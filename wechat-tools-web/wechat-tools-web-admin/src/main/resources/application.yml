@@ -1,0 +1,3 @@
+spring:
+  application:
+    name: wechat_user_application

@@ -1,0 +1,8 @@
+server:
+  port: 9011
+spring:
+  profiles:
+    include: repository,repository-release,web,web-release
+logging:
+  level:
+    com.levent8421.wechat.tools: debug

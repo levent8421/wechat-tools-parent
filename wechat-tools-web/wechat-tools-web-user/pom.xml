@@ -11,5 +11,11 @@
 
     <artifactId>wechat-tools-web-user</artifactId>
 
-
+    <dependencies>
+        <dependency>
+            <groupId>com.levent8421</groupId>
+            <artifactId>wechat-tools-web-commons</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 </project>

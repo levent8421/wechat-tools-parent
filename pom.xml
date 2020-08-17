@@ -24,4 +24,21 @@
         <module>wechat-tools-web</module>
         <module>wechat-tools-wechat</module>
     </modules>
+    <profiles>
+        <profile>
+            <id>dev</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <activeProfiles>dev</activeProfiles>
+            </properties>
+        </profile>
+        <profile>
+            <id>release</id>
+            <properties>
+                <activeProfiles>release</activeProfiles>
+            </properties>
+        </profile>
+    </profiles>
 </project>

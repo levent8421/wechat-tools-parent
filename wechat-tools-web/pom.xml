@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>wechat-tools-parent</artifactId>
+        <groupId>com.levent8421</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>wechat-tools-web</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>wechat-tools-web-commons</module>
+        <module>wechat-tools-web-user</module>
+        <module>wechat-tools-web-merchant</module>
+        <module>wechat-tools-web-admin</module>
+    </modules>
+</project>

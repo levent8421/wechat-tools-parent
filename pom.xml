@@ -20,5 +20,8 @@
     </properties>
     <modules>
         <module>wechat-tools-commons</module>
+        <module>wechat-tools-model</module>
+        <module>wechat-tools-web</module>
+        <module>wechat-tools-wechat</module>
     </modules>
 </project>

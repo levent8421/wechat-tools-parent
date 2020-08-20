@@ -3,7 +3,7 @@ package com.levent8421.wechat.tools.web.user.controller.api;
 import com.levent8421.wechat.tools.commons.entity.Merchant;
 import com.levent8421.wechat.tools.model.service.general.MerchantService;
 import com.levent8421.wechat.tools.web.commons.controller.AbstractApiController;
-import com.levent8421.wechat.tools.web.vo.GeneralResult;
+import com.levent8421.wechat.tools.web.commons.vo.GeneralResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -21,7 +21,7 @@ import java.util.List;
  * @author Levent8421
  */
 @RestController
-@RequestMapping("/api/merchant")
+@RequestMapping("/api/token/merchant")
 public class ApiMerchantController extends AbstractApiController {
     private final MerchantService merchantService;
 

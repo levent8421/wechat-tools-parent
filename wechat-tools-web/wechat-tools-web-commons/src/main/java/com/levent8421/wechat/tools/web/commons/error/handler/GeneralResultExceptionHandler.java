@@ -6,7 +6,7 @@ import com.levent8421.wechat.tools.commons.exception.PermissionDeniedException;
 import com.levent8421.wechat.tools.commons.exception.ResourceNotFoundException;
 import com.levent8421.wechat.tools.commons.utils.fn.Function;
 import com.levent8421.wechat.tools.web.commons.error.ExceptionHandler;
-import com.levent8421.wechat.tools.web.vo.GeneralResult;
+import com.levent8421.wechat.tools.web.commons.vo.GeneralResult;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.HashMap;

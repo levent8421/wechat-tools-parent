@@ -1,4 +1,4 @@
-package com.levent8421.wechat.tools.web.vo;
+package com.levent8421.wechat.tools.web.commons.vo;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

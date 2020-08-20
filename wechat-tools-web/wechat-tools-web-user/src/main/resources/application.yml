@@ -3,3 +3,6 @@ spring:
     name: wechat_user_application
   profiles:
     active: @activeProfiles@
+web-token:
+  ttl: 604800000
+  key: 1234567890

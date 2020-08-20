@@ -1,5 +1,6 @@
 package com.levent8421.wechat.tools.web.user.controller;
 
+import com.levent8421.wechat.tools.commons.exception.BadRequestException;
 import com.levent8421.wechat.tools.web.commons.controller.AbstractController;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -26,5 +27,10 @@ public class IndexController extends AbstractController {
     @GetMapping("/")
     public String index() {
         return "index";
+    }
+
+    @GetMapping("/error-page")
+    public String errorPage() {
+        throw new BadRequestException("TestError");
     }
 }

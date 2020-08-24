@@ -8,3 +8,6 @@ spring:
     multipart:
       max-file-size: 30MB
       max-request-size: 30MB
+web-token:
+  ttl: 604800000
+  key: 1234567890

@@ -3,30 +3,20 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>wechat-tools-wechat</artifactId>
+        <artifactId>wechat-tools-parent</artifactId>
         <groupId>com.levent8421</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>wechat-tools-wechat-api</artifactId>
-    <description>Wechat API</description>
+    <artifactId>wechat-tools-cache</artifactId>
+    <description>Cache</description>
 
     <dependencies>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <optional>true</optional>
-        </dependency>
-        <dependency>
-            <groupId>com.levent8421</groupId>
-            <artifactId>wechat-tools-commons</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-context</artifactId>
-            <version>5.2.8.RELEASE</version>
         </dependency>
     </dependencies>
 </project>

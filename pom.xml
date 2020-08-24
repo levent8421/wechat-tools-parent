@@ -23,6 +23,7 @@
         <module>wechat-tools-model</module>
         <module>wechat-tools-web</module>
         <module>wechat-tools-wechat</module>
+        <module>wechat-tools-cache</module>
     </modules>
     <profiles>
         <profile>

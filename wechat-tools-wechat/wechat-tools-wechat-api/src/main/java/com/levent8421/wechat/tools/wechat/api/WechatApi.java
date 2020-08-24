@@ -1,5 +1,8 @@
 package com.levent8421.wechat.tools.wechat.api;
 
+import com.levent8421.wechat.tools.wechat.api.vo.WechatAppTokenVo;
+import com.levent8421.wechat.tools.wechat.api.vo.WechatJsApiTicketVo;
+
 /**
  * Create By Levent8421
  * Create Time: 2020/8/17 19:31
@@ -11,4 +14,20 @@ package com.levent8421.wechat.tools.wechat.api;
  * @author Levent8421
  */
 public interface WechatApi {
+    /**
+     * 获取微信AccessToken
+     *
+     * @param appId  AppId
+     * @param secret Secret
+     * @return WxAccessToken
+     */
+    WechatAppTokenVo getToken(String appId, String secret);
+
+    /**
+     * Fetch jsApi ticket
+     *
+     * @param appToken app token
+     * @return ticket
+     */
+    WechatJsApiTicketVo getJsApiTicket(String appToken);
 }

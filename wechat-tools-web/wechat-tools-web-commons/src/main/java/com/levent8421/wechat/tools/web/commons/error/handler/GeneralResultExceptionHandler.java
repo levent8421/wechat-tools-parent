@@ -80,6 +80,6 @@ public class GeneralResultExceptionHandler implements ExceptionHandler {
         final String causeMessage = cause == null ? null : cause.getMessage();
         log.warn("Error on resolve http request, error class=[{}],error message=[{}], cause=[{},{}]",
                 error.getClass().getSimpleName(), error.getMessage(),
-                causeClass, causeMessage);
+                causeClass, causeMessage, error);
     }
 }

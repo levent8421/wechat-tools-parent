@@ -1,5 +1,6 @@
 package com.levent8421.wechat.tools.web.user.interceptor;
 
+import com.levent8421.wechat.tools.web.commons.interceptor.HttpRequestLogInterceptor;
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
@@ -22,10 +23,16 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @Component
 public class InterceptorConfiguration implements WebMvcConfigurer, ApplicationContextAware {
     private UserTokenInterceptor userTokenInterceptor;
+    private final HttpRequestLogInterceptor requestLogInterceptor;
+
+    public InterceptorConfiguration(HttpRequestLogInterceptor requestLogInterceptor) {
+        this.requestLogInterceptor = requestLogInterceptor;
+    }
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(userTokenInterceptor);
+        registry.addInterceptor(requestLogInterceptor);
     }
 
     @Override

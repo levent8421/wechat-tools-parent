@@ -15,8 +15,8 @@ import com.levent8421.wechat.tools.web.commons.security.jwt.AbstractJwtToken;
  * @author Levent8421
  */
 public class UserToken extends AbstractJwtToken {
-    public static final String MERCHANT_ID_NAME = "token.merchantId";
-    public static final String USER_ID_NAME = "token.userId";
+    public static final String MERCHANT_ID_NAME = "userToken.merchantId";
+    public static final String USER_ID_NAME = "userToken.userId";
 
     private final User user;
 

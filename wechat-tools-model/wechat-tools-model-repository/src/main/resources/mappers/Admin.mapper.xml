@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.levent8421.wechat.tools.model.repository.mapper.AdminMapper">
+    <resultMap id="rm_base" type="com.levent8421.wechat.tools.commons.entity.Admin"
+               extends="com.levent8421.wechat.tools.model.repository.basic.AbstractMapper.rm_base">
+        <id column="adm_id" property="id"/>
+        <result column="adm_login_name" property="loginName"/>
+        <result column="adm_name" property="name"/>
+        <result column="adm_password" property="password"/>
+        <result column="adm_authorization_str" property="authorizationStr"/>
+        <result column="adm_create_time" property="createTime"/>
+        <result column="adm_update_time" property="updateTime"/>
+        <result column="adm_deleted" property="deleted"/>
+    </resultMap>
+    <sql id="columns">
+        adm.id                adm_id,
+        adm.login_name        adm_login_name,
+        adm.name              adm_name,
+        adm.password          adm_password,
+        adm.authorization_str adm_authorization_str,
+        adm.create_time       adm_create_time,
+        adm.update_time       adm_update_time,
+        adm.deleted           adm_deleted
+    </sql>
+    <sql id="base_select">
+        select
+        <include refid="columns"/>
+        from t_admin as adm
+        where deleted = false
+    </sql>
+    <select id="selectByLoginName" resultMap="rm_base">
+        <include refid="base_select"/>
+        and (adm.login_name=#{loginName})
+    </select>
+</mapper>

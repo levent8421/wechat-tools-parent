@@ -8,6 +8,10 @@ import com.levent8421.wechat.tools.web.commons.security.TokenVerifier;
 import com.levent8421.wechat.tools.web.commons.vo.GeneralResult;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
+import org.springframework.beans.BeansException;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.ApplicationContextAware;
+import org.springframework.util.PathMatcher;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -28,9 +32,11 @@ import java.util.Map;
  * @author Levent8421
  */
 @Slf4j
-public abstract class AbstractTokenInterceptor implements HandlerInterceptor {
+public abstract class AbstractTokenInterceptor implements HandlerInterceptor, ApplicationContextAware {
     private static final String TOKEN_PARAM_NAME = "token";
     private static final String TOKEN_HEADER_NAME = "X-Token";
+    private ApplicationContext applicationContext;
+    private PathMatcher pathMatcher;
 
     private String tryFindToken(HttpServletRequest request) {
         String token = request.getHeader(TOKEN_HEADER_NAME);
@@ -104,5 +110,28 @@ public abstract class AbstractTokenInterceptor implements HandlerInterceptor {
     @Override
     public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) {
         getDataHolder().clearData();
+    }
+
+    @Override
+    public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
+        this.applicationContext = applicationContext;
+    }
+
+    private PathMatcher obtainPathMatcher() {
+        if (pathMatcher == null) {
+            pathMatcher = applicationContext.getBean(PathMatcher.class);
+        }
+        return pathMatcher;
+    }
+
+    /**
+     * 匹配给定路径与规则
+     *
+     * @param pattern 规则
+     * @param path    路径
+     * @return 是否匹配
+     */
+    protected boolean matchPath(String pattern, String path) {
+        return obtainPathMatcher().match(pattern, path);
     }
 }

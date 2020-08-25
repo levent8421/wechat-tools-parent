@@ -1,5 +1,6 @@
-package com.levent8421.wechat.tools.web.user.interceptor;
+package com.levent8421.wechat.tools.web.admin.interceptor;
 
+import com.levent8421.wechat.tools.web.admin.security.AdminTokenVerifier;
 import com.levent8421.wechat.tools.web.commons.interceptor.AbstractTokenInterceptor;
 import com.levent8421.wechat.tools.web.commons.security.TokenDataHolder;
 import com.levent8421.wechat.tools.web.commons.security.TokenVerifier;
@@ -11,37 +12,37 @@ import java.util.List;
 
 /**
  * Create By Levent8421
- * Create Time: 2020/8/20 17:53
- * Class Name: UserTokenInterceptor
+ * Create Time: 2020/8/26 1:06
+ * Class Name: AdminTokenInterceptor
  * Author: Levent8421
  * Description:
- * User Token Interceptor
+ * 管理员令牌拦截器
  *
  * @author Levent8421
  */
 @Component
-public class UserTokenInterceptor extends AbstractTokenInterceptor {
-    private final List<String> interceptPathList;
+public class AdminTokenInterceptor extends AbstractTokenInterceptor {
     private final TokenDataHolder tokenDataHolder;
-    private final TokenVerifier tokenVerifier;
+    private final AdminTokenVerifier adminTokenVerifier;
+    private final List<String> interceptPathList;
 
-    public UserTokenInterceptor(TokenDataHolder tokenDataHolder,
-                                TokenVerifier tokenVerifier) {
+    public AdminTokenInterceptor(TokenDataHolder tokenDataHolder,
+                                 AdminTokenVerifier adminTokenVerifier) {
         this.tokenDataHolder = tokenDataHolder;
-        this.tokenVerifier = tokenVerifier;
+        this.adminTokenVerifier = adminTokenVerifier;
         interceptPathList = new ArrayList<>();
-        loadInterceptPath();
+        loadPathList();
     }
 
-    private void loadInterceptPath() {
+    private void loadPathList() {
         interceptPathList.add("/api/token/**");
     }
 
     @Override
     protected boolean needAuthorization(HttpServletRequest request) {
-        final String path = request.getRequestURI();
-        for (String reg : interceptPathList) {
-            if (matchPath(reg, path)) {
+        final String uri = request.getRequestURI();
+        for (String path : interceptPathList) {
+            if (matchPath(path, uri)) {
                 return true;
             }
         }
@@ -50,7 +51,7 @@ public class UserTokenInterceptor extends AbstractTokenInterceptor {
 
     @Override
     protected TokenVerifier getTokenVerifier() {
-        return tokenVerifier;
+        return adminTokenVerifier;
     }
 
     @Override

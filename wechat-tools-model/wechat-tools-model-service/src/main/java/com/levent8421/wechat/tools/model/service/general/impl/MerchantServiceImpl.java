@@ -1,9 +1,13 @@
 package com.levent8421.wechat.tools.model.service.general.impl;
 
 import com.levent8421.wechat.tools.commons.entity.Merchant;
+import com.levent8421.wechat.tools.commons.exception.BadRequestException;
+import com.levent8421.wechat.tools.commons.utils.SerialNumberGenerator;
+import com.levent8421.wechat.tools.commons.utils.encrypt.MD5Utils;
 import com.levent8421.wechat.tools.model.repository.mapper.MerchantMapper;
 import com.levent8421.wechat.tools.model.service.basic.impl.AbstractServiceImpl;
 import com.levent8421.wechat.tools.model.service.general.MerchantService;
+import org.apache.commons.lang3.RandomStringUtils;
 import org.springframework.stereotype.Service;
 
 /**
@@ -19,10 +23,40 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class MerchantServiceImpl extends AbstractServiceImpl<Merchant> implements MerchantService {
+    private static final int SALT_LENGTH = 5;
     private final MerchantMapper merchantMapper;
+    private final SerialNumberGenerator serialNumberGenerator = new SerialNumberGenerator("M", "E", 4);
 
     public MerchantServiceImpl(MerchantMapper merchantMapper) {
         super(merchantMapper);
         this.merchantMapper = merchantMapper;
+    }
+
+    private String nextSn() {
+        return serialNumberGenerator.next();
+    }
+
+    private String encodePassword(String password) {
+        final String salt = RandomStringUtils.randomAlphanumeric(SALT_LENGTH);
+        return MD5Utils.md5(password, salt);
+    }
+
+    @Override
+    public Merchant create(Merchant merchant) {
+        final String loginName = merchant.getLoginName();
+        if (findByLoginName(loginName) != null) {
+            throw new BadRequestException(String.format("登录民为[%s]的商户已经存在！", loginName));
+        }
+        merchant.setSn(nextSn());
+        merchant.setAuthorizationCode("");
+        merchant.setPassword(encodePassword(merchant.getPassword()));
+        return save(merchant);
+    }
+
+    @Override
+    public Merchant findByLoginName(String loginName) {
+        final Merchant query = new Merchant();
+        query.setLoginName(loginName);
+        return findOneByQuery(query);
     }
 }

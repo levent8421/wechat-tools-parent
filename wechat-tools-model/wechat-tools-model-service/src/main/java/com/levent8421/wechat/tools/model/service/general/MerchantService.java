@@ -14,4 +14,19 @@ import com.levent8421.wechat.tools.model.service.basic.AbstractService;
  * @author Levent8421
  */
 public interface MerchantService extends AbstractService<Merchant> {
+    /**
+     * 创建新商户
+     *
+     * @param merchant 参数
+     * @return 创建结果
+     */
+    Merchant create(Merchant merchant);
+
+    /**
+     * 通过登录名查找商户
+     *
+     * @param loginName 登录名
+     * @return 商户
+     */
+    Merchant findByLoginName(String loginName);
 }

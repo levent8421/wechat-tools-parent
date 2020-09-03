@@ -180,7 +180,7 @@ public class DateTimeUtils {
      * @return 日期对象
      */
     public static Date parseTime(String timeStr) {
-        return parse(timeStr, Datetime.DATE_FORMAT);
+        return parse(timeStr, Datetime.TIME_FORMAT);
     }
 
     /**

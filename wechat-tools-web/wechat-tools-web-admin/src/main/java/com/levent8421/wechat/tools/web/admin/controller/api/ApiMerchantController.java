@@ -1,13 +1,16 @@
 package com.levent8421.wechat.tools.web.admin.controller.api;
 
-import com.levent8421.wechat.tools.commons.entity.Admin;
+import com.github.pagehelper.PageInfo;
+import com.levent8421.wechat.tools.commons.entity.Merchant;
+import com.levent8421.wechat.tools.commons.exception.BadRequestException;
+import com.levent8421.wechat.tools.model.service.general.MerchantService;
 import com.levent8421.wechat.tools.web.commons.controller.AbstractController;
-import com.levent8421.wechat.tools.web.commons.security.vo.TokenAccountVo;
 import com.levent8421.wechat.tools.web.commons.vo.GeneralResult;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.levent8421.wechat.tools.web.commons.vo.PaginationParam;
+import org.springframework.web.bind.annotation.*;
+
+import static com.levent8421.wechat.tools.web.commons.util.ParamChecker.notEmpty;
+import static com.levent8421.wechat.tools.web.commons.util.ParamChecker.notNull;
 
 /**
  * Create By Levent8421
@@ -23,14 +26,51 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/api/token/merchant")
 public class ApiMerchantController extends AbstractController {
+    private final MerchantService merchantService;
+
+    public ApiMerchantController(MerchantService merchantService) {
+        this.merchantService = merchantService;
+    }
+
     /**
-     * 管理员登录
+     * Create By Levent8421
+     * Create Time: 2020/8/28 22:06
+     * Class Name: ApiMerchantController
+     * Author: Levent8421
+     * Description:
+     * 分页查询所有商户信息
      *
-     * @param param params
-     * @return token and account
+     * @author Levent8421
      */
-    @PostMapping("/_login")
-    public GeneralResult<TokenAccountVo<Admin>> login(@RequestBody Admin param) {
-        return null;
+    @GetMapping("/_paged")
+    public GeneralResult<PageInfo<Merchant>> list(PaginationParam param) {
+        final PageInfo<Merchant> merchants = merchantService.list(param.getPage(), param.getRows());
+        return GeneralResult.ok(merchants);
+    }
+
+    /**
+     * 创建新商户
+     *
+     * @param param 参数
+     * @return GR
+     */
+    @PutMapping("/")
+    public GeneralResult<Merchant> createMerchant(@RequestBody Merchant param) {
+        final Merchant merchant = copyCreateParams(param);
+        final Merchant res = merchantService.create(merchant);
+        return GeneralResult.ok(res);
+    }
+
+    private Merchant copyCreateParams(Merchant param) {
+        final Class<BadRequestException> exception = BadRequestException.class;
+        notNull(param, exception, "空参数!");
+        notEmpty(param.getName(), exception, "名称必填");
+        notEmpty(param.getLoginName(), exception, "登录名必填");
+        notEmpty(param.getPassword(), exception, "密码必填");
+        final Merchant merchant = new Merchant();
+        merchant.setName(param.getName());
+        merchant.setLoginName(param.getLoginName());
+        merchant.setPassword(param.getPassword());
+        return merchant;
     }
 }

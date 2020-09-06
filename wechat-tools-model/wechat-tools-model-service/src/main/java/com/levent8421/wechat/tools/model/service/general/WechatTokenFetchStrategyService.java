@@ -12,4 +12,11 @@ import com.levent8421.wechat.tools.model.service.basic.AbstractService;
  * @author leven
  */
 public interface WechatTokenFetchStrategyService extends AbstractService<WechatTokenFetchStrategy> {
+    /**
+     * find strategy by merchant id
+     *
+     * @param merchantId 商户ID
+     * @return strategy
+     */
+    WechatTokenFetchStrategy findByMerchant(Integer merchantId);
 }

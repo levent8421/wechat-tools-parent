@@ -22,4 +22,11 @@ public class WechatTokenFetchStrategyServiceImpl extends AbstractServiceImpl<Wec
         super(wechatTokenFetchStrategyMapper);
         this.wechatTokenFetchStrategyMapper = wechatTokenFetchStrategyMapper;
     }
+
+    @Override
+    public WechatTokenFetchStrategy findByMerchant(Integer merchantId) {
+        final WechatTokenFetchStrategy query = new WechatTokenFetchStrategy();
+        query.setMerchantId(merchantId);
+        return findOneByQuery(query);
+    }
 }

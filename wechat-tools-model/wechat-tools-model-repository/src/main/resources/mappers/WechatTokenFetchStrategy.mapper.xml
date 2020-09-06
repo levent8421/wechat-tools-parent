@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.levent8421.wechat.tools.model.repository.mapper.WechatTokenFetchStrategyMapper">
+    <sql id="columns">
+        wtfs.id            as wtfs_id,
+        wtfs.merchant_id   as wtfs_merchant_id,
+        wtfs.strategy_code as wtfs_strategy_code,
+        wtfs.config_json   as wtfs_config_json,
+        wtfs.create_time   as wtfs_create_time,
+        wtfs.update_time   as wtfs_update_time,
+        wtfs.deleted       as wtfs_deleted
+    </sql>
+    <sql id="select">
+        select
+        <include refid="columns"/>
+        from t_wechat_token_fetch_strategy as wtfs
+        where wtfs.deleted = false
+    </sql>
+    <resultMap id="rm_base" type="com.levent8421.wechat.tools.commons.entity.WechatTokenFetchStrategy"
+               extends="com.levent8421.wechat.tools.model.repository.basic.AbstractMapper.rm_base">
+        <id column="wtfs_id" property="id"/>
+        <result column="wtfs_merchant_id" property="merchantId"/>
+        <result column="wtfs_strategy_code" property="strategyCode"/>
+        <result column="wtfs_config_json" property="configJson"/>
+        <result column="wtfs_create_time" property="createTime"/>
+        <result column="wtfs_update_time" property="updateTime"/>
+        <result column="wtfs_deleted" property="deleted"/>
+    </resultMap>
+</mapper>

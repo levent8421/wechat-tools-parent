@@ -16,3 +16,16 @@ create table t_merchant
 ) engine = InnoDB
   charset utf8
   collate utf8_general_ci;
+
+select m.id                 as m_id,
+       m.sn                 as m_sn,
+       m.name               as m_name,
+       m.logo_path          as m_logo_path,
+       m.authorization_code as m_authorization_code,
+       m.login_name         as m_login_name,
+       m.password           as m_password,
+       m.create_time        as m_create_time,
+       m.update_time        as m_update_time,
+       m.deleted            as m_deleted
+from t_merchant as m
+where m.deleted = false;

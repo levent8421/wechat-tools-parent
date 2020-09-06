@@ -10,6 +10,7 @@ package com.levent8421.wechat.tools.commons.utils.encrypt;
  *
  * @author Levent8421
  */
+
 public class MD5UtilsTest {
     public void test() {
         final String source = "111111";

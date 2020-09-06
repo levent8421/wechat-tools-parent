@@ -1,7 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.levent8421.wechat.tools.model.repository.mapper.MerchantMapper">
+    <sql id="columns">
+        m.id                 as m_id,
+        m.sn                 as m_sn,
+        m.name               as m_name,
+        m.logo_path          as m_logo_path,
+        m.authorization_code as m_authorization_code,
+        m.login_name         as m_login_name,
+        m.password           as m_password,
+        m.create_time        as m_create_time,
+        m.update_time        as m_update_time,
+        m.deleted            as m_deleted
+    </sql>
+    <sql id="select">
+        select
+        <include refid="columns"/>
+        from t_merchant as m
+        where m.deleted = false
+    </sql>
     <resultMap id="rm_base" type="com.levent8421.wechat.tools.commons.entity.Merchant"
                extends="com.levent8421.wechat.tools.model.repository.basic.AbstractMapper.rm_base">
+        <id column="m_id" property="id"/>
+        <result column="m_sn" property="sn"/>
+        <result column="m_name" property="name"/>
+        <result column="m_logo_path" property="logoPath"/>
+        <result column="m_authorization_code" property="authorizationCode"/>
+        <result column="m_login_name" property="loginName"/>
+        <result column="m_password" property="password"/>
+        <result column="m_create_time" property="createTime"/>
+        <result column="m_update_time" property="updateTime"/>
+        <result column="m_deleted" property="deleted"/>
     </resultMap>
 </mapper>

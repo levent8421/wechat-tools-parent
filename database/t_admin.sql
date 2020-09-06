@@ -16,6 +16,9 @@ create table t_admin
 
 create unique index admin_login_name_unique_index on t_admin (login_name);
 
+insert into t_admin (login_name, name, password, authorization_str, create_time, update_time, deleted)
+    value ('root', 'root', '32fcfb0ea9713975d13a7202cbce3c09,simple', '', now(), now(), false);
+
 select adm.id                adm_id,
        adm.login_name        adm_login_name,
        adm.name              adm_name,

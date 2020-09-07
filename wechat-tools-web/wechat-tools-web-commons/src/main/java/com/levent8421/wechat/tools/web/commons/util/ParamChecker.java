@@ -90,6 +90,29 @@ public class ParamChecker {
     }
 
     /**
+     * 校验map中必须包含指定key， 并且其对应的value不为空
+     *
+     * @param map            map
+     * @param key            key
+     * @param exceptionClass 异常类
+     * @param msg            异常信息
+     * @param <K>            key type
+     */
+    public static <K> void contains(Map<K, ?> map, K key, Class<? extends RuntimeException> exceptionClass, String msg) {
+        if (!map.containsKey(key)) {
+            throwException(exceptionClass, msg);
+        }
+        final Object value = map.get(key);
+        if (value == null) {
+            throwException(exceptionClass, msg);
+        }
+        if (value instanceof String) {
+            final String strValue = (String) value;
+            notEmpty(strValue, exceptionClass, msg);
+        }
+    }
+
+    /**
      * 抛出异常
      *
      * @param exceptionClass 异常类

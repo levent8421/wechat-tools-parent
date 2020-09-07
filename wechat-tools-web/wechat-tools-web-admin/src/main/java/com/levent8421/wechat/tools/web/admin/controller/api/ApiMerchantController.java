@@ -73,4 +73,16 @@ public class ApiMerchantController extends AbstractController {
         merchant.setPassword(param.getPassword());
         return merchant;
     }
+
+    /**
+     * find  merchant by row id
+     *
+     * @param id id
+     * @return GR
+     */
+    @GetMapping("/{id}")
+    public GeneralResult<Merchant> findMerchantById(@PathVariable("id") Integer id) {
+        final Merchant merchant = merchantService.require(id);
+        return GeneralResult.ok(merchant);
+    }
 }

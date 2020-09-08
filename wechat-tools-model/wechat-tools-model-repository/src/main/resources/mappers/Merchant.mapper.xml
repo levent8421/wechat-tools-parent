@@ -9,6 +9,8 @@
         m.authorization_code as m_authorization_code,
         m.login_name         as m_login_name,
         m.password           as m_password,
+        m.wechat_app_id      as m_wechat_app_id,
+        m.wechat_secret      as m_wechat_secret,
         m.create_time        as m_create_time,
         m.update_time        as m_update_time,
         m.deleted            as m_deleted
@@ -28,6 +30,8 @@
         <result column="m_authorization_code" property="authorizationCode"/>
         <result column="m_login_name" property="loginName"/>
         <result column="m_password" property="password"/>
+        <result column="m_wechat_app_id" property="wechatAppId"/>
+        <result column="m_wechat_secret" property="wechatAppId"/>
         <result column="m_create_time" property="createTime"/>
         <result column="m_update_time" property="updateTime"/>
         <result column="m_deleted" property="deleted"/>

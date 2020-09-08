@@ -2,6 +2,7 @@ package com.levent8421.wechat.tools.wechat.token.fetcher.impl;
 
 import com.levent8421.wechat.tools.cache.HashCache;
 import com.levent8421.wechat.tools.cache.memory.MemoryHashCache;
+import com.levent8421.wechat.tools.commons.entity.Merchant;
 import com.levent8421.wechat.tools.commons.entity.WechatTokenFetchStrategy;
 import com.levent8421.wechat.tools.wechat.token.fetcher.WechatTokenFetcher;
 import com.levent8421.wechat.tools.wechat.token.util.WechatTokenUtils;
@@ -28,12 +29,12 @@ public abstract class AbstractCachedWechatTokenFetcher implements WechatTokenFet
     }
 
     @Override
-    public WechatAppToken fetchAppToken(WechatTokenFetchStrategy strategy) {
+    public WechatAppToken fetchAppToken(Merchant merchant, WechatTokenFetchStrategy strategy) {
         final String key = String.valueOf(strategy.getId());
         final WechatAppToken cachedToken = tokenCache.get(key);
         final WechatAppToken token;
         if (cachedToken == null || WechatTokenUtils.isExpired(cachedToken)) {
-            token = doFetchAppToken(strategy);
+            token = doFetchAppToken(merchant, strategy);
         } else {
             token = cachedToken;
         }
@@ -44,17 +45,18 @@ public abstract class AbstractCachedWechatTokenFetcher implements WechatTokenFet
      * 执行抓取操作
      *
      * @param strategy 抓取策略
+     * @param merchant 商户信息
      * @return app token
      */
-    protected abstract WechatAppToken doFetchAppToken(WechatTokenFetchStrategy strategy);
+    protected abstract WechatAppToken doFetchAppToken(Merchant merchant, WechatTokenFetchStrategy strategy);
 
     @Override
-    public WechatJsApiTicket fetchJsApiTicket(WechatTokenFetchStrategy strategy) {
+    public WechatJsApiTicket fetchJsApiTicket(Merchant merchant, WechatTokenFetchStrategy strategy) {
         final String key = String.valueOf(strategy.getId());
         final WechatJsApiTicket cachedTicked = ticketCache.get(key);
         final WechatJsApiTicket ticket;
         if (cachedTicked == null || WechatTokenUtils.isExpired(cachedTicked)) {
-            ticket = doFetchJsApiTicket(strategy);
+            ticket = doFetchJsApiTicket(merchant, strategy);
         } else {
             ticket = cachedTicked;
         }
@@ -65,7 +67,8 @@ public abstract class AbstractCachedWechatTokenFetcher implements WechatTokenFet
      * 执行抓取操作
      *
      * @param strategy 抓取策略
+     * @param merchant 商户信息
      * @return ticket
      */
-    protected abstract WechatJsApiTicket doFetchJsApiTicket(WechatTokenFetchStrategy strategy);
+    protected abstract WechatJsApiTicket doFetchJsApiTicket(Merchant merchant, WechatTokenFetchStrategy strategy);
 }

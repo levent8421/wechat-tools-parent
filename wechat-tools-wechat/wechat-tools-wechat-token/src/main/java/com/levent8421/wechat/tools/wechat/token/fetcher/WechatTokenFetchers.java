@@ -1,5 +1,6 @@
 package com.levent8421.wechat.tools.wechat.token.fetcher;
 
+import com.levent8421.wechat.tools.commons.entity.Merchant;
 import com.levent8421.wechat.tools.commons.entity.WechatTokenFetchStrategy;
 import com.levent8421.wechat.tools.wechat.token.vo.WechatAppToken;
 import com.levent8421.wechat.tools.wechat.token.vo.WechatJsApiTicket;
@@ -52,21 +53,23 @@ public class WechatTokenFetchers {
      * 获取微信公众号APP token
      *
      * @param strategy 策略
+     * @param merchant 商户信息
      * @return AppToken
      */
-    public WechatAppToken fetchAppToken(WechatTokenFetchStrategy strategy) {
+    public WechatAppToken fetchAppToken(Merchant merchant, WechatTokenFetchStrategy strategy) {
         final Integer strategyCode = strategy.getStrategyCode();
-        return findFetcher(strategyCode).fetchAppToken(strategy);
+        return findFetcher(strategyCode).fetchAppToken(merchant, strategy);
     }
 
     /**
      * 获取JsApiTicket
      *
      * @param strategy 策略
+     * @param merchant 商户信息
      * @return js Api Ticket
      */
-    public WechatJsApiTicket fetchJsApiTicket(WechatTokenFetchStrategy strategy) {
+    public WechatJsApiTicket fetchJsApiTicket(Merchant merchant, WechatTokenFetchStrategy strategy) {
         final Integer strategyCode = strategy.getStrategyCode();
-        return findFetcher(strategyCode).fetchJsApiTicket(strategy);
+        return findFetcher(strategyCode).fetchJsApiTicket(merchant, strategy);
     }
 }

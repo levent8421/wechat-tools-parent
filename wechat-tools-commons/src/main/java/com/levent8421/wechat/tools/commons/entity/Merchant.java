@@ -54,4 +54,14 @@ public class Merchant extends AbstractEntity {
      */
     @Column(name = "password", nullable = false)
     private String password;
+    /**
+     * 微信公众号APP ID
+     */
+    @Column(name = "wechat_app_id")
+    private String wechatAppId;
+    /**
+     * 微信公众号secret
+     */
+    @Column(name = "wechat_secret")
+    private String wechatSecret;
 }

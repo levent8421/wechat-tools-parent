@@ -1,6 +1,6 @@
 package com.levent8421.wechat.tools.wechat.token.fetcher.impl;
 
-import com.alibaba.fastjson.JSON;
+import com.levent8421.wechat.tools.commons.entity.Merchant;
 import com.levent8421.wechat.tools.commons.entity.WechatTokenFetchStrategy;
 import com.levent8421.wechat.tools.wechat.api.WechatApi;
 import com.levent8421.wechat.tools.wechat.api.vo.WechatAppTokenVo;
@@ -37,10 +37,9 @@ public class StandardWechatTokenFetcher extends AbstractCachedWechatTokenFetcher
     }
 
     @Override
-    protected WechatAppToken doFetchAppToken(WechatTokenFetchStrategy strategy) {
-        final StandardWechatTokenConfig config = decodeTokenConfig(strategy.getConfigJson());
-        final String appId = config.getAppId();
-        final String secret = config.getSecret();
+    protected WechatAppToken doFetchAppToken(Merchant merchant, WechatTokenFetchStrategy strategy) {
+        final String appId = merchant.getWechatAppId();
+        final String secret = merchant.getWechatSecret();
         final WechatAppTokenVo tokenVo = wechatApi.getToken(appId, secret);
 
         final WechatAppToken token = convert2Token(tokenVo);
@@ -56,13 +55,10 @@ public class StandardWechatTokenFetcher extends AbstractCachedWechatTokenFetcher
         return token;
     }
 
-    private StandardWechatTokenConfig decodeTokenConfig(String configJson) {
-        return JSON.parseObject(configJson, StandardWechatTokenConfig.class);
-    }
 
     @Override
-    protected WechatJsApiTicket doFetchJsApiTicket(WechatTokenFetchStrategy strategy) {
-        final WechatAppToken token = fetchAppToken(strategy);
+    protected WechatJsApiTicket doFetchJsApiTicket(Merchant merchant, WechatTokenFetchStrategy strategy) {
+        final WechatAppToken token = fetchAppToken(merchant, strategy);
         final String tokenStr = token.getAccessToken();
         final WechatJsApiTicketVo ticketVo = wechatApi.getJsApiTicket(tokenStr);
         final WechatJsApiTicket ticket = convert2Ticket(ticketVo);

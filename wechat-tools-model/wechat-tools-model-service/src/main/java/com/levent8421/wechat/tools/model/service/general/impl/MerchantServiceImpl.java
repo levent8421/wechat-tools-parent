@@ -59,4 +59,11 @@ public class MerchantServiceImpl extends AbstractServiceImpl<Merchant> implement
         query.setLoginName(loginName);
         return findOneByQuery(query);
     }
+
+    @Override
+    public Merchant bindWechatAppId(Merchant merchant, String wechatAppId, String wechatSecret) {
+        merchant.setWechatAppId(wechatAppId);
+        merchant.setWechatSecret(wechatSecret);
+        return updateById(merchant);
+    }
 }

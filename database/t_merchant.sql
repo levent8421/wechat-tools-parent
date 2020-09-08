@@ -9,6 +9,8 @@ create table t_merchant
     authorization_code varchar(255) not null comment 'merchant authorization code',
     login_name         varchar(255) not null comment 'merchant login name',
     password           varchar(255) not null comment 'merchant login password',
+    wechat_app_id      varchar(255) null comment 'wechat appId',
+    wechat_secret      varchar(255) null comment 'wechat secret',
     create_time        datetime     not null comment 'row create time',
     update_time        datetime     not null comment 'row last modify time',
     deleted            bit(1)       not null comment 'logical deleted flag'
@@ -24,6 +26,8 @@ select m.id                 as m_id,
        m.authorization_code as m_authorization_code,
        m.login_name         as m_login_name,
        m.password           as m_password,
+       m.wechat_app_id      as m_wechat_app_id,
+       m.wechat_secret      as m_wechat_secret,
        m.create_time        as m_create_time,
        m.update_time        as m_update_time,
        m.deleted            as m_deleted

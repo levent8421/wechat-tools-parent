@@ -13,7 +13,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.levent8421</groupId>
+            <groupId>com.levent8421</groupId >
             <artifactId>wechat-tools-web-commons</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
@@ -21,6 +21,11 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>com.levent8421</groupId>
+            <artifactId>wechat-tools-wechat-token</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
         </dependency>
     </dependencies>
     <build>

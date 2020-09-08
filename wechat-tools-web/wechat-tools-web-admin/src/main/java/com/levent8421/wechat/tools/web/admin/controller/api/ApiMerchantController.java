@@ -85,4 +85,22 @@ public class ApiMerchantController extends AbstractController {
         final Merchant merchant = merchantService.require(id);
         return GeneralResult.ok(merchant);
     }
+
+    /**
+     * 绑定微信APP_ID
+     *
+     * @param id    merchant id
+     * @param param params{wechatAppId,wechatSecret}
+     * @return GRyarn start
+     */
+    @PostMapping("/{id}/wechat-app-id")
+    public GeneralResult<Merchant> bindWechatAppId(@PathVariable("id") Integer id, @RequestBody Merchant param) {
+        final Class<BadRequestException> error = BadRequestException.class;
+        notNull(param, error, "参数为空！");
+        notEmpty(param.getWechatAppId(), error, "微信APP_ID必填");
+        notEmpty(param.getWechatSecret(), error, "微信SECRET必填");
+        final Merchant merchant = merchantService.require(id);
+        final Merchant res = merchantService.bindWechatAppId(merchant, param.getWechatAppId(), param.getWechatSecret());
+        return GeneralResult.ok(res);
+    }
 }

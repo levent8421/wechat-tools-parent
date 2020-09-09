@@ -7,6 +7,7 @@ import com.levent8421.wechat.tools.commons.utils.encrypt.MD5Utils;
 import com.levent8421.wechat.tools.model.repository.mapper.AdminMapper;
 import com.levent8421.wechat.tools.model.service.basic.impl.AbstractServiceImpl;
 import com.levent8421.wechat.tools.model.service.general.AdminService;
+import org.apache.commons.lang3.RandomStringUtils;
 import org.springframework.stereotype.Service;
 
 /**
@@ -21,6 +22,7 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class AdminServiceImpl extends AbstractServiceImpl<Admin> implements AdminService {
+    private static final int PASSWORD_SALT_LEN = 7;
     private final AdminMapper adminMapper;
 
     public AdminServiceImpl(AdminMapper adminMapper) {
@@ -48,5 +50,16 @@ public class AdminServiceImpl extends AbstractServiceImpl<Admin> implements Admi
     @Override
     public Admin findByLoginName(String loginName) {
         return adminMapper.selectByLoginName(loginName);
+    }
+
+    @Override
+    public Admin create(Admin admin) {
+        admin.setPassword(encodePassword(admin.getPassword()));
+        return save(admin);
+    }
+
+    private String encodePassword(String password) {
+        final String salt = RandomStringUtils.randomAlphanumeric(PASSWORD_SALT_LEN);
+        return MD5Utils.md5(password, salt);
     }
 }

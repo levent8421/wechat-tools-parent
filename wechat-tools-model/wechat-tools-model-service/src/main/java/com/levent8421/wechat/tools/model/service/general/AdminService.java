@@ -30,4 +30,12 @@ public interface AdminService extends AbstractService<Admin> {
      * @return 账户信息
      */
     Admin findByLoginName(String loginName);
+
+    /**
+     * 创建管理员
+     *
+     * @param admin admin data
+     * @return admin
+     */
+    Admin create(Admin admin);
 }

@@ -1,7 +1,9 @@
 package com.levent8421.wechat.tools.web.merchant;
 
+import com.levent8421.wechat.tools.commons.context.ContextPackage;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import tk.mybatis.spring.annotation.MapperScan;
 
 /**
  * Create By Levent8421
@@ -13,7 +15,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  *
  * @author Levent8421
  */
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = ContextPackage.BASE_PACKAGE)
+@MapperScan(basePackages = ContextPackage.MAPPER_PACKAGE)
 public class WechatToolsWebMerchantApplication {
     /**
      * 主方法入口

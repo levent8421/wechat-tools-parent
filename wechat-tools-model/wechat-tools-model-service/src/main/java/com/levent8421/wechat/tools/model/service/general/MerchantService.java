@@ -39,4 +39,13 @@ public interface MerchantService extends AbstractService<Merchant> {
      * @return Merchant
      */
     Merchant bindWechatAppId(Merchant merchant, String wechatAppId, String wechatSecret);
+
+    /**
+     * 登录
+     *
+     * @param loginName 登录名
+     * @param password  密码
+     * @return merchant
+     */
+    Merchant login(String loginName, String password);
 }

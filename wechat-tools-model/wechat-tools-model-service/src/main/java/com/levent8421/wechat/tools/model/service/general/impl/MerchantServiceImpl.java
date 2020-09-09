@@ -2,6 +2,7 @@ package com.levent8421.wechat.tools.model.service.general.impl;
 
 import com.levent8421.wechat.tools.commons.entity.Merchant;
 import com.levent8421.wechat.tools.commons.exception.BadRequestException;
+import com.levent8421.wechat.tools.commons.exception.PermissionDeniedException;
 import com.levent8421.wechat.tools.commons.utils.SerialNumberGenerator;
 import com.levent8421.wechat.tools.commons.utils.encrypt.MD5Utils;
 import com.levent8421.wechat.tools.model.repository.mapper.MerchantMapper;
@@ -65,5 +66,21 @@ public class MerchantServiceImpl extends AbstractServiceImpl<Merchant> implement
         merchant.setWechatAppId(wechatAppId);
         merchant.setWechatSecret(wechatSecret);
         return updateById(merchant);
+    }
+
+    @Override
+    public Merchant login(String loginName, String password) {
+        final Merchant merchant = findByLoginName(loginName);
+        if (merchant == null) {
+            throw new PermissionDeniedException("商户不存在");
+        }
+        if (!checkPassword(merchant, password)) {
+            throw new PermissionDeniedException("账户与密码不匹配");
+        }
+        return merchant;
+    }
+
+    private boolean checkPassword(Merchant merchant, String password) {
+        return MD5Utils.isMatched(merchant.getPassword(), password);
     }
 }

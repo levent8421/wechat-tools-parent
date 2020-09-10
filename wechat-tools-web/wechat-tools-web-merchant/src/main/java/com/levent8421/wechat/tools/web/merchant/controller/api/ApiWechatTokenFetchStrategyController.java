@@ -1,27 +1,27 @@
-package com.levent8421.wechat.tools.web.admin.controller.api;
+package com.levent8421.wechat.tools.web.merchant.controller.api;
 
 import com.levent8421.wechat.tools.commons.entity.WechatTokenFetchStrategy;
 import com.levent8421.wechat.tools.commons.exception.ResourceNotFoundException;
 import com.levent8421.wechat.tools.model.service.general.WechatTokenFetchStrategyService;
-import com.levent8421.wechat.tools.web.commons.validate.fetcher.WechatTokenFetcherParamValidators;
 import com.levent8421.wechat.tools.web.commons.controller.AbstractController;
+import com.levent8421.wechat.tools.web.commons.validate.fetcher.WechatTokenFetcherParamValidators;
 import com.levent8421.wechat.tools.web.commons.vo.GeneralResult;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
 
 /**
- * Create By leven ont 2020/9/7 1:33
- * Class Name :[ApiWechatTokenFetchStrategyController]
- * <p>
- * 微信令牌获取策略相关API数据访问控制器
+ * Create By Levent8421
+ * Create Time: 2020/9/10 16:02
+ * Class Name: ApiWechatTokenFetchStrategyController
+ * Author: Levent8421
+ * Description:
+ * 微信token获取策略相关数据访问控制器
  *
- * @author leven
+ * @author Levent8421
  */
 @RestController
-@RequestMapping("/api/token/token-fetch")
-@Slf4j
+@RequestMapping("/api/token/token-strategy")
 public class ApiWechatTokenFetchStrategyController extends AbstractController {
     private final WechatTokenFetchStrategyService wechatTokenFetchStrategyService;
     private final WechatTokenFetcherParamValidators wechatTokenFetcherParamValidators;
@@ -33,16 +33,16 @@ public class ApiWechatTokenFetchStrategyController extends AbstractController {
     }
 
     /**
-     * 通过商户查找微信令牌获取策略
+     * 获取指定商户的微信令牌获取策略
      *
      * @param merchantId 商户ID
      * @return GR
      */
-    @GetMapping("/")
+    @GetMapping("/_by-merchant")
     public GeneralResult<WechatTokenFetchStrategy> findByMerchant(@RequestParam("merchantId") Integer merchantId) {
         final WechatTokenFetchStrategy strategy = wechatTokenFetchStrategyService.findByMerchant(merchantId);
         if (strategy == null) {
-            throw new ResourceNotFoundException("Can not find tokenFetcher for merchant " + merchantId);
+            throw new ResourceNotFoundException("策略未配置！");
         }
         return GeneralResult.ok(strategy);
     }

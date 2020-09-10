@@ -1,4 +1,4 @@
-package com.levent8421.wechat.tools.web.admin.validation.fetcher;
+package com.levent8421.wechat.tools.web.commons.validate.fetcher;
 
 import org.springframework.stereotype.Component;
 

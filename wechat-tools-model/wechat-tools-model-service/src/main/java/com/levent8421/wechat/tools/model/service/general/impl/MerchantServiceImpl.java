@@ -93,4 +93,11 @@ public class MerchantServiceImpl extends AbstractServiceImpl<Merchant> implement
         merchant.setPassword(encodedPassword);
         updateById(merchant);
     }
+
+    @Override
+    public Merchant findBySn(String sn) {
+        final Merchant query = new Merchant();
+        query.setSn(sn);
+        return findOneByQuery(query);
+    }
 }

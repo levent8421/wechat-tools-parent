@@ -57,4 +57,12 @@ public interface MerchantService extends AbstractService<Merchant> {
      * @param newPassword 新密码
      */
     void resetPassword(Merchant merchant, String password, String newPassword);
+
+    /**
+     * Find Merchant By SerialNumber
+     *
+     * @param sn sn
+     * @return Merchant or null
+     */
+    Merchant findBySn(String sn);
 }

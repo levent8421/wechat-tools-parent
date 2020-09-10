@@ -39,4 +39,14 @@ public abstract class AbstractController {
     public Object onAnyException(Throwable error) {
         return exceptionHandler.onException(error);
     }
+
+    /**
+     * 重定向视图名称
+     *
+     * @param viewName 视图
+     * @return view name
+     */
+    protected String redirect(String viewName) {
+        return String.format("redirect:%s", viewName);
+    }
 }

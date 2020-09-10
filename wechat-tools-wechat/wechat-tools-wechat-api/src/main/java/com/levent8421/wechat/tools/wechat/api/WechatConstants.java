@@ -17,4 +17,8 @@ public class WechatConstants {
      * 默认语言
      */
     public static final String DEFAULT_LANG = "zh_CN";
+    /**
+     * 默认编码方式
+     */
+    public static final String DEFAULT_CHARSET = "UTF-8";
 }

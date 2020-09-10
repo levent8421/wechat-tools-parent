@@ -1,0 +1,9 @@
+{
+  "properties": [
+    {
+      "name": "website.base-url",
+      "type": "java.lang.String",
+      "description": "网站基础路径."
+    }
+  ]
+}

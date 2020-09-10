@@ -6,6 +6,7 @@ import com.levent8421.wechat.tools.model.service.general.MerchantService;
 import com.levent8421.wechat.tools.web.commons.controller.AbstractController;
 import com.levent8421.wechat.tools.web.commons.security.TokenDataHolder;
 import com.levent8421.wechat.tools.web.commons.vo.GeneralResult;
+import com.levent8421.wechat.tools.web.commons.vo.ResetPasswordParam;
 import com.levent8421.wechat.tools.web.merchant.security.MerchantToken;
 import org.springframework.web.bind.annotation.*;
 
@@ -32,6 +33,11 @@ public class ApiMerchantController extends AbstractController {
         this.merchantService = merchantService;
     }
 
+    private Merchant currentMerchant() {
+        final Integer merchantId = tokenDataHolder.get(MerchantToken.MERCHANT_ID_KEY, Integer.class);
+        return merchantService.require(merchantId);
+    }
+
     /**
      * 获取当前登录的商户
      *
@@ -39,8 +45,7 @@ public class ApiMerchantController extends AbstractController {
      */
     @GetMapping("/_me")
     public GeneralResult<Merchant> me() {
-        final Integer merchantId = tokenDataHolder.get(MerchantToken.MERCHANT_ID_KEY, Integer.class);
-        final Merchant merchant = merchantService.require(merchantId);
+        final Merchant merchant = currentMerchant();
         return GeneralResult.ok(merchant);
     }
 
@@ -61,6 +66,41 @@ public class ApiMerchantController extends AbstractController {
         final Merchant merchant = merchantService.require(id);
         merchant.setWechatAppId(param.getWechatAppId());
         merchant.setWechatSecret(param.getWechatSecret());
+        final Merchant res = merchantService.updateById(merchant);
+        return GeneralResult.ok(res);
+    }
+
+    /**
+     * 重置当前商户的密码
+     *
+     * @param param param
+     * @return GR
+     */
+    @PostMapping("/_reset-password")
+    public GeneralResult<Void> resetPassword(@RequestBody ResetPasswordParam param) {
+        final Class<? extends RuntimeException> error = BadRequestException.class;
+        notNull(param, error, "参数为空");
+        notEmpty(param.getNewPassword(), error, "请输入新密码");
+        notEmpty(param.getPassword(), error, "请输入原密码");
+
+        final Merchant merchant = currentMerchant();
+        merchantService.resetPassword(merchant, param.getPassword(), param.getNewPassword());
+        return GeneralResult.ok();
+    }
+
+    /**
+     * 更新当前商户信息
+     *
+     * @param param param
+     * @return GR
+     */
+    @PostMapping("/_me")
+    public GeneralResult<Merchant> updateMerchantInfo(@RequestBody Merchant param) {
+        final Class<? extends RuntimeException> error = BadRequestException.class;
+        notNull(param, error, "参数为空");
+        notEmpty(param.getName(), error, "请输入商户名");
+        final Merchant merchant = currentMerchant();
+        merchant.setName(param.getName());
         final Merchant res = merchantService.updateById(merchant);
         return GeneralResult.ok(res);
     }

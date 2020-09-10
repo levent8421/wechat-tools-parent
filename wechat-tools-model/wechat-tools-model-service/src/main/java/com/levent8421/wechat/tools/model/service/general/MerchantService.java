@@ -48,4 +48,13 @@ public interface MerchantService extends AbstractService<Merchant> {
      * @return merchant
      */
     Merchant login(String loginName, String password);
+
+    /**
+     * 重置密码
+     *
+     * @param merchant    商户
+     * @param password    原密码
+     * @param newPassword 新密码
+     */
+    void resetPassword(Merchant merchant, String password, String newPassword);
 }

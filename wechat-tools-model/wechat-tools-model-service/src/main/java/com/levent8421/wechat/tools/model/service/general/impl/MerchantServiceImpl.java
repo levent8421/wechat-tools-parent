@@ -83,4 +83,14 @@ public class MerchantServiceImpl extends AbstractServiceImpl<Merchant> implement
     private boolean checkPassword(Merchant merchant, String password) {
         return MD5Utils.isMatched(merchant.getPassword(), password);
     }
+
+    @Override
+    public void resetPassword(Merchant merchant, String password, String newPassword) {
+        if (!checkPassword(merchant, password)) {
+            throw new PermissionDeniedException("原密码不正确！");
+        }
+        final String encodedPassword = encodePassword(newPassword);
+        merchant.setPassword(encodedPassword);
+        updateById(merchant);
+    }
 }

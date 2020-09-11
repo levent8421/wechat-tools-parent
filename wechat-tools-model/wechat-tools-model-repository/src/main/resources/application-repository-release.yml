@@ -2,4 +2,4 @@ spring:
   datasource:
     url: jdbc:mysql://localhost:3306/db_wechat_tools?userSSL=false&useUnicode=true&characterEncoding=utf8&autoReconnect=true&serverTimezone=GMT%2B8
     username: root
-    password: monolithiot
+    password: 942698@xyes

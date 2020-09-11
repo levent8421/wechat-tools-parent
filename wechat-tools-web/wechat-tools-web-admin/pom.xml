@@ -29,7 +29,7 @@
         </dependency>
     </dependencies>
     <build>
-        <finalName>wechat-tools-web-user</finalName>
+        <finalName>wechat-tools-web-admin</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>

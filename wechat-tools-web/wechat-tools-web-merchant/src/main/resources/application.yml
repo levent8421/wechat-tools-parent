@@ -1,5 +1,5 @@
 spring:
   application:
-    name: wechat_user_application
+    name: wechat_merchant_application
   profiles:
     active: @activeProfiles@

@@ -3,7 +3,6 @@ package com.levent8421.wechat.tools.resource.impl;
 import com.levent8421.wechat.tools.commons.exception.BadRequestException;
 import com.levent8421.wechat.tools.commons.exception.InternalServerErrorException;
 import com.levent8421.wechat.tools.resource.ResourcePathService;
-import com.levent8421.wechat.tools.resource.StaticResourceService;
 import com.levent8421.wechat.tools.resource.WechatVerifyFileService;
 import com.levent8421.wechat.tools.resource.config.ResourceConfigurationProperties;
 import com.levent8421.wechat.tools.resource.dto.VerifyFileInfo;
@@ -13,8 +12,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 /**
  * Create By Levent8421
@@ -32,15 +30,12 @@ public class WechatVerifyFileServiceImpl implements WechatVerifyFileService {
     private static final int MAX_FILE_SIZE = 4 * 1024;
     private final ResourcePathService resourcePathService;
     private final ResourceConfigurationProperties resourceConfigurationProperties;
-    private final StaticResourceService staticResourceService;
     private final String filePath;
-    private final List<VerifyFileInfo> copiedFiles = new ArrayList<>();
+    private final Map<String, VerifyFileInfo> copiedFiles = new HashMap<>(128);
 
     public WechatVerifyFileServiceImpl(ResourcePathService resourcePathService,
-                                       StaticResourceService staticResourceService,
                                        ResourceConfigurationProperties resourceConfigurationProperties) {
         this.resourcePathService = resourcePathService;
-        this.staticResourceService = staticResourceService;
         this.resourceConfigurationProperties = resourceConfigurationProperties;
         this.filePath = path();
     }
@@ -91,15 +86,29 @@ public class WechatVerifyFileServiceImpl implements WechatVerifyFileService {
             throw new InternalServerErrorException("Error on copy file", e);
         }
         final VerifyFileInfo fileInfo = new VerifyFileInfo(destFile, System.currentTimeMillis());
-        copiedFiles.add(fileInfo);
+        copiedFiles.put(fileName, fileInfo);
     }
 
     @Override
     public void cleanFiles() {
         final long now = System.currentTimeMillis();
-        copiedFiles.stream()
+        copiedFiles.values()
+                .stream()
                 .filter(file -> file.isExpired(now))
                 .forEach(VerifyFileInfo::delete);
         copiedFiles.clear();
+    }
+
+    @Override
+    public List<String> files(Integer merchantId) {
+        final File pathFile = new File(filePath, String.valueOf(merchantId));
+        if (!pathFile.exists()) {
+            return Collections.emptyList();
+        }
+        final String[] files = pathFile.list();
+        if (files == null || files.length <= 0) {
+            return Collections.emptyList();
+        }
+        return Arrays.asList(files);
     }
 }

@@ -3,6 +3,7 @@ package com.levent8421.wechat.tools.resource;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
+import java.util.List;
 
 /**
  * Create By Levent8421
@@ -38,4 +39,12 @@ public interface WechatVerifyFileService {
      * 删除拷贝到根目录的过期文件
      */
     void cleanFiles();
+
+    /**
+     * 查询商户已经上传的微信校验文件
+     *
+     * @param merchantId 商户ID
+     * @return files
+     */
+    List<String> files(Integer merchantId);
 }

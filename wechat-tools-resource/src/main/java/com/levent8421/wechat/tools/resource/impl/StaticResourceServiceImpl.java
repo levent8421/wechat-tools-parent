@@ -1,5 +1,6 @@
 package com.levent8421.wechat.tools.resource.impl;
 
+import com.levent8421.wechat.tools.commons.exception.BadRequestException;
 import com.levent8421.wechat.tools.resource.ResourcePathService;
 import com.levent8421.wechat.tools.resource.StaticResourceService;
 import org.springframework.stereotype.Component;
@@ -28,7 +29,11 @@ public class StaticResourceServiceImpl implements StaticResourceService {
 
     @Override
     public String saveFileAsOriginName(MultipartFile file, String path) throws IOException {
-        final File targetFile = new File(path, file.getName());
+        String fileName = file.getOriginalFilename();
+        if (fileName == null) {
+            throw new BadRequestException("获取文件名失败");
+        }
+        final File targetFile = new File(path, fileName);
         file.transferTo(targetFile);
         return file.getName();
     }

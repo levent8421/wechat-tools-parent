@@ -24,4 +24,18 @@ public interface WechatVerifyFileService {
      * @throws IOException e
      */
     String saveFile(MultipartFile file, Integer merchantId) throws IOException;
+
+    /**
+     * 使校验文件生效
+     * 拷贝文件到服务器根目录下
+     *
+     * @param merchantId 商户ID
+     * @param fileName   fileName
+     */
+    void enableFile(Integer merchantId, String fileName);
+
+    /**
+     * 删除拷贝到根目录的过期文件
+     */
+    void cleanFiles();
 }

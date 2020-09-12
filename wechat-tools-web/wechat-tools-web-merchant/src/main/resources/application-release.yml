@@ -2,7 +2,7 @@ server:
   port: 9013
 spring:
   profiles:
-    include: repository,repository-release,web,web-release
+    include: repository,repository-release,web,web-release,resource,resource-release
 logging:
   level:
     com.levent8421.wechat.tools: debug

@@ -1,0 +1,14 @@
+{
+  "properties": [
+    {
+      "name": "static.root-path",
+      "type": "java.lang.String",
+      "description": "static.root-path."
+    },
+    {
+      "name": "static.server",
+      "type": "java.lang.String",
+      "description": "static.server."
+    }
+  ]
+}

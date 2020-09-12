@@ -43,7 +43,7 @@ public class WechatTokenFetchers {
     }
 
     private WechatTokenFetcher findFetcher(Integer strategyCode) {
-        if (fetcherTable.containsKey(strategyCode)) {
+        if (!fetcherTable.containsKey(strategyCode)) {
             throw new IllegalArgumentException("Can not find tokenFetcher for strategyCode " + strategyCode);
         }
         return fetcherTable.get(strategyCode);

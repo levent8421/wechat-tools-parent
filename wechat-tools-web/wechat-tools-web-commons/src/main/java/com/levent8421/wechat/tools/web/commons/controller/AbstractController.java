@@ -2,6 +2,7 @@ package com.levent8421.wechat.tools.web.commons.controller;
 
 import com.levent8421.wechat.tools.web.commons.error.ExceptionHandler;
 import com.levent8421.wechat.tools.web.commons.error.handler.GeneralResultExceptionHandler;
+import org.springframework.web.servlet.ModelAndView;
 
 /**
  * Create By Levent8421
@@ -43,10 +44,21 @@ public abstract class AbstractController {
     /**
      * 重定向视图名称
      *
-     * @param viewName 视图
+     * @param url 视图
      * @return view name
      */
-    protected String redirect(String viewName) {
-        return String.format("redirect:%s", viewName);
+    protected String redirect(String url) {
+        return String.format("redirect:%s", url);
+    }
+
+    /**
+     * 重定向视图
+     *
+     * @param url url
+     * @return MV
+     */
+    protected ModelAndView redirectView(String url) {
+        final String view = redirect(url);
+        return new ModelAndView(view);
     }
 }

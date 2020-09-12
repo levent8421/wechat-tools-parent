@@ -37,5 +37,15 @@
             <artifactId>wechat-tools-model-repository</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
+        <dependency>
+            <groupId>com.levent8421</groupId>
+            <artifactId>wechat-tools-wechat-api</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.levent8421</groupId>
+            <artifactId>wechat-tools-wechat-token</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 </project>

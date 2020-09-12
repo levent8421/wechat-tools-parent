@@ -1,7 +1,7 @@
 package com.levent8421.wechat.tools.web.user.serurity;
 
 import com.auth0.jwt.JWTCreator;
-import com.levent8421.wechat.tools.commons.entity.User;
+import com.levent8421.wechat.tools.commons.entity.WechatUser;
 import com.levent8421.wechat.tools.web.commons.security.jwt.AbstractJwtToken;
 
 /**
@@ -18,9 +18,9 @@ public class UserToken extends AbstractJwtToken {
     public static final String MERCHANT_ID_NAME = "userToken.merchantId";
     public static final String USER_ID_NAME = "userToken.userId";
 
-    private final User user;
+    private final WechatUser user;
 
-    public UserToken(User user, String key, long ttl) {
+    public UserToken(WechatUser user, String key, long ttl) {
         super(key, ttl);
         this.user = user;
     }

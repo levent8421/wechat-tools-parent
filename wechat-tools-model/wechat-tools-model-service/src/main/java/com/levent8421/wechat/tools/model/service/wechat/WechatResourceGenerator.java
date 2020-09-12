@@ -21,7 +21,7 @@ public class WechatResourceGenerator {
     private static final String WECHAT_AUTH_URL_TEMPLATE =
             "https://open.weixin.qq.com/connect/oauth2/authorize?appid=%s&redirect_uri=%s&response_type=code&scope=snsapi_userinfo&state=%s#wechat_redirect";
     private static final String WECHAT_AUTH_REDIRECT_URL_TEMPLATE =
-            "%s/w/auth/%s";
+            "%s/api/w/auth/%s";
     private static final String CHARSET = "UTF-8";
     private final WebsiteConfigurationProperties websiteConfigurationProperties;
 

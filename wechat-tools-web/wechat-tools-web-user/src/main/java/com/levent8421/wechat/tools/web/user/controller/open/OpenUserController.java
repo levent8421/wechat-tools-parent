@@ -1,6 +1,6 @@
 package com.levent8421.wechat.tools.web.user.controller.open;
 
-import com.levent8421.wechat.tools.commons.entity.User;
+import com.levent8421.wechat.tools.commons.entity.WechatUser;
 import com.levent8421.wechat.tools.web.commons.conf.TokenConfiguration;
 import com.levent8421.wechat.tools.web.commons.controller.AbstractApiController;
 import com.levent8421.wechat.tools.web.commons.vo.GeneralResult;
@@ -30,7 +30,7 @@ public class OpenUserController extends AbstractApiController {
 
     @GetMapping("/_test-token")
     public GeneralResult<String> testToken() {
-        final User user = new User();
+        final WechatUser user = new WechatUser();
         user.setMerchantId(1);
         user.setId(1);
         final UserToken token = new UserToken(user, tokenConfiguration.getKey(), tokenConfiguration.getTtl());

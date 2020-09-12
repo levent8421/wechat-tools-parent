@@ -1,11 +1,15 @@
 package com.levent8421.wechat.tools.web.user.view;
 
 import com.levent8421.wechat.tools.commons.exception.InternalServerErrorException;
+import com.levent8421.wechat.tools.commons.utils.CollectionUtils;
 import com.levent8421.wechat.tools.model.service.config.WebsiteConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 /**
  * Create By leven ont 2020/9/11 0:26
@@ -53,6 +57,21 @@ public class ViewNameGenerator {
      */
     public String home() {
         return websiteConfigurationProperties.getBaseUrl();
+    }
+
+    /**
+     * 跳转到主页
+     *
+     * @param params 参数
+     * @return view name
+     */
+    public String home(Map<String, String> params) {
+        final List<String> pairs = new ArrayList<>();
+        for (Map.Entry<String, String> param : params.entrySet()) {
+            pairs.add(param.getKey() + "=" + param.getValue());
+        }
+        final String paramsStr = CollectionUtils.joinAsString(pairs.stream(), "&");
+        return String.format("%s?%s", websiteConfigurationProperties.getBaseUrl(), paramsStr);
     }
 
     private String urlEncode(String str) {

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.levent8421.wechat.tools.model.repository.mapper.WechatUserMapper">
+    <resultMap id="rm_base" type="com.levent8421.wechat.tools.commons.entity.WechatUser"
+               extends="com.levent8421.wechat.tools.model.repository.basic.AbstractMapper.rm_base">
+        <id column="wu_id" property="id"/>
+        <result column="wu_merchant_id" property="merchantId"/>
+        <result column="wu_w_nickname" property="wNickname"/>
+        <result column="wu_w_avatar" property="wAvatar"/>
+        <result column="wu_w_open_id" property="wOpenId"/>
+        <result column="wu_w_union_id" property="wUnionId"/>
+        <result column="wu_w_metadata" property="wMetadata"/>
+        <result column="wu_create_time" property="createTime"/>
+        <result column="wu_update_time" property="updateTime"/>
+        <result column="wu_deleted" property="deleted"/>
+    </resultMap>
+    <sql id="columns">
+        wu.id          as wu_id,
+        wu.merchant_id as wu_merchant_id,
+        wu.w_nickname  as wu_w_nickname,
+        wu.w_avatar    as wu_w_avatar,
+        wu.w_open_id   as wu_w_open_id,
+        wu.w_union_id  as wu_w_union_id,
+        wu.w_metadata  as wu_w_metadata,
+        wu.create_time as wu_create_time,
+        wu.update_time as wu_update_time,
+        wu.deleted     as wu_deleted
+    </sql>
+    <sql id="base_select">
+        select
+        <include refid="columns"/>
+        from t_wechat_user as wu
+        where wu.deleted = false
+    </sql>
+    <select id="selectByOpenId" resultMap="rm_base">
+        <include refid="base_select"/>
+        and wu.w_open_id=#{openId} and wu.merchant_id=#{merchantId}
+    </select>
+
+    <select id="selectByUnionId" resultMap="rm_base">
+        <include refid="base_select"/>
+        and wu.w_union_id=#{unionId} and wu.merchant_id=#{merchantId}
+    </select>
+</mapper>

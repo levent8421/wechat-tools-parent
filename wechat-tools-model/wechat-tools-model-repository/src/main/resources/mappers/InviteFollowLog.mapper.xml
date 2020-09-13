@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.levent8421.wechat.tools.model.repository.mapper.InviteFollowLogMapper">
+    <resultMap id="rm_base" type="com.levent8421.wechat.tools.commons.entity.InviteFollowLog"
+               extends="com.levent8421.wechat.tools.model.repository.basic.AbstractMapper.rm_base">
+        <id column="ifl_id" property="id"/>
+        <result column="ifl_user_id" property="userId"/>
+        <result column="ifl_inviter_id" property="inviterId"/>
+        <result column="ifl_merchant_id" property="merchantId"/>
+        <result column="ifl_stay_focused" property="stayFocused"/>
+        <result column="ifl_create_time" property="createTime"/>
+        <result column="ifl_update_time" property="updateTime"/>
+        <result column="ifl_deleted" property="deleted"/>
+    </resultMap>
+    <sql id="columns">
+        ifl.id           as ifl_id,
+        ifl.user_id      as ifl_user_id,
+        ifl.inviter_id   as ifl_inviter_id,
+        ifl.merchant_id  as ifl_merchant_id,
+        ifl.stay_focused as ifl_stay_focused,
+        ifl.create_time  as ifl_create_time,
+        ifl.update_time  as ifl_update_time,
+        ifl.deleted      as ifl_deleted
+    </sql>
+    <sql id="base_select">
+        select
+        <include refid="columns"/>
+        from t_invite_follow_log as ifl
+        where ifl.deleted = false
+    </sql>
+</mapper>

@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -40,24 +41,6 @@ public class ViewNameGenerator {
                 websiteConfigurationProperties.getBaseUrl(), ERROR_PAGE, urlEncode(message));
     }
 
-    /**
-     * 主页
-     *
-     * @param hash hash router
-     * @return view name
-     */
-    public String home(String hash) {
-        return String.format("%s/#%s", websiteConfigurationProperties.getBaseUrl(), hash);
-    }
-
-    /**
-     * 主页
-     *
-     * @return view name
-     */
-    public String home() {
-        return websiteConfigurationProperties.getBaseUrl();
-    }
 
     /**
      * 跳转到主页
@@ -72,6 +55,20 @@ public class ViewNameGenerator {
         }
         final String paramsStr = CollectionUtils.joinAsString(pairs.stream(), "&");
         return String.format("%s?%s", websiteConfigurationProperties.getBaseUrl(), paramsStr);
+    }
+
+    /**
+     * 进入主页 完成token验证后跳转到next页面
+     *
+     * @param next  next
+     * @param token web token
+     * @return view name
+     */
+    public String to(String next, String token) {
+        final Map<String, String> params = new HashMap<>(16);
+        params.put("next", next);
+        params.put("token", token);
+        return home(params);
     }
 
     private String urlEncode(String str) {

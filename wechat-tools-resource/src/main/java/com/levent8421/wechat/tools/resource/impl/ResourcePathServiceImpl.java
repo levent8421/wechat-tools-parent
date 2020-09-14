@@ -4,6 +4,9 @@ import com.levent8421.wechat.tools.resource.ResourcePathService;
 import com.levent8421.wechat.tools.resource.config.ResourceConfigurationProperties;
 import org.springframework.stereotype.Component;
 
+import java.util.Arrays;
+import java.util.List;
+
 /**
  * Create By Levent8421
  * Create Time: 2020/9/12 19:44
@@ -51,10 +54,22 @@ public class ResourcePathServiceImpl implements ResourcePathService {
         if (paths.length == 1) {
             return paths[0];
         }
-        final String firstPath = paths[0];
+        final List<String> pathLists = Arrays.asList(paths);
+        return joinPath(pathLists);
+    }
+
+    @Override
+    public String joinPath(List<String> paths) {
+        if (paths.size() <= 0) {
+            return "";
+        }
+        if (paths.size() == 1) {
+            return paths.get(0);
+        }
+        final String firstPath = paths.get(0);
         final StringBuilder sb = new StringBuilder(firstPath);
-        for (int i = 1; i < paths.length; i++) {
-            final String path = paths[i];
+        for (int i = 1; i < paths.size(); i++) {
+            final String path = paths.get(i);
             final char lastChar = sb.charAt(sb.length() - 1);
             if (lastChar != DELIMITER) {
                 sb.append(DELIMITER);

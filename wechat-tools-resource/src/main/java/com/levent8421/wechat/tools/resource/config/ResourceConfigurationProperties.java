@@ -29,5 +29,9 @@ public class ResourceConfigurationProperties {
     /**
      * 微信校验文件存放地址
      */
-    private String wechatVerifyFilePath = "/wechat-verify";
+    private String wechatVerifyFilePath = "wechat-verify";
+    /**
+     * 商户LOGO存放路径
+     */
+    private String merchantLogoPath = "merchant/logo";
 }

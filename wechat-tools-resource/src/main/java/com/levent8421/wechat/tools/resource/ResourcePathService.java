@@ -1,5 +1,7 @@
 package com.levent8421.wechat.tools.resource;
 
+import java.util.List;
+
 /**
  * Create By Levent8421
  * Create Time: 2020/9/12 19:39
@@ -46,4 +48,12 @@ public interface ResourcePathService {
      * @return 组合结果
      */
     String joinPath(String... paths);
+
+    /**
+     * Join path as string
+     *
+     * @param paths path list
+     * @return path
+     */
+    String joinPath(List<String> paths);
 }

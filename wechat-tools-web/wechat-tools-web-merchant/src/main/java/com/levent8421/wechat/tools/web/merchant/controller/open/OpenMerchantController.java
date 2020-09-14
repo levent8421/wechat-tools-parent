@@ -3,6 +3,7 @@ package com.levent8421.wechat.tools.web.merchant.controller.open;
 import com.levent8421.wechat.tools.commons.entity.Merchant;
 import com.levent8421.wechat.tools.commons.exception.BadRequestException;
 import com.levent8421.wechat.tools.model.service.general.MerchantService;
+import com.levent8421.wechat.tools.resource.MerchantResourceService;
 import com.levent8421.wechat.tools.web.commons.conf.TokenConfiguration;
 import com.levent8421.wechat.tools.web.commons.controller.AbstractController;
 import com.levent8421.wechat.tools.web.commons.security.vo.TokenAccountVo;
@@ -31,10 +32,14 @@ import static com.levent8421.wechat.tools.web.commons.util.ParamChecker.notNull;
 public class OpenMerchantController extends AbstractController {
     private final MerchantService merchantService;
     private final TokenConfiguration tokenConfiguration;
+    private final MerchantResourceService merchantResourceService;
 
-    public OpenMerchantController(MerchantService merchantService, TokenConfiguration tokenConfiguration) {
+    public OpenMerchantController(MerchantService merchantService,
+                                  TokenConfiguration tokenConfiguration,
+                                  MerchantResourceService merchantResourceService) {
         this.merchantService = merchantService;
         this.tokenConfiguration = tokenConfiguration;
+        this.merchantResourceService = merchantResourceService;
     }
 
     /**
@@ -54,6 +59,7 @@ public class OpenMerchantController extends AbstractController {
         final String password = param.getPassword();
         final Merchant merchant = merchantService.login(loginName, password);
         final String token = buildMerchantToken(merchant);
+        merchantResourceService.resolveStaticPath(merchant);
         final TokenAccountVo<Merchant> res = new TokenAccountVo<>();
         res.setAccount(merchant);
         res.setToken(token);

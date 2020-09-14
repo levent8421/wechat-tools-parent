@@ -1,3 +1,3 @@
 static:
   root-path: D:\\mnt\\wechat-tools-user
-  server: statis.wechat-tools.com
+  server: http://statis.wechat-tools.com

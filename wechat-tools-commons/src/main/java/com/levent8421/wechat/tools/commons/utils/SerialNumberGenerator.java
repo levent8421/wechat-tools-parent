@@ -22,12 +22,10 @@ public class SerialNumberGenerator {
     private final String prefix;
     private final String suffix;
     private final int maxNumber;
-    private final int maxNumberLen;
 
     public SerialNumberGenerator(String prefix, String suffix, int maxNumberLen) {
         this.prefix = prefix;
         this.suffix = suffix;
-        this.maxNumberLen = maxNumberLen;
         this.maxNumber = (int) (Math.pow(10, maxNumberLen) - 1);
         this.numberFormat = buildNumberFormat(maxNumberLen);
     }

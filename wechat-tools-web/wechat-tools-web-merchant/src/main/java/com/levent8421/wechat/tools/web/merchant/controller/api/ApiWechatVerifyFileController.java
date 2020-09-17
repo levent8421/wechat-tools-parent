@@ -4,10 +4,9 @@ import com.levent8421.wechat.tools.commons.exception.BadRequestException;
 import com.levent8421.wechat.tools.commons.exception.InternalServerErrorException;
 import com.levent8421.wechat.tools.model.service.config.WechatConfigurationProperties;
 import com.levent8421.wechat.tools.resource.WechatVerifyFileService;
-import com.levent8421.wechat.tools.web.commons.controller.AbstractController;
 import com.levent8421.wechat.tools.web.commons.security.TokenDataHolder;
 import com.levent8421.wechat.tools.web.commons.vo.GeneralResult;
-import com.levent8421.wechat.tools.web.merchant.security.MerchantToken;
+import com.levent8421.wechat.tools.web.merchant.controller.AbstractMerchantController;
 import com.levent8421.wechat.tools.web.merchant.vo.EnableWechatVerifyFileParam;
 import com.levent8421.wechat.tools.web.merchant.vo.WechatPlatformConfiguration;
 import org.springframework.web.bind.annotation.*;
@@ -31,7 +30,7 @@ import static com.levent8421.wechat.tools.web.commons.util.ParamChecker.notNull;
  */
 @RestController
 @RequestMapping("/api/token/verify-file")
-public class ApiWechatVerifyFileController extends AbstractController {
+public class ApiWechatVerifyFileController extends AbstractMerchantController {
     private final WechatVerifyFileService wechatVerifyFileService;
     private final TokenDataHolder tokenDataHolder;
     private final WechatConfigurationProperties wechatConfigurationProperties;
@@ -52,7 +51,7 @@ public class ApiWechatVerifyFileController extends AbstractController {
      */
     @PutMapping("/")
     public GeneralResult<String> uploadVerifyFile(MultipartFile file) {
-        final Integer merchantId = tokenDataHolder.get(MerchantToken.MERCHANT_ID_KEY, Integer.class);
+        final Integer merchantId = requireCurrentMerchantId(tokenDataHolder);
         try {
             final String fileName = wechatVerifyFileService.saveFile(file, merchantId);
             wechatVerifyFileService.enableFile(merchantId, fileName);
@@ -69,7 +68,7 @@ public class ApiWechatVerifyFileController extends AbstractController {
      */
     @GetMapping("/_wechat-platform")
     public GeneralResult<WechatPlatformConfiguration> wechatPlatformConfiguration() {
-        final Integer merchantId = tokenDataHolder.get(MerchantToken.MERCHANT_ID_KEY, Integer.class);
+        final Integer merchantId = requireCurrentMerchantId(tokenDataHolder);
         final List<String> files = wechatVerifyFileService.files(merchantId);
 
         final WechatPlatformConfiguration configuration = new WechatPlatformConfiguration();
@@ -90,7 +89,7 @@ public class ApiWechatVerifyFileController extends AbstractController {
     public GeneralResult<Void> enableFile(@RequestBody EnableWechatVerifyFileParam param) {
         notNull(param, BadRequestException.class, "参数为空");
         notEmpty(param.getFileName(), BadRequestException.class, "请填写文件名");
-        final Integer merchantId = tokenDataHolder.get(MerchantToken.MERCHANT_ID_KEY, Integer.class);
+        final Integer merchantId = requireCurrentMerchantId(tokenDataHolder);
         wechatVerifyFileService.enableFile(merchantId, param.getFileName());
         return GeneralResult.ok();
     }

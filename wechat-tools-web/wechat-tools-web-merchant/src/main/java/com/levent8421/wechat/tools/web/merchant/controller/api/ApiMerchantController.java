@@ -4,11 +4,10 @@ import com.levent8421.wechat.tools.commons.entity.Merchant;
 import com.levent8421.wechat.tools.commons.exception.BadRequestException;
 import com.levent8421.wechat.tools.model.service.general.MerchantService;
 import com.levent8421.wechat.tools.resource.MerchantResourceService;
-import com.levent8421.wechat.tools.web.commons.controller.AbstractController;
 import com.levent8421.wechat.tools.web.commons.security.TokenDataHolder;
 import com.levent8421.wechat.tools.web.commons.vo.GeneralResult;
 import com.levent8421.wechat.tools.web.commons.vo.ResetPasswordParam;
-import com.levent8421.wechat.tools.web.merchant.security.MerchantToken;
+import com.levent8421.wechat.tools.web.merchant.controller.AbstractMerchantController;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -25,7 +24,7 @@ import static com.levent8421.wechat.tools.web.commons.util.ParamChecker.notNull;
  */
 @RestController
 @RequestMapping("/api/token/merchant")
-public class ApiMerchantController extends AbstractController {
+public class ApiMerchantController extends AbstractMerchantController {
     private final TokenDataHolder tokenDataHolder;
     private final MerchantService merchantService;
     private final MerchantResourceService merchantResourceService;
@@ -38,10 +37,6 @@ public class ApiMerchantController extends AbstractController {
         this.merchantResourceService = merchantResourceService;
     }
 
-    private Merchant currentMerchant() {
-        final Integer merchantId = tokenDataHolder.get(MerchantToken.MERCHANT_ID_KEY, Integer.class);
-        return merchantService.require(merchantId);
-    }
 
     /**
      * 获取当前登录的商户
@@ -50,7 +45,7 @@ public class ApiMerchantController extends AbstractController {
      */
     @GetMapping("/_me")
     public GeneralResult<Merchant> me() {
-        final Merchant merchant = currentMerchant();
+        final Merchant merchant = requireCurrentMerchant(merchantService, tokenDataHolder);
         merchantResourceService.resolveStaticPath(merchant);
         return GeneralResult.ok(merchant);
     }
@@ -89,7 +84,7 @@ public class ApiMerchantController extends AbstractController {
         notEmpty(param.getNewPassword(), error, "请输入新密码");
         notEmpty(param.getPassword(), error, "请输入原密码");
 
-        final Merchant merchant = currentMerchant();
+        final Merchant merchant = requireCurrentMerchant(merchantService, tokenDataHolder);
         merchantService.resetPassword(merchant, param.getPassword(), param.getNewPassword());
         return GeneralResult.ok();
     }
@@ -105,7 +100,7 @@ public class ApiMerchantController extends AbstractController {
         final Class<? extends RuntimeException> error = BadRequestException.class;
         notNull(param, error, "参数为空");
         notEmpty(param.getName(), error, "请输入商户名");
-        final Merchant merchant = currentMerchant();
+        final Merchant merchant = requireCurrentMerchant(merchantService, tokenDataHolder);
         merchant.setName(param.getName());
         final Merchant res = merchantService.updateById(merchant);
         merchantResourceService.resolveStaticPath(res);
@@ -122,7 +117,7 @@ public class ApiMerchantController extends AbstractController {
     public GeneralResult<Merchant> uploadLogoFile(MultipartFile file) {
         notEmpty(file, BadRequestException.class, "文件未上传");
 
-        final Merchant merchant = currentMerchant();
+        final Merchant merchant = requireCurrentMerchant(merchantService, tokenDataHolder);
         final String fileName = merchantResourceService.saveLogo(file);
         merchant.setLogoPath(fileName);
         final Merchant res = merchantService.updateById(merchant);

@@ -3,9 +3,10 @@ package com.levent8421.wechat.tools.web.merchant.controller.api;
 import com.levent8421.wechat.tools.commons.entity.WechatTokenFetchStrategy;
 import com.levent8421.wechat.tools.commons.exception.ResourceNotFoundException;
 import com.levent8421.wechat.tools.model.service.general.WechatTokenFetchStrategyService;
-import com.levent8421.wechat.tools.web.commons.controller.AbstractController;
+import com.levent8421.wechat.tools.web.commons.security.TokenDataHolder;
 import com.levent8421.wechat.tools.web.commons.validate.fetcher.WechatTokenFetcherParamValidators;
 import com.levent8421.wechat.tools.web.commons.vo.GeneralResult;
+import com.levent8421.wechat.tools.web.merchant.controller.AbstractMerchantController;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
@@ -22,24 +23,27 @@ import java.util.Map;
  */
 @RestController
 @RequestMapping("/api/token/token-strategy")
-public class ApiWechatTokenFetchStrategyController extends AbstractController {
+public class ApiWechatTokenFetchStrategyController extends AbstractMerchantController {
     private final WechatTokenFetchStrategyService wechatTokenFetchStrategyService;
     private final WechatTokenFetcherParamValidators wechatTokenFetcherParamValidators;
+    private final TokenDataHolder tokenDataHolder;
 
     public ApiWechatTokenFetchStrategyController(WechatTokenFetchStrategyService wechatTokenFetchStrategyService,
-                                                 WechatTokenFetcherParamValidators wechatTokenFetcherParamValidators) {
+                                                 WechatTokenFetcherParamValidators wechatTokenFetcherParamValidators,
+                                                 TokenDataHolder tokenDataHolder) {
         this.wechatTokenFetchStrategyService = wechatTokenFetchStrategyService;
         this.wechatTokenFetcherParamValidators = wechatTokenFetcherParamValidators;
+        this.tokenDataHolder = tokenDataHolder;
     }
 
     /**
      * 获取指定商户的微信令牌获取策略
      *
-     * @param merchantId 商户ID
      * @return GR
      */
     @GetMapping("/_by-merchant")
-    public GeneralResult<WechatTokenFetchStrategy> findByMerchant(@RequestParam("merchantId") Integer merchantId) {
+    public GeneralResult<WechatTokenFetchStrategy> findByMerchant() {
+        final Integer merchantId = requireCurrentMerchantId(tokenDataHolder);
         final WechatTokenFetchStrategy strategy = wechatTokenFetchStrategyService.findByMerchant(merchantId);
         if (strategy == null) {
             throw new ResourceNotFoundException("策略未配置！");

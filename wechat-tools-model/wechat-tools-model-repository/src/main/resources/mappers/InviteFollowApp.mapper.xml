@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.levent8421.wechat.tools.model.repository.mapper.InviteFollowAppMapper">
+    <resultMap id="rm_base" type="com.levent8421.wechat.tools.commons.entity.InviteFollowApp"
+               extends="com.levent8421.wechat.tools.model.repository.basic.AbstractMapper.rm_base">
+        <id column="ifa_id" property="id"/>
+        <result column="ifa_merchant_id" property="merchantId"/>
+        <result column="ifa_theme_color" property="themeColor"/>
+        <result column="ifa_banner_image" property="bannerImage"/>
+        <result column="ifa_title" property="title"/>
+        <result column="ifa_subtitle" property="subtitle"/>
+        <result column="ifa_footer_text" property="footerText"/>
+        <result column="ifa_button_image" property="buttonImage"/>
+        <result column="ifa_rules_text" property="rulesText"/>
+        <result column="ifa_deadline" property="deadline"/>
+        <result column="ifa_phone_required" property="phoneRequired"/>
+        <result column="ifa_images_json" property="imagesJson"/>
+        <result column="ifa_state" property="state"/>
+        <result column="ifa_default_app" property="defaultApp"/>
+        <result column="ifa_create_time" property="createTime"/>
+        <result column="ifa_update_time" property="updateTime"/>
+        <result column="ifa_deleted" property="deleted"/>
+    </resultMap>
+    <sql id="columns">
+        ifa.id             as ifa_id,
+        ifa.merchant_id    as ifa_merchant_id,
+        ifa.theme_color    as ifa_theme_color,
+        ifa.banner_image   as ifa_banner_image,
+        ifa.title          as ifa_title,
+        ifa.subtitle       as ifa_subtitle,
+        ifa.footer_text    as ifa_footer_text,
+        ifa.button_image   as ifa_button_image,
+        ifa.rules_text     as ifa_rules_text,
+        ifa.deadline       as ifa_deadline,
+        ifa.phone_required as ifa_phone_required,
+        ifa.images_json    as ifa_images_json,
+        ifa.state          as ifa_state,
+        ifa.default_app    as ifa_default_app,
+        ifa.create_time    as ifa_create_time,
+        ifa.update_time    as ifa_update_time,
+        ifa.deleted        as ifa_deleted
+    </sql>
+    <sql id="base_select">
+        select
+        <include refid="columns"/>
+        from t_invite_follow_app as ifa
+        where ifa.deleted = false
+    </sql>
+</mapper>

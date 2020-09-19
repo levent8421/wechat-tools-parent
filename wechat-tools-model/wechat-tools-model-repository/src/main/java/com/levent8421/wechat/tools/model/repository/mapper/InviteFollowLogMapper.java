@@ -2,6 +2,7 @@ package com.levent8421.wechat.tools.model.repository.mapper;
 
 import com.levent8421.wechat.tools.commons.entity.InviteFollowLog;
 import com.levent8421.wechat.tools.model.repository.basic.AbstractMapper;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -16,4 +17,5 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface InviteFollowLogMapper extends AbstractMapper<InviteFollowLog> {
+
 }

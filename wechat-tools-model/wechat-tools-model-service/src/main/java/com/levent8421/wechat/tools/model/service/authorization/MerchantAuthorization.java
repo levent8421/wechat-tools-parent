@@ -12,6 +12,10 @@ package com.levent8421.wechat.tools.model.service.authorization;
  */
 public class MerchantAuthorization {
     /**
+     * 权限名称： 创建邀请关注APP
+     */
+    public static final String AUTH_CREATE_INVITE_FOLLOW_APP = "ifa";
+    /**
      * 允许商户登录
      */
     private Boolean login;

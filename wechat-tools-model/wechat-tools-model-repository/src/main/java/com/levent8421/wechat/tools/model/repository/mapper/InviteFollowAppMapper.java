@@ -2,6 +2,7 @@ package com.levent8421.wechat.tools.model.repository.mapper;
 
 import com.levent8421.wechat.tools.commons.entity.InviteFollowApp;
 import com.levent8421.wechat.tools.model.repository.basic.AbstractMapper;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -17,4 +18,13 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface InviteFollowAppMapper extends AbstractMapper<InviteFollowApp> {
+    /**
+     * 通过商户更新app默认标志
+     *
+     * @param merchantId 商户ID
+     * @param defaultApp 默认标志
+     * @return rows
+     */
+    int updateDefaultAppByMerchant(@Param("merchantId") Integer merchantId,
+                                   @Param("defaultApp") boolean defaultApp);
 }

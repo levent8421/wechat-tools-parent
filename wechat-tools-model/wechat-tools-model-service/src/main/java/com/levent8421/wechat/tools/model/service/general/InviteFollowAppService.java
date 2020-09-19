@@ -1,6 +1,7 @@
 package com.levent8421.wechat.tools.model.service.general;
 
 import com.levent8421.wechat.tools.commons.entity.InviteFollowApp;
+import com.levent8421.wechat.tools.commons.entity.Merchant;
 import com.levent8421.wechat.tools.model.service.basic.AbstractService;
 
 import java.util.List;
@@ -23,4 +24,29 @@ public interface InviteFollowAppService extends AbstractService<InviteFollowApp>
      * @return invite follow apps
      */
     List<InviteFollowApp> findByMerchant(Integer merchantId);
+
+    /**
+     * 创建APP
+     *
+     * @param app      app
+     * @param merchant 商户
+     * @return app
+     */
+    InviteFollowApp createApp(InviteFollowApp app, Merchant merchant);
+
+    /**
+     * 取消商户默认邀请关注应用
+     *
+     * @param merchantId 商户ID
+     */
+    void cancelMerchantDefaultApp(Integer merchantId);
+
+    /**
+     * 设置app是否为默认APP
+     *
+     * @param app        app
+     * @param defaultApp is default
+     * @return App
+     */
+    InviteFollowApp setDefaultAppFlag(InviteFollowApp app, Boolean defaultApp);
 }

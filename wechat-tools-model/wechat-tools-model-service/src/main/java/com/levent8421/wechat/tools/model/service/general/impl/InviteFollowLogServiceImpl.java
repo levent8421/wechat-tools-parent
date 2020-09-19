@@ -4,6 +4,7 @@ import com.levent8421.wechat.tools.commons.entity.InviteFollowLog;
 import com.levent8421.wechat.tools.model.repository.mapper.InviteFollowLogMapper;
 import com.levent8421.wechat.tools.model.service.basic.impl.AbstractServiceImpl;
 import com.levent8421.wechat.tools.model.service.general.InviteFollowLogService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 /**
@@ -15,6 +16,7 @@ import org.springframework.stereotype.Service;
  * @author leven
  */
 @Service
+@Slf4j
 public class InviteFollowLogServiceImpl extends AbstractServiceImpl<InviteFollowLog> implements InviteFollowLogService {
     private final InviteFollowLogMapper inviteFollowLogMapper;
 

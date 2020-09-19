@@ -46,4 +46,10 @@
         from t_invite_follow_app as ifa
         where ifa.deleted = false
     </sql>
+    <update id="updateDefaultAppByMerchant">
+        update t_invite_follow_app as ifa
+        set default_app=#{defaultApp},
+            update_time=now()
+        where ifa.merchant_id = #{merchantId}
+    </update>
 </mapper>

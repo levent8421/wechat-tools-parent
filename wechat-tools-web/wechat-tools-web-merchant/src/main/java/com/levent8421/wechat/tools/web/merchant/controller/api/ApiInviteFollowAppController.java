@@ -6,10 +6,12 @@ import com.levent8421.wechat.tools.commons.exception.BadRequestException;
 import com.levent8421.wechat.tools.model.service.combine.MerchantAppService;
 import com.levent8421.wechat.tools.model.service.general.InviteFollowAppService;
 import com.levent8421.wechat.tools.model.service.general.MerchantService;
+import com.levent8421.wechat.tools.resource.InviteFollowAppResourceService;
 import com.levent8421.wechat.tools.web.commons.security.TokenDataHolder;
 import com.levent8421.wechat.tools.web.commons.vo.GeneralResult;
 import com.levent8421.wechat.tools.web.merchant.controller.AbstractMerchantController;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 import java.util.Objects;
@@ -34,15 +36,18 @@ public class ApiInviteFollowAppController extends AbstractMerchantController {
     private final TokenDataHolder tokenDataHolder;
     private final MerchantService merchantService;
     private final MerchantAppService merchantAppService;
+    private final InviteFollowAppResourceService inviteFollowAppResourceService;
 
     public ApiInviteFollowAppController(InviteFollowAppService inviteFollowAppService,
                                         TokenDataHolder tokenDataHolder,
                                         MerchantService merchantService,
-                                        MerchantAppService merchantAppService) {
+                                        MerchantAppService merchantAppService,
+                                        InviteFollowAppResourceService inviteFollowAppResourceService) {
         this.inviteFollowAppService = inviteFollowAppService;
         this.tokenDataHolder = tokenDataHolder;
         this.merchantService = merchantService;
         this.merchantAppService = merchantAppService;
+        this.inviteFollowAppResourceService = inviteFollowAppResourceService;
     }
 
     /**
@@ -104,5 +109,94 @@ public class ApiInviteFollowAppController extends AbstractMerchantController {
         merchantAppService.cancelMerchantDefaultApp(merchantId);
         final InviteFollowApp resApp = inviteFollowAppService.setDefaultAppFlag(app, param.getDefaultApp());
         return GeneralResult.ok(resApp);
+    }
+
+    /**
+     * Find One App
+     *
+     * @param id id
+     * @return GR
+     */
+    @GetMapping("/{id}")
+    public GeneralResult<InviteFollowApp> findOneApp(@PathVariable("id") Integer id) {
+        final InviteFollowApp app = inviteFollowAppService.require(id);
+        inviteFollowAppResourceService.resolveStaticPath(app);
+        return GeneralResult.ok(app);
+    }
+
+    /**
+     * 设置应用基本信息
+     *
+     * @param id    ID
+     * @param param param
+     * @return GR
+     */
+    @PostMapping("/{id}/_base-info")
+    public GeneralResult<InviteFollowApp> updateAppBaseInfo(@PathVariable("id") Integer id,
+                                                            @RequestBody InviteFollowApp param) {
+        final InviteFollowApp app = inviteFollowAppService.require(id);
+        checkAndCopyUpdateBaseInfoParam(param, app);
+        final InviteFollowApp resApp = inviteFollowAppService.updateById(app);
+        return GeneralResult.ok(resApp);
+    }
+
+    private void checkAndCopyUpdateBaseInfoParam(InviteFollowApp param, InviteFollowApp app) {
+        final Class<? extends RuntimeException> error = BadRequestException.class;
+        notNull(param, error, "No Params!");
+        notEmpty(param.getTitle(), error, "请输入标题");
+        notEmpty(param.getThemeColor(), error, "请选择主题文字");
+
+        app.setTitle(param.getTitle());
+        app.setSubtitle(param.getSubtitle());
+        app.setFooterText(param.getFooterText());
+        app.setThemeColor(param.getThemeColor());
+        app.setRulesText(param.getRulesText());
+        app.setDeadline(param.getDeadline());
+        app.setPhoneRequired(param.getPhoneRequired());
+    }
+
+    /**
+     * 设置顶部图片
+     *
+     * @param id              id
+     * @param bannerImageFile file
+     * @return GR
+     */
+    @PostMapping("/{id}/banner-image")
+    public GeneralResult<InviteFollowApp> setBannerImage(@PathVariable("id") Integer id, MultipartFile bannerImageFile) {
+        notEmpty(bannerImageFile, BadRequestException.class, "未上传图片");
+        final InviteFollowApp app = inviteFollowAppService.require(id);
+        checkPermission(app.getMerchantId());
+        final String imageFileName = inviteFollowAppResourceService.saveBannerImage(bannerImageFile);
+        app.setBannerImage(imageFileName);
+        final InviteFollowApp resApp = inviteFollowAppService.updateById(app);
+        inviteFollowAppResourceService.resolveStaticPath(resApp);
+        return GeneralResult.ok(resApp);
+    }
+
+    /**
+     * 设置抽奖按钮图片
+     *
+     * @param id              id
+     * @param buttonImageFile file
+     * @return GR
+     */
+    @PostMapping("/{id}/button-image")
+    public GeneralResult<InviteFollowApp> setButtonImage(@PathVariable("id") Integer id, MultipartFile buttonImageFile) {
+        notEmpty(buttonImageFile, BadRequestException.class, "未上传图片");
+        final InviteFollowApp app = inviteFollowAppService.require(id);
+        checkPermission(app.getMerchantId());
+        final String imageFileName = inviteFollowAppResourceService.saveButtonImage(buttonImageFile);
+        app.setButtonImage(imageFileName);
+        final InviteFollowApp resApp = inviteFollowAppService.updateById(app);
+        inviteFollowAppResourceService.resolveStaticPath(resApp);
+        return GeneralResult.ok(resApp);
+    }
+
+    private void checkPermission(Integer merchantId) {
+        final Integer myId = requireCurrentMerchantId(tokenDataHolder);
+        if (!Objects.equals(merchantId, myId)) {
+            throw new BadRequestException("您无权操作该应用！");
+        }
     }
 }

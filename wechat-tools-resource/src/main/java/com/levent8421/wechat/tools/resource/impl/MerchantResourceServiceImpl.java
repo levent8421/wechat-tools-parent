@@ -8,8 +8,6 @@ import com.levent8421.wechat.tools.resource.config.ResourceConfigurationProperti
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.io.File;
-
 /**
  * Create By leven ont 2020/9/14 20:39
  * Class Name :[MerchantResourceServiceImpl]
@@ -42,11 +40,6 @@ public class MerchantResourceServiceImpl extends AbstractEntityResourceService<M
 
     @Override
     public String saveLogo(MultipartFile logoFile) {
-        final String path = withRootPath(resourceConfigurationProperties.getMerchantLogoPath());
-        final File pathFile = createPathIfNotExists(path);
-        final String fileName = fileNameGenerator.next() + getExtensions(logoFile.getOriginalFilename());
-        final File targetFile = new File(pathFile, fileName);
-        save(logoFile, targetFile);
-        return fileName;
+        return saveFile(fileNameGenerator, logoFile, resourceConfigurationProperties.getMerchantLogoPath());
     }
 }

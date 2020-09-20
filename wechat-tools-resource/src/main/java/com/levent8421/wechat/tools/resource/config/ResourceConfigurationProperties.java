@@ -34,4 +34,12 @@ public class ResourceConfigurationProperties {
      * 商户LOGO存放路径
      */
     private String merchantLogoPath = "merchant/logo";
+    /**
+     * 关注邀请APP顶部图片存放路径
+     */
+    private String inviteFollowAppBannerImagePath = "invite-follow-app/banner";
+    /**
+     * 关注邀请APP抽奖按钮图片存放路径
+     */
+    private String inviteFollowAppButtonImagePath = "invite-follow-app/button";
 }

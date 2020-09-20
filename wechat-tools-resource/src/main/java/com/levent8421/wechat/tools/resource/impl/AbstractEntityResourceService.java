@@ -2,6 +2,7 @@ package com.levent8421.wechat.tools.resource.impl;
 
 import com.levent8421.wechat.tools.commons.entity.AbstractEntity;
 import com.levent8421.wechat.tools.commons.exception.InternalServerErrorException;
+import com.levent8421.wechat.tools.commons.utils.SerialNumberGenerator;
 import com.levent8421.wechat.tools.resource.EntityResourceService;
 import com.levent8421.wechat.tools.resource.ResourcePathService;
 import org.apache.commons.lang3.StringUtils;
@@ -109,6 +110,45 @@ public abstract class AbstractEntityResourceService<T extends AbstractEntity> im
         } else {
             return "";
         }
+    }
+
+    /**
+     * 生成文件名
+     *
+     * @param generator 文件名称生成器
+     * @param file      文件
+     * @return filename
+     */
+    String nextFilename(SerialNumberGenerator generator, MultipartFile file) {
+        final String ext = getExtensions(file.getOriginalFilename());
+        return generator.next() + ext;
+    }
+
+    /**
+     * 创建目录
+     *
+     * @param paths 目录列表
+     * @return path file
+     */
+    File createPathInRootPath(String... paths) {
+        final String path = withRootPath(paths);
+        return createPathIfNotExists(path);
+    }
+
+    /**
+     * 保存图片
+     *
+     * @param filenameGenerator 文件名称生成器
+     * @param file              文件
+     * @param paths             路径
+     * @return 文件名
+     */
+    String saveFile(SerialNumberGenerator filenameGenerator, MultipartFile file, String... paths) {
+        final File path = createPathInRootPath(paths);
+        final String filename = nextFilename(filenameGenerator, file);
+        final File targetFile = new File(path, filename);
+        save(file, targetFile);
+        return filename;
     }
 
     /**

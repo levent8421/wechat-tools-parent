@@ -1,7 +1,11 @@
 package com.levent8421.wechat.tools.commons.entity;
 
+import com.alibaba.fastjson.annotation.JSONField;
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.levent8421.wechat.tools.commons.context.Datetime;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.Column;
 import javax.persistence.Table;
@@ -81,6 +85,9 @@ public class InviteFollowApp extends AbstractEntity {
      * 截止日期
      */
     @Column(name = "deadline")
+    @JSONField(format = Datetime.DATE_FORMAT)
+    @DateTimeFormat(pattern = Datetime.DATE_FORMAT)
+    @JsonFormat(pattern = Datetime.DATE_FORMAT)
     private Date deadline;
     /**
      * 是否需要输入电话号码

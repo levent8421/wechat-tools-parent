@@ -3,6 +3,7 @@ package com.levent8421.wechat.tools.commons.entity;
 import com.alibaba.fastjson.annotation.JSONField;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.levent8421.wechat.tools.commons.context.Datetime;
+import com.levent8421.wechat.tools.commons.dto.LinkImage;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -10,6 +11,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 import javax.persistence.Column;
 import javax.persistence.Table;
 import java.util.Date;
+import java.util.List;
 
 /**
  * Create By Levent8421
@@ -99,6 +101,10 @@ public class InviteFollowApp extends AbstractEntity {
      */
     @Column(name = "images_json")
     private String imagesJson;
+    /**
+     * 图片列表
+     */
+    private List<LinkImage> images;
     /**
      * APP状态
      */

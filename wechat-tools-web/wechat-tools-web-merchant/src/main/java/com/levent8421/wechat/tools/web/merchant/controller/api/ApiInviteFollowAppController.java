@@ -1,5 +1,7 @@
 package com.levent8421.wechat.tools.web.merchant.controller.api;
 
+import com.alibaba.fastjson.JSON;
+import com.levent8421.wechat.tools.commons.dto.LinkImage;
 import com.levent8421.wechat.tools.commons.entity.InviteFollowApp;
 import com.levent8421.wechat.tools.commons.entity.Merchant;
 import com.levent8421.wechat.tools.commons.exception.BadRequestException;
@@ -198,5 +200,46 @@ public class ApiInviteFollowAppController extends AbstractMerchantController {
         if (!Objects.equals(merchantId, myId)) {
             throw new BadRequestException("您无权操作该应用！");
         }
+    }
+
+    /**
+     * 上传新图片
+     *
+     * @param imageFile image file
+     * @param url       url
+     * @return GR
+     */
+    @PostMapping("/{id}/_append-image")
+    public GeneralResult<InviteFollowApp> appendImage(@PathVariable("id") Integer id,
+                                                      MultipartFile imageFile,
+                                                      @RequestParam("url") String url) {
+        final InviteFollowApp app = inviteFollowAppService.require(id);
+        checkPermission(app.getMerchantId());
+
+        final List<LinkImage> images = inviteFollowAppResourceService.appendImage(app.getImagesJson(), imageFile, url);
+        app.setImagesJson(JSON.toJSONString(images));
+        final InviteFollowApp resApp = inviteFollowAppService.updateById(app);
+        resApp.setImages(images);
+        return GeneralResult.ok(resApp);
+    }
+
+    /**
+     * 删除图片
+     *
+     * @param id    app id
+     * @param index image index
+     * @return GR
+     */
+    @DeleteMapping("/{id}/image")
+    public GeneralResult<InviteFollowApp> removeImage(@PathVariable("id") Integer id,
+                                                      @RequestParam("index") Integer index) {
+        final InviteFollowApp app = inviteFollowAppService.require(id);
+        checkPermission(app.getMerchantId());
+
+        final List<LinkImage> images = inviteFollowAppResourceService.removeImage(app.getImagesJson(), index);
+        app.setImagesJson(JSON.toJSONString(images));
+        final InviteFollowApp resApp = inviteFollowAppService.updateById(app);
+        resApp.setImages(images);
+        return GeneralResult.ok(resApp);
     }
 }

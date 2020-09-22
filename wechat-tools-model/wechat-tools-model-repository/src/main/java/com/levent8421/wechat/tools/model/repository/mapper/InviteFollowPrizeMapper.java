@@ -2,7 +2,10 @@ package com.levent8421.wechat.tools.model.repository.mapper;
 
 import com.levent8421.wechat.tools.commons.entity.InviteFollowPrize;
 import com.levent8421.wechat.tools.model.repository.basic.AbstractMapper;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
+
+import java.util.List;
 
 /**
  * Create By Levent8421
@@ -16,4 +19,21 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface InviteFollowPrizeMapper extends AbstractMapper<InviteFollowPrize> {
+    /**
+     * 查询某APP的奖品总中奖率
+     *
+     * @param appId appId
+     * @return winningRate sum
+     */
+    Integer selectSumWinningRateByApp(@Param("appId") Integer appId);
+
+    /**
+     * 查询某APP的奖品总中奖率，并排除指定奖品
+     *
+     * @param appId           appId
+     * @param excludePrizeIds 排除的奖品ID
+     * @return winning rate sum
+     */
+    Integer selectSumWinningRateByAppWithExclude(@Param("appId") Integer appId,
+                                                 @Param("excludePrizeIds") List<Integer> excludePrizeIds);
 }

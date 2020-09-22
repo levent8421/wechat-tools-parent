@@ -31,4 +31,12 @@ public interface InviteFollowPrizeService extends AbstractService<InviteFollowPr
      * @return prize
      */
     InviteFollowPrize create(InviteFollowPrize prize);
+
+    /**
+     * 更新奖品信息
+     *
+     * @param prize prize
+     * @return 更新结果
+     */
+    InviteFollowPrize updatePrizeInfo(InviteFollowPrize prize);
 }

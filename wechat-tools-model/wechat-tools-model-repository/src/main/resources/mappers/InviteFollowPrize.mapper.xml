@@ -34,4 +34,23 @@
         from t_invite_follow_prize as ifp
         where ifp.deleted = false
     </sql>
+    <select id="selectSumWinningRateByApp" resultType="integer">
+        select sum(ifp.winning_rate) as total_winning_rate
+        from t_invite_follow_prize as ifp
+        where ifp.deleted = false
+          and ifp.invite_follow_app_id = #{appId}
+    </select>
+    <select id="selectSumWinningRateByAppWithExclude" resultType="integer">
+        select sum(ifp.winning_rate) as total_winning_rate
+        from t_invite_follow_prize as ifp
+        where ifp.deleted = false
+        and ifp.invite_follow_app_id = #{appId}
+        <if test="excludePrizeIds.size()>0">
+            and
+            ifp.id not in
+            <foreach collection="excludePrizeIds" item="id" open="(" close=")" separator=",">
+                ${id}
+            </foreach>
+        </if>
+    </select>
 </mapper>

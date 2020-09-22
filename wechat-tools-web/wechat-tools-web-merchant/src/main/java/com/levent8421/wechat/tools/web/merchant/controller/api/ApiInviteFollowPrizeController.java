@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
+import java.util.Objects;
 
 import static com.levent8421.wechat.tools.web.commons.util.ParamChecker.notEmpty;
 import static com.levent8421.wechat.tools.web.commons.util.ParamChecker.notNull;
@@ -111,5 +112,55 @@ public class ApiInviteFollowPrizeController extends AbstractMerchantController {
         prize.setImage(imageFileName);
         final InviteFollowPrize resPrize = inviteFollowPrizeService.updateById(prize);
         return GeneralResult.ok(resPrize);
+    }
+
+    /**
+     * 切换奖品状态
+     *
+     * @param id 奖品ID
+     * @return GR
+     */
+    @PostMapping("/{id}/_toggle-state")
+    public GeneralResult<InviteFollowPrize> toggleState(@PathVariable("id") Integer id) {
+        final InviteFollowPrize prize = inviteFollowPrizeService.require(id);
+        final InviteFollowApp app = inviteFollowAppService.require(prize.getInviteFollowAppId());
+        checkPermission(tokenDataHolder, app.getMerchantId());
+        if (Objects.equals(prize.getState(), InviteFollowPrize.STATE_AVAILABLE)) {
+            prize.setState(InviteFollowPrize.STATE_NOT_AVAILABLE);
+        } else {
+            prize.setState(InviteFollowPrize.STATE_AVAILABLE);
+        }
+        final InviteFollowPrize resPrize = inviteFollowPrizeService.updateById(prize);
+        return GeneralResult.ok(resPrize);
+    }
+
+    /**
+     * 更新奖品基本信息
+     *
+     * @param id    id
+     * @param param param
+     * @return GR
+     */
+    @PostMapping("/{id}")
+    public GeneralResult<InviteFollowPrize> updatePrizeInfo(@PathVariable("id") Integer id,
+                                                            @RequestBody InviteFollowPrize param) {
+        final InviteFollowPrize prize = inviteFollowPrizeService.require(id);
+        final InviteFollowApp app = inviteFollowAppService.require(prize.getInviteFollowAppId());
+        checkPermission(tokenDataHolder, app.getMerchantId());
+        checkAndCopyUpdateParam(param, prize);
+        final InviteFollowPrize resPrize = inviteFollowPrizeService.updatePrizeInfo(prize);
+        return GeneralResult.ok(resPrize);
+    }
+
+    private void checkAndCopyUpdateParam(InviteFollowPrize param, InviteFollowPrize prize) {
+        final Class<BadRequestException> error = BadRequestException.class;
+        notNull(param, error, "No param!");
+        notEmpty(param.getName(), error, "请输入奖品名称");
+        notNull(param.getTotalStock(), error, "请输入奖品数量！");
+        notNull(param.getWinningRate(), error, "请输入奖品中奖率！");
+
+        prize.setName(param.getName());
+        prize.setTotalStock(param.getTotalStock());
+        prize.setWinningRate(param.getWinningRate());
     }
 }

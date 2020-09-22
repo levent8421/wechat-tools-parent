@@ -1,11 +1,13 @@
 package com.levent8421.wechat.tools.model.service.general.impl;
 
 import com.levent8421.wechat.tools.commons.entity.InviteFollowPrize;
+import com.levent8421.wechat.tools.commons.exception.BadRequestException;
 import com.levent8421.wechat.tools.model.repository.mapper.InviteFollowPrizeMapper;
 import com.levent8421.wechat.tools.model.service.basic.impl.AbstractServiceImpl;
 import com.levent8421.wechat.tools.model.service.general.InviteFollowPrizeService;
 import org.springframework.stereotype.Service;
 
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -37,9 +39,25 @@ public class InvitwFollowPrizeServiceImpl extends AbstractServiceImpl<InviteFoll
 
     @Override
     public InviteFollowPrize create(InviteFollowPrize prize) {
+        Integer totalWinningRate = inviteFollowPrizeMapper.selectSumWinningRateByApp(prize.getInviteFollowAppId());
+        totalWinningRate = totalWinningRate == null ? 0 : totalWinningRate;
+        if (totalWinningRate + prize.getWinningRate() > InviteFollowPrize.MAX_WINNING_RATE) {
+            throw new BadRequestException("中奖率总和不能超过[" + InviteFollowPrize.MAX_WINNING_RATE + "]!");
+        }
         prize.setSales(0);
         prize.setState(InviteFollowPrize.STATE_AVAILABLE);
         prize.setImage(DEFAULT_IMAGE);
         return save(prize);
+    }
+
+    @Override
+    public InviteFollowPrize updatePrizeInfo(InviteFollowPrize prize) {
+        Integer totalWinningRate = inviteFollowPrizeMapper.selectSumWinningRateByAppWithExclude(
+                prize.getInviteFollowAppId(), Collections.singletonList(prize.getId()));
+        totalWinningRate = totalWinningRate == null ? 0 : totalWinningRate;
+        if (totalWinningRate + prize.getWinningRate() > InviteFollowPrize.MAX_WINNING_RATE) {
+            throw new BadRequestException("中奖率总和不能超过[" + InviteFollowPrize.MAX_WINNING_RATE + "]!");
+        }
+        return updateById(prize);
     }
 }

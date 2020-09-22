@@ -21,6 +21,10 @@ import javax.persistence.Table;
 @Table(name = "t_invite_follow_prize")
 public class InviteFollowPrize extends AbstractEntity {
     /**
+     * 最大中奖率
+     */
+    public static final int MAX_WINNING_RATE = 100;
+    /**
      * 状态： 可用
      */
     public static final int STATE_AVAILABLE = 0x01;

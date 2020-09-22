@@ -1,8 +1,11 @@
 package com.levent8421.wechat.tools.resource.config;
 
 import lombok.Data;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
+
+import javax.annotation.PostConstruct;
 
 /**
  * Create By Levent8421
@@ -18,6 +21,16 @@ import org.springframework.stereotype.Component;
 @Component
 @ConfigurationProperties(prefix = "static")
 public class ResourceConfigurationProperties {
+    @PostConstruct
+    public void checkConfig() {
+        if (StringUtils.isBlank(rootPath)) {
+            throw new IllegalStateException("Can not find StaticResourceRootPath(static.root-path) config!");
+        }
+        if (StringUtils.isBlank(server)) {
+            throw new IllegalStateException("Can not find StaticResourceServer(static.server) config!");
+        }
+    }
+
     /**
      * 静态资源根目录
      */

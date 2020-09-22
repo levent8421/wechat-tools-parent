@@ -3,3 +3,4 @@ spring:
     name: wechat_admin_application
   profiles:
     active: @activeProfiles@
+    include: repository,web,service,resource

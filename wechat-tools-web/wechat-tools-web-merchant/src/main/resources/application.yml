@@ -3,3 +3,4 @@ spring:
     name: wechat_merchant_application
   profiles:
     active: @activeProfiles@
+    include: repository,web,service,resource

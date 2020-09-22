@@ -67,14 +67,16 @@ public class ResourcePathServiceImpl implements ResourcePathService {
             return paths.get(0);
         }
         final String firstPath = paths.get(0);
-        final StringBuilder sb = new StringBuilder(firstPath);
+        final StringBuilder sb = new StringBuilder(firstPath == null ? "" : firstPath);
         for (int i = 1; i < paths.size(); i++) {
             final String path = paths.get(i);
-            final char lastChar = sb.charAt(sb.length() - 1);
-            if (lastChar != DELIMITER) {
-                sb.append(DELIMITER);
+            if (sb.length() > 0) {
+                final char lastChar = sb.charAt(sb.length() - 1);
+                if (lastChar != DELIMITER) {
+                    sb.append(DELIMITER);
+                }
             }
-            sb.append(path);
+            sb.append(path == null ? "" : path);
         }
         return sb.toString();
     }

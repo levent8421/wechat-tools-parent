@@ -6,6 +6,8 @@ import com.levent8421.wechat.tools.model.service.basic.impl.AbstractServiceImpl;
 import com.levent8421.wechat.tools.model.service.general.InviteFollowPrizeService;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * Create By Levent8421
  * Create Time: 2020/9/21 22:43
@@ -18,10 +20,26 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class InvitwFollowPrizeServiceImpl extends AbstractServiceImpl<InviteFollowPrize> implements InviteFollowPrizeService {
+    private static final String DEFAULT_IMAGE = "default.png";
     private final InviteFollowPrizeMapper inviteFollowPrizeMapper;
 
     public InvitwFollowPrizeServiceImpl(InviteFollowPrizeMapper inviteFollowPrizeMapper) {
         super(inviteFollowPrizeMapper);
         this.inviteFollowPrizeMapper = inviteFollowPrizeMapper;
+    }
+
+    @Override
+    public List<InviteFollowPrize> findByApp(Integer appId) {
+        final InviteFollowPrize query = new InviteFollowPrize();
+        query.setInviteFollowAppId(appId);
+        return findByQuery(query);
+    }
+
+    @Override
+    public InviteFollowPrize create(InviteFollowPrize prize) {
+        prize.setSales(0);
+        prize.setState(InviteFollowPrize.STATE_AVAILABLE);
+        prize.setImage(DEFAULT_IMAGE);
+        return save(prize);
     }
 }

@@ -2,6 +2,7 @@ package com.levent8421.wechat.tools.resource.impl;
 
 import com.levent8421.wechat.tools.commons.entity.AbstractEntity;
 import com.levent8421.wechat.tools.commons.exception.InternalServerErrorException;
+import com.levent8421.wechat.tools.commons.utils.CollectionUtils;
 import com.levent8421.wechat.tools.commons.utils.SerialNumberGenerator;
 import com.levent8421.wechat.tools.resource.EntityResourceService;
 import com.levent8421.wechat.tools.resource.ResourcePathService;
@@ -12,6 +13,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.List;
 
 /**
@@ -162,6 +164,21 @@ public abstract class AbstractEntityResourceService<T extends AbstractEntity> im
             file.transferTo(targetFile);
         } catch (IOException e) {
             throw new InternalServerErrorException("Error on save file [" + targetFile.getAbsolutePath() + "]", e);
+        }
+    }
+
+    @Override
+    public void resolveStaticPath(T entity) {
+
+    }
+
+    @Override
+    public void resolveStaticPath(Collection<T> entities) {
+        if (CollectionUtils.isEmpry(entities)) {
+            return;
+        }
+        for (T entity : entities) {
+            resolveStaticPath(entity);
         }
     }
 }

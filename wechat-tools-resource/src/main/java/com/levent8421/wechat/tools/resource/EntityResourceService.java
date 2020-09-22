@@ -2,6 +2,8 @@ package com.levent8421.wechat.tools.resource;
 
 import com.levent8421.wechat.tools.commons.entity.AbstractEntity;
 
+import java.util.Collection;
+
 /**
  * Create By leven ont 2020/9/14 20:23
  * Class Name :[EntityResourceService]
@@ -19,4 +21,11 @@ public interface EntityResourceService<T extends AbstractEntity> {
      * @param entity 数据对象
      */
     void resolveStaticPath(T entity);
+
+    /**
+     * 处理对象中的资源路径，
+     *
+     * @param entities 数据对象
+     */
+    void resolveStaticPath(Collection<T> entities);
 }

@@ -48,6 +48,13 @@ public class MD5Utils {
         return String.format("%s%s%s", result, SALT_DELIMITER, salt);
     }
 
+    /**
+     * 判断MD5与原文是否匹配
+     *
+     * @param encrypted 加密后的字符串
+     * @param source    原文
+     * @return 是否匹配
+     */
     public static boolean isMatched(String encrypted, String source) {
         if (StringUtils.isBlank(encrypted) || StringUtils.isBlank(source)) {
             return false;

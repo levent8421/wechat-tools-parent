@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.levent8421.wechat.tools.model.repository.mapper.InviteFollowPrizeMapper">
+    <resultMap id="rm_base" type="com.levent8421.wechat.tools.commons.entity.InviteFollowPrize"
+               extends="com.levent8421.wechat.tools.model.repository.basic.AbstractMapper.rm_base">
+        <id column="ifp_id" property="id"/>
+        <result column="ifp_invite_follow_app_id" property="inviteFollowAppId"/>
+        <result column="adm_name" property="name"/>
+        <result column="ifp_image" property="image"/>
+        <result column="ifp_total_stock" property="totalStock"/>
+        <result column="ifp_winning_rate" property="winningRate"/>
+        <result column="ifp_sales" property="sales"/>
+        <result column="ifp_state" property="state"/>
+        <result column="ifp_create_time" property="createTime"/>
+        <result column="ifp_update_time" property="updateTime"/>
+        <result column="ifp_deleted" property="deleted"/>
+    </resultMap>
+    <sql id="columns">
+        ifp.id                   as ifp_id,
+        ifp.invite_follow_app_id as ifp_invite_follow_app_id,
+        ifp.name                 as ifp_name,
+        ifp.image                as ifp_image,
+        ifp.total_stock          as ifp_total_stock,
+        ifp.winning_rate         as ifp_winning_rate,
+        ifp.sales                as ifp_sales,
+        ifp.state                as ifp_state,
+        ifp.create_time          as ifp_create_time,
+        ifp.update_time          as ifp_update_time,
+        ifp.deleted              as ifp_deleted
+    </sql>
+    <sql id="base_select">
+        select
+        <include refid="columns"/>
+        from t_invite_follow_prize as ifp
+        where ifp.deleted = false
+    </sql>
+</mapper>

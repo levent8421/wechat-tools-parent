@@ -42,8 +42,4 @@ public class ResourceConfigurationProperties {
      * 关注邀请APP抽奖按钮图片存放路径
      */
     private String inviteFollowAppButtonImagePath = "invite-follow-app/button";
-    /**
-     * 关注邀请APP 图片文件存放路径
-     */
-    private String inviteFollowAppImagePath = "invite-follow-app/image";
 }

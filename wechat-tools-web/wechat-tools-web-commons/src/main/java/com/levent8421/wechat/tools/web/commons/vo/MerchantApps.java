@@ -1,4 +1,4 @@
-package com.levent8421.wechat.tools.web.merchant.vo;
+package com.levent8421.wechat.tools.web.commons.vo;
 
 import com.levent8421.wechat.tools.commons.entity.InviteFollowApp;
 import lombok.Data;

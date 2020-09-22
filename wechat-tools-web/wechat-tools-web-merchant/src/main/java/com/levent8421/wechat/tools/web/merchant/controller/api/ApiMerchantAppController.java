@@ -5,7 +5,7 @@ import com.levent8421.wechat.tools.model.service.general.InviteFollowAppService;
 import com.levent8421.wechat.tools.web.commons.security.TokenDataHolder;
 import com.levent8421.wechat.tools.web.commons.vo.GeneralResult;
 import com.levent8421.wechat.tools.web.merchant.controller.AbstractMerchantController;
-import com.levent8421.wechat.tools.web.merchant.vo.MerchantApps;
+import com.levent8421.wechat.tools.web.commons.vo.MerchantApps;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

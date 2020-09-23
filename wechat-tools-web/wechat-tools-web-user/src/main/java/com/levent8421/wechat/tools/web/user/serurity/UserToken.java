@@ -15,6 +15,7 @@ import com.levent8421.wechat.tools.web.commons.security.jwt.AbstractJwtToken;
  * @author Levent8421
  */
 public class UserToken extends AbstractJwtToken {
+    public static final long DEFAULT_TTL = 24 * 60 * 60 * 1000;
     public static final String MERCHANT_ID_NAME = "userToken.merchantId";
     public static final String USER_ID_NAME = "userToken.userId";
 
@@ -22,6 +23,11 @@ public class UserToken extends AbstractJwtToken {
 
     public UserToken(WechatUser user, String key, long ttl) {
         super(key, ttl);
+        this.user = user;
+    }
+
+    public UserToken(WechatUser user, String key) {
+        super(key, DEFAULT_TTL);
         this.user = user;
     }
 

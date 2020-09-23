@@ -26,6 +26,10 @@ public class WechatUser extends AbstractEntity {
     @Column(name = "merchant_id", length = 10, nullable = false)
     private Integer merchantId;
     /**
+     * 商户信息
+     */
+    private Merchant merchant;
+    /**
      * 微信昵称
      */
     @Column(name = "w_nickname")

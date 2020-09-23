@@ -1,3 +1,4 @@
 static:
   root-path: D:\\mnt\\wechat-tools-static
   server: http://statis.wechat-tools.com
+  wechat-verify-file-root-path: D:\\mnt\\wechat-tools-user

@@ -29,6 +29,9 @@ public class ResourceConfigurationProperties {
         if (StringUtils.isBlank(server)) {
             throw new IllegalStateException("Can not find StaticResourceServer(static.server) config!");
         }
+        if (StringUtils.isBlank(wechatVerifyFileRootPath)) {
+            throw new IllegalStateException("Can not find WechatVerifyFileRootPath(static.wechat-verify-file-root-path) config!");
+        }
     }
 
     /**
@@ -39,6 +42,10 @@ public class ResourceConfigurationProperties {
      * 静态资源服务器
      */
     private String server;
+    /**
+     * 微信验证文件存放路径
+     */
+    private String wechatVerifyFileRootPath;
     /**
      * 微信校验文件存放地址
      */

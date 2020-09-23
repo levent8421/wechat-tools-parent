@@ -78,8 +78,17 @@ public class WechatVerifyFileServiceImpl implements WechatVerifyFileService {
         if (!srcFile.exists()) {
             throw new BadRequestException("文件[" + srcPath + "]不存在");
         }
-        final String rootPath = resourcePathService.getRootPath();
-        final File destFile = new File(rootPath, fileName);
+        final String rootPath = resourceConfigurationProperties.getWechatVerifyFileRootPath();
+        final File rootPathFile = new File(rootPath);
+        if (!rootPathFile.isDirectory()) {
+            if (rootPathFile.exists()) {
+                throw new InternalServerErrorException("Can not create dir[" + rootPathFile.getAbsolutePath() + "], there is a file with same name");
+            }
+            if (!rootPathFile.mkdirs()) {
+                throw new InternalServerErrorException("Can not create dir [" + rootPathFile.getAbsolutePath() + "]!");
+            }
+        }
+        final File destFile = new File(rootPathFile, fileName);
         try {
             FileUtils.copyFile(srcFile, destFile);
         } catch (IOException e) {

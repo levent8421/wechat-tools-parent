@@ -1,16 +1,13 @@
 package com.levent8421.wechat.tools.web.merchant.controller.api;
 
-import com.levent8421.wechat.tools.commons.entity.InviteFollowApp;
-import com.levent8421.wechat.tools.model.service.general.InviteFollowAppService;
+import com.levent8421.wechat.tools.model.service.combine.MerchantAppService;
+import com.levent8421.wechat.tools.model.service.vo.MerchantApps;
 import com.levent8421.wechat.tools.web.commons.security.TokenDataHolder;
 import com.levent8421.wechat.tools.web.commons.vo.GeneralResult;
 import com.levent8421.wechat.tools.web.merchant.controller.AbstractMerchantController;
-import com.levent8421.wechat.tools.web.commons.vo.MerchantApps;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.List;
 
 /**
  * Create By Levent8421
@@ -25,15 +22,13 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/token/app")
 public class ApiMerchantAppController extends AbstractMerchantController {
-    /**
-     * 转发关注APP相关业务组件
-     */
-    private final InviteFollowAppService inviteFollowAppService;
     private final TokenDataHolder tokenDataHolder;
+    private final MerchantAppService merchantAppService;
 
-    public ApiMerchantAppController(InviteFollowAppService inviteFollowAppService, TokenDataHolder tokenDataHolder) {
-        this.inviteFollowAppService = inviteFollowAppService;
+    public ApiMerchantAppController(TokenDataHolder tokenDataHolder,
+                                    MerchantAppService merchantAppService) {
         this.tokenDataHolder = tokenDataHolder;
+        this.merchantAppService = merchantAppService;
     }
 
     /**
@@ -43,11 +38,7 @@ public class ApiMerchantAppController extends AbstractMerchantController {
      */
     @GetMapping("/")
     public GeneralResult<MerchantApps> myApp() {
-        final Integer merchantId = requireCurrentMerchantId(tokenDataHolder);
-        final List<InviteFollowApp> inviteFollowApps = inviteFollowAppService.findByMerchant(merchantId);
-
-        final MerchantApps merchantApps = new MerchantApps();
-        merchantApps.setInviteFollowApps(inviteFollowApps);
-        return GeneralResult.ok(merchantApps);
+        final MerchantApps apps = merchantAppService.findByMerchant(requireCurrentMerchantId(tokenDataHolder));
+        return GeneralResult.ok(apps);
     }
 }

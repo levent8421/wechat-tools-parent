@@ -4,6 +4,7 @@ import com.levent8421.wechat.tools.commons.entity.Merchant;
 import com.levent8421.wechat.tools.commons.entity.WechatUser;
 import com.levent8421.wechat.tools.model.service.general.MerchantService;
 import com.levent8421.wechat.tools.model.service.general.WechatUserService;
+import com.levent8421.wechat.tools.resource.MerchantResourceService;
 import com.levent8421.wechat.tools.web.commons.security.TokenDataHolder;
 import com.levent8421.wechat.tools.web.commons.vo.GeneralResult;
 import com.levent8421.wechat.tools.web.user.controller.AbstractUserController;
@@ -25,13 +26,16 @@ public class ApiWechatUserController extends AbstractUserController {
     private final WechatUserService wechatUserService;
     private final TokenDataHolder tokenDataHolder;
     private final MerchantService merchantService;
+    private final MerchantResourceService merchantResourceService;
 
     public ApiWechatUserController(WechatUserService wechatUserService,
                                    TokenDataHolder tokenDataHolder,
-                                   MerchantService merchantService) {
+                                   MerchantService merchantService,
+                                   MerchantResourceService merchantResourceService) {
         this.wechatUserService = wechatUserService;
         this.tokenDataHolder = tokenDataHolder;
         this.merchantService = merchantService;
+        this.merchantResourceService = merchantResourceService;
     }
 
     /**
@@ -43,6 +47,7 @@ public class ApiWechatUserController extends AbstractUserController {
     public GeneralResult<WechatUser> currentUser() {
         final WechatUser user = requireUser(tokenDataHolder, wechatUserService);
         final Merchant merchant = merchantService.require(user.getMerchantId());
+        merchantResourceService.resolveStaticPath(merchant);
         user.setMerchant(merchant);
         return GeneralResult.ok(user);
     }

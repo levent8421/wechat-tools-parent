@@ -45,6 +45,7 @@ public class WechatUser extends AbstractEntity {
     @Column(name = "w_open_id", nullable = false)
     private String wOpenId;
     /**
+     * yarn
      * 微信Union ID
      */
     @Column(name = "w_union_id")

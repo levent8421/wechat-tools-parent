@@ -1,5 +1,6 @@
 package com.levent8421.wechat.tools.model.service.general.impl;
 
+import com.levent8421.wechat.tools.commons.context.MerchantAppState;
 import com.levent8421.wechat.tools.commons.entity.InviteFollowApp;
 import com.levent8421.wechat.tools.commons.entity.Merchant;
 import com.levent8421.wechat.tools.commons.exception.BadRequestException;
@@ -53,7 +54,7 @@ public class InviteFollowAppServiceImpl extends AbstractServiceImpl<InviteFollow
     public InviteFollowApp createApp(InviteFollowApp app, Merchant merchant) {
         checkPermission(merchant.getAuthorizationCode());
         app.setButtonImage(DEFAULT_IMAGE_NAME);
-        app.setState(InviteFollowApp.STATE_INIT);
+        app.setState(MerchantAppState.STATE_INIT);
         app.setPhoneRequired(false);
         app.setDefaultApp(false);
         app.setMerchantId(merchant.getId());
@@ -70,5 +71,13 @@ public class InviteFollowAppServiceImpl extends AbstractServiceImpl<InviteFollow
     public InviteFollowApp setDefaultAppFlag(InviteFollowApp app, Boolean defaultApp) {
         app.setDefaultApp(defaultApp);
         return updateById(app);
+    }
+
+    @Override
+    public List<InviteFollowApp> findByMerchantAndState(Integer merchantId, Integer state) {
+        final InviteFollowApp query = new InviteFollowApp();
+        query.setMerchantId(merchantId);
+        query.setState(state);
+        return findByQuery(query);
     }
 }

@@ -49,4 +49,13 @@ public interface InviteFollowAppService extends AbstractService<InviteFollowApp>
      * @return App
      */
     InviteFollowApp setDefaultAppFlag(InviteFollowApp app, Boolean defaultApp);
+
+    /**
+     * Find app by state and merchant
+     *
+     * @param merchantId merchant id
+     * @param state      state  code
+     * @return apps
+     */
+    List<InviteFollowApp> findByMerchantAndState(Integer merchantId, Integer state);
 }

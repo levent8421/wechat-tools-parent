@@ -2,10 +2,12 @@ package com.levent8421.wechat.tools.web.merchant.controller.api;
 
 import com.levent8421.wechat.tools.commons.entity.Merchant;
 import com.levent8421.wechat.tools.commons.exception.BadRequestException;
+import com.levent8421.wechat.tools.model.service.config.WebsiteConfigurationProperties;
 import com.levent8421.wechat.tools.model.service.general.MerchantService;
 import com.levent8421.wechat.tools.resource.MerchantResourceService;
 import com.levent8421.wechat.tools.web.commons.security.TokenDataHolder;
 import com.levent8421.wechat.tools.web.commons.vo.GeneralResult;
+import com.levent8421.wechat.tools.web.commons.vo.QrCodeInfo;
 import com.levent8421.wechat.tools.web.commons.vo.ResetPasswordParam;
 import com.levent8421.wechat.tools.web.merchant.controller.AbstractMerchantController;
 import org.springframework.web.bind.annotation.*;
@@ -28,13 +30,16 @@ public class ApiMerchantController extends AbstractMerchantController {
     private final TokenDataHolder tokenDataHolder;
     private final MerchantService merchantService;
     private final MerchantResourceService merchantResourceService;
+    private final WebsiteConfigurationProperties websiteConfigurationProperties;
 
     public ApiMerchantController(TokenDataHolder tokenDataHolder,
                                  MerchantService merchantService,
-                                 MerchantResourceService merchantResourceService) {
+                                 MerchantResourceService merchantResourceService,
+                                 WebsiteConfigurationProperties websiteConfigurationProperties) {
         this.tokenDataHolder = tokenDataHolder;
         this.merchantService = merchantService;
         this.merchantResourceService = merchantResourceService;
+        this.websiteConfigurationProperties = websiteConfigurationProperties;
     }
 
 
@@ -123,5 +128,23 @@ public class ApiMerchantController extends AbstractMerchantController {
         final Merchant res = merchantService.updateById(merchant);
         merchantResourceService.resolveStaticPath(merchant);
         return GeneralResult.ok(res);
+    }
+
+    /**
+     * 当前商户的二维码
+     *
+     * @return GR
+     */
+    @GetMapping("/_qr-code")
+    public GeneralResult<QrCodeInfo> myQrCode() {
+        final Merchant merchant = getCurrentMerchant(merchantService, tokenDataHolder);
+        final String baseUrl = websiteConfigurationProperties.getBaseUrl();
+        final String sn = merchant.getSn();
+        final String qrCode = merchantResourceService.generateQrCode(baseUrl, sn);
+        final String qrCodeContent = merchantResourceService.getHomeUrl(baseUrl, sn);
+        final QrCodeInfo qrCodeInfo = new QrCodeInfo();
+        qrCodeInfo.setImageUrl(qrCode);
+        qrCodeInfo.setContent(qrCodeContent);
+        return GeneralResult.ok(qrCodeInfo);
     }
 }

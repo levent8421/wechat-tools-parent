@@ -55,6 +55,10 @@ public class ResourceConfigurationProperties {
      */
     private String merchantLogoPath = "merchant/logo";
     /**
+     * 商户二维码保存路径
+     */
+    private String merchantQrCodePath = "merchant/qr";
+    /**
      * 关注邀请APP顶部图片存放路径
      */
     private String inviteFollowAppBannerImagePath = "invite-follow-app/banner";

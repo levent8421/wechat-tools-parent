@@ -25,7 +25,7 @@ import java.io.IOException;
  */
 @Service
 public class MerchantResourceServiceImpl extends AbstractEntityResourceService<Merchant> implements MerchantResourceService {
-    private static final String WECHAT_AUTH_PATH = "/api/w/to-auth/";
+    private static final String WECHAT_AUTH_PATH = "api/w/to-auth/";
     private static final int QR_CODE_WIDTH = 300;
     private static final int QR_CODE_HEIGHT = 300;
     private static final int QR_CODE_MARGIN = 2;

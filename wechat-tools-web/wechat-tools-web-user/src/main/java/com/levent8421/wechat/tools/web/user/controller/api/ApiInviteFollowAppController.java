@@ -9,10 +9,8 @@ import com.levent8421.wechat.tools.resource.InviteFollowPrizeResourceService;
 import com.levent8421.wechat.tools.web.commons.security.TokenDataHolder;
 import com.levent8421.wechat.tools.web.commons.vo.GeneralResult;
 import com.levent8421.wechat.tools.web.user.controller.AbstractUserController;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.levent8421.wechat.tools.web.user.vo.InviteFollowDrawParam;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -57,9 +55,28 @@ public class ApiInviteFollowAppController extends AbstractUserController {
         checkPermissionByMerchant(tokenDataHolder, app.getMerchantId());
 
         inviteFollowAppResourceService.resolveStaticPath(app);
-        final List<InviteFollowPrize> prizes = inviteFollowPrizeService.findByApp(app.getId());
+        final List<InviteFollowPrize> prizes = inviteFollowPrizeService.findAvailableByAppId(app.getId());
         inviteFollowPrizeResourceService.resolveStaticPath(prizes);
         app.setPrizes(prizes);
         return GeneralResult.ok(app);
+    }
+
+    /**
+     * 抽奖
+     *
+     * @param id appId
+     * @return GR
+     */
+    @PostMapping("/{id}/_draw")
+    public GeneralResult<Void> draw(@PathVariable("id") Integer id,
+                                    @RequestBody InviteFollowDrawParam param) {
+        final InviteFollowApp app = inviteFollowAppService.require(id);
+        checkPermissionByMerchant(tokenDataHolder, app.getMerchantId());
+        final List<InviteFollowPrize> prizes = inviteFollowPrizeService.findAvailableByAppId(id);
+        final InviteFollowPrize prize = inviteFollowPrizeService.draw(prizes);
+        if (prize == null) {
+            return GeneralResult.ok();
+        }
+        return GeneralResult.ok();
     }
 }

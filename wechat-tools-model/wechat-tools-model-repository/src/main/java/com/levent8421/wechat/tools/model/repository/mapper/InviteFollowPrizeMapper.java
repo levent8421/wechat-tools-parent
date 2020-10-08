@@ -36,4 +36,21 @@ public interface InviteFollowPrizeMapper extends AbstractMapper<InviteFollowPriz
      */
     Integer selectSumWinningRateByAppWithExclude(@Param("appId") Integer appId,
                                                  @Param("excludePrizeIds") List<Integer> excludePrizeIds);
+
+    /**
+     * 查询科用的奖品（by appId）
+     *
+     * @param appId appId
+     * @return prizes
+     */
+    List<InviteFollowPrize> selectAvailableByAppId(@Param("appId") Integer appId);
+
+    /**
+     * 减库存
+     *
+     * @param id prize id
+     * @param ct 数量
+     * @return rows
+     */
+    Integer countDownStock(@Param("id") Integer id, @Param("ct") Integer ct);
 }

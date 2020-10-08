@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.levent8421.wechat.tools.model.repository.mapper.InviteFollowDrawMapper">
+    <resultMap id="rm_base" type="com.levent8421.wechat.tools.commons.entity.InviteFollowDraw"
+               extends="com.levent8421.wechat.tools.model.repository.basic.AbstractMapper.rm_base">
+        <id column="ifd_id" property="id"/>
+        <result column="ifd_invite_follow_app_id" property="inviteFollowAppId"/>
+        <result column="ifd_wechat_user_id" property="wechatUserId"/>
+        <result column="ifd_state" property="state"/>
+        <result column="ifd_prize_id" property="prizeId"/>
+        <result column="ifd_phone" property="phone"/>
+        <result column="ifd_create_time" property="createTime"/>
+        <result column="ifd_update_time" property="updateTime"/>
+        <result column="ifd_deleted" property="deleted"/>
+    </resultMap>
+    <sql id="columns">
+        ifd.id                   as ifd_id,
+        ifd.invite_follow_app_id as ifd_invite_follow_app_id,
+        ifd.wechat_user_id       as ifd_wechat_user_id,
+        ifd.state                as ifd_state,
+        ifd.prize_id             as ifd_prize_id,
+        ifd.phone                as ifd_phone,
+        ifd.create_time          as ifd_create_time,
+        ifd.update_time          as ifd_update_time,
+        ifd.deleted              as ifd_deleted
+    </sql>
+    <sql id="base_select">
+        select
+        <include refid="columns"/>
+        from t_invite_follow_draw as ifd
+        where ifd.deleted = false
+    </sql>
+</mapper>

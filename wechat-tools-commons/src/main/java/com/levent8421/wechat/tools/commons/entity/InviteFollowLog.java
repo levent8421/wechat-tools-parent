@@ -31,6 +31,11 @@ public class InviteFollowLog extends AbstractEntity {
     @Column(name = "invite_id", length = 10, nullable = false)
     private Integer inviterId;
     /**
+     * 抽奖应用ID
+     */
+    @Column(name = "app_id", length = 10, nullable = false)
+    private Integer appId;
+    /**
      * 商户ID
      */
     @Column(name = "merchant_id", length = 10, nullable = false)

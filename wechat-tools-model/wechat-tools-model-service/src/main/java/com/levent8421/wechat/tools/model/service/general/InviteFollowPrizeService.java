@@ -3,6 +3,7 @@ package com.levent8421.wechat.tools.model.service.general;
 import com.levent8421.wechat.tools.commons.entity.InviteFollowPrize;
 import com.levent8421.wechat.tools.model.service.basic.AbstractService;
 
+import java.util.Collection;
 import java.util.List;
 
 /**
@@ -39,4 +40,20 @@ public interface InviteFollowPrizeService extends AbstractService<InviteFollowPr
      * @return 更新结果
      */
     InviteFollowPrize updatePrizeInfo(InviteFollowPrize prize);
+
+    /**
+     * 抽奖
+     *
+     * @param prizes 奖品列表
+     * @return 中奖奖品
+     */
+    InviteFollowPrize draw(Collection<InviteFollowPrize> prizes);
+
+    /**
+     * 查询可用奖品 by appId
+     *
+     * @param appId appId
+     * @return prizes
+     */
+    List<InviteFollowPrize> findAvailableByAppId(Integer appId);
 }

@@ -5,7 +5,7 @@
                extends="com.levent8421.wechat.tools.model.repository.basic.AbstractMapper.rm_base">
         <id column="ifp_id" property="id"/>
         <result column="ifp_invite_follow_app_id" property="inviteFollowAppId"/>
-        <result column="adm_name" property="name"/>
+        <result column="ifp_name" property="name"/>
         <result column="ifp_image" property="image"/>
         <result column="ifp_total_stock" property="totalStock"/>
         <result column="ifp_winning_rate" property="winningRate"/>
@@ -53,4 +53,13 @@
             </foreach>
         </if>
     </select>
+    <select id="selectAvailableByAppId" resultMap="rm_base">
+        <include refid="base_select"/>
+        and (ifp.invite_follow_app_id=#{appId} and ifp.total_stock>0 and ifp.state=1)
+    </select>
+    <update id="countDownStock">
+        update t_invite_follow_prize as ifp
+        set ifp.total_stock=ifp.total_stock - #{ct}
+        where ifp.id = #{id}
+    </update>
 </mapper>

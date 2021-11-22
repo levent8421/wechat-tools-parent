@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.levent8421.wechat.tools.model.repository.mapper.SuperCtlDeviceMapper">
+    <resultMap id="rm_base" type="com.levent8421.wechat.tools.commons.entity.SuperCtlDevice"
+               extends="com.levent8421.wechat.tools.model.repository.basic.AbstractMapper.rm_base">
+        <id column="sc_d_id" property="id"/>
+        <result column="sc_d_wechat_user_id" property="wechatUserId"/>
+        <result column="sc_d_device_name" property="deviceName"/>
+        <result column="sc_d_address" property="address"/>
+        <result column="sc_d_last_heartbeat_time" property="lastHeartbeatTime"/>
+        <result column="sc_d_status_json" property="statusJson"/>
+        <result column="sc_d_create_time" property="createTime"/>
+        <result column="sc_d_update_time" property="updateTime"/>
+        <result column="sc_d_deleted" property="deleted"/>
+    </resultMap>
+    <sql id="columns">
+        sc_d.id                  as sc_d_id,
+        sc_d.wechat_user_id      as sc_d_wechat_user_id,
+        sc_d.device_name         as sc_d_device_name,
+        sc_d.address             as sc_d_address,
+        sc_d.last_heartbeat_time as sc_d_last_heartbeat_time,
+        sc_d.status_json         as sc_d_status_json,
+        sc_d.create_time         as sc_d_create_time,
+        sc_d.update_time         as sc_d_update_time,
+        sc_d.deleted             as sc_d_deleted
+    </sql>
+    <sql id="base_select">
+        select
+        <include refid="columns"/>
+        from t_super_ctl_device as sc_d
+        where sc_d.deleted = false
+    </sql>
+</mapper>

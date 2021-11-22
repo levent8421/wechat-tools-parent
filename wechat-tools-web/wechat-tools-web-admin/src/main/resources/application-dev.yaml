@@ -1,5 +1,5 @@
 server:
-  port: 9012
+  port: 9013
 spring:
   profiles:
     include: repository-dev,web-dev,service-dev,resource-dev

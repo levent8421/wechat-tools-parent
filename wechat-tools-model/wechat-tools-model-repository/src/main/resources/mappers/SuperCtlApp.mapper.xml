@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.levent8421.wechat.tools.model.repository.mapper.SuperCtlAppMapper">
+    <resultMap id="rm_base" type="com.levent8421.wechat.tools.commons.entity.SuperCtlApp"
+               extends="com.levent8421.wechat.tools.model.repository.basic.AbstractMapper.rm_base">
+        <id column="sc_app_id" property="id"/>
+        <result column="sc_app_merchant_id" property="merchantId"/>
+        <result column="sc_app_app_name" property="appName"/>
+        <result column="sc_app_description" property="description"/>
+        <result column="sc_app_expire_time" property="expireTime"/>
+        <result column="sc_app_create_time" property="createTime"/>
+        <result column="sc_app_update_time" property="updateTime"/>
+        <result column="sc_app_deleted" property="deleted"/>
+    </resultMap>
+    <sql id="columns">
+        sc_app.id          as sc_app_id,
+        sc_app.merchant_id as sc_app_merchant_id,
+        sc_app.app_name    as sc_app_app_name,
+        sc_app.description as sc_app_description,
+        sc_app.expire_time as sc_app_expire_time,
+        sc_app.create_time as sc_app_create_time,
+        sc_app.update_time as sc_app_update_time,
+        sc_app.deleted     as sc_app_deleted
+    </sql>
+    <sql id="base_select">
+        select
+        <include refid="columns"/>
+        from t_super_ctl_app as sc_app
+        where deleted = false
+    </sql>
+</mapper>

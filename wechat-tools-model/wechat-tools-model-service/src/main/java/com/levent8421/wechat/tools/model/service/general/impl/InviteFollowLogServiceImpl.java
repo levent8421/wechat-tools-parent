@@ -40,7 +40,7 @@ public class InviteFollowLogServiceImpl extends AbstractServiceImpl<InviteFollow
         inviteFollowLog.setAppId(app.getId());
         inviteFollowLog.setStayFocused(true);
         if (prize != null) {
-            inviteFollowLog.setPrizeId(prize.getId());
+//            inviteFollowLog.setPrizeId(prize.getId());
         }
         return save(inviteFollowLog);
     }

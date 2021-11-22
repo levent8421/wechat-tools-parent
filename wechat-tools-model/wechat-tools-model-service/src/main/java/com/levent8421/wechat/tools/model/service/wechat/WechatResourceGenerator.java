@@ -20,8 +20,7 @@ import java.net.URLEncoder;
 public class WechatResourceGenerator {
     private static final String WECHAT_AUTH_URL_TEMPLATE =
             "https://open.weixin.qq.com/connect/oauth2/authorize?appid=%s&redirect_uri=%s&response_type=code&scope=snsapi_userinfo&state=%s#wechat_redirect";
-    private static final String WECHAT_AUTH_REDIRECT_URL_TEMPLATE =
-            "%s/api/w/auth/%s";
+    private static final String WECHAT_AUTH_REDIRECT_URL_TEMPLATE = "%s/api/w/auth/%s";
     private static final String CHARSET = "UTF-8";
     private final WebsiteConfigurationProperties websiteConfigurationProperties;
 
@@ -56,8 +55,8 @@ public class WechatResourceGenerator {
      * @return redirect uri
      */
     private String generateWechatAuthRedirectUrl(Merchant merchant) {
-        final String websizeBaseUrl = websiteConfigurationProperties.getBaseUrl();
-        return String.format(WECHAT_AUTH_REDIRECT_URL_TEMPLATE, websizeBaseUrl, merchant.getSn());
+        final String websiteBaseUrl = websiteConfigurationProperties.getBaseUrl();
+        return String.format(WECHAT_AUTH_REDIRECT_URL_TEMPLATE, websiteBaseUrl, merchant.getSn());
     }
 
     private void checkWechatConfiguration(Merchant merchant) throws WechatResourceException {

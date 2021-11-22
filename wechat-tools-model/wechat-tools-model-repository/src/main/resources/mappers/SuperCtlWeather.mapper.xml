@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.levent8421.wechat.tools.model.repository.mapper.SuperCtlWeatherMapper">
+    <resultMap id="rm_base" type="com.levent8421.wechat.tools.commons.entity.SuperCtlWeather"
+               extends="com.levent8421.wechat.tools.model.repository.basic.AbstractMapper.rm_base">
+        <id column="sc_w_id" property="id"/>
+        <result column="sc_w_address" property="address"/>
+        <result column="sc_w_title" property="title"/>
+        <result column="sc_w_temperature" property="temperature"/>
+        <result column="sc_w_humidity" property="humidity"/>
+        <result column="sc_w_in_rain" property="inRain"/>
+        <result column="sc_w_ext_info" property="extInfo"/>
+        <result column="sc_w_last_refresh_time" property="lastRefreshTime"/>
+        <result column="sc_w_create_time" property="createTime"/>
+        <result column="sc_w_update_time" property="updateTime"/>
+        <result column="sc_w_deleted" property="deleted"/>
+    </resultMap>
+    <sql id="columns">
+        sc_w.id                as sc_w_id,
+        sc_w.address           as sc_w_address,
+        sc_w.title             as sc_w_title,
+        sc_w.temperature       as sc_w_temperature,
+        sc_w.humidity          as sc_w_humidity,
+        sc_w.in_rain           as sc_w_in_rain,
+        sc_w.ext_info          as sc_w_ext_info,
+        sc_w.last_refresh_time as sc_w_last_refresh_time,
+        sc_w.create_time       as sc_w_create_time,
+        sc_w.update_time       as sc_w_update_time,
+        sc_w.deleted           as sc_w_deleted
+    </sql>
+    <sql id="base_select">
+        select
+        <include refid="columns"/>
+        from t_super_ctl_weather sc_w
+        where sc_w.deleted = false
+    </sql>
+</mapper>

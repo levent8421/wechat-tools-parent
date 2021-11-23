@@ -2,7 +2,8 @@ package com.levent8421.wechat.tools.model.service.general;
 
 import com.levent8421.wechat.tools.commons.entity.SuperCtlDevice;
 import com.levent8421.wechat.tools.model.service.basic.AbstractService;
-import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
  * Create by Levent8421
@@ -14,5 +15,11 @@ import org.springframework.stereotype.Service;
  * @author levent8421
  */
 public interface SuperCtlDeviceService extends AbstractService<SuperCtlDevice> {
-
+    /**
+     * Find device by uid
+     *
+     * @param uid uid
+     * @return devices
+     */
+    List<SuperCtlDevice> findByUser(Integer uid);
 }

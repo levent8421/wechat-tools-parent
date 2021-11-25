@@ -1,5 +1,7 @@
 package com.levent8421.wechat.tools.model.service.authorization;
 
+import org.springframework.beans.BeanUtils;
+
 /**
  * Create By Levent8421
  * Create Time: 2020/9/8 16:17

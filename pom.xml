@@ -25,6 +25,7 @@
         <module>wechat-tools-wechat</module>
         <module>wechat-tools-cache</module>
         <module>wechat-tools-resource</module>
+        <module>wechat-tools-message</module>
     </modules>
     <profiles>
         <profile>

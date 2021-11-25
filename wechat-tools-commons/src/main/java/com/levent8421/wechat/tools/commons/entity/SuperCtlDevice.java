@@ -21,6 +21,11 @@ import java.util.Date;
 @Data
 public class SuperCtlDevice extends AbstractEntity {
     /**
+     * 序列号
+     */
+    @Column(name = "sn", nullable = false)
+    private String sn;
+    /**
      * 微信用户ID
      */
     @Column(name = "wechat_user_id", length = 10, nullable = false)

@@ -4,6 +4,7 @@
     <resultMap id="rm_base" type="com.levent8421.wechat.tools.commons.entity.SuperCtlDevice"
                extends="com.levent8421.wechat.tools.model.repository.basic.AbstractMapper.rm_base">
         <id column="sc_d_id" property="id"/>
+        <result column="sc_d_sn" property="sn"/>
         <result column="sc_d_wechat_user_id" property="wechatUserId"/>
         <result column="sc_d_device_name" property="deviceName"/>
         <result column="sc_d_address" property="address"/>
@@ -15,6 +16,7 @@
     </resultMap>
     <sql id="columns">
         sc_d.id                  as sc_d_id,
+        sc_d.sn                  as sc_d_sn,
         sc_d.wechat_user_id      as sc_d_wechat_user_id,
         sc_d.device_name         as sc_d_device_name,
         sc_d.address             as sc_d_address,

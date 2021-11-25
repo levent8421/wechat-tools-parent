@@ -3,6 +3,7 @@ drop table if exists t_super_ctl_device;
 create table t_super_ctl_device
 (
     id                  int(10)      not null auto_increment primary key,
+    sn                  varchar(255) not null,
     wechat_user_id      int(10)      not null,
     device_name         varchar(255) not null,
     address             varchar(255) null,
@@ -17,6 +18,7 @@ create table t_super_ctl_device
 
 
 select sc_d.id                  as sc_d_id,
+       sc_d.sn                  as sc_d_sn,
        sc_d.wechat_user_id      as sc_d_wechat_user_id,
        sc_d.device_name         as sc_d_device_name,
        sc_d.address             as sc_d_address,

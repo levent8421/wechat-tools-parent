@@ -1,8 +1,9 @@
 package com.levent8421.wechat.tools.model.service.general;
 
 import com.levent8421.wechat.tools.commons.entity.SuperCtlAction;
+import com.levent8421.wechat.tools.commons.entity.SuperCtlDevice;
+import com.levent8421.wechat.tools.model.service.app.sc.SuperCtlDeviceStatus;
 import com.levent8421.wechat.tools.model.service.basic.AbstractService;
-import org.springframework.stereotype.Service;
 
 /**
  * Create by Levent8421
@@ -14,5 +15,12 @@ import org.springframework.stereotype.Service;
  * @author levent8421
  */
 public interface SuperCtlActionService extends AbstractService<SuperCtlAction> {
-
+    /**
+     * 发送控制指令
+     *
+     * @param device       device
+     * @param targetStatus status
+     * @return action
+     */
+    SuperCtlAction sendAction(SuperCtlDevice device, SuperCtlDeviceStatus targetStatus);
 }

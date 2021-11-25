@@ -3,18 +3,22 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>wechat-tools-web</artifactId>
+        <artifactId>wechat-tools-message</artifactId>
         <groupId>com.levent8421</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>wechat-tools-web-user</artifactId>
+    <artifactId>wechat-tools-message-mqtt</artifactId>
 
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+    </properties>
     <dependencies>
         <dependency>
             <groupId>com.levent8421</groupId>
-            <artifactId>wechat-tools-web-commons</artifactId>
+            <artifactId>wechat-tools-commons</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>
@@ -22,27 +26,16 @@
             <artifactId>lombok</artifactId>
             <optional>true</optional>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.eclipse.paho/org.eclipse.paho.client.mqttv3 -->
         <dependency>
-            <groupId>com.levent8421</groupId>
-            <artifactId>wechat-tools-wechat-token</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <groupId>org.eclipse.paho</groupId>
+            <artifactId>org.eclipse.paho.client.mqttv3</artifactId>
+            <version>1.2.5</version>
         </dependency>
         <dependency>
             <groupId>com.levent8421</groupId>
-            <artifactId>wechat-tools-message-mqtt</artifactId>
+            <artifactId>wechat-tools-message-api</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
     </dependencies>
-    <build>
-        <finalName>wechat-tools-web-user</finalName>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <includeSystemScope>true</includeSystemScope>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
 </project>

@@ -38,4 +38,11 @@
         from t_super_ctl_action as sc_a
         where sc_a.deleted = false
     </sql>
+    <update id="updateState">
+        update t_super_ctl_action
+        set state_code=#{state},
+            response_msg=#{msg},
+            complete_time=#{completeTime}
+        where id = #{id}
+    </update>
 </mapper>

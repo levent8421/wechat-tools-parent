@@ -1,4 +1,4 @@
-package com.levent8421.wechat.tools.model.service.app.sc;
+package com.levent8421.wechat.tools.model.service.app.sc.define;
 
 /**
  * Create by Levent8421

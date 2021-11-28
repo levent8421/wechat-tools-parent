@@ -1,4 +1,4 @@
-package com.levent8421.wechat.tools.model.service.app.sc;
+package com.levent8421.wechat.tools.model.service.app.sc.define;
 
 import lombok.Data;
 
@@ -13,6 +13,8 @@ import lombok.Data;
  */
 @Data
 public class SuperCtlDeviceStatus {
+    public static final int MOTOR1 = 1;
+    public static final int MOTOR2 = 2;
     private String motor1;
     private String motor2;
 }

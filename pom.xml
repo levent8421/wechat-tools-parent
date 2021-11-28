@@ -26,6 +26,7 @@
         <module>wechat-tools-cache</module>
         <module>wechat-tools-resource</module>
         <module>wechat-tools-message</module>
+        <module>wechat-tools-weather</module>
     </modules>
     <profiles>
         <profile>

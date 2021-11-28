@@ -5,15 +5,19 @@ import lombok.Data;
 
 /**
  * Create by Levent8421
- * Date: 2021/11/25 18:04
- * ClassName: SuperCtlStateCtlParam
+ * Date: 2021/11/28 17:56
+ * ClassName: ActionDoneReportParam
  * Description:
- * SuperCtl 状态控制参数
+ * Action done
  *
  * @author levent8421
  */
 @Data
-public class SuperCtlStateCtlParam {
-    private Integer deviceId;
+public class ActionDoneReportParam {
+    private String msg;
     private SuperCtlDeviceStatus status;
 }
+/*
+* P4TEggMi8RIF07xOK
+* SE5ogdcX7Idz3djCO
+* */

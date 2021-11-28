@@ -3,7 +3,7 @@ package com.levent8421.wechat.tools.web.user.controller.api;
 import com.levent8421.wechat.tools.commons.entity.SuperCtlAction;
 import com.levent8421.wechat.tools.commons.entity.SuperCtlDevice;
 import com.levent8421.wechat.tools.commons.exception.BadRequestException;
-import com.levent8421.wechat.tools.model.service.app.sc.SuperCtlDeviceStatus;
+import com.levent8421.wechat.tools.model.service.app.sc.define.SuperCtlDeviceStatus;
 import com.levent8421.wechat.tools.model.service.general.SuperCtlActionService;
 import com.levent8421.wechat.tools.model.service.general.SuperCtlDeviceService;
 import com.levent8421.wechat.tools.web.commons.controller.AbstractApiController;

@@ -1,4 +1,4 @@
-package com.levent8421.wechat.tools.model.service.app.sc;
+package com.levent8421.wechat.tools.model.service.app.sc.define;
 
 /**
  * Create by Levent8421
@@ -14,4 +14,5 @@ public class SuperCtlActionStatus {
     public static final String STATE_FAIL = "fail";
     public static final String STATE_TIMEOUT = "timeout";
     public static final String STATE_SUCCESS = "success";
+    public static final String STATE_CONFLICT = "conflict";
 }

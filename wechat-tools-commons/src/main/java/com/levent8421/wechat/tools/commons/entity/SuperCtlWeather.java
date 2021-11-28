@@ -6,6 +6,7 @@ import lombok.EqualsAndHashCode;
 import javax.persistence.Column;
 import javax.persistence.Table;
 import java.math.BigDecimal;
+import java.util.Date;
 
 /**
  * Create by Levent8421
@@ -44,7 +45,7 @@ public class SuperCtlWeather extends AbstractEntity {
      * 是否有雨
      */
     @Column(name = "in_rain", length = 1, nullable = false)
-    private String inRain;
+    private Boolean inRain;
     /**
      * 其他信息
      */
@@ -54,5 +55,5 @@ public class SuperCtlWeather extends AbstractEntity {
      * 最后一次刷新时间
      */
     @Column(name = "last_refresh_time")
-    private String lastRefreshTime;
+    private Date lastRefreshTime;
 }

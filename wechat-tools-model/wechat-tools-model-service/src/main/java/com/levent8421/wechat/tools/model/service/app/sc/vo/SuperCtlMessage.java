@@ -1,4 +1,4 @@
-package com.levent8421.wechat.tools.model.service.app.sc;
+package com.levent8421.wechat.tools.model.service.app.sc.vo;
 
 import lombok.Data;
 

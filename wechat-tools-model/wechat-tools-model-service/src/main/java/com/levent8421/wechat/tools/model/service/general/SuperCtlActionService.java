@@ -2,8 +2,9 @@ package com.levent8421.wechat.tools.model.service.general;
 
 import com.levent8421.wechat.tools.commons.entity.SuperCtlAction;
 import com.levent8421.wechat.tools.commons.entity.SuperCtlDevice;
-import com.levent8421.wechat.tools.model.service.app.sc.SuperCtlDeviceStatus;
+import com.levent8421.wechat.tools.model.service.app.sc.define.SuperCtlDeviceStatus;
 import com.levent8421.wechat.tools.model.service.basic.AbstractService;
+import com.levent8421.wechat.tools.model.service.general.listener.SuperCtlActionCompleteListener;
 
 /**
  * Create by Levent8421
@@ -23,4 +24,28 @@ public interface SuperCtlActionService extends AbstractService<SuperCtlAction> {
      * @return action
      */
     SuperCtlAction sendAction(SuperCtlDevice device, SuperCtlDeviceStatus targetStatus);
+
+    /**
+     * 通知操作超时
+     *
+     * @param id        id
+     * @param awaitTime 等待时间
+     */
+    void notifyActionTimeout(Integer id, long awaitTime);
+
+    /**
+     * 监听action完成
+     *
+     * @param listener listener
+     */
+    void setActionCompleteListener(SuperCtlActionCompleteListener listener);
+
+    /**
+     * Mark action down
+     *
+     * @param id     id
+     * @param msg    msg
+     * @param status status
+     */
+    void reportActionDone(Integer id, String msg, SuperCtlDeviceStatus status);
 }

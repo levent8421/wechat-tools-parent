@@ -10,6 +10,7 @@ create table t_super_ctl_weather
     in_rain           bit(1)         not null,
     ext_info          text           null,
     last_refresh_time datetime       null,
+    need_refresh      bit(1)         not null,
     create_time       datetime       not null,
     update_time       datetime       not null,
     deleted           bit(1)         not null
@@ -26,6 +27,7 @@ select sc_w.id                as sc_w_id,
        sc_w.in_rain           as sc_w_in_rain,
        sc_w.ext_info          as sc_w_ext_info,
        sc_w.last_refresh_time as sc_w_last_refresh_time,
+       sc_w.need_refresh      as sc_w_need_refresh,
        sc_w.create_time       as sc_w_create_time,
        sc_w.update_time       as sc_w_update_time,
        sc_w.deleted           as sc_w_deleted

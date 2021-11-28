@@ -11,6 +11,7 @@
         <result column="sc_w_in_rain" property="inRain"/>
         <result column="sc_w_ext_info" property="extInfo"/>
         <result column="sc_w_last_refresh_time" property="lastRefreshTime"/>
+        <result column="sc_w_need_refresh" property="needRefresh"/>
         <result column="sc_w_create_time" property="createTime"/>
         <result column="sc_w_update_time" property="updateTime"/>
         <result column="sc_w_deleted" property="deleted"/>
@@ -24,6 +25,7 @@
         sc_w.in_rain           as sc_w_in_rain,
         sc_w.ext_info          as sc_w_ext_info,
         sc_w.last_refresh_time as sc_w_last_refresh_time,
+        sc_w.need_refresh      as sc_w_need_refresh,
         sc_w.create_time       as sc_w_create_time,
         sc_w.update_time       as sc_w_update_time,
         sc_w.deleted           as sc_w_deleted
@@ -34,4 +36,8 @@
         from t_super_ctl_weather sc_w
         where sc_w.deleted = false
     </sql>
+    <update id="updateNeedRefresh">
+        update t_super_ctl_weather set need_refresh=#{needRefresh} where id in
+        <foreach collection="ids" item="id" open="(" separator="," close=")">#{id}</foreach>
+    </update>
 </mapper>

@@ -2,7 +2,8 @@ package com.levent8421.wechat.tools.model.service.general;
 
 import com.levent8421.wechat.tools.commons.entity.SuperCtlWeather;
 import com.levent8421.wechat.tools.model.service.basic.AbstractService;
-import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
  * Create by Levent8421
@@ -14,5 +15,12 @@ import org.springframework.stereotype.Service;
  * @author levent8421
  */
 public interface SuperCtlWeatherService extends AbstractService<SuperCtlWeather> {
-
+    /**
+     * 标记是否需要更新
+     *
+     * @param ids         ids
+     * @param needRefresh needRefresh
+     * @return rows
+     */
+    int markRefresh(List<Integer> ids, boolean needRefresh);
 }

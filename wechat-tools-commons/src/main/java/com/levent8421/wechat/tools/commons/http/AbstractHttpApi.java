@@ -7,6 +7,7 @@ import com.levent8421.wechat.tools.commons.exception.InternalServerErrorExceptio
 import com.levent8421.wechat.tools.commons.utils.http.HttpApiStringResponse;
 import com.levent8421.wechat.tools.commons.utils.http.HttpUtils;
 import lombok.val;
+import org.apache.commons.lang3.exception.ExceptionUtils;
 
 import java.io.IOException;
 import java.security.KeyStore;
@@ -30,7 +31,7 @@ public abstract class AbstractHttpApi {
         try {
             return HttpUtils.get(url);
         } catch (IOException e) {
-            throw new InternalServerErrorException("Http get[" + url + "]", e);
+            throw new InternalServerErrorException("Http get[" + url + "]:" + ExceptionUtils.getMessage(e), e);
         }
     }
 

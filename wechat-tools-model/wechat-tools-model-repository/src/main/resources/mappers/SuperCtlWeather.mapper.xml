@@ -40,4 +40,14 @@
         update t_super_ctl_weather set need_refresh=#{needRefresh} where id in
         <foreach collection="ids" item="id" open="(" separator="," close=")">#{id}</foreach>
     </update>
+    <select id="selectByNeedRefresh" resultMap="rm_base">
+        <include refid="base_select"/>
+        and sc_w.need_refresh=#{needRefresh} order by sc_w.update_time asc
+        limit #{max}
+    </select>
+    <select id="selectByAddress" resultMap="rm_base">
+        <include refid="base_select"/>
+        and sc_w.address in
+        <foreach collection="addressArr" item="address" open="(" separator="," close=")">#{address}</foreach>
+    </select>
 </mapper>

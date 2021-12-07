@@ -1,15 +1,22 @@
 package com.levent8421.wechat.tools.web.user.controller.api;
 
+import com.google.common.collect.Lists;
+import com.google.common.collect.Sets;
 import com.levent8421.wechat.tools.commons.entity.SuperCtlDevice;
+import com.levent8421.wechat.tools.commons.entity.SuperCtlWeather;
 import com.levent8421.wechat.tools.model.service.general.SuperCtlDeviceService;
+import com.levent8421.wechat.tools.model.service.general.SuperCtlWeatherService;
 import com.levent8421.wechat.tools.web.commons.security.TokenDataHolder;
 import com.levent8421.wechat.tools.web.commons.vo.GeneralResult;
 import com.levent8421.wechat.tools.web.user.controller.AbstractUserController;
+import com.levent8421.wechat.tools.web.user.vo.SuperCtlDeviceInfo;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 /**
  * Create by Levent8421
@@ -25,11 +32,14 @@ import java.util.List;
 public class ApiSuperCtlDeviceController extends AbstractUserController {
     private final SuperCtlDeviceService superCtlDeviceService;
     private final TokenDataHolder tokenDataHolder;
+    private final SuperCtlWeatherService superCtlWeatherService;
 
     public ApiSuperCtlDeviceController(SuperCtlDeviceService superCtlDeviceService,
-                                       TokenDataHolder tokenDataHolder) {
+                                       TokenDataHolder tokenDataHolder,
+                                       SuperCtlWeatherService superCtlWeatherService) {
         this.superCtlDeviceService = superCtlDeviceService;
         this.tokenDataHolder = tokenDataHolder;
+        this.superCtlWeatherService = superCtlWeatherService;
     }
 
     /**
@@ -38,9 +48,21 @@ public class ApiSuperCtlDeviceController extends AbstractUserController {
      * @return GR
      */
     @GetMapping("/")
-    public GeneralResult<List<SuperCtlDevice>> devicesForCurrentUser() {
+    public GeneralResult<List<SuperCtlDeviceInfo>> devicesForCurrentUser() {
         Integer uid = requireUserId(tokenDataHolder);
         List<SuperCtlDevice> devices = superCtlDeviceService.findByUser(uid);
-        return GeneralResult.ok(devices);
+        Set<String> addressArr = Sets.newHashSet();
+        for (SuperCtlDevice device : devices) {
+            addressArr.add(device.getAddress());
+        }
+        Map<String, SuperCtlWeather> weatherTable = superCtlWeatherService.getWeathers(addressArr);
+        List<SuperCtlDeviceInfo> res = Lists.newArrayList();
+        for (SuperCtlDevice device : devices) {
+            SuperCtlDeviceInfo info = new SuperCtlDeviceInfo();
+            info.setDevice(device);
+            info.setWeather(weatherTable.get(device.getAddress()));
+            res.add(info);
+        }
+        return GeneralResult.ok(res);
     }
 }

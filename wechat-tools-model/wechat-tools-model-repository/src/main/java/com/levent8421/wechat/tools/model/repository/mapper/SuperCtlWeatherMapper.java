@@ -6,6 +6,7 @@ import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Set;
 
 /**
  * Create by Levent8421
@@ -27,4 +28,22 @@ public interface SuperCtlWeatherMapper extends AbstractMapper<SuperCtlWeather> {
      */
     int updateNeedRefresh(@Param("ids") List<Integer> ids,
                           @Param("needRefresh") boolean needRefresh);
+
+    /**
+     * Select by need refresh
+     *
+     * @param max         max
+     * @param needRefresh 是否需要刷新
+     * @return weatherRecords
+     */
+    List<SuperCtlWeather> selectByNeedRefresh(@Param("max") int max,
+                                              @Param("needRefresh") boolean needRefresh);
+
+    /**
+     * Select by address
+     *
+     * @param addressArr address list
+     * @return weathers
+     */
+    List<SuperCtlWeather> selectByAddress(@Param("addressArr") Set<String> addressArr);
 }

@@ -9,9 +9,12 @@ import com.levent8421.wechat.tools.commons.utils.datetime.DateTimeUtils;
 import com.levent8421.wechat.tools.weather.WeatherApi;
 import com.levent8421.wechat.tools.weather.WeatherException;
 import com.levent8421.wechat.tools.weather.WeatherInfo;
+import org.apache.commons.lang3.exception.ExceptionUtils;
 import org.springframework.stereotype.Component;
 
+import java.io.UnsupportedEncodingException;
 import java.math.BigDecimal;
+import java.net.URLEncoder;
 import java.util.Map;
 
 /**
@@ -76,9 +79,15 @@ public class ZhiXinWeatherApiImpl extends AbstractHttpApi implements WeatherApi 
         params.put("unit", "c");
         StringBuilder query = new StringBuilder();
         for (Map.Entry<String, String> entry : params.entrySet()) {
+            String value;
+            try {
+                value = URLEncoder.encode(entry.getValue(), "utf8");
+            } catch (UnsupportedEncodingException e) {
+                throw new WeatherException(ExceptionUtils.getMessage(e), e);
+            }
             query.append(entry.getKey())
                     .append('=')
-                    .append(entry.getValue())
+                    .append(value)
                     .append('&');
         }
         String url = API_URL + '?' + query;

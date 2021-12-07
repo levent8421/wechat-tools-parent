@@ -3,4 +3,4 @@ spring:
     name: wechat_user_application
   profiles:
     active: @activeProfiles@
-    include: web,repository,service,resource,message-mqtt
+    include: web,repository,service,resource,message-mqtt,weather

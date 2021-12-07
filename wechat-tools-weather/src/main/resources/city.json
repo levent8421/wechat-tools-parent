@@ -1,0 +1,3988 @@
+{
+  "北京": {
+    "北京": "WX4FBXXFKE4F",
+    "东城": "WX4G0URR276S",
+    "西城": "WX4EPCD9BMPN",
+    "朝阳": "WX4G17JWZEK7",
+    "丰台": "WX4DWN2X06KM",
+    "石景山": "WX4DUXSF6714",
+    "海淀": "WX4EQ2XJD7V2",
+    "门头沟": "WX4E1VJ3N56X",
+    "房山": "WX4D4S7291H4",
+    "通州": "WX4GN7JYY527",
+    "顺义": "WX4UQ3MYNN0Q",
+    "昌平": "WX4SUCU47R3T",
+    "大兴": "WX4DP0SUJ2YC",
+    "怀柔": "WX4VMUP35BZ0",
+    "平谷": "WX5K31KNJY1W",
+    "密云": "WX5JDT1H236N",
+    "延庆": "WX4QNGWY2FE8"
+  },
+  "天津": {
+    "天津": "WWGQDCW6TBW1",
+    "和平": "WWGQE0U6VS5D",
+    "河东": "WWGQEFZMJC1W",
+    "河西": "WWGQ7R6ZUMF7",
+    "南开": "WWGQ9STVVP3Y",
+    "河北": "WWGQDWRQSXXW",
+    "红桥": "WWGQC9YRXSBV",
+    "东丽": "WWGQM4R38052",
+    "西青": "WWGNW7KUC8EN",
+    "津南": "WWGMZ01DBNXT",
+    "北辰": "WWGR17G3NCFH",
+    "武清": "WX50P0FTHSHF",
+    "宝坻": "WX53VNZ3B0EM",
+    "滨海新区": "WWGTYKJXE1UQ",
+    "宁河": "WWGZ9PCCUGRS",
+    "静海": "WWGJKWFX9MYZ",
+    "蓟州": "WX57ZDBH4M0G"
+  },
+  "河北": {
+    "石家庄": {
+      "石家庄": "WWC2MYYCM6J5",
+      "长安": "WWC2QK2826WW",
+      "桥西": "WWC2HQR941EY",
+      "新华": "WWC2KWC5J30V",
+      "井陉": "WWC0M54UVCB4",
+      "裕华": "WWC2NNFBK813",
+      "藁城": "WWC8M50SUCVF",
+      "鹿泉": "WWC28UQ8P492",
+      "栾城": "WW9X2ZVDFXU1",
+      "正定": "WWC3P0GRF7RY",
+      "行唐": "WWC6WEUYBRNZ",
+      "灵寿": "WWC3FS39WJMP",
+      "高邑": "WW9MZUC5VS12",
+      "深泽": "WWCCJQQNDECG",
+      "赞皇": "WW9Q6C8GXHVW",
+      "无极": "WWCC0NQWE5V7",
+      "平山": "WWC1WEJYKUGC",
+      "元氏": "WW9QVBNVTQJ1",
+      "赵县": "WW9WG8HVWY49",
+      "辛集": "WW9ZTZHSH874",
+      "晋州": "WWCB3E4KC3BD",
+      "新乐": "WWCD1T7KVWJU"
+    },
+    "唐山": {
+      "唐山": "WXH13WQT7XKN",
+      "路南": "WXH12T28ZCYU",
+      "路北": "WXH13T4TDV3W",
+      "古冶": "WXH4P1N2GBRN",
+      "开平": "WXH1DVXJJ7JU",
+      "丰南": "WX5CP7MZCQWS",
+      "丰润": "WXH494BF8D4K",
+      "曹妃甸": "WWUNZ5FRFWND",
+      "滦南": "WXH2SWU0HMTY",
+      "乐亭": "WXH838HQ4U9G",
+      "迁西": "WXHHKMJFXY6X",
+      "玉田": "WX5DZ5BMGFFD",
+      "遵化": "WX5US4896NYS",
+      "迁安": "WXH7TJ6TQKXN",
+      "滦州": "WXH6JH68W3P4"
+    },
+    "秦皇岛": {
+      "秦皇岛": "WXJ51T411GRX",
+      "海港": "WXJ528H2CCFH",
+      "山海关": "WXJ5MMTY1TV3",
+      "北戴河": "WXHFWFFDTF1H",
+      "抚宁": "WXHFC5UTU6GD",
+      "青龙": "WXHTFF8EPCUE",
+      "昌黎": "WXH9ZG0VQ22K",
+      "卢龙": "WXHDBGYMZFB6"
+    },
+    "邯郸": {
+      "邯郸": "WW92M43YCQG0",
+      "邯山": "WW92J5JNFTQ4",
+      "丛台": "WW92MJQVK1XG",
+      "复兴": "WW92KTBK4BK7",
+      "峰峰": "WW3PQKGPBU90",
+      "肥乡": "WW3XUMDZ1VU6",
+      "永年": "WW93JP9G12GN",
+      "临漳": "WW3WB1RDPE4S",
+      "成安": "WW3X1XGKJSJY",
+      "大名": "WW3YKK9DM6PJ",
+      "涉县": "WW8B497GWYP5",
+      "磁县": "WW3QF93DN5JH",
+      "邱县": "WW9CKYBHP92R",
+      "鸡泽": "WW9DJCJF94B4",
+      "广平": "WW3XX2CRRHGK",
+      "馆陶": "WW3ZZDNFSTX3",
+      "魏县": "WW3WZKCQX57K",
+      "曲周": "WW99PZ8510UQ",
+      "武安": "WW90Y9JBUZGG"
+    },
+    "邢台": {
+      "桥东": "WW96VECQ55CT",
+      "桥西": "WW96UDKYNGT7",
+      "邢台": "WW96VH3U3KG5",
+      "临城": "WW9KVTBME3SP",
+      "内丘": "WW9KJYQBJRVN",
+      "柏乡": "WW9T3DEMMDTV",
+      "隆尧": "WW9S7XKGWBDS",
+      "任县": "WW9E1X73VTTV",
+      "南和": "WW9D3XEKTEVV",
+      "宁晋": "WW9WP0D0QH6C",
+      "巨鹿": "WW9G9XDQ1QBS",
+      "新河": "WW9VW84KPEHD",
+      "广宗": "WW9FUK3SMKZ5",
+      "平乡": "WW9FCS6K3KBE",
+      "威县": "WW9FQS42PESS",
+      "清河": "WWD6BHKK6KG7",
+      "临西": "WWD1SK2DC1FH",
+      "南宫": "WWDH3X35SBES",
+      "沙河": "WW93TS26G3UH"
+    },
+    "保定": {
+      "保定": "WWFJ5S4DNJ0T",
+      "竞秀": "WWFJ5JMBF7CD",
+      "莲池": "WWFJHN3UNPX7",
+      "满城": "WWFJ84TKNY22",
+      "清苑": "WWFHECCGX5C4",
+      "徐水": "WWFJZXMGBR4N",
+      "涞水": "WX421K89XKQ4",
+      "阜平": "WWCJN0RMDUFV",
+      "定兴": "WWFR6KVHKD8D",
+      "唐县": "WWCU2QJZH5W1",
+      "高阳": "WWFK49KRMD97",
+      "容城": "WWFQHSVFWXW5",
+      "涞源": "WWCXCE7QMETV",
+      "望都": "WWCUK2C8M7PH",
+      "安新": "WWFMQJ1TKVC7",
+      "易县": "WWFPU72W35DJ",
+      "曲阳": "WWCEDN9CZ9YC",
+      "蠡县": "WWF4VV5D0PVV",
+      "顺平": "WWCUGUG15KWH",
+      "博野": "WWF4EXDEQP88",
+      "雄县": "WWFTCBJ6YNDT",
+      "涿州": "WX42WGNG8V7T",
+      "定州": "WWCG0HQE70MQ",
+      "安国": "WWF484JKWZ07",
+      "高碑店": "WWFRSPZ3UEMH"
+    },
+    "张家口": {
+      "张家口": "WX38NPJ1DP88",
+      "桥东": "WX38N3543Y5E",
+      "桥西": "WX38JY8ZKHXS",
+      "宣化": "WX1YFP0B5K9C",
+      "下花园": "WX1YRM11239W",
+      "万全": "WX1XFD29CWXF",
+      "崇礼": "WX3CP43599T9",
+      "张北": "WX3D451UPEYZ",
+      "康保": "WX3W04X9ZT6W",
+      "沽源": "WX6M0CF1M7HB",
+      "尚义": "WX319QQKM7P3",
+      "蔚县": "WX16XN7R46RV",
+      "阳原": "WX1HNP85CY46",
+      "怀安": "WX1R7EWPGJRZ",
+      "怀来": "WX4JUDX551G5",
+      "涿鹿": "WX1VTYUWS9E4",
+      "赤城": "WX62GC2B68GG"
+    },
+    "承德": {
+      "承德": "WX7C5D6581T3",
+      "双桥": "WX7C5DZJSF0K",
+      "双滦": "WX7C02NE1C46",
+      "鹰手营": "WX5WTM1EG05G",
+      "承德县": "WXHPCJBY2WF7",
+      "兴隆": "WX5W40P3Y6R2",
+      "滦平": "WX72VGJ4E1J0",
+      "隆化": "WX7ENF146Y60",
+      "丰宁": "WX6FQKJZQH8M",
+      "宽城": "WXHQBP480HE1",
+      "围场": "WX7WX3NGVYE8",
+      "平泉": "WXK3HXU4K3VY"
+    },
+    "沧州": {
+      "沧州": "WWG1FS318M6P",
+      "新华": "WWG1GNZ4XV45",
+      "运河": "WWG1FQN3QJUR",
+      "沧县": "WWG1GKQ1SMKP",
+      "青县": "WWG56R38Z332",
+      "东光": "WWDZ7XYDCZCC",
+      "海兴": "WWG8CM6767JJ",
+      "盐山": "WWG27QUCRFP5",
+      "肃宁": "WWF6EGBYFX5Z",
+      "南皮": "WWFBRE4KG1FF",
+      "吴桥": "WWDY02926S39",
+      "献县": "WWF94QKN85GE",
+      "孟村": "WWG28DMTGF2E",
+      "泊头": "WWFBSD7TVF7G",
+      "任丘": "WWFS3BV2Q54S",
+      "黄骅": "WWG6Q359MNQJ",
+      "河间": "WWFD97YYUP1R"
+    },
+    "廊坊": {
+      "廊坊": "WX4BZD6KEJFY",
+      "安次": "WX4BXR409T9P",
+      "广阳": "WX4BZDTY2B9D",
+      "固安": "WX48Q6P06KTR",
+      "永清": "WWFZEJBXWG20",
+      "香河": "WX54NRUV1974",
+      "大城": "WWFUJVP7GFZH",
+      "文安": "WWFV4K4F5TNT",
+      "大厂": "WX54VGYJZDF4",
+      "霸州": "WWFY2TZYH86C",
+      "三河": "WX55RYPU2SNV"
+    },
+    "衡水": {
+      "衡水": "WWDQ8KE95MGB",
+      "桃城": "WWDQ8J7UXJP4",
+      "冀州": "WWDJTZ7T05TG",
+      "枣强": "WWDM3Q29Z6YJ",
+      "武邑": "WWDRHUVJRWYX",
+      "武强": "WWF2R5NHCCU4",
+      "饶阳": "WWF33X81BKW8",
+      "安平": "WWF1KXX1GHE0",
+      "故城": "WWDKQZQG8BES",
+      "景县": "WWDWMZ14RM7E",
+      "阜城": "WWDX7N1BEPTM",
+      "深州": "WWF0M3KFW1SY"
+    }
+  },
+  "山西": {
+    "太原": {
+      "太原": "WW8P3NH2TPDT",
+      "小店区": "WW8N9SDCPJGB",
+      "迎泽": "WW8P3K9XEM94",
+      "杏花岭": "WW8P96QC7QG2",
+      "尖草坪区": "WQXZZ8CQMBQZ",
+      "万柏林": "WW8P25YZ9Y3R",
+      "晋源": "WQXYX3ENTGXR",
+      "清徐": "WQXVUSFGBSPB",
+      "阳曲": "WWB0EF7VC635",
+      "娄烦": "WQZ2XD7TYF35",
+      "古交": "WQXZ8RPSN2Q4"
+    },
+    "大同": {
+      "大同": "WX0S40QDCME0",
+      "新荣": "WX0MN2HGDW9C",
+      "平城": "WX0ECZRGWVHT",
+      "云冈": "WX07WD7XW8FZ",
+      "云州": "WX0G9P0ZXUG7",
+      "阳高": "WX0VSMNHR17W",
+      "天镇": "WX1JGYNX8DJ7",
+      "广灵": "WX160XBJJ124",
+      "灵丘": "WX10R658RUTR",
+      "浑源": "WX0CFG5JRBRU",
+      "左云": "WX05S9C8UK6Y"
+    },
+    "阳泉": {
+      "阳泉": "WW8Z267HHZ3U",
+      "矿区": "WW8Z27W1UTPU",
+      "郊区": "WW8ZBG80FZ2F",
+      "平定": "WW8Z13R8CYSX",
+      "盂县": "WWB8SKR25D88"
+    },
+    "长治": {
+      "长治": "WW2MYN52R11E",
+      "潞州": "WW2MYN8DKWC5",
+      "上党": "WW2MH7KCBNT6",
+      "屯留": "WW2Q8EUEQDSX",
+      "潞城": "WW2W8MSM94YG",
+      "襄垣": "WW2RUD06XVT9",
+      "平顺": "WW2TVNJ0Q947",
+      "黎城": "WW2XSH8GCMPS",
+      "壶关": "WW2MRZMWR0JB",
+      "长子": "WW2M2RMQM85B",
+      "武乡": "WW81XBWY79DG",
+      "沁县": "WW81HD1SK2DC",
+      "沁源": "WQRZSHS5YTNU"
+    },
+    "晋城": {
+      "晋城": "WW23BS9T8PB1",
+      "沁水": "WQRFBXQGP6ND",
+      "阳城": "WQRCY4VTZZ7E",
+      "陵川": "WW2E9989W73T",
+      "泽州": "WW21ZW863X9U",
+      "高平": "WW279T1Y4EWW"
+    },
+    "朔州": {
+      "朔州": "WQZZWRV1BGKH",
+      "朔城": "WQZZWM9DTY1H",
+      "平鲁": "WRP8ZK5QCQ57",
+      "山阴": "WX00Z63H8TCQ",
+      "应县": "WX02ZRZ5MNKG",
+      "右玉": "WRPGRQ4HKUNM",
+      "怀仁": "WX06T4Y6DFPK"
+    },
+    "晋中": {
+      "晋中": "WW8NMEQJCMJE",
+      "榆次": "WW8NMWF7B000",
+      "榆社": "WW86FSQHRUC7",
+      "左权": "WW8DGU3S2KZ5",
+      "和顺": "WW8U27EPHB3G",
+      "昔阳": "WW8Y529B6H2C",
+      "寿阳": "WW8RRRZ4VPUC",
+      "太谷": "WW8HCHH7M1DD",
+      "祁县": "WQXUKPK5W8WU",
+      "平遥": "WQXG82RTNQQ4",
+      "灵石": "WQX3XKK6VCBS",
+      "介休": "WQXDDV1EMH2D"
+    },
+    "运城": {
+      "运城": "WQNZJRJNM3JV",
+      "盐湖": "WQNZMBKZZMSR",
+      "临猗": "WQNZBWU784FT",
+      "万荣": "WQQC9BPBQNTD",
+      "闻喜": "WQR14G7BTVDG",
+      "稷山": "WQQFT0VCH2VR",
+      "新绛": "WQR4DU7VTC6B",
+      "绛县": "WQR3FFFVCRME",
+      "垣曲": "WQR2V45T7SGN",
+      "夏县": "WQPPFYGGTFFV",
+      "平陆": "WQPN4UEGMYDF",
+      "芮城": "WQNTQSFWNUVD",
+      "永济": "WQNW2TTQSRR8",
+      "河津": "WQQDX0C30BYX"
+    },
+    "忻州": {
+      "忻州": "WWB4T4PKXRH7",
+      "忻府": "WWB4MRNMS0C8",
+      "定襄": "WWB6FJPDJZBM",
+      "五台县": "WWBS34D4S729",
+      "代县": "WWBQ60RXJZBK",
+      "繁峙": "WWBWCHD0H32E",
+      "宁武": "WQZVG7WR7WVJ",
+      "静乐": "WQZD710CQN3J",
+      "神池": "WQZY34M992PB",
+      "五寨": "WQZT31W8VVSF",
+      "岢岚": "WQZK4V4GC6VS",
+      "河曲": "WRP00BFMHSJF",
+      "保德": "WQYBPZT229EC",
+      "偏关": "WRP234PB6K9Z",
+      "原平": "WWBHKD9DS76C"
+    },
+    "临汾": {
+      "临汾": "WQRM38NMHR7P",
+      "尧都": "WQRM4ZVRFJJK",
+      "曲沃": "WQR68W1ZZ32K",
+      "翼城": "WQR7Q22N2DVB",
+      "襄汾": "WQRHPEUB5HY0",
+      "洪洞": "WQRQJP5EE9G0",
+      "古县": "WQRW6FC8J409",
+      "安泽": "WQRVDKCVN86M",
+      "浮山": "WQRS8U0H7VGZ",
+      "吉县": "WQQTQEF9WZV8",
+      "乡宁": "WQQU9UPUQJVX",
+      "大宁": "WQQZ2PJTNHC2",
+      "隰县": "WQWBU30BBRG5",
+      "永和": "WQW9JMY2CBFC",
+      "蒲县": "WQQZPWJCZS56",
+      "汾西": "WQX26ZFV9RJT",
+      "侯马": "WQR4TU6TE13B",
+      "霍州": "WQX2N3258WJG"
+    },
+    "吕梁": {
+      "吕梁": "WQXJ2UGJEGPU",
+      "离石": "WQXJ2Y63UDVV",
+      "文水": "WQXSVJFMX1WP",
+      "交城": "WQXV85C0S7M4",
+      "兴县": "WQZ4BE5PGXV2",
+      "临县": "WQWZVKT4V2TZ",
+      "柳林": "WQWUGTFVT39X",
+      "石楼": "WQWF3ZXUW5VT",
+      "岚县": "WQZ3V0ET5T5N",
+      "方山": "WQXP7PG4YZG3",
+      "中阳": "WQXH3GWZ1B2E",
+      "交口": "WQX466JMGG98",
+      "孝义": "WQX7R6UQMVBW",
+      "汾阳": "WQXKP8G9QZ91"
+    }
+  },
+  "内蒙古": {
+    "呼和浩特": {
+      "呼和浩特": "WRR2Q2Z7CXWM",
+      "新城": "WRR2KVG2VVPD",
+      "回民": "WRR25UV015EU",
+      "玉泉": "WRPRV49XB01Z",
+      "赛罕": "WRR2J9TZ4PWB",
+      "土左旗": "WRPP8UF7HWJV",
+      "托县": "WRPJ1FYVCB0D",
+      "和林": "WRPT8WBYDCE4",
+      "清水河": "WRP7J74YUE7E",
+      "武川": "WRR38N7KM5P3"
+    },
+    "包头": {
+      "包头": "WRNP70PG2MPX",
+      "东河": "WRNNZFRK4QU1",
+      "昆都仑": "WRNP5Q3XD0CZ",
+      "青山": "WRNPHWXVC6JX",
+      "石拐": "WRNRM5VSXDT8",
+      "白云鄂博": "WRQJVB46BMM3",
+      "九原": "WRNNYQBHVKJV",
+      "土右旗": "WRNWFCW1QSHU",
+      "固阳": "WRQ32JRCNF7E",
+      "达茂旗": "WRQQZ7FJ2MU1"
+    },
+    "乌海": {
+      "乌海": "WR5CWTXYQRVP",
+      "海勃湾": "WR5CY9QS9051",
+      "海南": "WRH027BW6C3P",
+      "乌达": "WR5BSX8JK31B"
+    },
+    "赤峰": {
+      "赤峰": "WXS86P4BSG4G",
+      "红山": "WXS8DG25QSRP",
+      "元宝山": "WXKZ4KD9EVGY",
+      "松山": "WXS8D1XPE0CR",
+      "阿鲁旗": "WXV3SKPEDBCE",
+      "巴林左旗": "WXUFHW3F5D5Y",
+      "巴林右旗": "WXSRS6SF7KJ2",
+      "林西": "WXGBN31KKM5F",
+      "克什克腾": "WXEW1QFK62V0",
+      "翁牛特": "WXSU6GNH7E1G",
+      "喀喇沁": "WXKQMGUUKTYV",
+      "宁城": "WXKUEMJ3WD11",
+      "敖汉": "WXT0XSQXM7W2"
+    },
+    "通辽": {
+      "通辽": "WXYBNKF2CT25",
+      "科尔沁": "Y8N2K43REK6R",
+      "科左中旗": "WXZEN1WGUK0Z",
+      "科左后旗": "WXXH24U9CSK3",
+      "开鲁": "WXY201PUQV5D",
+      "库伦": "WXWE4FY0Q9KF",
+      "奈曼": "WXTGC2WEKFBQ",
+      "扎鲁特": "WXVVQQNFE1UM",
+      "霍林郭勒": "Y8J548QRRP4M"
+    },
+    "鄂尔多斯": {
+      "鄂尔多斯": "WRN16S9GJRQ1",
+      "东胜": "WRN4X1583F0B",
+      "康巴什": "WRN17F23YKG3",
+      "达拉特": "WRNJZW4PEF1G",
+      "准格尔": "WRP18ZD2U8JG",
+      "鄂前旗": "WQU3QRRWBSHK",
+      "鄂托克": "WQUY8CT6E2E1",
+      "杭锦旗": "WRJ69FZ6XD5S",
+      "乌审旗": "WQV7SFYJKCD8",
+      "伊金霍洛": "WQYP3CHPF6K3"
+    },
+    "内蒙古": {
+      "呼伦贝尔": "Y8TPTQNF5V3X",
+      "巴彦淖尔": "WRHRG8C39PEC",
+      "乌兰察布": "WX23NNWFJD1D",
+      "锡林郭勒": "WXF9BT6Y0JY4"
+    },
+    "呼伦贝尔": {
+      "海拉尔": "Y8V0J2JZ730B",
+      "扎赉诺尔": "Y8G9TKZ0EY3K",
+      "阿荣旗": "Y8XCC9U1ED2C",
+      "莫力达瓦": "YB8E9PDNHQBS",
+      "鄂伦春旗": "YBBJGD9F14VV",
+      "鄂温克旗": "Y8T76RN47M5Q",
+      "陈旗": "Y8V1S4ZDQ3WD",
+      "新左旗": "Y8SS1PUGYH77",
+      "新右旗": "Y8DVQFRGVYH1",
+      "满洲里": "Y8GD09U2RMGS",
+      "牙克石": "Y8VB770UUCUF",
+      "扎兰屯": "Y8X2CNRZF23B",
+      "额尔古纳": "Y8VMYB06UYXJ",
+      "根河": "Y9N2VK0NVNP7"
+    },
+    "巴彦淖尔": {
+      "临河": "WRHRGFQ3CQS6",
+      "五原": "WRKCZDPBCG73",
+      "磴口": "WRHJ7MCE68ZU",
+      "乌前旗": "WRJR8KUE0QPV",
+      "乌中旗": "WRMHMRTFG38V",
+      "乌后旗": "WRK1U6JBZG69",
+      "杭锦后旗": "WRK0W3BPRBQF"
+    },
+    "乌兰察布": {
+      "集宁": "WX23MTKCJ427",
+      "卓资": "WX209TDGZ0EG",
+      "化德": "WX3N65SM0W15",
+      "商都": "WX2SR7YN29RS",
+      "兴和": "WX2BX3UZK26D",
+      "凉城": "WRPYXD32MGWG",
+      "察右前旗": "WX0XBRU29NYZ",
+      "察右中旗": "WX24FBYXJJX5",
+      "察右后旗": "WX27Z3XPV0HC",
+      "四子王旗": "WRRKJY3RW8UZ",
+      "丰镇": "WX0QNB13F470"
+    },
+    "兴安盟": {
+      "兴安": "Y8NY1ECCRVK4",
+      "乌兰浩特": "Y8NY1KD57NS4",
+      "阿尔山": "Y8MK3HF77T3W",
+      "科右前旗": "Y8NWN6G3JYMN",
+      "科右中旗": "Y8N2K15G20SV",
+      "扎赉特": "Y8R3UDVJCX65",
+      "突泉": "Y8N6NMHTDM4H"
+    },
+    "锡林郭勒": {
+      "二连浩特": "WRZ8K4JREJGB",
+      "锡林浩特": "WXF9CJPWG18C",
+      "阿巴嘎": "WXCF2PQT74VK",
+      "苏左旗": "WXBC3WWUFBMN",
+      "苏右旗": "WX855QMHZ385",
+      "东乌旗": "Y854VWWVNX18",
+      "西乌旗": "WXGTS599QD7D",
+      "太仆寺": "WX3YREWVHWP7",
+      "镶黄旗": "WX8BNR8RX4XF",
+      "正镶白旗": "WX9B8UKRQ5X0",
+      "正蓝旗": "WXD2REKS5FV5",
+      "多伦": "WX6ZFQDU79YS"
+    },
+    "阿拉善盟": {
+      "阿拉善": "WQGJJBDMKH1Z",
+      "阿左旗": "WQGHUSF91KWU",
+      "阿右旗": "WQBR1B1HE9XH",
+      "额济纳": "WPRWREDT4QH5"
+    }
+  },
+  "辽宁": {
+    "沈阳": {
+      "沈阳": "WXRVB9QYXKY8",
+      "和平": "WXRV8R5T04M6",
+      "沈河": "WXRVC0PX7PW6",
+      "大东": "WXRVC3ZWVKNY",
+      "皇姑": "WXRVBVE1P9RF",
+      "铁西": "WXRTZ3E3MWSD",
+      "苏家屯": "WXRTN8KHBPBG",
+      "浑南": "WXRV318CHCYF",
+      "沈北新区": "WXRZ4WVR9X2Z",
+      "于洪": "WXRTTZCUTWXC",
+      "辽中": "WXRK0W3ZX2BR",
+      "康平": "WXXENYKSZ3D7",
+      "法库": "WXXCB0CHKQJP",
+      "新民": "WXRQFVFG9RMW"
+    },
+    "大连": {
+      "大连": "WWYMRT0VRMUG",
+      "中山": "WWYMRUZ825SR",
+      "西岗": "WWYMRHPCCQV0",
+      "沙河口": "WWYMQF687P5G",
+      "甘井子": "WWYMT706MWWC",
+      "旅顺": "WWYHZDFNGU9B",
+      "金州": "WWYW3MGNP831",
+      "普兰店": "WXN8PH938UQD",
+      "长海": "WWZPMKUH348F",
+      "瓦房店": "WXNC2HTENP33",
+      "庄河": "WXP3Y7PM38QK"
+    },
+    "鞍山": {
+      "鞍山": "WXR3Y6P2CEQ3",
+      "铁东": "WXR3WXG75MXF",
+      "铁西": "WXR3YJ7CFEBU",
+      "立山": "WXR6P6YFMX3P",
+      "千山": "WXR3TSJ16Y0M",
+      "台安": "WXR53SZXBZ04",
+      "岫岩": "WXPTJKCB00NX",
+      "海城": "WXR281GRM0R6"
+    },
+    "抚顺": {
+      "新抚": "WZ2N5S6KN57F",
+      "东洲": "WZ2NN6TY9GD5",
+      "望花": "WZ2N0DUD49TM",
+      "顺城": "WZ2NK21ZFVU4",
+      "抚顺": "WZ2NM0P2XMU7",
+      "新宾": "WZ2VMHSNF5V4",
+      "清原": "WZ2ZD85FQBZ4"
+    },
+    "本溪": {
+      "本溪": "WZ24BQQTFN10",
+      "平山": "WZ24BQ12PBKE",
+      "溪湖": "WZ25072ECFZP",
+      "明山": "WZ24CRSSZ4XW",
+      "南芬": "WXRCZ9ZBN5KC",
+      "本溪县": "WZ263DV24Y4T",
+      "桓仁": "WZ34U2VP4TW7"
+    },
+    "丹东": {
+      "丹东": "WZ0KQ36Y0N4N",
+      "元宝": "WZ0KQD3FZ5SH",
+      "振兴": "WZ0KJU8HT4GY",
+      "振安": "WZ0KRQ39DEES",
+      "宽甸": "WZ0XXQWJ2WR9",
+      "东港": "WZ06C4578DTW",
+      "凤城": "WZ0NP79N2D92"
+    },
+    "锦州": {
+      "锦州": "WXQ1U6H0VE63",
+      "古塔": "WXQ1UHYC3BYW",
+      "凌河": "WXQ1USRK37ND",
+      "太和": "WXQ1GEM4133K",
+      "黑山": "WXQV4ZM045RV",
+      "义县": "WXQHQ8KCZ9PG",
+      "凌海": "WXQ61QU2EUQ2",
+      "北镇": "WXQSETH19DN9"
+    },
+    "营口": {
+      "营口": "WXNZM7TPVMMZ",
+      "站前": "WXNZMGYQRGJ3",
+      "西市": "WXNZKFB1WQ8W",
+      "鲅鱼圈": "WXNUFE2R2G8Q",
+      "老边": "WXPP2TQ3Y2NH",
+      "盖州": "WXPJB4SE19U7",
+      "大石桥": "WXPP781G2VHR"
+    },
+    "阜新": {
+      "海州": "WXQWBPZKWZJP",
+      "新邱": "WXQX7M6TS6QZ",
+      "太平": "WXQWBXRTH6U9",
+      "清河门": "WXQMDVBQ32Q8",
+      "细河": "WXQX0F15G7PB",
+      "阜新": "WXQX09T2HRXX",
+      "彰武": "WXX1H5P97UW5"
+    },
+    "辽阳": {
+      "辽阳": "WXRDFBCXJJ8E",
+      "白塔": "WXRDFB8SDS8U",
+      "文圣": "WXRDEP0XSWZ9",
+      "宏伟": "WXRD7R0FH78C",
+      "弓长岭": "WXRCCPMX97XY",
+      "太子河": "WXRDDVW12EKS",
+      "辽阳县": "WXRD2XBGFUGJ",
+      "灯塔": "WXREWKQ0VR9K"
+    },
+    "盘锦": {
+      "盘锦": "WXQCCV8TM5T4",
+      "双台子": "WXQF36JKNZY5",
+      "兴隆台": "WXQF1SKD6DJB",
+      "大洼": "WXQC1U0TV1TJ",
+      "盘山": "WXQF8TK68J6D"
+    },
+    "铁岭": {
+      "银州": "WZ809CWFNRS9",
+      "清河": "WZ860BQ0C5BJ",
+      "铁岭": "WZ809BF6B5HR",
+      "西丰": "WZ8EN4F269K6",
+      "昌图": "WZ85RGYGED4B",
+      "调兵山": "WXXCE7QMETV4",
+      "开原": "WZ84N3GZSQZH"
+    },
+    "朝阳": {
+      "双塔": "WXMSKY7S59FX",
+      "龙城": "WXMSEBQHS8M0",
+      "朝阳": "WXMSKZT4B3TT",
+      "建平县": "WXM5D0XUMP37",
+      "喀左": "WXM4JQFC0DDQ",
+      "北票": "WXMVU1QN8UYB",
+      "凌源": "WXKFTJ26TTKF"
+    },
+    "葫芦岛": {
+      "葫芦岛": "WXJZTSCEPN4J",
+      "连山": "WXJZYQD81CPK",
+      "龙港": "WXJZWZKMQZ1B",
+      "南票": "WXMCGDGR793Z",
+      "绥中": "WXJT6HJ9H0Z0",
+      "建昌": "WXM0NP59WRD8",
+      "兴城": "WXJZ549SEUU4"
+    }
+  },
+  "吉林": {
+    "长春": {
+      "长春": "WZC1EXZ0P9HU",
+      "南关": "WZC1S28RV6C8",
+      "宽城": "WZC1GXR20WUC",
+      "朝阳": "WZC16G5QZFCH",
+      "二道": "WZC1SC1BURVN",
+      "绿园": "WZC1D5U5DSMG",
+      "双阳": "WZ9REDW47HPB",
+      "九台": "WZC7PM687S82",
+      "农安": "WZCHB81R92M3",
+      "榆树": "WZCYZXNZKTX6",
+      "德惠": "WZCMK67YN39K"
+    },
+    "吉林": {
+      "吉林": "WZCCRENBK8PQ",
+      "昌邑": "WZF18HHC353Z",
+      "龙潭": "WZCCZC7DHYG6",
+      "船营": "WZCCR7HPJ434",
+      "丰满": "WZCCRC5DQCN8",
+      "永吉": "WZCBQTFKPWH8",
+      "蛟河": "WZF89QYZKN9Q",
+      "桦甸": "WZDH7Y3YRH94",
+      "舒兰": "WZFK8Y6JM2HV",
+      "磐石": "WZ9SK6FCCUK3",
+      "延边": "WZS5FZSMRDT6"
+    },
+    "四平": {
+      "四平": "WZ8MTDUGMP22",
+      "铁西": "WZ8MMQJ39H3U",
+      "铁东": "WZ8MWBGVB73M",
+      "梨树": "WZ8QMNNM6CR3",
+      "伊通": "WZ9NE78SJ9EY",
+      "公主岭": "WZ8Z2QGJUG9Z",
+      "双辽": "WXXZD69FQS42"
+    },
+    "辽源": {
+      "辽源": "WZ8GZQHFH76E",
+      "龙山": "WZ8UP3SBV311",
+      "西安": "WZ8UPWNQ8XWM",
+      "东丰": "WZ96B98JJ08H",
+      "东辽": "WZ8UHMQ5P5GS"
+    },
+    "通化": {
+      "通化": "WZ3T3SEQVEVF",
+      "东昌": "WZ3T6H1964E1",
+      "二道江": "WZ3TSH3130W1",
+      "通化县": "WZ3MJE87E7HH",
+      "辉南": "WZ9DGCSJPBEH",
+      "柳河": "WZ92T0CFC75P",
+      "梅河口": "WZ93GYM7HQ8K",
+      "集安": "WZ39ZM9MR5E6"
+    },
+    "白山": {
+      "白山": "WZ3YSC05ZW82",
+      "浑江": "WZ3YSE3P5FF2",
+      "江源": "WZ6PJDT5559T",
+      "抚松": "WZD8B3FQNGYV",
+      "靖宇": "WZD1JQSVYHUG",
+      "长白": "WZ75TK22UX8K",
+      "临江": "WZ6JZ9MY8KF0"
+    },
+    "松原": {
+      "松原": "YB0B8REJKCCB",
+      "宁江": "YB0BBNUMJJ5Z",
+      "前郭": "WZBX23CR6X91",
+      "长岭": "WZB5VHZMXQK2",
+      "乾安": "YB00N5SSE2Q8",
+      "扶余": "WZCXGSKGQZDX"
+    },
+    "白城": {
+      "白城": "Y8P7E0F5F2QK",
+      "洮北": "Y8P7E2V4U0EB",
+      "镇赉": "Y8PSG6XX856R",
+      "通榆": "WXZWBZ0P7VEF",
+      "洮南": "Y8P3CUJDMK7W",
+      "大安": "YB06U51BTYU8"
+    },
+    "延边": {
+      "延吉": "WZS5FY540EQG",
+      "图们": "WZSK6Q7Q6K8D",
+      "敦化": "WZENTZQ0X9FP",
+      "珲春": "WZSEYSHXC5JZ",
+      "龙井": "WZS5340C29F7",
+      "和龙": "WZE9ZQQGJYES",
+      "汪清": "WZSQ2W1J61K3",
+      "安图": "WZETM1Y05WW7"
+    }
+  },
+  "黑龙江": {
+    "哈尔滨": {
+      "哈尔滨": "YB1UX38K6DY1",
+      "道里": "YB4H315RDCJ7",
+      "南岗": "YB4H63BZXBM3",
+      "道外": "YB4H3ZFGN2W9",
+      "平房": "YB453MUK1XKZ",
+      "松北": "YB1UW9V2RYRM",
+      "香坊": "YB4H40KX05JS",
+      "呼兰": "YB4J07UDZU0V",
+      "阿城": "YB46BYDJJRHB",
+      "双城": "YB1F47R7MKFZ",
+      "依兰": "YBHPEBR3TCC6",
+      "方正": "YB5SEX55HE4W",
+      "宾县": "YB4SKBS1561S",
+      "巴彦": "YB4W5H9G7NT6",
+      "木兰": "YB5J3KUW5HZ6",
+      "通河": "YB5T9B8FSMN5",
+      "延寿": "YB5681ZJ3WPD",
+      "尚志": "YB4CR843E4FZ",
+      "五常": "WZFRT37VCWZV"
+    },
+    "齐齐哈尔": {
+      "齐齐哈尔": "YB2JK81THR6Z",
+      "龙沙": "YB2JHT6R1S07",
+      "建华": "YB2JKS0YCQ6G",
+      "铁锋": "YB2JM19MGX06",
+      "昂昂溪": "YB2H1RZYG2NG",
+      "富拉尔基": "Y8RUT1EPZEJ9",
+      "碾子山": "Y8RQK1Z9YNGK",
+      "梅里斯": "Y8RVPUJ1HQZZ",
+      "龙江": "Y8RT700VNP3P",
+      "依安": "YB907K29JWGV",
+      "泰来": "Y8PZBQZEW6YJ",
+      "甘南": "WQ1PJ9PBXYZY",
+      "富裕": "YB8803K79NNG",
+      "克山": "YB990PXEP8FW",
+      "克东": "YB9C0ZS7N0ZN",
+      "拜泉": "YB3WV12DHGJU",
+      "讷河": "YB8GC3X83ZH8"
+    },
+    "鸡西": {
+      "鸡西": "YBJ1SQ97WHN1",
+      "鸡冠": "YBJ1SQGYT1DK",
+      "恒山": "YBJ14TUZ328F",
+      "滴道": "YBJ1CR053BCD",
+      "梨树": "YBHBTBM79KJ9",
+      "城子河": "YBJ1VHCVWHQH",
+      "麻山": "YBHC0YJYHJ40",
+      "鸡东": "YBJ1RVTBQ7QU",
+      "虎林": "YBNS6H1JDD6U",
+      "密山": "YBJG0U0GCXQV"
+    },
+    "鹤岗": {
+      "鹤岗": "YBKTK25TPP2R",
+      "向阳": "YBKTK9ZXWXMJ",
+      "工农": "YBKTHM9MY5ZV",
+      "南山": "YBKTHT42W0KK",
+      "兴安": "YBKSG3XTUZZY",
+      "东山": "YBKTM320X96D",
+      "兴山": "YBKTKUY2JGPC",
+      "萝北": "YBMN9JEMXFYE",
+      "绥滨": "YBMUBR41ZWVC"
+    },
+    "双鸭山": {
+      "双鸭山": "YBM322SX2QPB",
+      "尖山": "YBM327K9XWEB",
+      "岭东": "YBM309937NQC",
+      "四方台": "YBM3H3UFWQUM",
+      "宝山": "YBM2VYTWQGYK",
+      "集贤": "YBM1ZCJGWRNZ",
+      "友谊": "YBMDPHJC6851",
+      "宝清": "YBNP8231E3BD",
+      "饶河": "YBR61XWMU274"
+    },
+    "大庆": {
+      "大庆": "YB2BVPSH4JM5",
+      "萨尔图": "YB2CNFHX4NTR",
+      "龙凤": "YB2BZK58SVC8",
+      "让胡路": "YB2C3K7R3S8U",
+      "红岗": "YB0ZCY60RJRM",
+      "大同": "YB0VBHBYKM2C",
+      "肇州": "YB15FX6VF96N",
+      "肇源": "YB0FYQ8MPPPB",
+      "林甸": "YB2U3KZE3VKW",
+      "杜尔伯特": "YB26XUMTX1MB"
+    },
+    "伊春": {
+      "伊春": "YB7XT0YP7SYK",
+      "南岔": "YB7UJSZC9867",
+      "友好": "YBE85XJG6JSD",
+      "西林": "YB7YN7JHFQPS",
+      "翠峦": "YB7RRZCRPCKP",
+      "新青": "YBS4EQTGB7WF",
+      "美溪": "YB7YFPPRTC7W",
+      "金山屯": "YBKJ9NCD4RU8",
+      "五营": "YBECTPUZR61H",
+      "乌马河": "YB7XD8PSR3Q1",
+      "汤旺河": "YBS5SK90GZCD",
+      "带岭": "YB7EXBBDYQEK",
+      "乌伊岭": "YBSH3P2G88DK",
+      "红星": "YBS42JM8VY66",
+      "上甘岭": "YBE8ZV54FR97",
+      "嘉荫": "YBSWNF7FDHQM",
+      "铁力": "YB7530MQ64YB"
+    },
+    "佳木斯": {
+      "佳木斯": "YBKDQEKD30TF",
+      "向阳": "YBKDQ2EMSQK6",
+      "前进": "YBKDQ9F6QKK4",
+      "东风": "YBKDR5R7872K",
+      "郊区": "YBKDM3PEMWE3",
+      "桦南": "YBHYGPYJM88E",
+      "桦川": "YBKGQXERKG29",
+      "汤原": "YBK3GFYMCRK7",
+      "同江": "YBQPPD6J7GCC",
+      "富锦": "YBMUU3T71YRK",
+      "抚远": "YBX7PT7XWV91"
+    },
+    "七台河": {
+      "七台河": "YBJH7VFZU4T1",
+      "新兴": "YBJHEK0MQBYU",
+      "桃山": "YBJHM6BQSK9F",
+      "茄子河": "YBJHQQE0652T",
+      "勃利": "YBHU70W1JD0S"
+    },
+    "牡丹江": {
+      "牡丹江": "WZUJT5EC6FK4",
+      "东安": "WZUJTE6JFGW6",
+      "阳明": "WZUJTY0EEW1Y",
+      "爱民": "WZUJSY0ES6N0",
+      "西安": "WZUJT6F2NJN7",
+      "林口": "YBH9SQEEXH03",
+      "绥芬河": "WZVK8QKT22PV",
+      "海林": "WZUJ81EXHD0Q",
+      "宁安": "WZUH61TJMXJN",
+      "穆棱": "WZUZD13VBQVV",
+      "东宁": "WZV4XWWWM7QM"
+    },
+    "黑河": {
+      "黑河": "YBFTUGSP7QCT",
+      "爱辉": "YBFTV5V9G6CF",
+      "嫩江": "YB9P8ZPU52Q6",
+      "逊克": "YBG653UBRVZH",
+      "孙吴": "YBF91HXS758Z",
+      "北安": "YB9FRH101ETS",
+      "五大连池": "YB9SPBB13PS3"
+    },
+    "绥化": {
+      "绥化": "YB63388P2QN8",
+      "北林": "YB6333XQVSWR",
+      "望奎": "YB3FQJ5UT8EX",
+      "兰西": "YB1Z1X4Q330T",
+      "青冈": "YB39T3Z4WYXN",
+      "庆安": "YB6DTY1PZ37S",
+      "明水": "YB3S2UVE6TKN",
+      "绥棱": "YB6KU1X7HWMH",
+      "安达": "YB1PGYYE8DVM",
+      "肇东": "YB1W4DZC4Y2W",
+      "海伦": "YB6Q138SZ3Q5"
+    },
+    "大兴安岭": {
+      "大兴安岭": "YBBQB6TMV95Z",
+      "漠河": "Y9RJK4ZSEGWJ",
+      "加格达奇": "YBBNZ69JB91R",
+      "呼玛": "YC4N3CPTNFUT",
+      "塔河": "YC29TSEF0DGK"
+    }
+  },
+  "上海": {
+    "上海": "WTW3SJ5ZBJUY",
+    "黄浦": "WTW3SMGJ8NHW",
+    "徐汇区": "WTW37HNSSJ68",
+    "长宁": "WTW3DGZ6DG22",
+    "静安": "WTW3GB8WWK6S",
+    "普陀": "WTW3F34NJJ19",
+    "虹口": "WTW3UGFJ7BJR",
+    "杨浦": "WTW3V712JSV7",
+    "闵行": "WTW3414PNURY",
+    "宝山": "WTW6SK5N30JR",
+    "嘉定": "WTW4X8D1EZCZ",
+    "浦东新区": "WTW3T7RMWMB4",
+    "金山": "WTQQBVVG9ZMN",
+    "松江": "WTW0W2VDYEPR",
+    "青浦": "WTW1HNSVUSCG",
+    "奉贤": "WTQRUHGF01UB",
+    "崇明": "WTW7FS0ZC50Z"
+  },
+  "江苏": {
+    "南京": {
+      "南京": "WTSQQYHVQ973",
+      "玄武": "WTSQR4WJNP42",
+      "秦淮": "WTSQR0GVT2DZ",
+      "建邺": "WTSQJDMYP91J",
+      "鼓楼": "WTSQQTCEZ5DT",
+      "浦口": "WTSQ7682Y34B",
+      "栖霞": "WTSQXKQHG41K",
+      "雨花台": "WTSQNB0QZZ03",
+      "江宁": "WTSTB2RFJXXJ",
+      "六合": "WTU8011K7TN4",
+      "溧水": "WTSSH3EWX58K",
+      "高淳": "WTSD1PMY2Z2C"
+    },
+    "无锡": {
+      "无锡": "WTTE97PU94T9",
+      "锡山": "WTTEF8S5Q6BN",
+      "惠山": "WTTS1REQ6G7M",
+      "滨湖": "WTTE2GZFGHHT",
+      "梁溪": "WTTE96Y2VC2D",
+      "新吴": "WTTE4V50PN9N",
+      "江阴": "WTTT2Z1YYP5B",
+      "宜兴": "WTT4QE46BRED"
+    },
+    "徐州": {
+      "徐州": "WW56FQXV5ZHB",
+      "鼓楼": "WW5746R8PEEU",
+      "云龙": "WW56GGZFDN77",
+      "贾汪": "WW5EBUURF35H",
+      "泉山": "WW56FDJWX2QH",
+      "铜山": "WW566Q28FVU3",
+      "丰县": "WW4VMKCW0UVD",
+      "沛县": "WW5JSF3UFMPR",
+      "睢宁": "WW5BU529F4N8",
+      "新沂": "WWH5T4EY4BS0",
+      "邳州": "WW5GHPB86PWW"
+    },
+    "常州": {
+      "常州": "WTTKC92GVT6S",
+      "天宁": "WTTKCCXTT1RS",
+      "钟楼": "WTTKBMF9SWCP",
+      "新北": "WTTM1FVWGGDE",
+      "武进": "WTTK3N6Q7S9D",
+      "金坛": "WTTH8GUJNUYP",
+      "溧阳": "WTSFWZFDVB90"
+    },
+    "苏州": {
+      "苏州": "WTTDPCGXTWUS",
+      "虎丘": "WTTDP3RN2FHT",
+      "吴中": "WTTCCH80FWRR",
+      "相城": "WTTF3NYNX9V0",
+      "姑苏": "WTTF295B36E7",
+      "吴江": "WTTC34246TPK",
+      "常熟": "WTTU59XQWGTU",
+      "张家港": "WTTTR1VB4WE5",
+      "昆山": "WTW48BWCWRFR",
+      "太仓": "WTW4GTQ3D8BV"
+    },
+    "南通": {
+      "南通": "WTTVYTY1H0HF",
+      "崇川": "WTTYN5DEE05E",
+      "港闸": "WTTYJPWNWDG6",
+      "通州": "WTWN7PBRX3RJ",
+      "如东": "WTWPVE8TDSTJ",
+      "启东": "WTWT00WUFMYT",
+      "如皋": "WTV8RDHRSTU0",
+      "海门": "WTWJMR1QCXH8",
+      "海安": "WTV9HVT12RV9"
+    },
+    "连云港": {
+      "连云港": "WWHUBFTRE77P",
+      "连云": "WWHVG800SD6K",
+      "海州": "WWHUBHNHSXN8",
+      "赣榆": "WWHWNSSE3NTF",
+      "东海": "WWHKQTVXVDDC",
+      "灌云": "WWHG1S55YRKV",
+      "灌南": "WWHCGUH42S6N"
+    },
+    "淮安": {
+      "淮安": "WTUXK27DXN0R",
+      "淮安区": "WTUYDYQNZ73S",
+      "淮阴区": "WTUXKD5HBN2U",
+      "清江浦": "WTUWUKKSCM9V",
+      "洪泽": "WTUT2N16E9YJ",
+      "涟水": "WWHB4J3YB2MU",
+      "盱眙": "WTU78P6WBJG5",
+      "金湖": "WTUEU75ERN0K"
+    },
+    "盐城": {
+      "盐城": "WTVMWP4TCFT7",
+      "亭湖": "WTVMZNCD8D11",
+      "盐都": "WTVMW5D93FM6",
+      "大丰": "WTVSV7GS42WD",
+      "响水": "WWJ48CUJQYN4",
+      "滨海": "WWJ1QCCEC7H5",
+      "阜宁": "WWJ0NJ7WY26S",
+      "射阳": "WWJ80M7QU06U",
+      "建湖": "WTVNQJ58YK4W",
+      "东台": "WTVDCKPV15VD"
+    },
+    "扬州": {
+      "扬州": "WTUBM40RTTUB",
+      "广陵": "WTUBM9EEUXN3",
+      "邗江": "WTUBJN87JTKZ",
+      "江都": "WTV02RTWKYJJ",
+      "宝应": "WTUV49RDG2ZX",
+      "仪征": "WTSZ8484RK10",
+      "高邮": "WTUFMXQM2DYS"
+    },
+    "镇江": {
+      "镇江": "WTSZNJUFDEP9",
+      "京口": "WTSZNMZSH2F7",
+      "润州": "WTSZJJM4K9X5",
+      "丹徒": "WTSYY1HFFDPE",
+      "丹阳": "WTTN0CKJWBQ5",
+      "扬中": "WTTPQE63277W",
+      "句容": "WTSTZB2FNR8M"
+    },
+    "泰州": {
+      "泰州": "WTV28G74FW3J",
+      "海陵": "WTV2BEPNYDNT",
+      "高港": "WTTPZGGEZ968",
+      "姜堰": "WTV3N04D9ZMK",
+      "兴化": "WTV5R2BHGKV1",
+      "靖江": "WTTW0V1FN0EU",
+      "泰兴": "WTTR507GUDWK"
+    },
+    "宿迁": {
+      "宿迁": "WWH1780CEFBR",
+      "宿城": "WWH14X18FKV8",
+      "宿豫": "WWH1HKMVPFDW",
+      "沭阳": "WWH6NTJTTT4U",
+      "泗阳": "WTURUDS1HRTG",
+      "泗洪": "WTUN6JJ0VSJN"
+    }
+  },
+  "浙江": {
+    "杭州": {
+      "杭州": "WTMKQ069CCJ7",
+      "上城": "WTMKN3V5ZZP4",
+      "下城": "WTMKQ9J9W5W9",
+      "江干": "WTMKPHX3CWBD",
+      "拱墅": "WTMKMZBFE71F",
+      "西湖": "WTMKJSBWTWPD",
+      "滨江": "WTM7Z7SRBC17",
+      "萧山": "WTME8U3BYPEU",
+      "余杭": "WTMT13ZC35J8",
+      "富阳": "WTM6CW2VVW48",
+      "临安": "WTM5UR1QW0QN",
+      "桐庐": "WTM1E0VJ94EK",
+      "淳安": "WTK8KSE02PBV",
+      "建德": "WTHZDQ9J3QQ3"
+    },
+    "宁波": {
+      "宁波": "WTQ3VZQP879N",
+      "海曙": "WTQ3VU7BB6FN",
+      "江北": "WTQ6JCNY16W8",
+      "北仑": "WTQDKB86YU3K",
+      "镇海": "WTQD3U1Z3SDM",
+      "鄞州": "WTQ3TQRKQ701",
+      "奉化": "WTQ2DT8GC08G",
+      "象山": "WTNXTNXJ2Y63",
+      "宁海": "WTNQE4Q8K5DE",
+      "余姚": "WTQ4UFF9RTER",
+      "慈溪": "WTQ5WSKBZXXU"
+    },
+    "温州": {
+      "温州": "WSVZ695PCF71",
+      "鹿城": "WSVZ3KXMRYFJ",
+      "龙湾": "WSVYVJ955QS4",
+      "瓯海": "WSVZ0EF4XCF7",
+      "洞头": "WSYNKF69X852",
+      "永嘉": "WTJB4HS3XU64",
+      "平阳": "WSVTRTHMKTU5",
+      "苍南": "WSVS7Y0X57DC",
+      "文成": "WSVQH3PW4Z3D",
+      "泰顺": "WSVHU6CQYHW0",
+      "瑞安": "WSVY110N4XR6",
+      "乐清": "WTN002CJ5K0D"
+    },
+    "嘉兴": {
+      "嘉兴": "WTMYGTZ7WZMY",
+      "南湖": "WTMYUMUKSM74",
+      "秀洲": "WTMZ49N98592",
+      "嘉善": "WTMZX85620Z4",
+      "海盐": "WTQJ8MC45K2X",
+      "海宁": "WTMVDJU6PU6P",
+      "平湖": "WTQN9UU06QU3",
+      "桐乡": "WTMWR8H2STU5"
+    },
+    "湖州": {
+      "湖州": "WTMRU3PTDC3X",
+      "吴兴": "WTMRWCC28EGN",
+      "南浔": "WTMXS06SWBWE",
+      "德清": "WTMM9VZ6PS7X",
+      "长兴": "WTT22RH887PG",
+      "安吉": "WTMN72H2DJU5"
+    },
+    "绍兴": {
+      "绍兴": "WTMDXTK6STK4",
+      "越城": "WTMDXGDTS1BB",
+      "柯桥": "WTMEJ7UZ1MF4",
+      "上虞": "WTMFY6YC7JSR",
+      "新昌": "WTJZZ4K9YNTF",
+      "诸暨": "WTM3PFKGD19C",
+      "嵊州": "WTMBM2F7YP9T"
+    },
+    "金华": {
+      "金华": "WTJJ6TY7R0FK",
+      "婺城": "WTJJ2Z9CP0HZ",
+      "金东": "WTJJE9F5QTST",
+      "武义": "WTJHQT468Q7X",
+      "浦江": "WTJPXCJYWMYU",
+      "磐安": "WTJTK2QKW2KX",
+      "兰溪": "WTHYNPKFFDZ9",
+      "义乌": "WTJQSMBKCGCH",
+      "东阳": "WTJQXFKB659G",
+      "永康": "WTJK7M54TWQZ"
+    },
+    "衢州": {
+      "衢州": "WTHS8FW3RYBK",
+      "柯城": "WTHSBF5GZDBN",
+      "衢江": "WTHSF7DHTZE9",
+      "常山": "WTHK2VPDSNMR",
+      "开化": "WTHJWWYY9CXF",
+      "龙游": "WTHTPUBBN20R",
+      "江山": "WTH7E3B2YK6Y"
+    },
+    "舟山": {
+      "舟山": "WTQFSTR6DMK4",
+      "定海": "WTQFF2YX0JWG",
+      "普陀": "WTQFRH0PKS9T",
+      "岱山": "WTQUHDZ742SN",
+      "嵊泗": "WTRNF6JR5Z1W"
+    },
+    "台州": {
+      "台州": "WTN74CS48NB0",
+      "椒江": "WTN75JN9H56X",
+      "黄岩": "WTN4ZXD47G1F",
+      "路桥": "WTN6D4F4WFPU",
+      "三门": "WTNMDJ4HQCRY",
+      "天台": "WTNJDNGQE3SF",
+      "仙居": "WTJU5R8GUYHF",
+      "温岭": "WTN33UDGJZR3",
+      "临海": "WTNHH5UZKTCC",
+      "玉环": "WTN0N8UVPSPF"
+    },
+    "丽水": {
+      "丽水": "WTJ3BG5J683H",
+      "莲都": "WTJ3BE42ZV8K",
+      "青田": "WTJ81H91XHK6",
+      "缙云": "WTJ6UR863G14",
+      "遂昌": "WTHFDN3Z06MV",
+      "松阳": "WTHCYG4TMB3H",
+      "云和": "WSVPBZH4YGYJ",
+      "庆元": "WSUTJH1D4J1V",
+      "景宁": "WSVP4JXGM413",
+      "龙泉": "WSUXWZGCF5QK"
+    }
+  },
+  "安徽": {
+    "合肥": {
+      "合肥": "WTEMH46Z5N09",
+      "瑶海": "WTEMJRCVVPNG",
+      "庐阳": "WTEMK79QR10U",
+      "蜀山": "WTEMHNWW0T6B",
+      "包河": "WTEKVK45X268",
+      "长丰": "WTG2F2B9DYU6",
+      "肥东": "WTET35E43QSX",
+      "肥西": "WTEK6Q2W6US6",
+      "庐江": "WTE3UBBSQN4R",
+      "巢湖": "WTEGF0W764FN"
+    },
+    "芜湖": {
+      "芜湖": "WTS4JZ3WMZMC",
+      "镜湖": "WTS4MC9MZDPC",
+      "弋江": "WTS4JS2RHCZP",
+      "鸠江": "WTS4MYYQ3PU2",
+      "三山": "WTS1E5SRHQ7U",
+      "芜湖县": "WTS34NSJCKB5",
+      "繁昌": "WTS0C9YW5EUJ",
+      "南陵": "WTKPUSV60CG0",
+      "无为": "WTEF53FXXNUU"
+    },
+    "蚌埠": {
+      "蚌埠": "WTG7R0CSBHZ9",
+      "龙子湖": "WTG7RJRKC1JS",
+      "蚌山": "WTG7QTS5ZCZY",
+      "禹会": "WTG7Q4CZWYZ0",
+      "淮上": "WTG7W3QPX264",
+      "怀远": "WTG7D6PB5VKY",
+      "五河": "WTGUD6V8EPFU",
+      "固镇": "WTGMT9TZ44HQ"
+    },
+    "淮南": {
+      "淮南": "WTG1WKHG98G5",
+      "大通": "WTG1XKXRXCUK",
+      "田家庵": "WTG1WXT7P1DE",
+      "谢家集": "WTG17P43HDN1",
+      "八公山": "WTG1DKZB05SG",
+      "潘集": "WTG46R3TR6CK",
+      "凤台": "WTG400BGM1U4",
+      "寿县": "WTG137H870PQ"
+    },
+    "马鞍山": {
+      "马鞍山": "WTSK2DC1FHK3",
+      "花山": "WTSK2NZB4F92",
+      "雨山": "WTSK0RUJXNMJ",
+      "博望": "WTSE832M8GRH",
+      "当涂": "WTS72PD80470",
+      "含山": "WTEURQMY3KWD",
+      "和县": "WTSHMW6QKUT4"
+    },
+    "淮北": {
+      "淮北": "WW511U7JJ68Q",
+      "杜集": "WW516K5Z0HHM",
+      "相山": "WW511W7NGXEQ",
+      "烈山": "WW50F48Y0143",
+      "濉溪": "WW50CNVQ64QC"
+    },
+    "铜陵": {
+      "铜陵": "WT7ZCN9UKCZS",
+      "铜官": "WTEB1B0QM30H",
+      "义安": "WTEB071JWRYP",
+      "郊区": "WT7ZBEHWGP9G",
+      "枞阳": "WT7QDUY2MYY1"
+    },
+    "安庆": {
+      "安庆": "WT7JXTC4NSMZ",
+      "迎江": "WT7M86G5V7M9",
+      "大观": "WT7JYF8EW2Y7",
+      "宜秀": "WT7JZB7C371F",
+      "怀宁": "WT7NF83HBR41",
+      "潜山": "WT6YK858TVGG",
+      "太湖": "WT6TJG95X75S",
+      "宿松": "WT6ED2SH2P7E",
+      "望江": "WT6GRHGZCP1F",
+      "岳西": "WT6XX856R8B4",
+      "桐城": "WTE0TK2RKE82"
+    },
+    "黄山": {
+      "黄山": "WTK1H2DTJ1U4",
+      "屯溪": "WTK1HDM78CE1",
+      "黄山区": "WTKH25GWK92K",
+      "徽州": "WTK1SWQ6KSMG",
+      "歙县": "WTK1YVWJ7586",
+      "休宁": "WTK13M211D6G",
+      "黟县": "WT7F78D4BHMK",
+      "祁门": "WT79YV9J6GD4"
+    },
+    "滁州": {
+      "滁州": "WTSPU2JCPU6T",
+      "琅琊": "WTSPEZRV0DD3",
+      "南谯": "WTSPGVC6CSNS",
+      "来安": "WTU0WGQ4GN2M",
+      "全椒": "WTSNE79S49XY",
+      "定远": "WTG9J9USVXX2",
+      "凤阳": "WTGDGRGCES45",
+      "天长": "WTUD5BV5KCZ6",
+      "明光": "WTGFKXQMM6BH"
+    },
+    "阜阳": {
+      "阜阳": "WTF75T383SE2",
+      "颍州": "WTF754S5EV8V",
+      "颍东": "WTF7HRBMJFDV",
+      "颍泉": "WTF774JHUPCK",
+      "临泉": "WTCUNS4QXWU9",
+      "太和": "WTFHWYRVM20T",
+      "阜南": "WTF1WH4G90Y7",
+      "颍上": "WTF9TU15X2GE",
+      "界首": "WTFJ0EHJ0C17"
+    },
+    "宿州": {
+      "宿州": "WTGPMFNHZW6H",
+      "埇桥": "WTGPMU22MZ76",
+      "砀山": "WW4EZ9GRP901",
+      "萧县": "WW54KY3BFMZ3",
+      "灵璧": "WTGWFGT6CT2C",
+      "泗县": "WTGY6QVE5H6G"
+    },
+    "六安": {
+      "六安": "WTDUEP89WV0P",
+      "金安": "WTDUEU1VNR0U",
+      "裕安": "WTDUD6N3923E",
+      "叶集": "WTDMMBFJSUSW",
+      "霍邱": "WTDXVV3PZKGD",
+      "舒城": "WTE5HBCY43PQ",
+      "金寨": "WTDKMY6Q7U8F",
+      "霍山": "WTDDXHHYM2NZ"
+    },
+    "亳州": {
+      "亳州": "WW42DDHQT937",
+      "谯城": "WW42DRPXTXVB",
+      "涡阳": "WTFWSWHU4KCH",
+      "蒙城": "WTFVK8EEVCEB",
+      "利辛": "WTFSS4Y28PZU"
+    },
+    "池州": {
+      "池州": "WT7W3R63DQMH",
+      "贵池": "WT7WE4YHS47Y",
+      "东至": "WT75NZE35WSM",
+      "石台": "WT7ECM6K62M1",
+      "青阳": "WT7Y3EXV0N15"
+    },
+    "宣城": {
+      "宣城": "WTS2N4R0GD1V",
+      "宣州": "WTS2N4PBR954",
+      "郎溪": "WTS9PG0CQK87",
+      "广德": "WTKZV3NVX9MZ",
+      "泾县": "WTKNWKB0RYYC",
+      "绩溪": "WTK74F1FKQ38",
+      "旌德": "WTKK30QCV1JG",
+      "宁国": "WTKW72N8DVY5"
+    }
+  },
+  "福建": {
+    "福州": {
+      "福州": "WSSU6EXX52RE",
+      "鼓楼": "WSSU6SWYKMJ0",
+      "台江": "WSSU4ZQ6D7WR",
+      "仓山": "WSSU4N0Z7VJ9",
+      "马尾": "WSSGY5V35CQZ",
+      "晋安": "WSSU7K8V49R4",
+      "长乐": "WSSGXXXY1YGK",
+      "闽侯": "WSSSYB7YF1Q6",
+      "连江": "WSSVPCX44CGZ",
+      "罗源": "WSTN8KT9HVV0",
+      "闽清": "WSST0MPYTDR0",
+      "永泰": "WSSE4M6PTVE9",
+      "平潭": "WST1JTV0U2C3",
+      "福清": "WSSFKD1VGEEB"
+    },
+    "厦门": {
+      "厦门": "WS7GQBRNR6V8",
+      "思明": "WS7GNFTT1KYV",
+      "海沧": "WS7GMCC298MV",
+      "湖里": "WSK52QUM8ZN2",
+      "集美": "WS7GZ62HZ7FN",
+      "同安": "WSKH8TFNWW1K",
+      "翔安": "WSKH4DNJVNBP"
+    },
+    "莆田": {
+      "莆田": "WSS8S6CQZBPG",
+      "城厢": "WSS8EVMHKZX6",
+      "涵江": "WSS8Y1JBZPUE",
+      "荔城": "WSS8SM7SRP86",
+      "秀屿": "WSKZ5N0G42QG",
+      "仙游": "WSS2KDKNUQVB"
+    },
+    "三明": {
+      "三明": "WSETKW23BDUT",
+      "梅列": "WSETKZPX8XNH",
+      "三元": "WSETK0KH29J0",
+      "明溪": "WSEQ4BW2MUQ1",
+      "清流": "WSEHFMCTX39R",
+      "宁化": "WSDVQQMCY4BM",
+      "大田": "WSEF1WXC251P",
+      "尤溪": "WSSHCK0539DF",
+      "沙县": "WSEY0JUZ0UTQ",
+      "将乐": "WSG8145193HS",
+      "泰宁": "WSG342BXFGKQ",
+      "建宁": "WSG0DS3006D0",
+      "永安": "WSE7YCD0RPP0"
+    },
+    "泉州": {
+      "泉州": "WSKMS3KBE2JM",
+      "鲤城": "WSKMDQV4EHBK",
+      "丰泽": "WSKME5B5PD5M",
+      "洛江": "WSKMUKDMV3H2",
+      "泉港": "WSKWCVKYYD0V",
+      "惠安": "WSKQRKED2DHM",
+      "安溪": "WSKN97B53DDZ",
+      "永春": "WSS05CR7TY17",
+      "德化": "WSS146HKQ8T9",
+      "金门": "WSK5H226V4KW",
+      "石狮": "WSKKEVYQ9QHK",
+      "晋江": "WSKM4Q76FR2E",
+      "南安": "WSKNJC9SVCMG"
+    },
+    "漳州": {
+      "漳州": "WS7EMPWP7EQ3",
+      "芗城": "WS7EMNTE8EBT",
+      "龙文": "WS7EQMNJDJ9T",
+      "云霄": "WS72JZVNG5T4",
+      "漳浦": "WS79K88R2WH8",
+      "诏安": "WS5QFQPG5BKZ",
+      "长泰": "WS7SP3YVVUES",
+      "东山": "WS5WB4MYT24Q",
+      "南靖": "WS77QZDPR5R1",
+      "平和": "WS76THRM8172",
+      "华安": "WS7W66Y8P6PC",
+      "龙海": "WS7G14CZSFRE"
+    },
+    "南平": {
+      "南平": "WSSP952Z8846",
+      "延平": "WSSP91VC9V9P",
+      "建阳": "WSGGRZK2G3R8",
+      "顺昌": "WSGB2WG36FN7",
+      "浦城": "WSUQC4WVV1JZ",
+      "光泽": "WSGKTZM47HJP",
+      "松溪": "WSUKWGSVYEGQ",
+      "政和": "WSUE8QXCV9Z1",
+      "邵武": "WSGE9QD3F3V1",
+      "武夷山": "WSGVVZ6GFR4Y",
+      "建瓯": "WSU1U2TVPV4W"
+    },
+    "龙岩": {
+      "龙岩": "WS7NZ16DHEHU",
+      "新罗": "WS7NZ1KRFSM0",
+      "永定": "WS7H8K0HQJUX",
+      "长汀": "WSDDZW5QXSBP",
+      "上杭": "WS6Y90NQYD7Y",
+      "武平": "WS6WCCM6N54S",
+      "连城": "WSE42DNVB5T8",
+      "漳平": "WS7RZVWXHMCF"
+    },
+    "宁德": {
+      "宁德": "WSSZXXPU1B76",
+      "蕉城": "WSSZXY1127B3",
+      "霞浦": "WSV2FTM76EJM",
+      "古田": "WSSRNNXPEX1U",
+      "屏南": "WSU95KWS6GWP",
+      "寿宁": "WSUUR2C0RG4K",
+      "周宁": "WSUF73J3QW3J",
+      "柘荣": "WSV6BMHD0RZV",
+      "福安": "WSV449Y2RJFK",
+      "福鼎": "WSV7RXM8C130"
+    }
+  },
+  "江西": {
+    "南昌": {
+      "南昌": "WT47HJP3HEMP",
+      "东湖": "WT47JNXDRDZB",
+      "西湖": "WT47H9XDJYVW",
+      "青云谱": "WT46VFGN0UR8",
+      "湾里": "WT4737UYM11F",
+      "青山湖": "WT47NWJMXSFE",
+      "新建": "WT47789T9EG2",
+      "南昌县": "WT46QJ3EUC9R",
+      "安义": "WT4HJ7UZQJUC",
+      "进贤": "WT49MU95PR79"
+    },
+    "景德镇": {
+      "景德镇": "WT5QD22W4GKR",
+      "昌江": "WT5QD3W9X9C9",
+      "珠山": "WT5QDYKEYQ0Z",
+      "浮梁": "WT5RH4DUEHBD",
+      "乐平": "WT5KC1U4MZ3T"
+    },
+    "萍乡": {
+      "萍乡": "WSBVNTZH3M2C",
+      "安源": "WSBVR1T8GMD4",
+      "湘东": "WSBV7CX8VJD6",
+      "莲花": "WSC42FZGEQW3",
+      "上栗": "WSBYTE6SU0WQ",
+      "芦溪": "WSCJ4VFH7T69"
+    },
+    "九江": {
+      "九江": "WT62ZWSX5CM0",
+      "濂溪": "WT62Z37EEZFR",
+      "浔阳": "WT63PK1YEZYT",
+      "柴桑": "WT62MW8HMU0E",
+      "武宁": "WT1YE0MQ07KX",
+      "修水": "WT1MPHG242PZ",
+      "永修": "WT4M5HFBP84R",
+      "德安": "WT4QF7M5SS28",
+      "都昌": "WT4WE8RWN5QZ",
+      "湖口": "WT69HSHVF39J",
+      "彭泽": "WT6FH5JH5GFZ",
+      "瑞昌": "WT62B5H6D352",
+      "共青城": "WT4Q7JJ8PW6M",
+      "庐山": "WT62Z5N49CH0"
+    },
+    "新余": {
+      "新余": "WSCWR06PNPFU",
+      "渝水": "WSCWPT88FMNQ",
+      "分宜": "WSCW32KPHXVK"
+    },
+    "鹰潭": {
+      "鹰潭": "WT50ZFRU8TYY",
+      "月湖": "WT50XJK5D5EG",
+      "余江": "WT506M9SZM12",
+      "贵溪": "WT52GKHYZYP5"
+    },
+    "赣州": {
+      "赣州": "WS9DZQ1QXHGR",
+      "章贡": "WS9DYUXD78Q3",
+      "南康": "WS99GJQQHF99",
+      "赣县": "WS9G0VKRWJX1",
+      "信丰": "WS98RK33PNGM",
+      "大余": "WS926PGJSP5V",
+      "上犹": "WS96Y0WPYKTD",
+      "崇义": "WS960YW9R51R",
+      "安远": "WS6NCWC0UGE9",
+      "龙南": "WS3TGBS1XBEN",
+      "定南": "WS3UCX43CQB9",
+      "全南": "WS3KVCWGJQMH",
+      "宁都": "WSDW8HE1JVY0",
+      "于都": "WSD5DKN38YTG",
+      "兴国": "WSDJBC5R3GDP",
+      "会昌": "WSD3DSK6V9CK",
+      "寻乌": "WS6JZWJB2345",
+      "石城": "WSDTZ1HZM7WZ",
+      "瑞金": "WSDE0R63YVWV"
+    },
+    "吉安": {
+      "吉安": "WSCF23JCKNQJ",
+      "吉州": "WSCF2TUZXCE3",
+      "青原": "WSCF14EX1KWY",
+      "吉安县": "WSC9YS79SJ3X",
+      "吉水": "WSCFGG5PGRY0",
+      "峡江": "WSFJ0KHDPV0V",
+      "新干": "WSFJCZREYZHW",
+      "永丰": "WSF56TMW9CN7",
+      "泰和": "WSC8QNV1640E",
+      "遂川": "WS9MVCNZM7TP",
+      "万安": "WS9WEFSNZVEH",
+      "安福": "WSCEB0RSP9FT",
+      "永新": "WSC1R65EPUJ7",
+      "井冈山": "WSC2020Z7CP8"
+    },
+    "宜春": {
+      "宜春": "WSCQ4UBFXPTE",
+      "袁州": "WSCQ5TJWH7TG",
+      "奉新": "WT45389JSGG8",
+      "万载": "WSCRGZJ6U7BM",
+      "上高": "WT18X545WJ6V",
+      "宜丰": "WT197YKJRZ7N",
+      "靖安": "WT4H0ZE7CY44",
+      "铜鼓": "WT16699XQ1MP",
+      "丰城": "WT426TSKVT12",
+      "樟树": "WSFPSVYRS57B",
+      "高安": "WT419M9Y7ZGP"
+    },
+    "抚州": {
+      "抚州": "WSFXR95RZD21",
+      "临川": "WSFWYTUM7M71",
+      "东乡": "WT4BTG05DVQT",
+      "南城": "WSFUTZR67UPP",
+      "黎川": "WSG5K9FD12YG",
+      "南丰": "WSFFGENXCZCB",
+      "崇仁": "WSFTBZ35BZPY",
+      "乐安": "WSFK5C2Z6DEG",
+      "宜黄": "WSFSSXKF6K1P",
+      "金溪": "WSGNC4TMF1NZ",
+      "资溪": "WSGJXFXU0WQB",
+      "广昌": "WSF8WUM8H6W2"
+    },
+    "上饶": {
+      "上饶": "WT5CU7PJK0RS",
+      "信州": "WT5CU22FHTT0",
+      "广丰": "WTH19R80C84G",
+      "上饶县": "WT5CERD8Z0HG",
+      "玉山": "WTH54V510EQZ",
+      "铅山": "WT59N76XBY9H",
+      "横峰": "WT59SJ9WQXGX",
+      "弋阳": "WT5984JCVRDQ",
+      "余干": "WT4GR0EV95CB",
+      "鄱阳": "WT4UYZK90PC6",
+      "万年": "WT55RBXV8EYB",
+      "婺源": "WT5Y3SZC851N",
+      "德兴": "WT5SEQ5VGX4H"
+    }
+  },
+  "山东": {
+    "济南": {
+      "济南": "WWE0TGW4PX6N",
+      "历下": "WWE284B4BBUM",
+      "市中": "WWE0W0NUVUJF",
+      "槐荫": "WWE0S00VDXD2",
+      "天桥": "WWE0TUZRX4XE",
+      "历城": "WWE0XTRF5FPF",
+      "长清": "WW7PBM8PNJUD",
+      "章丘": "WWE8FKWTX2PU",
+      "济阳": "WWE67KHBPGXH",
+      "莱芜": "WW7WJ9SSV9R7",
+      "钢城": "WW7V0SRQUYT1",
+      "平阴": "WW6Y3US63DJM",
+      "商河": "WWEK3CFHBB5R"
+    },
+    "青岛": {
+      "青岛": "WWMT5Q64CR3G",
+      "市南": "WWMT5ZMFHXY8",
+      "市北": "WWMT716RYYZN",
+      "黄岛": "WWMKWU0KKVZP",
+      "崂山": "WWMTM7G9DRY8",
+      "李沧": "WWMTSKH8YQNC",
+      "城阳": "WWMWE96JVNUD",
+      "即墨": "WWMWUYV0B7T9",
+      "胶州": "WWMQ76G0JDNC",
+      "平度": "WWT31X8GJ8FW",
+      "莱西": "WWT9WPCRMD0K"
+    },
+    "淄博": {
+      "淄博": "WWECQQCKH37Z",
+      "淄川": "WWEBH2ZZKMW6",
+      "张店": "WWECMKMEVJWC",
+      "博山": "WW7Z9SXGBJ1H",
+      "临淄": "WWS17YZKJC3R",
+      "周村": "WWEC65NRD14N",
+      "桓台": "WWEFQFPJZ7T8",
+      "高青": "WWEG3N9FUYPW",
+      "沂源": "WWKJC42GB8F6"
+    },
+    "枣庄": {
+      "枣庄": "WW5QJDVC4NKQ",
+      "市中": "WW5W6FVXU1BH",
+      "薛城": "WW5MUP4UEN0T",
+      "峄城": "WW5TG9EJUTF9",
+      "台儿庄": "WW5SXJ22GG4D",
+      "山亭": "WW5X8VB2PY7F",
+      "滕州": "WW5R9F45BCGR"
+    },
+    "东营": {
+      "东营": "WWSKUMUVE3TR",
+      "河口": "WWSR3PYFVPVC",
+      "垦利": "WWSMC9JRR5WZ",
+      "利津": "WWSJ4Z50BDQU",
+      "广饶": "WWS4YK2HRUYG"
+    },
+    "烟台": {
+      "烟台": "WWWM51WDH1FX",
+      "芝罘": "WWWMD3UUQFEK",
+      "福山": "WWWJR4ET3F8V",
+      "牟平": "WWWKXHF6M35C",
+      "莱山": "WWWM7KTCG82S",
+      "长岛": "WWTZER0UHBKF",
+      "龙口": "WWTWNMZZPS9Q",
+      "莱阳": "WWTF6S501GEH",
+      "莱州": "WWT7906M5W3D",
+      "蓬莱": "WWTZ5SZMQYVZ",
+      "招远": "WWTSEG0852FV",
+      "栖霞": "WWTUJW38PPFN",
+      "海阳": "WWW1HZDEP8GQ"
+    },
+    "潍坊": {
+      "潍坊": "WWS8Z342UPZ7",
+      "潍城": "WWS8UQ5420B5",
+      "寒亭": "WWSC0Y8YQWYN",
+      "坊子": "WWS8X8DJ79MY",
+      "奎文": "WWS8YF36CENQ",
+      "临朐": "WWKRC0QBMJMV",
+      "昌乐": "WWS2ZC40FXVE",
+      "青州": "WWS0XV7HRPDD",
+      "诸城": "WWKUV187JWKU",
+      "寿光": "WWS3VCB99D29",
+      "安丘": "WWKZ0RYU1K4N",
+      "高密": "WWMNUYZ2C5XC",
+      "昌邑": "WWSCTPBRMDHU"
+    },
+    "济宁": {
+      "济宁": "WW6CSB4BQYSD",
+      "任城": "WW6CMJDJ434E",
+      "兖州": "WW744X9JB264",
+      "微山": "WW5Q16G3NY6N",
+      "鱼台": "WW4ZN7TCY0BK",
+      "金乡": "WW4XW2R1D3V6",
+      "嘉祥": "WW69X0HBMQWF",
+      "汶上": "WW6G686NKDZ0",
+      "泗水": "WW76UT92V1CY",
+      "梁山": "WW6E9MNYH59Q",
+      "曲阜": "WW74MVNHX8DP",
+      "邹城": "WW71MSQGYW39"
+    },
+    "泰安": {
+      "泰安": "WW7MBNP039PE",
+      "泰山": "WW7MCKDBY7F5",
+      "岱岳": "WW7JZ5Y9R8ZJ",
+      "宁阳": "WW753ZEPM723",
+      "东平": "WW6U6KFG7TQW",
+      "新泰": "WW7SRGJ3PVKF",
+      "肥城": "WW7JC4M7F0YF"
+    },
+    "威海": {
+      "威海": "WWWV6YM1F4ZV",
+      "环翠": "WWWV6FGFUY36",
+      "文登": "WWWG9K41ENS5",
+      "荣成": "WWX53WXDBY0N",
+      "乳山": "WWW6J3P6W6B4"
+    },
+    "日照": {
+      "日照": "WWKCX8PB3YE6",
+      "东港": "WWKCW318GJPW",
+      "岚山": "WWHZG1C62BEP",
+      "五莲": "WWKG2KNFC740",
+      "莒县": "WWKD2J1KE8WP"
+    },
+    "临沂": {
+      "临沂": "WWHPMHEV4CS4",
+      "兰山": "WWHPKVN1B7SS",
+      "罗庄": "WWHP5E068244",
+      "河东": "WWHPW5YPSX1Q",
+      "沂南": "WWK4PZEJZ06D",
+      "郯城": "WWHHVN7U4GU0",
+      "沂水": "WWK7E383W76V",
+      "兰陵": "WW5YM1KZEQDE",
+      "费县": "WW7BSKXNSHX9",
+      "平邑": "WW79UWXD3XTH",
+      "莒南": "WWK80H367EQ4",
+      "蒙阴": "WW7G5WDH04T7",
+      "临沭": "WWHQEUYR9RU3"
+    },
+    "德州": {
+      "德州": "WWDTN3X443VR",
+      "德城": "WWDTN3D6R378",
+      "陵城": "WWDUKEEXJB7G",
+      "宁津": "WWEN1MUX5HXQ",
+      "庆云": "WWEQZJ9S2NRW",
+      "临邑": "WWE5E2QJHQK4",
+      "齐河": "WWE12ENZ81JW",
+      "平原": "WWDG3QTDZWHQ",
+      "夏津": "WWD6PWS97GJP",
+      "武城": "WWDE9PXW5NBU",
+      "乐陵": "WWEQESS30VZ8",
+      "禹城": "WWDFJFZKGFZN"
+    },
+    "聊城": {
+      "聊城": "WW6RR5W09UKP",
+      "东昌府": "WW6RR28NEJY1",
+      "阳谷": "WW6M6XKQM812",
+      "莘县": "WW6Q05KR43E2",
+      "茌平": "WWD8J74TVQ4X",
+      "东阿": "WW6WTMDTT6FE",
+      "冠县": "WW6PD8VX3UYK",
+      "高唐": "WWD9SZUP761S",
+      "临清": "WWD38U64V3UU"
+    },
+    "滨州": {
+      "滨州": "WWEUSKZ4K1P9",
+      "滨城": "WWEUVMYTH3FB",
+      "沾化": "WWSN2P5DKT27",
+      "惠民": "WWET1Z0BU6QH",
+      "阳信": "WWEW5D74SS6T",
+      "无棣": "WWEWSH99NTG8",
+      "博兴": "WWS524GWKTBQ",
+      "邹平": "WWE9Z1B3EF69"
+    },
+    "菏泽": {
+      "菏泽": "WW607X60CDS4",
+      "牡丹": "WW60D38662MB",
+      "定陶": "WW4PTB7981VF",
+      "曹县": "WW4NHUW7KNEF",
+      "单县": "WW4TCRNUSN1M",
+      "成武": "WW4QUFMNX8NW",
+      "巨野": "WW693KQGUN33",
+      "郓城": "WW66W0C9HBCR",
+      "鄄城": "WW64K72D30D4",
+      "东明": "WW3BDWW8YKEM"
+    }
+  },
+  "河南": {
+    "郑州": {
+      "郑州": "WW0V9QP93VS8",
+      "中原": "WW0V9JVYNWC8",
+      "二七": "WW0V9C9B6YEV",
+      "管城": "WW0VDXJ1BPHH",
+      "金水": "WW0VFR2EUERG",
+      "上街": "WW0W1DZCPQ6N",
+      "惠济": "WW0Y378GUEEZ",
+      "中牟": "WW1J92W6TMP7",
+      "巩义": "WW0MFCTTBVCC",
+      "荥阳": "WW0TU7X25TBT",
+      "新密": "WW0SKJBZC6X9",
+      "新郑": "WW0GEYRDT0F3",
+      "登封": "WW0KH51FMCSX"
+    },
+    "开封": {
+      "开封": "WW1MBZNSXN1M",
+      "龙亭": "WW1Q444M0R4Q",
+      "顺河": "WW1MFR3EUQW8",
+      "鼓楼": "WW1MCVJWFGY2",
+      "禹王台": "WW1MCGJKPY32",
+      "祥符": "WW1MSP3R5F6Y",
+      "杞县": "WW1SECSHRFG1",
+      "通许": "WW1KHUFS83F7",
+      "尉氏": "WW15Y1ZR4C4C",
+      "兰考": "WW1WHFC35YMQ"
+    },
+    "洛阳": {
+      "洛阳": "WQPUYY7S4GV2",
+      "老城": "WQPVR4HUTRT6",
+      "西工": "WQPVNJZ60FQ0",
+      "瀍河": "WQPVRC7XNMRC",
+      "涧西": "WQPVJMRRPS1G",
+      "吉利": "WW0N9C670PS3",
+      "洛龙": "WQPUZN3QU0QH",
+      "孟津": "WQPYNKT52YS4",
+      "新安": "WQPV8094SMJ5",
+      "栾川": "WQP25VRNY82K",
+      "嵩县": "WQPDQBUDPM6K",
+      "汝阳": "WQPFR2F4HVQK",
+      "宜阳": "WQPU2KPTW6QH",
+      "洛宁": "WQP7SDTN18D0",
+      "伊川": "WQPGY1VXPC59",
+      "偃师": "WW0JW67UUMPP"
+    },
+    "平顶山": {
+      "平顶山": "WW02P7XHT0KB",
+      "新华": "WTBXCVVWGV3X",
+      "卫东": "WTBXFV7X18K5",
+      "石龙": "WW02BEK9YDH8",
+      "湛河": "WTBXFEC4SER7",
+      "宝丰": "WW02SZXJ3CYB",
+      "叶县": "WTBX726FWQJZ",
+      "鲁山": "WTBRCH772XTX",
+      "郏县": "WW0922H394YZ",
+      "舞钢": "WTBTRNNDX9ZJ",
+      "汝州": "WW04RS2Q9T9V"
+    },
+    "安阳": {
+      "文峰": "WW3M645C7VU9",
+      "北关": "WW3M6J4GNWC1",
+      "殷都": "WW3M2VSG55XX",
+      "龙安": "WW3M36GRRPTQ",
+      "安阳": "WW3M6GBCXPV8",
+      "汤阴": "WW3K6551HJ7F",
+      "滑县": "WW36MVNUT2TP",
+      "内黄": "WW3SW87XUJ9X",
+      "林州": "WW2VNN34YPR7"
+    },
+    "鹤壁": {
+      "鹤壁": "WW372S04V500",
+      "鹤山": "WW3HT9QF0RGY",
+      "山城": "WW3HNNYPHZ0B",
+      "淇滨": "WW372F92W3ME",
+      "浚县": "WW36YTSBB3YY",
+      "淇县": "WW34W8VCHBGZ"
+    },
+    "新乡": {
+      "红旗": "WW2BZ4VP4ZYC",
+      "卫滨": "WW2BYFWJJFTX",
+      "凤泉": "WW3121D1WKYR",
+      "牧野": "WW2BZVJ83JVK",
+      "新乡": "WW2BZF5MQKGW",
+      "获嘉": "WW2BDHTQSUW1",
+      "原阳": "WW1P3KWMJ3X6",
+      "延津": "WW1PYWVGSFGV",
+      "封丘": "WW1R7SWJ51XF",
+      "长垣": "WW381XGQVETF",
+      "卫辉": "WW317SR5ZWKC",
+      "辉县": "WW2CSZKC3PHE"
+    },
+    "焦作": {
+      "焦作": "WW2835D5K7BE",
+      "解放": "WW282RRS2F2Y",
+      "中站": "WW22RQSXG9EB",
+      "马村": "WW28DD4PFZ4S",
+      "山阳": "WW28349N3ETT",
+      "修武": "WW28MJMJWEFR",
+      "博爱": "WW22HFX01GNV",
+      "武陟": "WW0XSJBB36PX",
+      "温县": "WW0QTNY3FZZQ",
+      "沁阳": "WW0R9F15G9ZP",
+      "孟州": "WW0NW37GHRX1"
+    },
+    "濮阳": {
+      "华龙": "WW3GD3N1D5CE",
+      "清丰": "WW3U5X7UDMJ9",
+      "南乐": "WW3VM2NJ4X3Z",
+      "范县": "WW6HH3BTCHDH",
+      "台前": "WW6KU1X7HWMH",
+      "濮阳": "WW3G3XDR3729"
+    },
+    "许昌": {
+      "许昌": "WW0CWDZP17BC",
+      "魏都": "WW0CTFQUC063",
+      "建安": "WW0FJUQZWUZD",
+      "鄢陵": "WW11YXTYUUEZ",
+      "襄城": "WW08W61WE9KG",
+      "禹州": "WW0DQH6QDTSM",
+      "长葛": "WW0FSVSCCNKE"
+    },
+    "漯河": {
+      "漯河": "WTCP494CDTDN",
+      "源汇": "WTCNFQTJ89KK",
+      "郾城": "WTCP44TJ8VH0",
+      "召陵": "WTCPH4KRB0VV",
+      "舞阳": "WTBY1J8ZZGEM",
+      "临颍": "WW102S9RC2VQ"
+    },
+    "三门峡": {
+      "三门峡": "WQPJF7T25VCT",
+      "湖滨": "WQPJF4089RWV",
+      "陕州": "WQNVRSVYPSG6",
+      "渑池": "WQPMYCTVGTZ3",
+      "卢氏": "WQNCXN85SS19",
+      "义马": "WQPT9WJ1RVTB",
+      "灵宝": "WQNU6UJJD4RU"
+    },
+    "南阳": {
+      "南阳": "WTB58RQWFJC5",
+      "宛城": "WTB5BB88DRS4",
+      "卧龙": "WTB58TBXWEYG",
+      "南召": "WMZYW6MP8US5",
+      "方城": "WTBM72S5FCE0",
+      "西峡": "WMZM2F3Q038U",
+      "镇平": "WMZGCUGMSW32",
+      "内乡": "WMZS10WDJYSC",
+      "淅川": "WMZK2Z1K0R8G",
+      "社旗": "WTBK1B945WX1",
+      "唐河": "WTB4P8B739CF",
+      "新野": "WMZCH84F8XRU",
+      "桐柏": "WTB8HKZ2GT2E",
+      "邓州": "WMZ9YMNNV393"
+    },
+    "商丘": {
+      "商丘": "WW45ZXMVB36N",
+      "梁园": "WW45YWXD3T0C",
+      "睢阳": "WW45XSKNVP4C",
+      "民权": "WW1V5GG4GKNJ",
+      "睢县": "WW1GFRRMV36Y",
+      "宁陵": "WW45BPMMYC2Q",
+      "柘城": "WW1CZDQBHSR6",
+      "虞城": "WW47SNR6S8V1",
+      "夏邑": "WW4DDX7K1NKP",
+      "永城": "WW4BCQVWRDK3"
+    },
+    "信阳": {
+      "信阳": "WT9NG9P4ZDHG",
+      "浉河": "WT9NER49RVET",
+      "平桥": "WT9NSU5T2MR4",
+      "罗山": "WT9RNJY4W7J9",
+      "光山": "WT9WNT5DH09S",
+      "新县": "WT9EVYJF1525",
+      "商城": "WTDHCVP8QVSS",
+      "固始": "WTDR065W56GC",
+      "潢川": "WT9YC946C60E",
+      "淮滨": "WTF03ZXWQYHT",
+      "息县": "WTC849PU6V0D"
+    },
+    "周口": {
+      "周口": "WTCX2BMDDWHP",
+      "川汇": "WTCX2VDHGZTY",
+      "扶沟": "WW13FF2BPHMD",
+      "西华": "WW12Q1N5Q2TT",
+      "商水": "WTCQXZCNMT12",
+      "沈丘": "WTCY42R3J76B",
+      "郸城": "WTCZMMY16W9U",
+      "淮阳": "WTCXYHM56P8X",
+      "太康": "WW19V6R0NUR4",
+      "鹿邑": "WW40EVCGP195",
+      "项城": "WTCWQ97SK5CW"
+    },
+    "驻马店": {
+      "驻马店": "WTC5DEFF6TD5",
+      "驿城": "WTC59FGT5T22",
+      "西平": "WTCJFSDUDE40",
+      "上蔡": "WTCM228GGCX8",
+      "平舆": "WTCE86P00T7N",
+      "正阳": "WTC36Y8UZ0MW",
+      "确山": "WTC4DE4CFE4J",
+      "泌阳": "WTBD4SMPG6H6",
+      "汝南": "WTC7DP7NUJGG",
+      "遂平": "WTCHD4U28XCH",
+      "新蔡": "WTCF23VYS4QP"
+    },
+    "济源": {
+      "济源": "WW0P9B6381U6"
+    }
+  },
+  "湖北": {
+    "武汉": {
+      "武汉": "WT3Q0FW9ZJ3Q",
+      "江岸": "WT3Q15127BGF",
+      "江汉": "WT3Q05M8D0GQ",
+      "硚口": "WT3JYZUB3PKY",
+      "汉阳": "WT3JYFXEDP1P",
+      "武昌": "WT3MC4WT3FKT",
+      "青山": "WT3Q6F0VYYG8",
+      "洪山": "WT3M9BFEN0YH",
+      "东西湖": "WT3NJN4YMV8N",
+      "汉南": "WT3H7VVXDGNX",
+      "蔡甸": "WT3JFYFJ7T4T",
+      "江夏": "WT3K9MJ39443",
+      "黄陂": "WT3RDE9WY1J4",
+      "新洲": "WT3XS24F3BU6"
+    },
+    "黄石": {
+      "黄石": "WT3GC9DRC209",
+      "黄石港": "WT3GFQ2E83RH",
+      "西塞山": "WT3GG9EZF2J9",
+      "下陆": "WT3G8NNE5PV2",
+      "铁山": "WT3EY9EXU019",
+      "阳新": "WT3CV6N0FE3C",
+      "大冶": "WT3G0PW95NTM"
+    },
+    "十堰": {
+      "十堰": "WMYC8VK3H18J",
+      "茅箭": "WMYC3Y8SV0MN",
+      "张湾": "WMYC8ZG8115H",
+      "郧阳": "WMYFCB88T5T4",
+      "郧西": "WMYE8XMQUMZE",
+      "竹山": "WMWRK77135MQ",
+      "竹溪": "WMWPBEXTTK9V",
+      "房县": "WMWWRWPJK123",
+      "丹江口": "WMZ31TW3KRG1"
+    },
+    "宜昌": {
+      "宜昌": "WMRNSHZ87YY1",
+      "西陵": "WMRNSPPT7TUH",
+      "伍家岗": "WMRNMGN3GBDB",
+      "点军": "WMRNEGFZKJCH",
+      "猇亭": "WMRJXW7VJMW8",
+      "夷陵": "WMRPJ1SB0P8P",
+      "远安": "WMX2U0N7ZEBC",
+      "兴山": "WMWF25JDYP96",
+      "秭归": "WMQZMKMJV2TC",
+      "长阳": "WMRJ3FYU9G8T",
+      "五峰": "WMQEY3ERVBJ1",
+      "宜都": "WMRKBN5KV4XR",
+      "当阳": "WMRRRDEEWB3J",
+      "枝江": "WMRMP7S7TG0S"
+    },
+    "襄阳": {
+      "襄阳": "WMXY3PVX93RV",
+      "襄城": "WMXWPE9J39Q2",
+      "樊城": "WMXWR9FQ1X17",
+      "襄州": "WMXYBV9K9THS",
+      "南漳": "WMXSBC25GV7U",
+      "谷城": "WMXRSDT43S40",
+      "保康": "WMXJ7E9F2YSR",
+      "老河口": "WMZ2JNEE5T7P",
+      "枣阳": "WT8NV9N4C6JE",
+      "宜城": "WMXU6Q3YQSD6"
+    },
+    "鄂州": {
+      "鄂州": "WT3SYNJHF48X",
+      "梁子湖": "WT3E17UHSWMM",
+      "华容": "WT3TDX5CTXP7",
+      "鄂城": "WT3SYQ9ZG5M7"
+    },
+    "荆门": {
+      "荆门": "WMXB90VDC7PZ",
+      "东宝": "WMXB9J4RH898",
+      "掇刀": "WMXB1PTX96XF",
+      "沙洋": "WT2N9UF22NU3",
+      "钟祥": "WT813F662JHK",
+      "京山": "WT82MXHBT507"
+    },
+    "孝感": {
+      "孝感": "WT3PBQDH23US",
+      "孝南": "WT2ZZUXQMFTK",
+      "孝昌": "WT91C2YKMQPR",
+      "大悟": "WT95SG5SSDX9",
+      "云梦": "WT8BKRN0X55E",
+      "应城": "WT8B0670UF1V",
+      "安陆": "WT8CFUE0ZYRZ",
+      "汉川": "WT2YQ78MPNPG"
+    },
+    "荆州": {
+      "沙市": "WMRU6PDDV99V",
+      "荆州": "WMRU9C7MH9C3",
+      "公安": "WMRG1F56KW32",
+      "监利": "WT238SSDNDUS",
+      "江陵": "WMRFY4V9RVEX",
+      "石首": "WMRCJSPJVCDT",
+      "洪湖": "WT29T8GV8DEK",
+      "松滋": "WMR7XQH7JZB8"
+    },
+    "黄冈": {
+      "黄冈": "WT3TJZMB152J",
+      "黄州": "WT3TNHBFY1PX",
+      "团风": "WT3WMBJB9JB5",
+      "红安": "WT99BNREPWDS",
+      "罗田": "WT6P1GRDQZUE",
+      "英山": "WT6QBJU7DR7Q",
+      "浠水": "WT3VPP301EMT",
+      "蕲春": "WT65FXJW9BQQ",
+      "黄梅": "WT67N5CSSY3M",
+      "麻城": "WT9C3S4K9M28",
+      "武穴": "WT61V6HBY5KC"
+    },
+    "咸宁": {
+      "咸宁": "WT33C6J2C563",
+      "咸安": "WT33BG1B7CC8",
+      "嘉鱼": "WT2FXCEQNM5D",
+      "通城": "WT0YQHC1W5PQ",
+      "崇阳": "WT304G6J5X68",
+      "通山": "WT32MUWBMRVJ",
+      "赤壁": "WT2CP6KGS3D9"
+    },
+    "随州": {
+      "随州": "WT8S7Y3W2KX4",
+      "曾都": "WT8S7WJG9YYR",
+      "随县": "WT8T4P1VBGB4",
+      "广水": "WT8GYH1PY5PR"
+    },
+    "恩施": {
+      "恩施": "WMMU75CW7CKH",
+      "利川": "WMMKQGBQKCRH",
+      "建始": "WMQN0FWCYM6Q",
+      "巴东": "WMW2WS7Z77D8",
+      "宣恩": "WMMFE38YHVHF",
+      "咸丰": "WMM8GG0DE34B",
+      "来凤": "WMJZCMYWKYB7",
+      "鹤峰": "WMQ4PG1KHGFX"
+    },
+    "仙桃": {
+      "仙桃": "WT2SV8EY0D76"
+    },
+    "潜江": {
+      "潜江": "WT2M09U9QEH8"
+    },
+    "天门": {
+      "天门": "WT2QRPRCSNKH"
+    },
+    "神农架": {
+      "神农架": "WMW7Q9T3W529"
+    }
+  },
+  "湖南": {
+    "长沙": {
+      "长沙": "WT029G15ETRJ",
+      "芙蓉": "WT027GXDDZVH",
+      "天心": "WSBRGN2DUPB7",
+      "岳麓": "WT029SWNTQ9M",
+      "开福": "WT02FBTQR9TC",
+      "雨花": "WT02H4GSFM21",
+      "望城": "WT01RK950X33",
+      "长沙县": "WT02TNDSJP30",
+      "浏阳": "WT0B1SWCDUM4",
+      "宁乡": "WT009NU2JJDW"
+    },
+    "株洲": {
+      "株洲": "WSBQQ66C8040",
+      "荷塘": "WSBQRPW5R0E0",
+      "芦淞": "WSBQNDXN4W0R",
+      "石峰": "WSBQTGJS3ZM1",
+      "天元": "WSBQM479QTF1",
+      "渌口": "WSBMWDBCBUTQ",
+      "攸县": "WSB9DGHQKKUC",
+      "茶陵": "WSB8RQY12DPE",
+      "炎陵": "WS8YSUSC1JU8",
+      "醴陵": "WSBTQM1T7TUG"
+    },
+    "湘潭": {
+      "雨湖": "WSBQ3PSWU03K",
+      "岳塘": "WSBQDD9F5K58",
+      "湘潭": "WSBQ3F31E8P0",
+      "湘乡": "WSBJB8JFGN9T",
+      "韶山": "WSBNBKW84135"
+    },
+    "衡阳": {
+      "衡阳": "WSB118FZZ57Y",
+      "珠晖": "WSB148ETSU8F",
+      "雁峰": "WSB0FX94CB94",
+      "石鼓": "WSB161E8EB7F",
+      "蒸湘": "WSB117TP0EC6",
+      "南岳": "WSB5J0XQZ2HM",
+      "衡阳县": "WKZCMJ9RDU2U",
+      "衡南": "WSB05F5C931H",
+      "衡山": "WSB6BMJ6JXGV",
+      "衡东": "WSB641Z8MVBK",
+      "祁东": "WKZ8R75KC3G6",
+      "耒阳": "WS8NRCWGESFY",
+      "常宁": "WKXYM38EEUCW"
+    },
+    "邵阳": {
+      "邵阳": "WKZ7089YZ20M",
+      "双清": "WKZ6CN1JMM0C",
+      "大祥": "WKZ4ZSP7H0ES",
+      "北塔": "WKZ7008UVZQF",
+      "邵东": "WKZ7NBTYG8PM",
+      "新邵": "WKZ72J7QT1P7",
+      "邵阳县": "WKZ1S50Q6UV9",
+      "隆回": "WKYFQ9196W2T",
+      "洞口": "WKY9UH69ETRX",
+      "绥宁": "WKWR4W8Z9P0U",
+      "新宁": "WKWY67QTBJNG",
+      "城步": "WKWQN2S86K61",
+      "武冈": "WKY8J6N39C4U"
+    },
+    "岳阳": {
+      "岳阳楼": "WT0RN5QNW4KR",
+      "云溪": "WT0X9MY4SEDS",
+      "君山": "WT0RE7SWF39G",
+      "岳阳": "WT0RN4EKXHCD",
+      "华容": "WT0PCTFYRNGG",
+      "湘阴": "WT070TH9NEKX",
+      "平江": "WT0G2S66JU43",
+      "汨罗": "WT07V4YK4VP7",
+      "临湘": "WT0XWNDM6WK3"
+    },
+    "常德": {
+      "常德": "WMPMM26US87X",
+      "武陵": "WMPMM3CHK06D",
+      "鼎城": "WMPMJ5PRMJ98",
+      "安乡": "WMPZ27XXYMQP",
+      "汉寿": "WMPS7VN4DN7R",
+      "澧县": "WMR2WCVZ78R6",
+      "临澧": "WMPRS9JN9TFH",
+      "桃源": "WMPK2V168Q2Z",
+      "石门": "WMR0Q8B7YPEM",
+      "津市": "WMR89EV1XBMZ"
+    },
+    "张家界": {
+      "张家界": "WMNT9YCY99D6",
+      "永定": "WMNTEJXJNE5N",
+      "武陵源": "WMNWGPJ2PST9",
+      "慈利": "WMPP2EEPGTMR",
+      "桑植": "WMNR680G3J0Z"
+    },
+    "益阳": {
+      "益阳": "WMPFEYKZJDQM",
+      "资阳": "WMPFEV7VN8Z5",
+      "赫山区": "WMPFTN3R4F2V",
+      "南县": "WMPZJSRNVUFW",
+      "桃江": "WMPDR3ER337R",
+      "安化": "WMP16Y7VMZ6Y",
+      "沅江": "WMPUJ7BX7VC9"
+    },
+    "郴州": {
+      "郴州": "WS86EV4EKUK4",
+      "北湖": "WS86EW2H7GJD",
+      "苏仙": "WS86U09ZVUSD",
+      "桂阳": "WS84MHP2P7SK",
+      "宜章": "WS826PZTTZ0M",
+      "永兴": "WS8KTSUFM103",
+      "嘉禾": "WKXCT09Q6C8G",
+      "临武": "WS2PC4H6TJD9",
+      "汝城": "WS8C6G5PXCPY",
+      "桂东": "WS9H2E9R12M7",
+      "安仁": "WS8XCS8DY29X",
+      "资兴": "WS8EB9E86PP2"
+    },
+    "永州": {
+      "永州": "WKXQ7GRJYT07",
+      "零陵": "WKXMHN5QNGN0",
+      "冷水滩": "WKXQ7E2TUMP7",
+      "祁阳": "WKXX1NWXTZHU",
+      "东安": "WKXNHJZX5UWN",
+      "双牌": "WKX7SXTN1WFH",
+      "道县": "WKX35PD542YQ",
+      "江永": "WKRPV6H49J8C",
+      "宁远": "WKX9EH2FY1CH",
+      "蓝山": "WKXB2DQYZQY8",
+      "新田": "WKXG3WS4GW0Y",
+      "江华": "WKRR5PFH4KNQ"
+    },
+    "怀化": {
+      "怀化": "WKYHZ4GWCU8B",
+      "鹤城": "WKYHZVJMT0CG",
+      "中方": "WKY5VS08DDJN",
+      "沅陵": "WMN3ZYB3B2TM",
+      "辰溪": "WKYR71NXU469",
+      "溆浦": "WKYWU69VUC0P",
+      "会同": "WKY0BEX9J71C",
+      "麻阳": "WKYND99FT2W1",
+      "新晃": "WKVESNX1V3U1",
+      "芷江": "WKVUPV4EC4ZS",
+      "靖州": "WKTZPYDX9PPS",
+      "通道": "WKWHFH5773SF",
+      "洪江": "WKY4EP87RRX0"
+    },
+    "娄底": {
+      "娄底": "WKZTU85FVNSV",
+      "娄星": "WKZTU89M9NDC",
+      "双峰": "WKZU1JJEC6ZU",
+      "新化": "WKZJUEWPMYZJ",
+      "冷水江": "WKZJRWUZEJYP",
+      "涟源": "WKZMT4ES5W70"
+    },
+    "湖南": {
+      "湘西": "WMN114DHVC2T"
+    },
+    "湘西": {
+      "吉首": "WMN10GQZYQDK",
+      "泸溪": "WMN2S17C2JKC",
+      "凤凰": "WKVZN00K91EK",
+      "花垣": "WMJFE6BFSFHU",
+      "保靖": "WMJGRHKDNHJC",
+      "古丈": "WMN4VFP5SDWN",
+      "永顺": "WMNHGXQ34XBF",
+      "龙山": "WMJZDHU7PY4J"
+    }
+  },
+  "广东": {
+    "广州": {
+      "广州": "WS0E9D8WN298",
+      "荔湾": "WS0E8F6N4RPM",
+      "越秀": "WS0E96FT02NG",
+      "海珠": "WS0E66Z20TDM",
+      "天河": "WS0EE6PJG2NP",
+      "白云": "WS0EC2PHQX3N",
+      "黄埔": "WS0EMWYGT1DG",
+      "番禺": "WS0DE3FVQQJF",
+      "花都": "WS0T07U6CHNV",
+      "南沙": "WS09XPQTZJDF",
+      "从化": "WS0VBX4KTY4M",
+      "增城": "WS0UW38KR4ZC"
+    },
+    "韶关": {
+      "韶关": "WS2V1N2FZZ77",
+      "武江": "WS2V06ENKZ1F",
+      "浈江": "WS2V148YRZ56",
+      "曲江": "WS2U3HBGRV7Q",
+      "始兴": "WS3JGWP0R9HG",
+      "仁化": "WS2YSMWJX4GE",
+      "翁源": "WS34T0FCJBBP",
+      "乳源": "WS2SCX09YQC9",
+      "新丰": "WS30YTVCUV5Y",
+      "乐昌": "WS2WGQFBY7TC",
+      "南雄": "WS3QBUYWX53K"
+    },
+    "深圳": {
+      "深圳": "WS10730EM8EV",
+      "罗湖": "WS10M1282EDZ",
+      "福田": "WS105K2T7CJQ",
+      "南山": "WS100QW1GPVQ",
+      "宝安": "WS0CQNGUGPVU",
+      "龙岗": "WS11R8SX9P8H",
+      "盐田": "WS10R6V1Z3W3",
+      "龙华": "WS115H2FNT23",
+      "坪山": "WS134N2PPHDH",
+      "光明": "WS112TF588VD"
+    },
+    "珠海": {
+      "珠海": "WEBY8Q5HHUCU",
+      "香洲": "WEBWXTUKFZVF",
+      "斗门": "WEBW3TPBZK4N",
+      "金湾": "WEBTS3XR5D0W"
+    },
+    "汕头": {
+      "汕头": "WS4UZ4EZ953Z",
+      "龙湖": "WS4UZZ55FE62",
+      "金平": "WS4UZW19C9YK",
+      "濠江": "WS5H2PDDMW50",
+      "潮阳": "WS4UMK1T8FMS",
+      "潮南": "WS4U33H9BCEJ",
+      "澄海": "WS5J94MKFJNZ",
+      "南澳": "WS5JNZ7R7SKM"
+    },
+    "佛山": {
+      "佛山": "WS06YNEMPP18",
+      "禅城": "WS06YJ1QBPTV",
+      "南海": "WS07NB3R6P5J",
+      "顺德": "WS09DNWE9K51",
+      "三水": "WS07B3VRJ95C",
+      "高明": "WS0628UDNTKS"
+    },
+    "江门": {
+      "江门": "WS02MNW64CP6",
+      "蓬江": "WS03H2M8FGM9",
+      "江海": "WS02NRFNW3V1",
+      "新会": "WEBRU49CJZSE",
+      "台山": "WEBNW67ZSKX5",
+      "开平": "WEBP7F5UCQ3H",
+      "鹤山": "WS03D9NHZG9K",
+      "恩平": "W7ZY5MWRGETJ"
+    },
+    "湛江": {
+      "湛江": "W7Y3P046TR7U",
+      "赤坎": "W7Y3P80FXRKU",
+      "霞山": "W7Y885QFFQQT",
+      "坡头": "W7Y8CBCC9WF6",
+      "麻章": "W7Y3N2HDDR6H",
+      "遂溪": "W7Y3SU1EE0Y7",
+      "徐闻": "W7W7DUZQG4DJ",
+      "廉江": "W7Y6VRB1THP7",
+      "雷州": "W7WR0BMGCFTH",
+      "吴川": "W7YCBTHQB1D9"
+    },
+    "茂名": {
+      "茂名": "W7YGK0CKZKF9",
+      "茂南": "W7YG5UHY0DC5",
+      "电白": "W7YFMCGWX6QZ",
+      "高州": "W7YUDQQT20NV",
+      "化州": "W7YEM2YKCUFC",
+      "信宜": "W7YZHSXQ4MUP"
+    },
+    "肇庆": {
+      "肇庆": "WKPGPK45UZQM",
+      "端州": "WKPGPSCPVC6T",
+      "鼎湖": "WS05C2MS6B9J",
+      "高要": "WKPGNB7X6ZJM",
+      "广宁": "WKPYQMTN8ZK0",
+      "怀集": "WKRB0DWBP7NT",
+      "封开": "WKPM31RCDK9F",
+      "德庆": "WKP7XQK6TBB9",
+      "四会": "WS0HSP55471W"
+    },
+    "惠州": {
+      "惠州": "WS17E8Y5G0RU",
+      "惠城": "WS176DZ1QKTP",
+      "惠阳": "WS13SYDE8K43",
+      "博罗": "WS17BEB1M10N",
+      "惠东": "WS1DDX2S1WRZ",
+      "龙门": "WS1NZZFM3BWE"
+    },
+    "梅州": {
+      "梅州": "WS6D4KH12059",
+      "梅江": "WS6D64N18D5J",
+      "梅县": "WS6D0U112BPC",
+      "大埔": "WS6FX8F350FZ",
+      "丰顺": "WS4X5XPWQ1NV",
+      "五华": "WS624KM4KE2D",
+      "平远": "WS67UBV4XEYW",
+      "蕉岭": "WS6S7E03JJQ6",
+      "兴宁": "WS633S25BQQ9"
+    },
+    "汕尾": {
+      "海丰": "WS448MS9ZY2G",
+      "陆河": "WS4HX9TU26F1",
+      "陆丰": "WS44X9VV2Q44"
+    },
+    "河源": {
+      "河源": "WS1WFPCVR8WG",
+      "源城": "WS1X4107UC2Y",
+      "紫金": "WS1YKVXW8X2B",
+      "龙川": "WS3CNE62XTSE",
+      "连平": "WS36TH3V9370",
+      "和平": "WS3EP6CRX477",
+      "东源": "WS1XE8KCWCFD"
+    },
+    "阳江": {
+      "阳江": "W7ZSKJM3GP7Z",
+      "江城": "W7ZS7KRD3R55",
+      "阳东": "W7ZSMP4KPPW5",
+      "阳西": "W7Z7EZRNYTB7",
+      "阳春": "W7ZQPTEXYG9J"
+    },
+    "清远": {
+      "清远": "WS0QU43YTBHW",
+      "清城": "WS0QUDT8X9DW",
+      "清新": "WS0QFZVT2B9G",
+      "佛冈": "WS0XZ7NP0DXS",
+      "阳山": "WS256BQWM4Z0",
+      "连山": "WKREY2Y4T7CQ",
+      "连南": "WKRUDUPU3TUP",
+      "英德": "WS29S3Z6EW8W",
+      "连州": "WKRUVR09GYC9"
+    },
+    "东莞": {
+      "东莞": "WS0GHKN5ZP7T"
+    },
+    "中山": {
+      "中山": "WS08H58U92R8"
+    },
+    "东沙": {
+      "东沙": "WEEJ79ZFGR3H"
+    },
+    "潮州": {
+      "潮州": "WS4YTUBPDZY9",
+      "湘桥": "WS4YTY74NHT5",
+      "潮安": "WS4VRHGY1HCF",
+      "饶平": "WS5NWKUZ9XG1"
+    },
+    "揭阳": {
+      "揭阳": "WS4VBP4H9W1J",
+      "榕城": "WS4TZGH3YWW9",
+      "揭东": "WS4Y14Y3NW7Y",
+      "揭西": "WS4M7C2CDSEF",
+      "惠来": "WS4EN02X2RHM",
+      "普宁": "WS4SE9XSQ4YC"
+    },
+    "云浮": {
+      "云浮": "WKPDMK3Y8JWT",
+      "云城": "WKPDMQRVRJH7",
+      "云安": "WKPEK9EFTPUF",
+      "新兴": "WKPC1U7MHD9Q",
+      "郁南": "WKPK1UVST3GE",
+      "罗定": "WKP3DC4UC7TS"
+    }
+  },
+  "广西": {
+    "南宁": {
+      "南宁": "WKJ1F428HH2F",
+      "兴宁": "WKJ41BUVFEZJ",
+      "青秀": "WKJ1C6HK1RFJ",
+      "江南": "WKHCXEZ30PHK",
+      "西乡塘": "WKJ1BMPFBBPH",
+      "良庆": "WKJ12ZDVDBWV",
+      "邕宁": "WKJ1KT88R5QS",
+      "武鸣": "WKHGZ9ZZ1C53",
+      "隆安": "WKHEF7F1MC5W",
+      "马山": "WKHYVQNGP8MZ",
+      "上林": "WKJJR321EKT4",
+      "宾阳": "WKJK5G1DRC8P",
+      "横县": "WKJ9N2ZBXD3M"
+    },
+    "柳州": {
+      "柳州": "WKMF3VJHWB9X",
+      "城中": "WKMF3E507941",
+      "鱼峰": "WKMF6E9986TH",
+      "柳南": "WKMF3NBB820V",
+      "柳北": "WKMF97SF9JK7",
+      "柳江": "WKMDPF5WVXUT",
+      "柳城": "WKMSJX6UEMP3",
+      "鹿寨": "WKQ52BQYQ6F2",
+      "融安": "WKMZ92YXKUBK",
+      "融水": "WKMWW5C7MD8R",
+      "三江": "WKTFWJ073H76"
+    },
+    "桂林": {
+      "桂林": "WKQRV6P6WM81",
+      "秀峰": "WKQRV12W5W7N",
+      "叠彩": "WKW2JBGCJJ91",
+      "象山": "WKQRTRKBSFQF",
+      "七星": "WKQRWJXEGS3R",
+      "雁山": "WKQQVD0VZWM9",
+      "临桂": "WKQRE8VPQHGS",
+      "阳朔": "WKQSFP11FWFC",
+      "灵川": "WKW2W7SD4R6N",
+      "全州": "WKWGX2QTNW6D",
+      "兴安": "WKW9WRGRMFJH",
+      "永福": "WKQNNEKZP9XB",
+      "灌阳": "WKX0CQ2ZY8R0",
+      "龙胜": "WKW4Z0EXCU8F",
+      "资源": "WKWSJ6W79ZDY",
+      "平乐": "WKQSJ7Y21UFB",
+      "恭城": "WKQV3BPVNPMX",
+      "荔浦": "WKQ7RVBM07JM"
+    },
+    "梧州": {
+      "梧州": "WKPJS42KFVJX",
+      "万秀": "WKPJT196EK7E",
+      "长洲": "WKPJS5BJ5QEV",
+      "龙圩": "WKPJ5M5RV8GD",
+      "苍梧": "WKPJ5P7PQU7M",
+      "藤县": "WKNVH01QR7FS",
+      "蒙山": "WKQ9DVQPNWUZ",
+      "岑溪": "WKNFMKMNTMTV"
+    },
+    "北海": {
+      "北海": "W7VD5N6F061Q",
+      "海城": "W7VD4VVDG5RQ",
+      "银海": "W7VD53NHY2TV",
+      "铁山港": "W7VF3ZENHN9Z",
+      "合浦": "W7VEKBVHBKV9"
+    },
+    "防城港": {
+      "防城港": "W7V53W659VPW",
+      "港口": "W7V54HT0496N",
+      "防城": "W7V5CE453YPS",
+      "上思": "W7UY10K9H778",
+      "东兴": "W7UF2ZMM76GH"
+    },
+    "钦州": {
+      "钦州": "W7VHZEYSJ2W6",
+      "钦南": "W7VKB6R5BC54",
+      "钦北": "W7VJGTXK3GR7",
+      "灵山": "W7VXX5MB4X51",
+      "浦北": "W7VYSY5UHHBS"
+    },
+    "贵港": {
+      "贵港": "WKJGQJ0R3057",
+      "港北": "WKJGMRC50RFB",
+      "港南": "WKJGMCKCVNJM",
+      "覃塘": "WKJGDD9SRNM3",
+      "平南": "WKNMZZ0K8QJM",
+      "桂平": "WKNM0GVFCUJJ"
+    },
+    "玉林": {
+      "玉林": "WKN2DZXM71F0",
+      "玉州": "WKN2DRY662FY",
+      "福绵": "WKN28259H5DJ",
+      "容县": "WKND5EK53SYX",
+      "陆川": "W7YRJ301TJXQ",
+      "博白": "W7YNWRVWQTP2",
+      "兴业": "WKN1KJSBKE3U",
+      "北流": "WKN3R043T6GZ"
+    },
+    "百色": {
+      "百色": "WK5ZFNY7D4FJ",
+      "右江": "WK5ZFPDUE1BJ",
+      "田阳": "WKHNCPBV28D7",
+      "田东": "WKHNM84RUYV5",
+      "平果": "WKHS8J32GEN4",
+      "德保": "WK5UDPN7454N",
+      "那坡": "WK5M0PRP3SRT",
+      "凌云": "WK7F90CCHBZX",
+      "乐业": "WK7UBX53FYY3",
+      "田林": "WK7D1RDMF2M4",
+      "西林": "WK6ERS56ZE00",
+      "隆林": "WK6UUV4ZWYST",
+      "靖西": "WK5ETDSWJ8X2"
+    },
+    "贺州": {
+      "贺州": "WKR6FMS0Z3UW",
+      "八步": "WKR6FKD48S16",
+      "平桂": "WKR70SJ1M63M",
+      "昭平": "WKQC92407NS4",
+      "钟山": "WKR5S9W1TGRJ",
+      "富川": "WKRJK00M4ZMX"
+    },
+    "河池": {
+      "河池": "WKKUE0QPVT8X",
+      "金城江": "WKKU6R5K3T89",
+      "宜州": "WKM72U54FE10",
+      "南丹": "WKKQNGKZN9E2",
+      "天峨": "WKKNNXNG9CZB",
+      "凤山": "WKK5EVPQJG9Q",
+      "东兰": "WKK77R8RQ76C",
+      "罗城": "WKMKYP49CYV3",
+      "环江": "WKKVR21JPZ6R",
+      "巴马": "WKK32S35FNK3",
+      "都安": "WKKB5UK42E64",
+      "大化": "WKHYCPUTK2EE"
+    },
+    "来宾": {
+      "来宾": "WKJWVXFV72X7",
+      "兴宾": "WKJXJ8BJEYWS",
+      "忻城": "WKM2BVG1FT1N",
+      "象州": "WKMBRGDE35ZE",
+      "武宣": "WKJYR85RBNZ5",
+      "金秀": "WKQ370WXKN48",
+      "合山": "WKJRT2K9WCGF"
+    },
+    "崇左": {
+      "崇左": "W7UR7MB3QQDU",
+      "江州": "W7UR6Z32S5CC",
+      "扶绥": "WKH8XRDMK1Z2",
+      "宁明": "W7UJUKTUXG48",
+      "龙州": "W7GZPKTY1MYX",
+      "大新": "WKH1ZKHDMH3W",
+      "天等": "WKH5MC9DTZVF",
+      "凭祥": "W7GVV4UFR6C5"
+    }
+  },
+  "海南": {
+    "海口": {
+      "海口": "W7W3YQKE4QDH",
+      "秀英": "W7W3VDWPN4P9",
+      "龙华": "W7W3YQZT42Z8",
+      "琼山": "W7W3Z1F46YX5",
+      "美兰": "W7W3ZQE17J8N"
+    },
+    "三亚": {
+      "三亚": "W7JZGDR3YYTF",
+      "海棠": "W7Q09504MN9X",
+      "吉阳": "W7MBJ2MWU8XX",
+      "天涯": "W7MB4E3DV1CS",
+      "崖州": "W7M8KNJT9XDF"
+    },
+    "三沙": {
+      "三沙": "W6ZZU0E5REV5",
+      "西沙": "W6ZZU0QTK2SN",
+      "南沙": "W982Y5WFG81G",
+      "中沙": "WDC336NBG99F"
+    },
+    "儋州": {
+      "儋州": "W7MZJ3D2NP9X"
+    },
+    "五指山": {
+      "五指山": "W7MFU4Y12VWZ"
+    },
+    "琼海": {
+      "琼海": "W7QT9B3G3S46"
+    },
+    "文昌": {
+      "文昌": "W7QZ1QFP50HH"
+    },
+    "万宁": {
+      "万宁": "W7QDBNQVFQN8"
+    },
+    "东方": {
+      "东方": "W7MHXVJCW6NC"
+    },
+    "定安": {
+      "定安": "W7W2N6K8F64J"
+    },
+    "屯昌": {
+      "屯昌": "W7QQ1QHQ7VWQ"
+    },
+    "澄迈": {
+      "澄迈": "W7W0PPEX9F8F"
+    },
+    "临高": {
+      "临高": "W7TCRF6D3JPS"
+    },
+    "白沙": {
+      "白沙": "W7MV6SENCGG4"
+    },
+    "昌江": {
+      "昌江": "W7MT92RG3HJD"
+    },
+    "乐东": {
+      "乐东": "W7MDSJR4TMK4"
+    },
+    "陵水": {
+      "陵水": "W7Q1PZC6KCFW"
+    },
+    "保亭": {
+      "保亭": "W7Q1BR3PE78W"
+    },
+    "琼中": {
+      "琼中": "W7QH70RCB3PE"
+    }
+  },
+  "重庆": {
+    "万州": "WMMP6DW7X06M",
+    "涪陵": "WMK35FQ793S3",
+    "渝中": "WM7B0UQQJ0GH",
+    "大渡口": "WM5XWZZPRXZ1",
+    "江北": "WM7B3N6262QC",
+    "沙坪坝": "WM78N6K8U9KE",
+    "九龙坡": "WM5XZE5ZMCBN",
+    "南岸": "WM5ZFDVK7WMM",
+    "北碚": "WM79T0YJEDWK",
+    "綦江": "WM5V4UU0J05Z",
+    "大足": "WM70VWWZN938",
+    "渝北": "WM7C46MEE1DC",
+    "巴南": "WM5XPUMQZUUY",
+    "黔江": "WMJRGPGBSWYR",
+    "长寿": "WMK1UTTM2GE4",
+    "江津": "WM5SCJ07NZ5W",
+    "合川": "WM5W6QWEZ7RF",
+    "永川": "WM71JRZDM9CN",
+    "南川": "WMHJVF9EJCVG",
+    "璧山": "WM783HE03RUT",
+    "铜梁": "WM73V4P2B573",
+    "潼南": "WM778NP51XZ8",
+    "荣昌": "WM5P68152M4P",
+    "开州": "WMT17HJH9J72",
+    "梁平": "WMKWT11EFN9B",
+    "武隆": "WMHWGGM5SUR2",
+    "重庆": "WM7B0X53DZW2",
+    "城口": "WMTMBB744X9J",
+    "丰都": "WMK9GMWT6GW4",
+    "垫江": "WMKKDC3VH3C9",
+    "忠县": "WMKU65CY23MU",
+    "云阳": "WMT20F70FD1J",
+    "奉节": "WMTB7P18EGH5",
+    "巫山": "WMW0U3UNJEFM",
+    "巫溪": "WMTFWSNNK0HZ",
+    "石柱": "WMKFSM6DDT76",
+    "秀山": "WMJ3ZGHV603U",
+    "酉阳": "WMJK55GZKTY3",
+    "彭水": "WMHYTMYUZEVU"
+  },
+  "四川": {
+    "成都": {
+      "成都": "WM6N2PM3WY2K",
+      "锦江": "WM6N2M7XGZEW",
+      "青羊": "WM3YXBW1MWTV",
+      "金牛": "WM3YXEWSR0CV",
+      "武侯": "WM3YRD8KCECP",
+      "成华": "WM6N2VFQ5GF5",
+      "龙泉驿": "WM6JUTP55J51",
+      "青白江区": "WM6PEV9CP11P",
+      "新都": "WM6P3URTYBS9",
+      "温江": "WM3YDSY8QQG3",
+      "双流": "WM3VUYBJRT0M",
+      "郫都": "WM3Z7FE5E2QJ",
+      "金堂": "WM6R825D72GF",
+      "大邑": "WM3TGWUVQV4T",
+      "蒲江": "WM3EG1WRUB19",
+      "新津": "WM3V43Z3M74B",
+      "都江堰": "WM98MGMU14B5",
+      "彭州": "WM9BHZXX8D8F",
+      "邛崃": "WM3T49B93EPB",
+      "崇州": "WM3WR040WJFG",
+      "简阳": "WM6KGN4UZDDR"
+    },
+    "自贡": {
+      "自贡": "WM4WBR42NUWC",
+      "自流井": "WM4WBJNRWDMF",
+      "贡井": "WM4QYY9QFH03",
+      "大安": "WM4X04H05E9E",
+      "沿滩": "WM4WD3MNCY4X",
+      "荣县": "WM4R8HU74Q5M",
+      "富顺": "WM4WHBH1G638"
+    },
+    "攀枝花": {
+      "攀枝花": "WK8R4WWPXZ1K",
+      "东区": "WK8R43389RMT",
+      "西区": "WK8R2DS5SJ8J",
+      "仁和": "WK8QFBJT8Y1C",
+      "米易": "WKB8GV3E27PJ",
+      "盐边": "WK8RVSSFV08R"
+    },
+    "泸州": {
+      "泸州": "WM4UPPEGCN1F",
+      "江阳": "WM4UR1UBCUVP",
+      "纳溪": "WM4GTV2J6UWW",
+      "龙马潭": "WM4UX0NC4NH8",
+      "泸县": "WM4VVFX75CZ5",
+      "合江": "WM57BNX09TRS",
+      "叙永": "WM4BR05Y1H9G",
+      "古蔺": "WKGPXFRG0DYZ"
+    },
+    "德阳": {
+      "德阳": "WMD1P5P1QK95",
+      "旌阳": "WMD30J8NSKYC",
+      "罗江": "WMD61VWS4RPT",
+      "中江": "WMD2W0CDUG1R",
+      "广汉": "WMD0HZWRS4EF",
+      "什邡": "WMD147N32UTG",
+      "绵竹": "WMD475H4GZX6"
+    },
+    "绵阳": {
+      "绵阳": "WMD7P0YN1CHN",
+      "涪城": "WMD6ZWXSH9T8",
+      "游仙": "WMD7PFN8BEQQ",
+      "安州": "WMD77ECE9D52",
+      "三台": "WMD8ZJSFTKNY",
+      "盐亭": "WMDCTGRMEVZ4",
+      "梓潼": "WMDGCNN6NE7G",
+      "北川": "WMDM0BDHVMUV",
+      "平武": "WMF26TUKJW12",
+      "江油": "WMDKZ9KEGVMH"
+    },
+    "广元": {
+      "广元": "WMG22PXN3WPT",
+      "利州": "WMG282Z7NHF2",
+      "昭化": "WMERGHTGZ80X",
+      "朝天": "WMG39X06UZU5",
+      "旺苍": "WMEX67Q9R7RY",
+      "青川": "WMFC6E40K8PN",
+      "剑阁": "WMEP9HMKDHNU",
+      "苍溪": "WMEKD2RBEUSY"
+    },
+    "遂宁": {
+      "遂宁": "WM7JD7CXZK37",
+      "船山": "WM7JDJQPBNBD",
+      "安居": "WM6UXWKR9SYU",
+      "蓬溪": "WM7PJEQFQXCE",
+      "射洪": "WM6ZTGXQGCP4",
+      "大英": "WM6Y4DHB00XN"
+    },
+    "内江": {
+      "内江": "WM68Q2Z5FRTM",
+      "市中": "WM68QF9EBXED",
+      "东兴": "WM68QUT8KRYM",
+      "威远": "WM4RVZF2EYBZ",
+      "资中": "WM693VM3N46E",
+      "隆昌": "WM6BE5B9WB2P"
+    },
+    "乐山": {
+      "乐山": "WM3B1R518R80",
+      "市中": "WM3B1HGHDDRJ",
+      "沙湾": "WM1XK712G7EV",
+      "五通桥": "WM1Z63UKTHX2",
+      "金口河": "WM1Q3S60DMF0",
+      "犍为": "WM1YJRQ4FDCC",
+      "井研": "WM608JT7YB87",
+      "夹江": "WM39HU1MGCTM",
+      "沐川": "WM1UU3CDMRRJ",
+      "峨边": "WM1QMCNVJ6VJ",
+      "马边": "WM1SH26FCVS2",
+      "峨眉山": "WM386SXB6ZBT"
+    },
+    "南充": {
+      "南充": "WM7RJGM47PV5",
+      "顺庆": "WM7RNNEPYQR8",
+      "高坪": "WM7RNSN3MYXC",
+      "嘉陵": "WM7QVXUHQCGG",
+      "南部": "WME6MEJFFPS6",
+      "营山": "WMEBC1CYHGZT",
+      "蓬安": "WME8T8UDVEPR",
+      "仪陇": "WME9FKW8ZQRZ",
+      "西充": "WME2377KNFF5",
+      "阆中": "WME7KPDB5428"
+    },
+    "眉山": {
+      "眉山": "WM3FFWQTYQ52",
+      "东坡": "WM3FFTW3T7RB",
+      "彭山": "WM3GG9EZF2J9",
+      "仁寿": "WM649VRDWVKD",
+      "洪雅": "WM3D0NZ8XS68",
+      "丹棱": "WM3DG8UZNVDE",
+      "青神": "WM3CENMK27H9"
+    },
+    "宜宾": {
+      "宜宾": "WM47STMVQSWN",
+      "翠屏": "WM47STK22SHH",
+      "南溪": "WM4SHGUP7MC9",
+      "叙州": "WM4770DVXEF2",
+      "江安": "WM4EQYJSKKNM",
+      "长宁": "WM4DEDB6T4NK",
+      "高县": "WM43DRT0U80E",
+      "珙县": "WM43YGNV2B7S",
+      "筠连": "WM4262JNHS8E",
+      "兴文": "WM4BFXF5KWR5",
+      "屏山": "WM4HN06FCJW2"
+    },
+    "广安": {
+      "广安": "WM7V66VSE5DV",
+      "前锋": "WMKJ824QJCE1",
+      "岳池": "WM7TVC7YWSZB",
+      "武胜": "WM7SDMN9X6PC",
+      "邻水": "WMKH932J19FC",
+      "华蓥": "WM7UVDE8366Q"
+    },
+    "达州": {
+      "达州": "WMS3W5RJETCF",
+      "通川": "WMS3TG2T9TBD",
+      "达川": "WMS3QPZ15T9C",
+      "宣汉": "WMSD75P6CZTD",
+      "开江": "WMS8Y9UW15VV",
+      "大竹": "WMKNZ6HXJP1W",
+      "渠县": "WMKP6HMJV8T1",
+      "万源": "WMSY6Q1J33Q3"
+    },
+    "雅安": {
+      "雅安": "WM34XCDQ1VND",
+      "雨城": "WM368WBCX6RB",
+      "名山": "WM374ECSWNMJ",
+      "荥经": "WM31S2VJDDWK",
+      "汉源": "WM0YZZ52NKE9",
+      "石棉": "WM0Y33PT1FUT",
+      "天全": "WM3544H62W30",
+      "芦山": "WM35W08H3Z67",
+      "宝兴": "WM3HG8XNPDKF"
+    },
+    "巴中": {
+      "巴中": "WMEVJW5E9Q66",
+      "巴州": "WMEVJQZ9N3N2",
+      "恩阳": "WMETP06HJ8Y4",
+      "通江": "WMSM84FE2P70",
+      "南江": "WMGBNCPHRMJD",
+      "平昌": "WMS5T55UDFS1"
+    },
+    "资阳": {
+      "资阳": "WM67M75V9WZY",
+      "雁江": "WM67MCT9JU3E",
+      "安岳": "WM6GHZDCNYST",
+      "乐至": "WM6SMB31Z35E"
+    },
+    "阿坝": {
+      "马尔康": "WM8TQP4QFXH2",
+      "汶川": "WM9EJ4B8KCMF",
+      "理县": "WM96G9WJ50XU",
+      "茂县": "WM9U5PJM2KH9",
+      "松潘": "WMC9TKP5WBZ5",
+      "九寨沟": "WMFJ7B9GZ190",
+      "金川": "WM8E4DV073K6",
+      "小金": "WM8B37RS1FUE",
+      "黑水": "WM9NRQ5TRCM3",
+      "壤塘": "WJXZ9FE6KS12",
+      "阿坝": "WMB74JR8MU82",
+      "若尔盖": "WMCPN9JCSVEY",
+      "红原": "WMBFTE49U5NM"
+    },
+    "甘孜": {
+      "康定": "WM2DBQKMCNNB",
+      "泸定": "WM2DNQC8ESKB",
+      "丹巴": "WM2RWMDC014P",
+      "九龙": "WM0HVXQ11RVD",
+      "雅江": "WJRFFFB92TEX",
+      "道孚": "WJXBJP9RDF8F",
+      "炉霍": "WJXDEH0YQ01P",
+      "甘孜": "WJX5GH5PYG5R",
+      "新龙": "WJX24F6BC6JT",
+      "德格": "WJWJ50XUBMZT",
+      "白玉": "WJW38GMV9VV4",
+      "石渠": "WJVG87F4RTTG",
+      "色达": "WJXRE4D46KN2",
+      "理塘": "WJR69TQ6SM74",
+      "巴塘": "WJQ6XJ66TM7F",
+      "乡城": "WJNUX481KWCS",
+      "稻城": "WJPM4KU0P2HX",
+      "得荣": "WJNE7HM6PSJ9"
+    },
+    "凉山": {
+      "凉山": "WKBWQZEYXGPF",
+      "西昌": "WKBWXPN9R8ZN",
+      "木里": "WKBNBSTB513E",
+      "盐源": "WKBHJ9QP36TE",
+      "德昌": "WKBEVHJ0WD4Q",
+      "会理": "WK8XWZ0HJ8Q4",
+      "会东": "WK8ZQRB6ZPZC",
+      "宁南": "WKC1FXFY4TDP",
+      "普格": "WKBGV0KH41VJ",
+      "布拖": "WKCJEWR0XWSB",
+      "金阳": "WKCMTD8K5QK0",
+      "昭觉": "WKCPKKVH6DW6",
+      "喜德": "WM0C4E7ZYYXH",
+      "冕宁": "WM0DKVMGV99X",
+      "越西": "WM0FUZSF35HD",
+      "甘洛": "WM1HF9FF6X6J",
+      "美姑": "WM134V2FPNV8",
+      "雷波": "WM18UF3KEVVQ"
+    }
+  },
+  "贵州": {
+    "贵阳": {
+      "贵阳": "WKEZD7MXE04F",
+      "南明": "WKEZHKZJKNZX",
+      "云岩": "WKEZKQP0SPXT",
+      "花溪": "WKEY53GB7KZZ",
+      "乌当": "WKEZMPUFZRC1",
+      "白云": "WKEZFBUNM07Z",
+      "观山湖": "WKEZ65M9FNBQ",
+      "开阳": "WKU1FPVNJTTP",
+      "息烽": "WKGFHTQKVQ0H",
+      "修文": "WKGB9K30N480",
+      "清镇": "WKEXNC30FYDP"
+    },
+    "贵州": {
+      "六盘水": "WKDX33TQ96BZ",
+      "黔西南": "WK6WEPSTQ9P5",
+      "黔东南": "WKSZ3058QEG5",
+      "黔南": "WKSMQSH1JQT7"
+    },
+    "六盘水": {
+      "钟山": "WKDX1WQZTN43",
+      "六枝": "WKEJ052UM4HH",
+      "水城": "WKDXH1Q2BNXZ"
+    },
+    "遵义": {
+      "遵义": "WKUJ8GKSN3ZC",
+      "红花岗": "WKUJ318BBTD6",
+      "汇川": "WKUJC00FBWDM",
+      "播州": "WKGUWV7Y7JQW",
+      "桐梓": "WM5BN8ZVNKJ4",
+      "绥阳": "WKUPNBNHE18K",
+      "正安": "WMH6KTK5U3TZ",
+      "道真": "WMHS23RYJWPN",
+      "务川": "WMHDQCEZ61QR",
+      "凤冈": "WKUX55Z31CVS",
+      "湄潭": "WKUMVZ2ECX0W",
+      "余庆": "WKUDYG5ZFPY2",
+      "习水": "WM59157PCQSS",
+      "赤水": "WM54T6B6SD0K",
+      "仁怀": "WKGWM8KXJXZK"
+    },
+    "安顺": {
+      "安顺": "WKEM6FWMMFWJ",
+      "西秀": "WKEM74RR02GU",
+      "平坝": "WKEW3C8GSKYN",
+      "普定": "WKEJWRKV1EE5",
+      "镇宁": "WKEHQCGKG8HR",
+      "关岭": "WKE5EKN1SQS5",
+      "紫云": "WKE6MZTHE5VJ"
+    },
+    "毕节": {
+      "毕节": "WKFG79YD1BCG",
+      "七星关": "WKFGK4NKXR2P",
+      "大方": "WKG46YX84QG4",
+      "黔西": "WKG3UB8TNJ4Q",
+      "金沙": "WKGS30G037HS",
+      "织金": "WKEPWZ5K58K6",
+      "纳雍": "WKFBMGPKGCZ4",
+      "威宁": "WKF0UGW3H55C",
+      "赫章": "WKF6QFYG8YE9"
+    },
+    "铜仁": {
+      "铜仁": "WKVTSQQ2WQS8",
+      "碧江": "WKVTS3EBTW5E",
+      "万山": "WKVSSCV587VD",
+      "江口": "WKVMSFWHHY68",
+      "玉屏": "WKV6YT145ZYT",
+      "石阡": "WKUUWCFETGC4",
+      "思南": "WKUYZK90PC67",
+      "印江": "WKVP69NRZ463",
+      "德江": "WMHBU66SDTGQ",
+      "沿河": "WMJ4SCP234PB",
+      "松桃": "WMJ8KBJN0KTE"
+    },
+    "黔西南": {
+      "兴义": "WK6WEJ9VE4V7",
+      "兴仁": "WKDB9MMSRXS6",
+      "普安": "WKDDSJN72HRF",
+      "晴隆": "WKDFFQ4YESYX",
+      "贞丰": "WKE0KH7CPQVV",
+      "望谟": "WK7RNQ59VHN4",
+      "册亨": "WK7NPGRZ09WB",
+      "安龙": "WK7NBHBYT5KH"
+    },
+    "黔东南": {
+      "凯里": "WKSZ0YTRER5H",
+      "黄平": "WKU9P2FRU5RQ",
+      "施秉": "WKUCU2DT4T5Q",
+      "三穗": "WKV33JDRES3S",
+      "镇远": "WKV1GHM19J7R",
+      "岑巩": "WKV6S7BQCZ1P",
+      "天柱": "WKV9HUTH27TX",
+      "锦屏": "WKTXUBVN22MX",
+      "剑河": "WKV05F4CS1JH",
+      "台江": "WKTP8ZHHNBQ4",
+      "黎平": "WKTT5R40C63U",
+      "榕江": "WKT5T2MV5Q2F",
+      "从江": "WKT6QPDS9GVM",
+      "雷山": "WKSY54Q4TS2T",
+      "麻江": "WKSWB01MEWN1",
+      "丹寨": "WKSTJ19D41CZ"
+    },
+    "黔南": {
+      "都匀": "WKSMQWM9VDFV",
+      "福泉": "WKSRYHX4G89Z",
+      "荔波": "WKS8WGEF4PQQ",
+      "贵定": "WKSR0NDX8P5H",
+      "瓮安": "WKU3VXCQ0T8P",
+      "独山": "WKS6YYHYWSGR",
+      "平塘": "WKS6FNHN9KBP",
+      "罗甸": "WKEBTJKURR94",
+      "长顺": "WKESN6DE8Z9N",
+      "龙里": "WKSN6PJ4MTM5",
+      "惠水": "WKEUDUU4M15C",
+      "三都": "WKSEY9S83PJB"
+    }
+  },
+  "贵州省": {
+    "六盘水": {
+      "盘州": "WKD6360TZ7W0"
+    }
+  },
+  "云南": {
+    "昆明": {
+      "昆明": "WK3N92NQV6RQ",
+      "五华": "WK3N3P64940F",
+      "盘龙": "WK3N9S7VVVX0",
+      "官渡": "WK3N37XB7ECR",
+      "西山": "WK3N3H54GDZX",
+      "东川": "WK9K7GTRH227",
+      "呈贡": "WK3JE328T85V",
+      "晋宁": "WK2UQEP11M2F",
+      "富民": "WK2ZKRNJPHG8",
+      "宜良": "WK3MG0X990WW",
+      "石林": "WK3KVVNZTQTJ",
+      "嵩明": "WK920WB4MN80",
+      "禄劝": "WK8C7G0RS11Y",
+      "寻甸": "WK93MWBK53KP",
+      "安宁": "WK2VGBX9T0DQ"
+    },
+    "曲靖": {
+      "曲靖": "WK9C440U729C",
+      "麒麟": "WK9C41G417BE",
+      "沾益": "WK9CDRZRM64U",
+      "马龙": "WK98TJ2SKZTF",
+      "陆良": "WK3WRHD4Q44V",
+      "师宗": "WK3VQ05VJX7X",
+      "罗平": "WK6JT3KBW0HV",
+      "富源": "WKD4H30D94F4",
+      "会泽": "WK9QQ9SG8KYY",
+      "宣威": "WKDJ0V5Q9F60"
+    },
+    "玉溪": {
+      "玉溪": "WK2FT8F9H0YR",
+      "红塔": "WK2FMRDWCVD0",
+      "江川": "WK344HH32811",
+      "澄江": "WK3HQ5011V66",
+      "通海": "WK314NUM0TCH",
+      "华宁": "WK31WJRR4YFZ",
+      "易门": "WK2SKGJCJT3D",
+      "峨山": "WK2CD1V6SYWN",
+      "新平": "WK28BTG9FJPQ",
+      "元江": "WK0W1N6JSQ8X"
+    },
+    "保山": {
+      "保山": "WHQWBSVQS7RS",
+      "隆阳": "WHQWBT9W0B66",
+      "施甸": "WHQS8VUWTW0H",
+      "龙陵": "WHQ5VD8SFSJ5",
+      "昌宁": "WHQV62NT0PQZ",
+      "腾冲": "WHQN3KTD265M"
+    },
+    "昭通": {
+      "昭通": "WKCG2PQ8G1M2",
+      "昭阳": "WKCERY5710Y4",
+      "鲁甸": "WKCDSRDG3ZS2",
+      "巧家": "WKC1NH8H3GDR",
+      "盐津": "WKFPGZ1FZ5CJ",
+      "大关": "WKCVGGEP7QYJ",
+      "永善": "WM18W5J5DJ2T",
+      "绥江": "WM1FTQQP4D3V",
+      "镇雄": "WKFS4MH5B4GS",
+      "彝良": "WKCVPTYUKTR3",
+      "威信": "WKFWQMZN42M3",
+      "水富": "WM44ZEVVB6F4"
+    },
+    "丽江": {
+      "丽江": "WHZ2BV37270V",
+      "古城": "WHZ2BTMRE5QP",
+      "玉龙": "WHZ28GME01UD",
+      "永胜": "WHXXU8GYM0KZ",
+      "华坪": "WK8P2RYDFPC1",
+      "宁蒗": "WHZENYHTX2D6"
+    },
+    "普洱": {
+      "普洱": "WHPG4ZZB3XSN",
+      "思茅": "WHPC9UB2WNWU",
+      "宁洱": "WHPGWHBBGJNT",
+      "墨江": "WK0M3C31ESX4",
+      "景东": "WHREN6YPT637",
+      "景谷": "WHPTEQP92JD2",
+      "镇沅": "WHPXZWFED6UJ",
+      "江城": "WK02MWSFJ106",
+      "孟连": "W5YYCR4P7JS4",
+      "澜沧": "WHP03CNG3B8T",
+      "西盟": "WHNBDZTJ61ZB"
+    },
+    "临沧": {
+      "临沧": "WHPPV7HP148U",
+      "临翔": "WHPPVQKYQSPH",
+      "凤庆": "WHR5CWR92U25",
+      "云县": "WHR5NDBRW477",
+      "永德": "WHQ8DQX8USEV",
+      "镇康": "WHNR2CJB9CM1",
+      "双江": "WHPJ2HUW1SU6",
+      "耿马": "WHNTVZHUEYHJ",
+      "沧源": "WHNEDQRDS8GC"
+    },
+    "楚雄": {
+      "楚雄": "WK2NQUD6QD0J",
+      "双柏": "WK2K88KXYTSX",
+      "牟定": "WK80N37GSQP5",
+      "南华": "WK2P27W8DH3P",
+      "姚安": "WHXCPD1KMBWC",
+      "大姚": "WK843S4BP5EU",
+      "永仁": "WK8K39CUF8NX",
+      "元谋": "WK86NQDC254P",
+      "武定": "WK8C4PT7HBYN",
+      "禄丰": "WK2X4FKMK7UC"
+    },
+    "红河": {
+      "个旧": "WK1KGNRS15Y8",
+      "开远": "WK1QVYNGJ2MP",
+      "蒙自": "WK1SBYMS4EU0",
+      "弥勒": "WK3DC9GKM9TV",
+      "屏边": "WK1DXR3KPN7R",
+      "建水": "WK1N7GYS2XJK",
+      "石屏": "WK0YUQN5P07X",
+      "泸西": "WK3G93E1872J",
+      "元阳": "WK1H5UYS89V7",
+      "红河": "WK1KZS3MC5U1",
+      "金平": "WS4UZW6K55FB",
+      "绿春": "WK0FF5J2SYY0",
+      "河口": "WK1BJGSSS870"
+    },
+    "文山": {
+      "文山": "WK4HUQ2S15F0",
+      "砚山": "WK4NQ5FU3PNK",
+      "西畴": "WK4MMUFQ5UBF",
+      "麻栗坡": "WK47W8B5YB6K",
+      "马关": "WK44ZWTV0R40",
+      "丘北": "WK60FDJT3UYQ",
+      "广南": "WK68YFJTKKYQ",
+      "富宁": "WK5N7MWNSRK0"
+    },
+    "云南": {
+      "西双版纳": "W5ZTJWVFU2BB",
+      "迪庆": "WHYYKBBJHGP4"
+    },
+    "西双版纳": {
+      "景洪": "W5ZTMB87F1X8",
+      "勐海": "W5ZKVZ92W8UF",
+      "勐腊": "W7B4PQ340D1Q"
+    },
+    "大理": {
+      "大理": "WHX38U36B3BU",
+      "漾濞": "WHX443J6EFCD",
+      "祥云": "WHX8BN6RBB60",
+      "宾川": "WHXDBY0NEUGZ",
+      "弥渡": "WHX2NQZ63WW2",
+      "南涧": "WHRQX2HQVF2W",
+      "巍山": "WHRRD2UPRKUS",
+      "永平": "WHWBBUET905H",
+      "云龙": "WHWEJPR1BVDM",
+      "洱源": "WHXHD7J25BCT",
+      "剑川": "WHXNCM8UQWRN",
+      "鹤庆": "WHXPPSUV7NYP"
+    },
+    "德宏": {
+      "德宏": "WHQ5514S00XF",
+      "瑞丽": "WHM8DSSNWK81",
+      "芒市": "WHQ4GPRG06PD",
+      "梁河": "WHMVHY7FUP2E",
+      "盈江": "WHMSSKNKQMUX",
+      "陇川": "WHM99MRZ1NVX"
+    },
+    "怒江": {
+      "怒江": "WHW713U75VQ2",
+      "泸水": "WHW78XWW0YUS",
+      "福贡": "WHY31BFZVGRQ",
+      "贡山": "WHYJV216CWST",
+      "兰坪": "WHWWQR56MVM5"
+    },
+    "迪庆": {
+      "香格里拉": "WHYYKDR3D2H0",
+      "德钦": "WJN64BXK50F1",
+      "维西": "WHYDE5VQZXJX"
+    }
+  },
+  "西藏": {
+    "拉萨": {
+      "拉萨": "WJ2B9TWGFBT5",
+      "城关": "WJ2B9VM9U1Z6",
+      "堆龙德庆": "WJ28WV85V8W5",
+      "达孜": "WJ2BYEP4930B",
+      "林周": "WJ2FH7NHP5GX",
+      "当雄": "WJ2V3H8YZGG6",
+      "尼木": "WJ0PE3JNXMBH",
+      "曲水": "WJ0X0DESDHZ6",
+      "墨竹工卡": "WJ31XQ7SRGJ3"
+    },
+    "日喀则": {
+      "日喀则": "TVPNW82QN57R",
+      "桑珠孜": "TVPNQVH2QWTV",
+      "南木林": "TVR2GE0DS3P2",
+      "江孜": "TVPSWBSXPQDR",
+      "定日": "TVJGN7NYG5K7",
+      "萨迦": "TVNS6VN4WWKZ",
+      "拉孜": "TVNM6JF5QBZU",
+      "昂仁": "TVNN8VYUY7FK",
+      "谢通门": "TVNZ2TS60JDS",
+      "白朗": "TVPMXMHKMC2W",
+      "仁布": "TVPYK1HJNDYV",
+      "康马": "TVPF89NBR6N8",
+      "定结": "TVN3MK85JPR3",
+      "仲巴": "TV7C25KYBFJR",
+      "亚东": "TUZHQFX485K9",
+      "吉隆": "TVHSJ5CX6JCC",
+      "聂拉木": "TVJ0K80WPHWE",
+      "萨嘎": "TVHWG7QEDUQ0",
+      "岗巴": "TVNBYK4QCW05"
+    },
+    "昌都": {
+      "昌都": "WJT157H36HS5",
+      "卡若": "WJT158PWGVZG",
+      "江达": "WJTG5N3SGCS5",
+      "贡觉": "WJMZS5WNBCNF",
+      "类乌齐": "WJS9W5MVXJUD",
+      "丁青": "WJEFXRVFC2W8",
+      "察雅": "WJMQK78M1Y15",
+      "八宿": "WJKFVQQVZWJB",
+      "左贡": "WJM8F9K0Q2B5",
+      "芒康": "WJQ0GEN6D90B",
+      "洛隆": "WJKNUTV78Z7N",
+      "边坝": "WJ7RFYWKMCYH"
+    },
+    "林芝": {
+      "林芝": "WJ70G7N4S3H0",
+      "巴宜": "WJ70E5WYGTPN",
+      "工布江达": "WJ63CZQXD7XW",
+      "米林": "WJ5N0P2FV4U1",
+      "墨脱": "WJ5YC735WH20",
+      "波密": "WJK1GM9T6EXF",
+      "察隅": "WJJ71GPQZE7E",
+      "朗县": "WJ4JMB7S80MZ"
+    },
+    "山南": {
+      "山南": "WJ1Q3KPFD1QS",
+      "乃东": "WJ1Q230V5FZT",
+      "札囊": "WJ0YRYDKXB3J",
+      "贡嘎": "WJ0WWMCSGEUU",
+      "桑日": "WJ1QTBQYJ7MP",
+      "琼结": "WJ1JNHZ24B4Z",
+      "曲松": "WJ1T6H1CP8YB",
+      "措美": "WJ118X92C2J7",
+      "洛扎": "WJ097Y3T2RRN",
+      "加查": "WJ1VFDWEN3G7",
+      "隆子": "WJ1C8JWW7PVR",
+      "错那": "WHCRK35ZY633",
+      "浪卡子": "WJ0KC1G62XMT"
+    },
+    "那曲": {
+      "那曲": "WJ97P4G263RF",
+      "色尼": "WJ97N9Q6PJUR",
+      "嘉黎": "WJ6Q3GWT4QPE",
+      "比如": "WJDE5DZ8Q1QF",
+      "聂荣": "WJ9WSR6B9CUR",
+      "安多": "WJ9PW4X66U4B",
+      "申扎": "TVRPFX4Y6Q8F",
+      "索县": "WJDTQ58D2QSR",
+      "班戈": "WJ842QWX6PC4",
+      "巴青": "WJDVESWT9Z3V",
+      "尼玛": "TVWHBCQGYM6K",
+      "双湖": "TYN9ZT6T4ZPF"
+    },
+    "阿里": {
+      "阿里": "TV9JG0M1S9QU",
+      "普兰": "TV3SR5FNQ16U",
+      "札达": "TV8EPFU86C2D",
+      "噶尔": "TVBBYSRN1R0G",
+      "日土": "TVBTYHDKDEH2",
+      "革吉": "TVC8MFJZ9JB0",
+      "改则": "TVEZC01CHURT",
+      "措勤": "TVS86P4BSG4G"
+    }
+  },
+  "陕西": {
+    "西安": {
+      "西安": "WQJ6YY8MHZP0",
+      "新城": "WQJ6ZQ76D36J",
+      "碑林": "WQJ6YUKZ3YZQ",
+      "莲湖": "WQJ6YVZPX158",
+      "灞桥": "WQJDCY2TU0U9",
+      "未央": "WQJ7P51HQNTN",
+      "雁塔": "WQJ6WSDSFJ3E",
+      "阎良": "WQJTJQM8RHQG",
+      "临潼": "WQJET2GEF2QS",
+      "长安": "WQJ6QU2QSVXJ",
+      "高陵": "WQJS6JVXU4X1",
+      "鄠邑": "WQJ1ZR8NGKTP",
+      "蓝田": "WQJDR8U6HTKH",
+      "周至": "WQHFQHKYDTXT"
+    },
+    "铜川": {
+      "铜川": "WQJQWC27HZX1",
+      "王益": "WQJX9BNWGGSM",
+      "印台": "WQJXF82REX68",
+      "耀州": "WQJQXUUZDPCC",
+      "宜君": "WQM97H6GBQ33"
+    },
+    "宝鸡": {
+      "宝鸡": "WQH5TBCEVBMU",
+      "渭滨": "WQH5W1KDPKXE",
+      "金台": "WQH5W44QT9Y2",
+      "陈仓": "WQH7E2B7Y26U",
+      "凤翔": "WQHK7KPTX67K",
+      "岐山": "WQHEBZQMZC2Q",
+      "扶风": "WQHEW8UEC0MU",
+      "眉县": "WQHE5BMPKZPM",
+      "陇县": "WQ5YX3MG1RW9",
+      "千阳": "WQHJJGCDVUJV",
+      "麟游": "WQHTK9718H8F",
+      "凤县": "WQ58ZYVQRFKC",
+      "太白": "WQH3F4K01K24"
+    },
+    "咸阳": {
+      "咸阳": "WQJ7398FTXFD",
+      "秦都": "WQJ739F0DUXQ",
+      "杨陵": "WQHFGRM2FMCW",
+      "渭城": "WQJ76R8T4XW1",
+      "三原": "WQJKYY2KHGZ0",
+      "泾阳": "WQJKKMZXFF99",
+      "乾县": "WQHUQVFXVF91",
+      "礼泉": "WQJH5HVH91G7",
+      "永寿": "WQHVKSCY5SGF",
+      "长武": "WQK8HXGNB58F",
+      "旬邑": "WQJPC17KZFW8",
+      "淳化": "WQJJYG981MUJ",
+      "武功": "WQHFYNSV4XP8",
+      "兴平": "WQJ5HS0EZPQT",
+      "彬州": "WQHZ73J2W931"
+    },
+    "渭南": {
+      "渭南": "WQJU78X3NFJU",
+      "临渭": "WQJU72QMUR28",
+      "华州": "WQNH3UHJD6KK",
+      "潼关": "WQNKS3EH34V3",
+      "大荔": "WQNJVX0SDWJJ",
+      "合阳": "WQQ26T2V95BZ",
+      "澄城": "WQQ0JS2D6EM4",
+      "蒲城": "WQJYVD3WX04N",
+      "白水": "WQMBJS3DR564",
+      "富平": "WQJTSQN3QMS8",
+      "韩城": "WQQ9BFUTVX25",
+      "华阴": "WQNK8VMBCGJ4"
+    },
+    "延安": {
+      "延安": "WQTB5QBFKYSB",
+      "宝塔": "WQTB5MNX09S1",
+      "安塞": "WQT9XXURKDHH",
+      "延长": "WQW0P55TCY0Z",
+      "延川": "WQW3G1Y9S469",
+      "子长": "WQTGPX73BJXJ",
+      "志丹": "WQT37NGUH9QR",
+      "吴起": "WQSFKHBQGXQK",
+      "甘泉": "WQMY2KD4RDJV",
+      "富县": "WQMU8VBY9WNU",
+      "洛川": "WQMG6PSRRG61",
+      "宜川": "WQQM4FXQ7P44",
+      "黄龙": "WQQ47JPU82XX",
+      "黄陵": "WQMDQJ1KT88R"
+    },
+    "汉中": {
+      "汉中": "WMUH5K1WDWZC",
+      "汉台": "WMUH5KNUSFE5",
+      "南郑": "WMU59R2NCTFG",
+      "城固": "WMUKD6G2DRBS",
+      "洋县": "WMUKZRE888U6",
+      "西乡": "WMUES7GDRJ87",
+      "勉县": "WMGUE6F8XPUU",
+      "宁强": "WMGDCB8BS7W4",
+      "略阳": "WMGMXE81662F",
+      "镇巴": "WMU9P3FKUPX2",
+      "留坝": "WMUP302F8W4R",
+      "佛坪": "WMUY9PUWKM58"
+    },
+    "榆林": {
+      "榆林": "WQY1BBWVNM4Q",
+      "榆阳": "WQY1C2TT0M5Q",
+      "横山": "WQTXYSX6B89Z",
+      "府谷": "WQYYP3NWNX6D",
+      "靖边": "WQTMGUCEZU00",
+      "定边": "WQSTB3PZMEXP",
+      "绥德": "WQWMKF9T74WM",
+      "米脂": "WQWQG0NTSN49",
+      "佳县": "WQY86134D9DY",
+      "吴堡": "WQWTP9X4H1BR",
+      "清涧": "WQW6CY4YTUZR",
+      "子洲": "WQWNPB92KU69",
+      "神木": "WQYSFKZ9HSEU"
+    },
+    "安康": {
+      "安康": "WMV9BV1YY1EC",
+      "汉滨": "WMVD0B77K0R2",
+      "汉阴": "WMV5HVR23HXB",
+      "石泉": "WMUUP294PYD3",
+      "宁陕": "WMVJ8CSPNFNN",
+      "紫阳": "WMV1J8J4SR3K",
+      "岚皋": "WMTRY5DT9UTM",
+      "平利": "WMVB264PXTVB",
+      "镇坪": "WMTVK5W42YWZ",
+      "旬阳": "WMVFC080DEX6",
+      "白河": "WMY69QSQ7GQM"
+    },
+    "商洛": {
+      "商洛": "WQN0TV21C6RY",
+      "商州": "WQN0TTBE49T5",
+      "洛南": "WQN3FH44QURY",
+      "丹凤": "WMYRWWGUER6D",
+      "商南": "WMYYEPUQ7M02",
+      "山阳": "WMYNSRUNMT42",
+      "镇安": "WMVW5V8XG7DV",
+      "柞水": "WMVXDEK0NR01"
+    }
+  },
+  "甘肃": {
+    "兰州": {
+      "兰州": "WQ3V4QR6VR6G",
+      "城关": "WQ3V4S13X6PJ",
+      "七里河": "WQ3V1TSRUYEZ",
+      "西固": "WQ3TMGVY4T5S",
+      "安宁": "WQ3V2HRWPPME",
+      "红古": "WQ3NU8K6H92P",
+      "永登": "WQ92VYQZV2M0",
+      "皋兰": "WQ3YTMWJDDCG",
+      "榆中": "WQ65CQ3C7U75"
+    },
+    "嘉峪关": {
+      "嘉峪关": "WPJFKJQ5BCWZ"
+    },
+    "金昌": {
+      "金昌": "WQBEJ0TNY84M",
+      "金川": "WQBEJKQP0G5C",
+      "永昌": "WQB987HQ3HYC"
+    },
+    "白银": {
+      "白银": "WQ6PFTTX1VY6",
+      "平川": "WQD8CQQZU032",
+      "靖远": "WQD2N13ESY17",
+      "会宁": "WQ6EN6ZPD6M7",
+      "景泰": "WQD524VQQVBQ"
+    },
+    "天水": {
+      "天水": "WQ5HTXNGNE1W",
+      "秦州": "WQ5HTXRPUXMC",
+      "麦积": "WQ5KJ8PFPH4X",
+      "清水": "WQ5MXN192JX8",
+      "秦安": "WQ5NKEFS3RNU",
+      "甘谷": "WQ4VSF6UYVHX",
+      "武山": "WQ4TD8E69JH5",
+      "张家川": "WQ5X15E1C2US"
+    },
+    "武威": {
+      "武威": "WQ8ZZ2UYK26X",
+      "凉州": "WQ8ZZ8SD0P07",
+      "民勤": "WQC79WS9F1FC",
+      "古浪": "WQ9JJJ4YTF20",
+      "天祝": "WQ966U0BP5TS"
+    },
+    "张掖": {
+      "张掖": "WNZMMYCRWTUZ",
+      "甘州": "WNZMQQUDYXMD",
+      "肃南": "WNYUFUV14HXU",
+      "民乐": "WNZDW5YYUR0Z",
+      "临泽": "WNZNX7MSF0TW",
+      "高台": "WPNBP2YTNS4D",
+      "山丹": "WNZUS5SJYEYY"
+    },
+    "平凉": {
+      "平凉": "WQ7F5V8HRBZU",
+      "崆峒": "WQ7F5RDTZ0KF",
+      "泾川": "WQK2GR8KNM6G",
+      "灵台": "WQHX8BQ3XCB6",
+      "崇信": "WQK0GD0V7UBQ",
+      "庄浪": "WQ72JPZQB5E6",
+      "静宁": "WQ74JDNYYXCT",
+      "华亭": "WQ7B6GS5M5GG"
+    },
+    "酒泉": {
+      "酒泉": "WPN41UK0D3H6",
+      "肃州": "WPN41E4Z384M",
+      "金塔": "WPN76W0U3H0V",
+      "瓜州": "WPK0M8YWC8WC",
+      "肃北": "WP52Z43S8JZW",
+      "阿克塞": "WP516W3J2R6N",
+      "玉门": "WPJJ0KV8HBJP",
+      "敦煌": "WP5K632W4YHQ"
+    },
+    "庆阳": {
+      "庆阳": "WQKE38EK0NBP",
+      "西峰": "WQKE30MY2FBB",
+      "庆城": "WQKSYCEG4NQK",
+      "环县": "WQS21EJMZNNZ",
+      "华池": "WQKZ3PHTHKG8",
+      "合水": "WQKGF0CF87VY",
+      "正宁": "WQM1FN8DKP8U",
+      "宁县": "WQK9ZY8FQR8K",
+      "镇原": "WQK4ZRKEJ41D"
+    },
+    "定西": {
+      "定西": "WQ66KU06BHB1",
+      "安定": "WQ66KTJUW8WP",
+      "通渭": "WQ6B5PBWYG84",
+      "陇西": "WQ4RHGT1Z8YS",
+      "渭源": "WQ4PGE4XN48S",
+      "临洮": "WQ3C78EZ6QJ8",
+      "漳县": "WQ4Q320XZQY5",
+      "岷县": "WQ1GZ7B369NN"
+    },
+    "甘肃": {
+      "陇南": "WMFTU75WU2CG",
+      "甘南": "WQ1PJB8R8EFB"
+    },
+    "陇南": {
+      "武都": "WMFW5823J5Q2",
+      "成县": "WMGPVSQGQX9X",
+      "文县": "WMF7QN3ESV1Q",
+      "宕昌": "WQ41XNX5WK11",
+      "康县": "WMGJDGX96674",
+      "西和": "WQ4CS1JHGGDU",
+      "礼县": "WQ4F3NQ2YTGC",
+      "徽县": "WQ52JGTHE0M0",
+      "两当": "WQ58FYVQ3D2C"
+    },
+    "临夏": {
+      "临夏": "WQ36SBF902FR",
+      "康乐": "WQ3C0NYT5JVK",
+      "永靖": "WQ3KRHG76MRY",
+      "广河": "WQ39V4BTUZMG",
+      "和政": "WQ33XCC4TW9Q",
+      "东乡": "WQ3DBVT8F9UN",
+      "积石山": "WQ35K6M0DDYK"
+    },
+    "甘南": {
+      "合作": "WQ1NYPBJ3BD7",
+      "临潭": "WQ1MRUCNJSC6",
+      "卓尼": "WQ1SEPN7HG1W",
+      "舟曲": "WQ40NVRYV22S",
+      "迭部": "WQ13SYDE8K43",
+      "玛曲": "WQ096TT077KK",
+      "碌曲": "WQ0UEZPEJ54Q",
+      "夏河": "WQ2BHZUYC5SD"
+    }
+  },
+  "青海": {
+    "西宁": {
+      "西宁": "WQ82K43YVYU8",
+      "城东": "WQ82HWCF35QF",
+      "城中": "WQ2RFKFNPJ35",
+      "城西": "WQ827EYPSNYH",
+      "城北": "WQ827XYMV34P",
+      "大通": "WQ861FCHGDZN",
+      "湟中": "WQ2PXK95BT1K",
+      "湟源": "WQ808MQS6P94"
+    },
+    "海东": {
+      "海东": "WQ2Y3RYEE7DY",
+      "乐都": "WQ2ZD0VRKUYH",
+      "平安": "WQ2XEU9EBMPH",
+      "民和": "WQ3NEM8TTDGG",
+      "互助": "WQ83XBTWR1TG",
+      "化隆": "WQ2TR5Y9XXZ0",
+      "循化": "WQ2GGYR9MH67"
+    },
+    "海北": {
+      "海北": "WNXF241JU7T0",
+      "门源": "WQ8K8KV6M95C",
+      "祁连": "WNZ31NRYD7CG",
+      "海晏": "WNXCCV7QHD93",
+      "刚察": "WNXHQE8RN077"
+    },
+    "黄南": {
+      "黄南": "WQ2D1TXVBJ01",
+      "同仁": "WQ2D1D0WYRCT",
+      "尖扎": "WQ2S3SZGRM6N",
+      "泽库": "WQ0PM100W37C",
+      "河南": "WQ0JXFQUGT4Z"
+    },
+    "海南": {
+      "海南": "WNRW6560ZURV",
+      "共和": "WNRW3ST4RFJV",
+      "同德": "WNR8890F4U70",
+      "贵德": "WQ2JH4EN6R1D",
+      "兴海": "WNR47J5HWBER",
+      "贵南": "WNRDKT5UT0SZ"
+    },
+    "果洛": {
+      "果洛": "WNPK15RJ0H84",
+      "玛沁": "WNPK0UCK83BG",
+      "班玛": "WJZEK4TR5HGV",
+      "甘德": "WNP1320CWDZP",
+      "达日": "WNNB584BJ218",
+      "久治": "WMBNJJXRZ7SM",
+      "玛多": "WNJYDHURXZF1"
+    },
+    "玉树": {
+      "玉树": "WJUGXXRYCVG7",
+      "杂多": "WJGG0T726UW2",
+      "称多": "WJVJCDF43FZE",
+      "治多": "WN5BXFHQE3RE",
+      "囊谦": "WJSX5MYDDGN1",
+      "曲麻莱": "WNH45VPMTV1K"
+    },
+    "海西": {
+      "海西": "WNTHRYRP0P8J",
+      "格尔木": "WN7RPW01FK0F",
+      "德令哈": "WNTHXEN8J2YM",
+      "茫崖": "WN9RXN2FUH78",
+      "乌兰": "WNW40FYUY6FQ",
+      "天峻": "WNWKJQ20JPZQ"
+    }
+  },
+  "青海省": {
+    "海西": {
+      "都兰": "WNMWXB5WVDKW"
+    }
+  },
+  "宁夏": {
+    "银川": {
+      "银川": "WQGDF7NXZRZB",
+      "兴庆": "WQGDFECDFF07",
+      "西夏": "WQG7P9J0MMRM",
+      "金凤": "WQGDC7YKHVCU",
+      "永宁": "WQG9CB8VHMNN",
+      "贺兰": "WQGEK1CDN8GE",
+      "灵武": "WQG8EXGHSDF8"
+    },
+    "石嘴山": {
+      "石嘴山": "WQGTUXRECXJN",
+      "大武口": "WQGTUR539D4N",
+      "惠农": "WQGZMC4ZF66C",
+      "平罗": "WQGV21SBBVT6"
+    },
+    "吴忠": {
+      "吴忠": "WQG80DH3X35S",
+      "利通": "WQG80FD6W5XP",
+      "红寺堡": "WQEKVMHBDMR4",
+      "盐池": "WQSQGVWK3QKQ",
+      "同心": "WQE66K084GSK",
+      "青铜峡": "WQG2M9MFD1SQ"
+    },
+    "固原": {
+      "固原": "WQ7SF3WEPQRU",
+      "原州": "WQ7SFD33FJDT",
+      "西吉": "WQ7HTUNHRTFP",
+      "隆德": "WQ76WU6JX1R0",
+      "泾源": "WQ79GDGJUX6E",
+      "彭阳": "WQ7GFQM97H6G"
+    },
+    "中卫": {
+      "中卫": "WQDV3QM9ZDUM",
+      "沙坡头": "WQDV3T4WV5WP",
+      "中宁": "WQEJHX48C6QU",
+      "海原": "WQE0H17GXQJG"
+    }
+  },
+  "新疆": {
+    "乌鲁木齐": {
+      "乌鲁木齐": "TZY33C4YJBP3",
+      "天池": "TZY9UBXJKW3F",
+      "沙依巴克": "TZY31M8B0VK0",
+      "新市": "TZY39NJQF8E4",
+      "水磨沟": "TZY3672F74BZ",
+      "头屯河": "TZY1T755SJTZ",
+      "达坂城": "TZWY97DH51SN",
+      "米东": "TZY656TH0C43"
+    },
+    "乌鲁木齐市": {
+      "乌鲁木齐县": "TZWRVZM42Y62"
+    },
+    "克拉玛依": {
+      "独山子": "TZUK5TE15104",
+      "克拉玛依": "VBH77M0RQ24G",
+      "白碱滩": "VBHECPMVBC2Y",
+      "乌尔禾": "VBHYJSW72WWD"
+    },
+    "吐鲁番": {
+      "吐鲁番": "TZXKM4G9GS71",
+      "高昌": "TZXKM3JHFK87",
+      "鄯善": "WP85VH0PY75Z",
+      "托克逊": "TZX537BGWDP0"
+    },
+    "哈密": {
+      "哈密": "WPDE8HGNVFWJ",
+      "伊州": "WPD7XUNHKNBN",
+      "巴里坤": "WPF0H30S3J44",
+      "伊吾": "WPEQ4CQMTBQ5"
+    },
+    "昌吉": {
+      "昌吉": "TZY46T9GJ6Y0",
+      "阜康": "TZYE4J306SDB",
+      "呼图壁": "TZVG36WXHUBM",
+      "玛纳斯": "TZVK1BX6PWE9",
+      "奇台": "TZZDQMW5J6C2",
+      "吉木萨尔": "TZZ6M3FYSD7X",
+      "木垒": "WPB1Q75BK2PN"
+    },
+    "新疆": {
+      "博尔塔拉": "TZFR7QSK5DH2",
+      "巴音郭楞": "TZMM84XHV4GU",
+      "克州": "TXN1VJTX2P0K",
+      "伊犁": "TZCCFD84WXV4",
+      "图木舒克": "TZ04Z1NF3P4V",
+      "北屯": "VBQMNXK3YFKV",
+      "铁门关": "TZKYJKV2ZPNW",
+      "双河": "TZFX1GQY86PS",
+      "可克达拉": "TZC9UPSYFNPD",
+      "昆玉": "TY87SMB6KKFW"
+    },
+    "博尔塔拉": {
+      "博乐": "TZFR7TC93WEK",
+      "阿拉山口": "VB48ZP18XJHZ",
+      "精河": "TZFVTZPMGFX5",
+      "温泉": "TZCXGFS1PZE5"
+    },
+    "巴音郭楞": {
+      "库尔勒": "TZMM87UXBKRG",
+      "轮台": "TZ7VTTGD1K6R",
+      "尉犁": "TZM74EVKDWMM",
+      "若羌": "TYYTYR77VZJN",
+      "且末": "TYUBFM3537NM",
+      "焉耆": "TZMX3FW7E0QT",
+      "和静": "TZT2Y04ECGV3",
+      "和硕": "TZTB2Z0B9ENG",
+      "博湖": "TZMWG64P1R1Y"
+    },
+    "阿克苏": {
+      "阿克苏": "TZ344WFBDS60",
+      "温宿": "TZ34CDV9QMXZ",
+      "库车": "TZ7J24BUT5SJ",
+      "沙雅": "TZ6F7XYECUCV",
+      "新和": "TZ6SREGQR92H",
+      "拜城": "TZ6JYCRYTKB8",
+      "乌什": "TZ266ZVEBUCV",
+      "阿瓦提": "TZ1PJH6YVUBN",
+      "柯坪": "TZ0NQUF3WE0N"
+    },
+    "克州": {
+      "阿图什": "TXN1VQC3C8ST",
+      "阿克陶": "TWYN8R1172BW",
+      "阿合奇": "TXRBC5JD93PB",
+      "乌恰": "TXJ9BQG3U0DV"
+    },
+    "喀什": {
+      "喀什": "TXN08CQCQM63",
+      "疏附": "TXJBN0BM1H56",
+      "疏勒": "TXN04S9CTKQ4",
+      "英吉沙": "TWYJMQCR9TUX",
+      "泽普": "TWYCNQ6Q9EB5",
+      "莎车": "TWYFT6JHTRJG",
+      "叶城": "TWXP3XZDBZB1",
+      "麦盖提": "TWZJQCX0BJSD",
+      "岳普湖": "TWYX4VW5QDHC",
+      "伽师": "TXN8DNC04TDY",
+      "巴楚": "TXPF73WR79MP",
+      "塔什库尔干": "TWTQZ9VXCN1J"
+    },
+    "和田": {
+      "和田": "TY8G4T7ZWVX1",
+      "墨玉": "TY8SN2C97XSC",
+      "皮山": "TWXWJ29B2HQ9",
+      "洛浦": "TY94BS3K3KV7",
+      "策勒": "TY96QXSU87YV",
+      "于田": "TYD1DKQ6BCVU",
+      "民丰": "TYDFCKMSRSU7"
+    },
+    "伊犁": {
+      "伊宁": "TZCCF7RKT36V",
+      "奎屯": "TZUKEYQM32HM",
+      "霍尔果斯": "TZC5MZQTRD5Y",
+      "伊宁县": "TZCFPN341DJW",
+      "察布查尔": "TZC9QE58K01W",
+      "霍城": "TZCD87P1BE5J",
+      "巩留": "TZDRR5Q13GKN",
+      "新源": "TZEPN6HY1DG1",
+      "昭苏": "TZ9TQPJNFP08",
+      "特克斯": "TZDJY5FY9PYQ",
+      "尼勒克": "TZF9J3FSVRD8"
+    },
+    "塔城": {
+      "塔城": "VB71BQ84QPSS",
+      "乌苏": "TZUHYBNPE023",
+      "额敏": "VB72XN98BHXT",
+      "沙湾": "TZUUHQ48FWGQ",
+      "托里": "VB5MQ379THW4",
+      "裕民": "VB5NB62NW0HW",
+      "和布克赛尔": "VBKFNXEMUB2D"
+    },
+    "阿勒泰": {
+      "阿勒泰": "VBW8JQY63YDB",
+      "布尔津": "VBMZ27D0XSMZ",
+      "富蕴": "VBREMH46Z5N0",
+      "福海": "VBQHP1GTCU8U",
+      "哈巴河": "VBT3QWCH5CQX",
+      "青河": "Y02388H8QWSD",
+      "吉木乃": "VBMJF4RGV0C6"
+    },
+    "石河子": {
+      "石河子": "TZVHJ8T4HQ93"
+    },
+    "阿拉尔": {
+      "阿拉尔": "TZ1Y9TFKC7BS"
+    },
+    "五家渠": {
+      "五家渠": "TZY7200FWT0M"
+    }
+  },
+  "台湾": {
+    "高雄": {
+      "恒春": "WEVV5TEP8D3H",
+      "台南": "WSJ6Z5NBXNB0",
+      "屏东": "WSJ8VWFY76R3",
+      "马公": "WSJN13BN6HU0",
+      "嘉义": "WSJTS6QKYMHX",
+      "云林": "WSN1KVD8RE7K"
+    },
+    "台中": {
+      "鹿谷乡": "WSJWYWP7083Z",
+      "彰化": "WSJZ5FCK9PXR",
+      "南投": "WSM8YXXK0T3G",
+      "苗栗": "WSMC3UM5YY39",
+      "台东": "WSMGSCECS52T",
+      "埔里": "WSQ02DZQ65HE",
+      "花莲": "WSQ2RJ6MT7GZ"
+    },
+    "台北": {
+      "新竹": "WSQJ0Q34GR2E",
+      "大溪": "WSQM81BYPZ6P",
+      "桃园": "WSQQ01XUYC7E",
+      "宜兰": "WSQSFMPXSWEV",
+      "基隆": "WSQWFQ3WXV69"
+    }
+  },
+  "香港": "WECNV8ZNE40W",
+  "九龙": "WECNYQ9U02EE",
+  "荃湾": "WECPHRTP69SV",
+  "新界": "WECPJQ06ZPUE",
+  "澳门": "WEBTFUSKS7HB",
+  "路环岛": "WEBVB7GZ9P8N",
+  "氹仔岛": "WEBY02613HF6"
+}

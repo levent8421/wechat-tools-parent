@@ -41,6 +41,11 @@ public class SuperCtlDevice extends AbstractEntity {
     @Column(name = "address")
     private String address;
     /**
+     * address code
+     */
+    @Column(name = "address_code", length = 100)
+    private String addressCode;
+    /**
      * 最后一次心跳时间
      */
     @Column(name = "last_heartbeat_time")

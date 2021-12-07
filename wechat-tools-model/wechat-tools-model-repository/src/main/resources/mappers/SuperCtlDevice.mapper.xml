@@ -8,6 +8,7 @@
         <result column="sc_d_wechat_user_id" property="wechatUserId"/>
         <result column="sc_d_device_name" property="deviceName"/>
         <result column="sc_d_address" property="address"/>
+        <result column="sc_d_address_code" property="addressCode"/>
         <result column="sc_d_last_heartbeat_time" property="lastHeartbeatTime"/>
         <result column="sc_d_status_json" property="statusJson"/>
         <result column="sc_d_create_time" property="createTime"/>
@@ -20,6 +21,7 @@
         sc_d.wechat_user_id      as sc_d_wechat_user_id,
         sc_d.device_name         as sc_d_device_name,
         sc_d.address             as sc_d_address,
+        sc_d.address_code        as sc_d_address_code,
         sc_d.last_heartbeat_time as sc_d_last_heartbeat_time,
         sc_d.status_json         as sc_d_status_json,
         sc_d.create_time         as sc_d_create_time,

@@ -73,6 +73,9 @@ public class SuperCtlWeatherServiceImpl extends AbstractServiceImpl<SuperCtlWeat
             if (!isExpired(weather)) {
                 continue;
             }
+            if (weather.isNeedRefresh()) {
+                continue;
+            }
             expiredIds.add(weather.getId());
         }
         if (expiredIds.size() > 0) {
@@ -86,7 +89,7 @@ public class SuperCtlWeatherServiceImpl extends AbstractServiceImpl<SuperCtlWeat
                 refreshWeather(weather);
                 weathersToSave.add(weather);
             } catch (Exception e) {
-                log.error("Error on fetch weather:[{}]:{}", address, ExceptionUtils.getMessage(e));
+                log.error("Error on fetch weather:[{}]:{}", address, ExceptionUtils.getMessage(e), e);
             }
         }
         save(weathersToSave);

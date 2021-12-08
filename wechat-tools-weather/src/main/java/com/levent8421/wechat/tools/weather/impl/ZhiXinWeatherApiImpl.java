@@ -99,7 +99,9 @@ public class ZhiXinWeatherApiImpl extends AbstractHttpApi implements WeatherApi 
             String error = resp.getString("status");
             throw new WeatherException(errorCode + "|" + error);
         }
-        ZhiXinWeatherResult result = results.getObject(0, ZhiXinWeatherResult.class);
+        JSONObject firstResult = results.getJSONObject(0);
+        ZhiXinWeatherResult result = firstResult.getObject("now", ZhiXinWeatherResult.class);
+
         WeatherInfo res = new WeatherInfo();
         res.setAddress(address);
         res.setTitle(result.getText());

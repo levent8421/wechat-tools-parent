@@ -53,14 +53,14 @@ public class ApiSuperCtlDeviceController extends AbstractUserController {
         List<SuperCtlDevice> devices = superCtlDeviceService.findByUser(uid);
         Set<String> addressArr = Sets.newHashSet();
         for (SuperCtlDevice device : devices) {
-            addressArr.add(device.getAddress());
+            addressArr.add(device.getAddressCode());
         }
         Map<String, SuperCtlWeather> weatherTable = superCtlWeatherService.getWeathers(addressArr);
         List<SuperCtlDeviceInfo> res = Lists.newArrayList();
         for (SuperCtlDevice device : devices) {
             SuperCtlDeviceInfo info = new SuperCtlDeviceInfo();
             info.setDevice(device);
-            info.setWeather(weatherTable.get(device.getAddress()));
+            info.setWeather(weatherTable.get(device.getAddressCode()));
             res.add(info);
         }
         return GeneralResult.ok(res);

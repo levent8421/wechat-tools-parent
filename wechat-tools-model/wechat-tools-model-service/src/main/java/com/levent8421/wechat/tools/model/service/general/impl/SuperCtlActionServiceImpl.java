@@ -133,5 +133,6 @@ public class SuperCtlActionServiceImpl extends AbstractServiceImpl<SuperCtlActio
         action.setStateJsonAfter(JSON.toJSONString(status));
         SuperCtlAction updatedAction = updateById(action);
         notifyActionComplete(updatedAction);
+        superCtlMessageManager.remove(id);
     }
 }

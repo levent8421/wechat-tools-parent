@@ -1,5 +1,5 @@
 message:
   broker: tcp://localhost:1883
-  username: guest
-  password: guest
+  username: admin
+  password: levent8421
   clientId: server-01

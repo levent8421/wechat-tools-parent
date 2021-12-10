@@ -34,4 +34,10 @@
         from t_super_ctl_device as sc_d
         where sc_d.deleted = false
     </sql>
+    <update id="updateStatus">
+        update t_super_ctl_device set status_json=#{statusStr} where id=#{id}
+    </update>
+    <update id="updateStatusBySn">
+        update t_super_ctl_device set status_json=#{statusStr} where sn=#{sn}
+    </update>
 </mapper>

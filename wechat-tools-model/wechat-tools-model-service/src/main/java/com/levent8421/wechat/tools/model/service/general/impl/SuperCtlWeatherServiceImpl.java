@@ -3,6 +3,7 @@ package com.levent8421.wechat.tools.model.service.general.impl;
 import com.google.common.collect.Maps;
 import com.levent8421.wechat.tools.commons.entity.SuperCtlWeather;
 import com.levent8421.wechat.tools.commons.exception.InternalServerErrorException;
+import com.levent8421.wechat.tools.commons.utils.CollectionUtils;
 import com.levent8421.wechat.tools.commons.utils.datetime.DateTimeUtils;
 import com.levent8421.wechat.tools.model.repository.mapper.SuperCtlWeatherMapper;
 import com.levent8421.wechat.tools.model.service.basic.impl.AbstractServiceImpl;
@@ -15,10 +16,7 @@ import org.apache.commons.lang3.exception.ExceptionUtils;
 import org.assertj.core.util.Lists;
 import org.springframework.stereotype.Service;
 
-import java.util.Date;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 /**
  * Create by Levent8421
@@ -61,6 +59,9 @@ public class SuperCtlWeatherServiceImpl extends AbstractServiceImpl<SuperCtlWeat
 
     @Override
     public Map<String, SuperCtlWeather> getWeathers(Set<String> addressArr) {
+        if (CollectionUtils.isEmpry(addressArr)) {
+            return Collections.emptyMap();
+        }
         Map<String, SuperCtlWeather> dbWeathers = findWeathers(addressArr);
         List<String> notExistsAddressArr = Lists.newArrayList();
         for (String address : addressArr) {
@@ -79,7 +80,8 @@ public class SuperCtlWeatherServiceImpl extends AbstractServiceImpl<SuperCtlWeat
             expiredIds.add(weather.getId());
         }
         if (expiredIds.size() > 0) {
-            markRefresh(expiredIds, true);
+            int maeked = markRefresh(expiredIds, true);
+            log.info("mark [{}] WeatherRow need refresh", maeked);
         }
         List<SuperCtlWeather> weathersToSave = Lists.newArrayList();
         for (String address : notExistsAddressArr) {

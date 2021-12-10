@@ -43,9 +43,9 @@ public interface SuperCtlActionService extends AbstractService<SuperCtlAction> {
     /**
      * Mark action down
      *
-     * @param id     id
+     * @param action action
      * @param msg    msg
      * @param status status
      */
-    void reportActionDone(Integer id, String msg, SuperCtlDeviceStatus status);
+    void reportActionDone(SuperCtlAction action, String msg, SuperCtlDeviceStatus status);
 }

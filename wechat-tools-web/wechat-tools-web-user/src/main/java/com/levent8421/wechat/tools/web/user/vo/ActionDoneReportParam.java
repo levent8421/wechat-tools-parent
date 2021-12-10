@@ -16,8 +16,9 @@ import lombok.Data;
 public class ActionDoneReportParam {
     private String msg;
     private SuperCtlDeviceStatus status;
+    private String sn;
 }
 /*
-* P4TEggMi8RIF07xOK
-* SE5ogdcX7Idz3djCO
-* */
+ * P4TEggMi8RIF07xOK
+ * SE5ogdcX7Idz3djCO
+ * */

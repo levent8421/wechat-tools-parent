@@ -2,8 +2,10 @@ package com.levent8421.wechat.tools.model.service.general.impl;
 
 import com.levent8421.wechat.tools.commons.entity.SuperCtlDevice;
 import com.levent8421.wechat.tools.model.repository.mapper.SuperCtlDeviceMapper;
+import com.levent8421.wechat.tools.model.service.app.sc.define.SuperCtlDeviceStatus;
 import com.levent8421.wechat.tools.model.service.basic.impl.AbstractServiceImpl;
 import com.levent8421.wechat.tools.model.service.general.SuperCtlDeviceService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -17,6 +19,7 @@ import java.util.List;
  *
  * @author levent8421
  */
+@Slf4j
 @Service
 public class SuperCtlDeviceServiceImpl extends AbstractServiceImpl<SuperCtlDevice> implements SuperCtlDeviceService {
     private final SuperCtlDeviceMapper superCtlAppMapper;
@@ -31,5 +34,27 @@ public class SuperCtlDeviceServiceImpl extends AbstractServiceImpl<SuperCtlDevic
         SuperCtlDevice query = new SuperCtlDevice();
         query.setWechatUserId(uid);
         return findByQuery(query);
+    }
+
+    @Override
+    public void updateStatus(Integer id, SuperCtlDeviceStatus status) {
+        String statusStr = status.asString();
+        int rows = superCtlAppMapper.updateStatus(id, statusStr);
+        if (rows != 1) {
+            log.error("update statue[{}] for device[{}] res(Unexpect)=[{}]", status, id, rows);
+        } else {
+            log.info("update statue[{}] for device[{}] res=[{}]", status, id, rows);
+        }
+    }
+
+    @Override
+    public void updateStatus(String sn, SuperCtlDeviceStatus status) {
+        String statusStr = status.asString();
+        int rows = superCtlAppMapper.updateStatusBySn(sn, statusStr);
+        if (rows != 1) {
+            log.error("update statue[{}] for device[{}] res(Unexpect)=[{}]", status, sn, rows);
+        } else {
+            log.info("update statue[{}] for device[{}] res=[{}]", status, sn, rows);
+        }
     }
 }

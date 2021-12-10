@@ -118,8 +118,7 @@ public class SuperCtlActionServiceImpl extends AbstractServiceImpl<SuperCtlActio
     }
 
     @Override
-    public void reportActionDone(Integer id, String msg, SuperCtlDeviceStatus status) {
-        SuperCtlAction action = require(id);
+    public void reportActionDone(SuperCtlAction action, String msg, SuperCtlDeviceStatus status) {
         String stateJsonExpect = action.getStateJsonExpect();
         SuperCtlDeviceStatus expect = JSON.parseObject(stateJsonExpect, SuperCtlDeviceStatus.class);
         if (!expect.equals(status)) {
@@ -133,6 +132,6 @@ public class SuperCtlActionServiceImpl extends AbstractServiceImpl<SuperCtlActio
         action.setStateJsonAfter(JSON.toJSONString(status));
         SuperCtlAction updatedAction = updateById(action);
         notifyActionComplete(updatedAction);
-        superCtlMessageManager.remove(id);
+        superCtlMessageManager.remove(action.getId());
     }
 }

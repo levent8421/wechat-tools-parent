@@ -87,22 +87,28 @@ public class DeviceCtlEndpoint extends AbstractWebsocketEndpoint implements Supe
         Class<BadRequestException> e = BadRequestException.class;
         ParamChecker.notNull(param, e, "empty param");
         ParamChecker.notNull(param.getDeviceId(), e, "deviceId is required!");
-        ParamChecker.notNull(param.getMotor(), e, "motor is required!");
-        ParamChecker.notNull(param.getState(), e, "state is required!");
-        if (!MotorStates.isStateInRule(param.getState())) {
-            throw new BadRequestException("Invalidate state:" + param.getState());
+        ParamChecker.notEmpty(param.getStatus(), e, "status is required!");
+        for (MotorCtlParam.State state : param.getStatus()) {
+            ParamChecker.notNull(state.getMotor(), e, "status[$i].motor is required!");
+            ParamChecker.notEmpty(state.getState(), e, "status[$i].state is required!");
+            if (!MotorStates.isStateInRule(state.getState())) {
+                throw new BadRequestException("Invalidate state:" + state.getState());
+            }
         }
+
         SuperCtlDevice device = superCtlDeviceService.require(param.getDeviceId());
         SuperCtlDeviceStatus targetStatus = JSON.parseObject(device.getStatusJson(), SuperCtlDeviceStatus.class);
-        switch (param.getMotor()) {
-            case SuperCtlDeviceStatus.MOTOR1:
-                targetStatus.setMotor1(param.getState());
-                break;
-            case SuperCtlDeviceStatus.MOTOR2:
-                targetStatus.setMotor2(param.getState());
-                break;
-            default:
-                throw new BadRequestException("Invalidate motor:" + param.getMotor());
+        for (MotorCtlParam.State state : param.getStatus()) {
+            switch (state.getMotor()) {
+                case SuperCtlDeviceStatus.MOTOR1:
+                    targetStatus.setMotor1(state.getState());
+                    break;
+                case SuperCtlDeviceStatus.MOTOR2:
+                    targetStatus.setMotor2(state.getState());
+                    break;
+                default:
+                    throw new BadRequestException("Invalidate motor:" + state.getMotor());
+            }
         }
         log.info("Operate device[{}] to target[{}]", device.getId(), targetStatus);
         SuperCtlAction action = superCtlActionService.sendAction(device, targetStatus);

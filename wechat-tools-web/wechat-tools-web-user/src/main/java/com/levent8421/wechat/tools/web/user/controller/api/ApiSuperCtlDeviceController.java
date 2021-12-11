@@ -4,15 +4,15 @@ import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
 import com.levent8421.wechat.tools.commons.entity.SuperCtlDevice;
 import com.levent8421.wechat.tools.commons.entity.SuperCtlWeather;
+import com.levent8421.wechat.tools.commons.exception.BadRequestException;
 import com.levent8421.wechat.tools.model.service.general.SuperCtlDeviceService;
 import com.levent8421.wechat.tools.model.service.general.SuperCtlWeatherService;
 import com.levent8421.wechat.tools.web.commons.security.TokenDataHolder;
+import com.levent8421.wechat.tools.web.commons.util.ParamChecker;
 import com.levent8421.wechat.tools.web.commons.vo.GeneralResult;
 import com.levent8421.wechat.tools.web.user.controller.AbstractUserController;
 import com.levent8421.wechat.tools.web.user.vo.SuperCtlDeviceInfo;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Map;
@@ -64,5 +64,40 @@ public class ApiSuperCtlDeviceController extends AbstractUserController {
             res.add(info);
         }
         return GeneralResult.ok(res);
+    }
+
+    /**
+     * Get Device Info
+     *
+     * @param id id
+     * @return GR
+     */
+    @GetMapping("/{id}")
+    public GeneralResult<SuperCtlDevice> getDevice(@PathVariable("id") Integer id) {
+        SuperCtlDevice device = superCtlDeviceService.require(id);
+        return GeneralResult.ok(device);
+    }
+
+    /**
+     * Update deviceIndo
+     *
+     * @param id    id
+     * @param param params
+     * @return GR
+     */
+    @PostMapping("/{id}")
+    public GeneralResult<SuperCtlDevice> updateDevice(@PathVariable("id") Integer id,
+                                                      @RequestBody SuperCtlDevice param) {
+        Class<BadRequestException> e = BadRequestException.class;
+        ParamChecker.notNull(param, e, "empty param!");
+        ParamChecker.notEmpty(param.getAddressCode(), e, "addressCode is required!");
+        ParamChecker.notEmpty(param.getAddress(), e, "address is required!");
+        ParamChecker.notEmpty(param.getDeviceName(), e, "deviceName is required!");
+        SuperCtlDevice device = superCtlDeviceService.require(id);
+        device.setDeviceName(param.getDeviceName());
+        device.setAddress(param.getAddress());
+        device.setAddressCode(param.getAddressCode());
+        device = superCtlDeviceService.updateById(device);
+        return GeneralResult.ok(device);
     }
 }

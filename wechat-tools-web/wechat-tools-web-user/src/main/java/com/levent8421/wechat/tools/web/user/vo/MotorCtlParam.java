@@ -2,6 +2,8 @@ package com.levent8421.wechat.tools.web.user.vo;
 
 import lombok.Data;
 
+import java.util.List;
+
 /**
  * Create by Levent8421
  * Date: 2021/11/28 15:32
@@ -13,7 +15,12 @@ import lombok.Data;
  */
 @Data
 public class MotorCtlParam {
+    @Data
+    public static class State {
+        Integer motor;
+        String state;
+    }
+
     private Integer deviceId;
-    private Integer motor;
-    private String state;
+    private List<State> status;
 }

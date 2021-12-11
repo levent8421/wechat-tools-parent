@@ -28,10 +28,10 @@ public class HttpRequestLogInterceptor implements HandlerInterceptor {
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) {
         final long startTime = System.currentTimeMillis();
         request.setAttribute(REQUEST_START_TIME, startTime);
-
+        String remoteAddr = request.getRemoteAddr();
         final String path = request.getRequestURI();
         final String method = request.getMethod();
-        log.info("Request: [{}:{}]", method, path);
+        log.info("Request: [{}] from [{}]:{}", method, remoteAddr, path);
         return true;
     }
 

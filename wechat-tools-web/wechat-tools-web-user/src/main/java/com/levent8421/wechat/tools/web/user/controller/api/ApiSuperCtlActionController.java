@@ -3,6 +3,7 @@ package com.levent8421.wechat.tools.web.user.controller.api;
 import com.levent8421.wechat.tools.commons.entity.SuperCtlAction;
 import com.levent8421.wechat.tools.commons.entity.SuperCtlDevice;
 import com.levent8421.wechat.tools.commons.exception.BadRequestException;
+import com.levent8421.wechat.tools.message.DeviceMessageClient;
 import com.levent8421.wechat.tools.model.service.app.sc.define.SuperCtlDeviceStatus;
 import com.levent8421.wechat.tools.model.service.general.SuperCtlActionService;
 import com.levent8421.wechat.tools.model.service.general.SuperCtlDeviceService;
@@ -29,11 +30,14 @@ import org.springframework.web.bind.annotation.RestController;
 public class ApiSuperCtlActionController extends AbstractApiController {
     private final SuperCtlActionService superCtlActionService;
     private final SuperCtlDeviceService superCtlDeviceService;
+    private final DeviceMessageClient deviceMessageClient;
 
     public ApiSuperCtlActionController(SuperCtlActionService superCtlActionService,
-                                       SuperCtlDeviceService superCtlDeviceService) {
+                                       SuperCtlDeviceService superCtlDeviceService,
+                                       DeviceMessageClient deviceMessageClient) {
         this.superCtlActionService = superCtlActionService;
         this.superCtlDeviceService = superCtlDeviceService;
+        this.deviceMessageClient = deviceMessageClient;
     }
 
     /**
@@ -50,7 +54,7 @@ public class ApiSuperCtlActionController extends AbstractApiController {
         ParamChecker.notNull(param.getStatus(), e, "status params!");
         SuperCtlDevice device = superCtlDeviceService.require(param.getDeviceId());
         SuperCtlDeviceStatus status = param.getStatus();
-        SuperCtlAction action = superCtlActionService.sendAction(device, status);
+        SuperCtlAction action = superCtlActionService.sendAction(device, status, deviceMessageClient);
         return GeneralResult.ok(action);
     }
 }

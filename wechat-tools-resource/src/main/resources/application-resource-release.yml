@@ -1,4 +1,4 @@
 static:
-  root-path: /var/www/wtstatic.levent8421.com
-  server: http://wtstatic.levent8421.com
-  wechat-verify-file-root-path: /var/www/wt.levent8421.com
+  root-path: /var/www/superctl.levent8421.com
+  server: http://superctl.levent8421.com
+  wechat-verify-file-root-path: /var/www/superctl.levent8421.com

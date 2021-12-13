@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSON;
 import com.levent8421.wechat.tools.commons.entity.SuperCtlAction;
 import com.levent8421.wechat.tools.commons.entity.SuperCtlDevice;
 import com.levent8421.wechat.tools.commons.exception.BadRequestException;
+import com.levent8421.wechat.tools.message.DeviceMessageClient;
 import com.levent8421.wechat.tools.model.service.app.sc.define.MotorStates;
 import com.levent8421.wechat.tools.model.service.app.sc.define.SuperCtlDeviceStatus;
 import com.levent8421.wechat.tools.model.service.general.SuperCtlActionService;
@@ -39,13 +40,16 @@ public class DeviceCtlEndpoint extends AbstractWebsocketEndpoint implements Supe
     private final SuperCtlActionService superCtlActionService;
     private final SuperCtlDeviceService superCtlDeviceService;
     private final SessionManager sessionManager = new SessionManager();
+    private final DeviceMessageClient deviceMessageClient;
 
     public DeviceCtlEndpoint(SuperCtlActionService superCtlActionService,
                              SuperCtlDeviceService superCtlDeviceService,
-                             UserTokenVerifier tokenVerifier) {
+                             UserTokenVerifier tokenVerifier,
+                             DeviceMessageClient deviceMessageClient) {
         super(tokenVerifier);
         this.superCtlActionService = superCtlActionService;
         this.superCtlDeviceService = superCtlDeviceService;
+        this.deviceMessageClient = deviceMessageClient;
         superCtlActionService.setActionCompleteListener(this);
     }
 
@@ -111,7 +115,7 @@ public class DeviceCtlEndpoint extends AbstractWebsocketEndpoint implements Supe
             }
         }
         log.info("Operate device[{}] to target[{}]", device.getId(), targetStatus);
-        SuperCtlAction action = superCtlActionService.sendAction(device, targetStatus);
+        SuperCtlAction action = superCtlActionService.sendAction(device, targetStatus, deviceMessageClient);
         log.info("Send action:[{}]", action.getId());
     }
 

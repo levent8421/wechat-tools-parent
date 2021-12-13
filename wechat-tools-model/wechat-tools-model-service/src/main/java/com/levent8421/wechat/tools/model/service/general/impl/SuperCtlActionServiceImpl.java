@@ -36,17 +36,14 @@ import java.util.Date;
 @Slf4j
 @Service
 public class SuperCtlActionServiceImpl extends AbstractServiceImpl<SuperCtlAction> implements SuperCtlActionService {
-    private final DeviceMessageClient messageClient;
     private final SuperCtlActionMapper superCtlActionMapper;
     private final SuperCtlConf superCtlConf;
     private final SuperCtlMessageManager superCtlMessageManager;
     private SuperCtlActionCompleteListener actionCompleteListener;
 
-    public SuperCtlActionServiceImpl(DeviceMessageClient messageClient,
-                                     SuperCtlActionMapper mapper,
+    public SuperCtlActionServiceImpl(SuperCtlActionMapper mapper,
                                      SuperCtlConf superCtlConf) {
         super(mapper);
-        this.messageClient = messageClient;
         this.superCtlActionMapper = mapper;
         this.superCtlConf = superCtlConf;
         superCtlMessageManager = new SuperCtlMessageManager(this);
@@ -63,7 +60,7 @@ public class SuperCtlActionServiceImpl extends AbstractServiceImpl<SuperCtlActio
     }
 
     @Override
-    public SuperCtlAction sendAction(SuperCtlDevice device, SuperCtlDeviceStatus targetStatus) {
+    public SuperCtlAction sendAction(SuperCtlDevice device, SuperCtlDeviceStatus targetStatus, DeviceMessageClient messageClient) {
         SuperCtlAction action = new SuperCtlAction();
         action.setDevice(device);
         action.setDeviceId(device.getId());

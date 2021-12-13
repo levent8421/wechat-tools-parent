@@ -1,7 +1,7 @@
 wechat:
-  server-ip: 47.116.129.67
-  js-api-domain: wt.levent8421.com
-  authorization-domain: wt.levent8421.com
+  server-ip: 81.68.188.160
+  js-api-domain: superctl.levent8421.com
+  authorization-domain: superctl.levent8421.com
 super-ctl:
   super-ctl-upstream-topic: super_ctl_upstream
   super-ctl-downstream-topic-prefix: super_ctl_downstream_

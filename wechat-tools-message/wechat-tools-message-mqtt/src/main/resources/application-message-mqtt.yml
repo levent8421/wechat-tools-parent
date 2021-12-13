@@ -1,5 +1,5 @@
 message:
-  broker: tcp://localhost:1883
+  broker: tcp://superctl.levent8421.com:1883
   username: admin
   password: levent8421
-  clientId: server-01
+  clientId: server-0

@@ -43,6 +43,7 @@ public class MqttDeviceMessageClient implements DeviceMessageClient, Application
         message.setPayload(payload);
         message.setRetained(true);
         try {
+            log.info("MQTT pub msg:[{}]:{}", topic, new String(payload));
             mqttClient.publish(topic, message);
         } catch (MqttException e) {
             throw new MessageException(ExceptionUtils.getMessage(e), e);
@@ -71,6 +72,7 @@ public class MqttDeviceMessageClient implements DeviceMessageClient, Application
         String username = messageConf.getUsername();
         String password = messageConf.getPassword();
         try {
+            log.info("MQTT[{}] connect with {}:{}@[{}]", clientId, username, password, broker);
             mqttClient = new MqttClient(broker, clientId, new MemoryPersistence());
         } catch (MqttException e) {
             throw new RuntimeException(ExceptionUtils.getMessage(e), e);

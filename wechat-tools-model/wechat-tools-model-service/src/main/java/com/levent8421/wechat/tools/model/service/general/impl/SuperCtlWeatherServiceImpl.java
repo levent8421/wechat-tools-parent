@@ -74,7 +74,7 @@ public class SuperCtlWeatherServiceImpl extends AbstractServiceImpl<SuperCtlWeat
             if (!isExpired(weather)) {
                 continue;
             }
-            if (weather.isNeedRefresh()) {
+            if (weather.getNeedRefresh()) {
                 continue;
             }
             expiredIds.add(weather.getId());

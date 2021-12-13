@@ -60,5 +60,5 @@ public class SuperCtlWeather extends AbstractEntity {
      * 是否需要更新
      */
     @Column(name = "need_refresh", nullable = false, length = 1)
-    private boolean needRefresh;
+    private Boolean needRefresh;
 }

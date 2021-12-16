@@ -3,9 +3,12 @@ package com.levent8421.wechat.tools.wechat.api.impl;
 import com.levent8421.wechat.tools.commons.http.AbstractHttpApi;
 import com.levent8421.wechat.tools.wechat.api.WechatApi;
 import com.levent8421.wechat.tools.wechat.api.vo.*;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.springframework.stereotype.Component;
+
+import java.util.Objects;
 
 /**
  * Create By Levent8421
@@ -17,6 +20,7 @@ import org.springframework.stereotype.Component;
  *
  * @author Levent8421
  */
+@Slf4j
 @Component
 public class WechatApiImpl extends AbstractHttpApi implements WechatApi {
     private static final int NONCE_STR_LEN = 7;
@@ -44,14 +48,21 @@ public class WechatApiImpl extends AbstractHttpApi implements WechatApi {
     @Override
     public WechatAppTokenVo getToken(String appId, String secret) {
         final String apiUrl = String.format(API_URL_WECHAT_APP_TOKEN, appId, secret);
-        return get(apiUrl, WechatAppTokenVo.class, resp -> resp.get("errcode") == null);
+        return get(apiUrl, WechatAppTokenVo.class, resp -> {
+            Integer errcode = resp.getInteger("errcode");
+            return (errcode == null || Objects.equals(errcode, 0));
+        });
     }
 
     @Override
     public WechatJsApiTicketVo getJsApiTicket(String appToken) {
         final String apiUrl = String.format(API_URL_WECHAT_JS_API_TICKET, appToken);
-        return get(apiUrl, WechatJsApiTicketVo.class, resp -> resp.get("errcode") == null);
+        return get(apiUrl, WechatJsApiTicketVo.class, resp -> {
+            Integer errcode = resp.getInteger("errcode");
+            return (errcode == null || Objects.equals(errcode, 0));
+        });
     }
+
 
     @Override
     public WechatJsApiConfigParam getJsApiConfigParam(String jsApiTicket, String appId, String url) {
@@ -60,7 +71,7 @@ public class WechatApiImpl extends AbstractHttpApi implements WechatApi {
         final String signTemplate = "jsapi_ticket=%s&noncestr=%s&timestamp=%s&url=%s";
         final String signText = String.format(signTemplate, jsApiTicket, nonceStr, timestamp, url);
         final String sign = DigestUtils.sha1Hex(signText);
-
+        log.info("Create JS_TKT sig[{}] with text:[{}]", sign, signText);
         final WechatJsApiConfigParam param = new WechatJsApiConfigParam();
         param.setAppId(appId);
         param.setSignature(sign);

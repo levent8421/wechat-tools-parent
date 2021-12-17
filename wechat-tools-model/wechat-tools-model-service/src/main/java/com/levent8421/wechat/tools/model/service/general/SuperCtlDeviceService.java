@@ -39,4 +39,20 @@ public interface SuperCtlDeviceService extends AbstractService<SuperCtlDevice> {
      * @param status status
      */
     void updateStatus(String sn, SuperCtlDeviceStatus status);
+
+    /**
+     * Bind New Device
+     *
+     * @param device device
+     * @return device
+     */
+    SuperCtlDevice bindNewDevice(SuperCtlDevice device);
+
+    /**
+     * Find by sn
+     *
+     * @param sn sn
+     * @return device
+     */
+    SuperCtlDevice findBySn(String sn);
 }

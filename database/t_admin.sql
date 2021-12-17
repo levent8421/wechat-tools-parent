@@ -1,4 +1,4 @@
-drop table if exists t_admin;
+ drop table if exists t_admin;
 
 create table t_admin
 (

@@ -1,0 +1,5 @@
+message:
+  broker: tcp://localhost:1883
+  username: admin
+  password: levent8421
+  clientId: server-0

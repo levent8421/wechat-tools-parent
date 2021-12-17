@@ -35,9 +35,17 @@
         where sc_d.deleted = false
     </sql>
     <update id="updateStatus">
-        update t_super_ctl_device set status_json=#{statusStr} where id=#{id}
+        update t_super_ctl_device
+        set status_json=#{statusStr}
+        where id = #{id}
     </update>
     <update id="updateStatusBySn">
-        update t_super_ctl_device set status_json=#{statusStr} where sn=#{sn}
+        update t_super_ctl_device
+        set status_json=#{statusStr}
+        where sn = #{sn}
     </update>
+    <select id="selectBySn" resultMap="rm_base">
+        <include refid="base_select"/>
+        and sc_d.sn=#{sn}
+    </select>
 </mapper>

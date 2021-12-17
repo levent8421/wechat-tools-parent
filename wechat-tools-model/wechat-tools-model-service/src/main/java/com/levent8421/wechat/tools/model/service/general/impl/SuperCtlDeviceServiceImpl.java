@@ -1,6 +1,7 @@
 package com.levent8421.wechat.tools.model.service.general.impl;
 
 import com.levent8421.wechat.tools.commons.entity.SuperCtlDevice;
+import com.levent8421.wechat.tools.commons.exception.BadRequestException;
 import com.levent8421.wechat.tools.model.repository.mapper.SuperCtlDeviceMapper;
 import com.levent8421.wechat.tools.model.service.app.sc.define.SuperCtlDeviceStatus;
 import com.levent8421.wechat.tools.model.service.basic.impl.AbstractServiceImpl;
@@ -56,5 +57,19 @@ public class SuperCtlDeviceServiceImpl extends AbstractServiceImpl<SuperCtlDevic
         } else {
             log.info("update statue[{}] for device[{}] res=[{}]", status, sn, rows);
         }
+    }
+
+    @Override
+    public SuperCtlDevice bindNewDevice(SuperCtlDevice device) {
+        SuperCtlDevice dbDevice = findBySn(device.getSn());
+        if (dbDevice != null) {
+            throw new BadRequestException("该设备已被认领:" + dbDevice.getDeviceName());
+        }
+        return save(device);
+    }
+
+    @Override
+    public SuperCtlDevice findBySn(String sn) {
+        return superCtlAppMapper.selectBySn(sn);
     }
 }

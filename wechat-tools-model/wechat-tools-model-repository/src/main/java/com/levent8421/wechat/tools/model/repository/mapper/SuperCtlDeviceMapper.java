@@ -35,4 +35,12 @@ public interface SuperCtlDeviceMapper extends AbstractMapper<SuperCtlDevice> {
      */
     int updateStatusBySn(@Param("sn") String sn,
                          @Param("statusStr") String statusStr);
+
+    /**
+     * Select by sn
+     *
+     * @param sn sn
+     * @return device
+     */
+    SuperCtlDevice selectBySn(@Param("sn") String sn);
 }

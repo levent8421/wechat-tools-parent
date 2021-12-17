@@ -5,6 +5,7 @@ import com.google.common.collect.Sets;
 import com.levent8421.wechat.tools.commons.entity.SuperCtlDevice;
 import com.levent8421.wechat.tools.commons.entity.SuperCtlWeather;
 import com.levent8421.wechat.tools.commons.exception.BadRequestException;
+import com.levent8421.wechat.tools.model.service.app.sc.define.SuperCtlDeviceStatus;
 import com.levent8421.wechat.tools.model.service.general.SuperCtlDeviceService;
 import com.levent8421.wechat.tools.model.service.general.SuperCtlWeatherService;
 import com.levent8421.wechat.tools.web.commons.security.TokenDataHolder;
@@ -99,5 +100,31 @@ public class ApiSuperCtlDeviceController extends AbstractUserController {
         device.setAddressCode(param.getAddressCode());
         device = superCtlDeviceService.updateById(device);
         return GeneralResult.ok(device);
+    }
+
+    /**
+     * 用户认领设备
+     *
+     * @param param params
+     * @return GR
+     */
+    @PutMapping("/")
+    public GeneralResult<SuperCtlDevice> createDevice(@RequestBody SuperCtlDevice param) {
+        Integer uid = requireUserId(tokenDataHolder);
+        Class<BadRequestException> e = BadRequestException.class;
+        ParamChecker.notNull(param, e, "empty params!");
+        ParamChecker.notEmpty(param.getSn(), e, "sn is required!");
+        ParamChecker.notEmpty(param.getDeviceName(), e, "deviceName is required!");
+        ParamChecker.notEmpty(param.getAddress(), e, "address is required!");
+        ParamChecker.notEmpty(param.getAddressCode(), e, "addressCode is required!");
+        SuperCtlDevice device = new SuperCtlDevice();
+        device.setWechatUserId(uid);
+        device.setDeviceName(param.getDeviceName());
+        device.setSn(param.getSn());
+        device.setAddress(param.getAddress());
+        device.setAddressCode(param.getAddressCode());
+        device.setStatusJson(SuperCtlDeviceStatus.DEFAULT_STATUS);
+        SuperCtlDevice res = superCtlDeviceService.bindNewDevice(device);
+        return GeneralResult.ok(res);
     }
 }

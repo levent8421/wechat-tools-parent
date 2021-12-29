@@ -1,5 +1,6 @@
 package com.levent8421.wechat.tools.web.user.controller.api;
 
+import com.github.pagehelper.PageInfo;
 import com.levent8421.wechat.tools.commons.entity.SuperCtlAction;
 import com.levent8421.wechat.tools.commons.entity.SuperCtlDevice;
 import com.levent8421.wechat.tools.commons.exception.BadRequestException;
@@ -11,10 +12,7 @@ import com.levent8421.wechat.tools.web.commons.controller.AbstractApiController;
 import com.levent8421.wechat.tools.web.commons.util.ParamChecker;
 import com.levent8421.wechat.tools.web.commons.vo.GeneralResult;
 import com.levent8421.wechat.tools.web.user.vo.SuperCtlStateCtlParam;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * Create by Levent8421
@@ -56,5 +54,22 @@ public class ApiSuperCtlActionController extends AbstractApiController {
         SuperCtlDeviceStatus status = param.getStatus();
         SuperCtlAction action = superCtlActionService.sendAction(device, status, deviceMessageClient);
         return GeneralResult.ok(action);
+    }
+
+    /**
+     * Find action by type with pagination
+     *
+     * @param type type
+     * @param page page
+     * @param rows rows
+     * @return GR
+     */
+    @GetMapping("/_by-type")
+    public GeneralResult<PageInfo<SuperCtlAction>> findByType(@RequestParam("type") String type,
+                                                              @RequestParam(required = false, value = "page", defaultValue = "1") Integer page,
+                                                              @RequestParam(required = false, value = "rows", defaultValue = "1") Integer rows) {
+
+        PageInfo<SuperCtlAction> res = superCtlActionService.findByType(type, page, rows);
+        return GeneralResult.ok(res);
     }
 }

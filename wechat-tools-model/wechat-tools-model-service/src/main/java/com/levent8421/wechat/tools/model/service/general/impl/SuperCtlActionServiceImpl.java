@@ -1,23 +1,23 @@
 package com.levent8421.wechat.tools.model.service.general.impl;
 
 import com.alibaba.fastjson.JSON;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.levent8421.wechat.tools.commons.entity.SuperCtlAction;
 import com.levent8421.wechat.tools.commons.entity.SuperCtlDevice;
 import com.levent8421.wechat.tools.commons.utils.datetime.DateTimeUtils;
 import com.levent8421.wechat.tools.message.DeviceMessageClient;
-import com.levent8421.wechat.tools.message.MessageException;
 import com.levent8421.wechat.tools.model.repository.mapper.SuperCtlActionMapper;
 import com.levent8421.wechat.tools.model.service.app.sc.define.SuperCtlActionStatus;
 import com.levent8421.wechat.tools.model.service.app.sc.define.SuperCtlActionTypes;
 import com.levent8421.wechat.tools.model.service.app.sc.define.SuperCtlDeviceStatus;
 import com.levent8421.wechat.tools.model.service.app.sc.msg.SuperCtlMessageManager;
-import com.levent8421.wechat.tools.model.service.app.sc.vo.SuperCtlMessage;
 import com.levent8421.wechat.tools.model.service.basic.impl.AbstractServiceImpl;
 import com.levent8421.wechat.tools.model.service.config.SuperCtlConf;
 import com.levent8421.wechat.tools.model.service.general.SuperCtlActionService;
+import com.levent8421.wechat.tools.model.service.general.impl.superctl.SuperCtlActionSender;
 import com.levent8421.wechat.tools.model.service.general.listener.SuperCtlActionCompleteListener;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.lang3.exception.ExceptionUtils;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
@@ -40,6 +40,7 @@ public class SuperCtlActionServiceImpl extends AbstractServiceImpl<SuperCtlActio
     private final SuperCtlConf superCtlConf;
     private final SuperCtlMessageManager superCtlMessageManager;
     private SuperCtlActionCompleteListener actionCompleteListener;
+    private final SuperCtlActionSender actionSender;
 
     public SuperCtlActionServiceImpl(SuperCtlActionMapper mapper,
                                      SuperCtlConf superCtlConf) {
@@ -47,6 +48,7 @@ public class SuperCtlActionServiceImpl extends AbstractServiceImpl<SuperCtlActio
         this.superCtlActionMapper = mapper;
         this.superCtlConf = superCtlConf;
         superCtlMessageManager = new SuperCtlMessageManager(this);
+        actionSender = new SuperCtlActionSender(superCtlMessageManager, this);
     }
 
     @PostConstruct
@@ -72,28 +74,16 @@ public class SuperCtlActionServiceImpl extends AbstractServiceImpl<SuperCtlActio
         SuperCtlAction savedAction = save(action);
 
         String topic = superCtlConf.getSuperCtlDownstreamTopicPrefix() + device.getSn();
-        SuperCtlMessage<SuperCtlDeviceStatus> message = new SuperCtlMessage<>();
-        message.setId(savedAction.getId());
-        message.setAction(SuperCtlActionTypes.STATE_CTL);
-        message.setPayload(targetStatus);
-        byte[] payload = JSON.toJSONBytes(message);
-        try {
-            superCtlMessageManager.register(message);
-            messageClient.publish(topic, String.valueOf(savedAction.getId()), payload);
-        } catch (MessageException e) {
-            savedAction.setStateCode(SuperCtlActionStatus.STATE_FAIL);
-            savedAction.setResponseMsg("Send fail:" + ExceptionUtils.getMessage(e));
-            updateById(savedAction);
-            notifyActionComplete(savedAction);
-            log.error("Error on send state ctl msg", e);
-        }
+        actionSender.sendAction(messageClient, topic, action);
         return savedAction;
     }
 
-    private void notifyActionComplete(SuperCtlAction action) {
+    @Override
+    public void notifyActionComplete(SuperCtlAction action) {
         if (actionCompleteListener != null) {
             actionCompleteListener.onComplete(action);
         }
+        superCtlMessageManager.remove(action.getId());
     }
 
     @Override
@@ -130,5 +120,11 @@ public class SuperCtlActionServiceImpl extends AbstractServiceImpl<SuperCtlActio
         SuperCtlAction updatedAction = updateById(action);
         notifyActionComplete(updatedAction);
         superCtlMessageManager.remove(action.getId());
+    }
+
+    @Override
+    public PageInfo<SuperCtlAction> findByType(String type, Integer page, Integer rows) {
+        return PageHelper.startPage(page, rows)
+                .doSelectPageInfo(() -> superCtlActionMapper.selectByType(type));
     }
 }

@@ -47,6 +47,11 @@ public class SuperCtlAction extends AbstractEntity {
     @Column(name = "state_json_after")
     private String stateJsonAfter;
     /**
+     * 预约时间
+     */
+    @Column(name = "order_time")
+    private Date orderTime;
+    /**
      * 发起时间
      */
     @Column(name = "start_time", nullable = false)

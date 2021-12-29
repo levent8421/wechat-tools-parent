@@ -1,5 +1,6 @@
 package com.levent8421.wechat.tools.model.service.general;
 
+import com.github.pagehelper.PageInfo;
 import com.levent8421.wechat.tools.commons.entity.SuperCtlAction;
 import com.levent8421.wechat.tools.commons.entity.SuperCtlDevice;
 import com.levent8421.wechat.tools.message.DeviceMessageClient;
@@ -50,4 +51,21 @@ public interface SuperCtlActionService extends AbstractService<SuperCtlAction> {
      * @param status status
      */
     void reportActionDone(SuperCtlAction action, String msg, SuperCtlDeviceStatus status);
+
+    /**
+     * 通知操作结束
+     *
+     * @param action action
+     */
+    void notifyActionComplete(SuperCtlAction action);
+
+    /**
+     * Find action by type with pagination
+     *
+     * @param type type
+     * @param page page
+     * @param rows rows
+     * @return PageInfo
+     */
+    PageInfo<SuperCtlAction> findByType(String type, Integer page, Integer rows);
 }

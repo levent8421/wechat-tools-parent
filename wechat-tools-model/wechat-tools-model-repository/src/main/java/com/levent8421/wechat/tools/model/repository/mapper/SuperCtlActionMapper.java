@@ -6,6 +6,7 @@ import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.Date;
+import java.util.List;
 
 /**
  * Create by Levent8421
@@ -31,4 +32,12 @@ public interface SuperCtlActionMapper extends AbstractMapper<SuperCtlAction> {
                     @Param("state") String state,
                     @Param("msg") String msg,
                     @Param("completeTime") Date completeTime);
+
+    /**
+     * select by type
+     *
+     * @param type type code
+     * @return actions
+     */
+    List<SuperCtlAction> selectByType(@Param("type") String type);
 }

@@ -20,19 +20,19 @@ create table t_super_ctl_action
   charset utf8mb4
   collate utf8mb4_general_ci;
 
-
-select id                as sc_a_id,
-       device_id         as sc_a_device_id,
-       type_code         as sc_a_type_code,
-       state_json_before as sc_a_state_json_before,
-       state_json_expect as sc_a_state_json_expect,
-       state_json_after  as sc_a_state_json_after,
-       start_time        as sc_a_start_time,
-       complete_time     as sc_a_complete_time,
-       state_code        as sc_a_state_code,
-       response_msg      as sc_a_response_msg,
-       create_time       as sc_a_create_time,
-       update_time       as sc_a_update_time,
-       deleted           as sc_a_deleted
+select sc_a.id                as sc_a_id,
+       sc_a.device_id         as sc_a_device_id,
+       sc_a.type_code         as sc_a_type_code,
+       sc_a.state_json_before as sc_a_state_json_before,
+       sc_a.state_json_expect as sc_a_state_json_expect,
+       sc_a.state_json_after  as sc_a_state_json_after,
+       sc_a.start_time        as sc_a_start_time,
+       sc_a.order_time        as sc_a_order_time,
+       sc_a.complete_time     as sc_a_complete_time,
+       sc_a.state_code        as sc_a_state_code,
+       sc_a.response_msg      as sc_a_response_msg,
+       sc_a.create_time       as sc_a_create_time,
+       sc_a.update_time       as sc_a_update_time,
+       sc_a.deleted           as sc_a_deleted
 from t_super_ctl_action as sc_a
 where sc_a.deleted = false;

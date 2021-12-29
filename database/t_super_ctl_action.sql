@@ -8,6 +8,7 @@ create table t_super_ctl_action
     state_json_before text         null,
     state_json_expect text         not null,
     state_json_after  text         null,
+    order_time        datetime     null,
     start_time        datetime     not null,
     complete_time     datetime     null,
     state_code        varchar(100) not null,

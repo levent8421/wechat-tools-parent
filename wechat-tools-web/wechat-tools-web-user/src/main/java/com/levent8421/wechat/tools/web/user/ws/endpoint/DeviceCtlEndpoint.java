@@ -16,6 +16,7 @@ import com.levent8421.wechat.tools.web.user.serurity.UserTokenVerifier;
 import com.levent8421.wechat.tools.web.user.vo.MotorCtlParam;
 import com.levent8421.wechat.tools.web.user.ws.WebSocketSpringConfigurator;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.exception.ExceptionUtils;
 import org.springframework.stereotype.Component;
 
 import javax.websocket.Session;
@@ -89,9 +90,14 @@ public class DeviceCtlEndpoint extends AbstractWebsocketEndpoint implements Supe
     private void resolveMessage(Session session, String message) {
         MotorCtlParam param = JSON.parseObject(message, MotorCtlParam.class);
         Class<BadRequestException> e = BadRequestException.class;
-        ParamChecker.notNull(param, e, "empty param");
-        ParamChecker.notNull(param.getDeviceId(), e, "deviceId is required!");
-        ParamChecker.notEmpty(param.getStatus(), e, "status is required!");
+        try {
+            ParamChecker.notNull(param, e, "empty param");
+            ParamChecker.notNull(param.getDeviceId(), e, "deviceId is required!");
+            ParamChecker.notEmpty(param.getStatus(), e, "status is required!");
+        } catch (BadRequestException ex) {
+            log.debug("Error:{}", ExceptionUtils.getMessage(ex));
+            return;
+        }
         for (MotorCtlParam.State state : param.getStatus()) {
             ParamChecker.notNull(state.getMotor(), e, "status[$i].motor is required!");
             ParamChecker.notEmpty(state.getState(), e, "status[$i].state is required!");

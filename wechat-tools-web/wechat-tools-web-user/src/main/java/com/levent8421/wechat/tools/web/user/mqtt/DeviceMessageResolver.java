@@ -16,6 +16,7 @@ import org.apache.commons.lang3.exception.ExceptionUtils;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import javax.annotation.PostConstruct;
 import java.util.Objects;
 
 /**
@@ -45,10 +46,11 @@ public class DeviceMessageResolver implements DeviceMessageListener {
         this.superCtlDeviceService = superCtlDeviceService;
     }
 
-    @PostMapping
+    @PostConstruct
     public void subscribe() {
         try {
             this.deviceMessageClient.subscribe(superCtlConf.getSuperCtlUpstreamTopic(), this);
+            log.info("MQTT:subscribe [{}]", superCtlConf.getSuperCtlUpstreamTopic());
         } catch (MessageException e) {
             throw new RuntimeException(ExceptionUtils.getMessage(e), e);
         }
@@ -56,16 +58,18 @@ public class DeviceMessageResolver implements DeviceMessageListener {
 
     @Override
     public void onMessage(String topic, byte[] payload) {
+        String msgStr = new String(payload);
+        log.info("MQTT: Resolve msg:{}", msgStr);
         JSONObject message = JSON.parseObject(payload, JSONObject.class);
         String type = message.getString("type");
         if (type == null) {
-            log.warn("Resolve Empty Msg Type from device:{}", new String(payload));
+            log.warn("Resolve Empty Msg Type from device:{}", msgStr);
             return;
         }
         if (Objects.equals(TYPE_ACK, type)) {
             this.resolveActionAck(message);
         } else {
-            log.warn("Resolve Invalidate Msg type from device:{}", new String(payload));
+            log.warn("Resolve Invalidate Msg type from device:{}", msgStr);
         }
     }
 

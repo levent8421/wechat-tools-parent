@@ -41,7 +41,7 @@ public class MqttDeviceMessageClient implements DeviceMessageClient, Application
         MqttMessage message = new MqttMessage();
         message.setQos(CONTROL_MSG_QOS);
         message.setPayload(payload);
-        message.setRetained(true);
+        message.setRetained(false);
         try {
             log.info("MQTT pub msg:[{}]:{}", topic, new String(payload));
             mqttClient.publish(topic, message);
@@ -52,11 +52,14 @@ public class MqttDeviceMessageClient implements DeviceMessageClient, Application
 
     @Override
     public void subscribe(String topic, DeviceMessageListener listener) throws MessageException {
+        listenerTable.put(topic, listener);
+        if (mqttClient == null) {
+            return;
+        }
         try {
             mqttClient.subscribe(topic);
-            listenerTable.put(topic, listener);
         } catch (MqttException e) {
-            throw new MessageException(ExceptionUtils.getMessage(e), e);
+            log.error("Error on subscribe[{}]", topic, e);
         }
     }
 
@@ -89,6 +92,13 @@ public class MqttDeviceMessageClient implements DeviceMessageClient, Application
             throw new RuntimeException(ExceptionUtils.getMessage(e), e);
         }
         mqttClient.setCallback(this);
+        for (String topic : this.listenerTable.keySet()) {
+            try {
+                mqttClient.subscribe(topic);
+            } catch (MqttException e) {
+                log.error("Error on subscribe[{}]", topic, e);
+            }
+        }
     }
 
     @Override

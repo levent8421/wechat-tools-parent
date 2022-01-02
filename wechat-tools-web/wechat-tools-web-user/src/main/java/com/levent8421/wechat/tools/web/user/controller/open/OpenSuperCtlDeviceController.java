@@ -1,10 +1,12 @@
 package com.levent8421.wechat.tools.web.user.controller.open;
 
 import com.levent8421.wechat.tools.commons.entity.SuperCtlDevice;
+import com.levent8421.wechat.tools.commons.utils.datetime.DateTimeUtils;
 import com.levent8421.wechat.tools.model.service.app.sc.define.SuperCtlDeviceStatus;
 import com.levent8421.wechat.tools.model.service.general.SuperCtlDeviceService;
 import com.levent8421.wechat.tools.web.commons.controller.AbstractApiController;
 import com.levent8421.wechat.tools.web.commons.vo.GeneralResult;
+import com.levent8421.wechat.tools.web.user.vo.SuperCtlDeviceStatusSyncResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -35,12 +37,15 @@ public class OpenSuperCtlDeviceController extends AbstractApiController {
      * @return GR
      */
     @GetMapping("/_status-via-sn")
-    public GeneralResult<SuperCtlDeviceStatus> getDeviceStatusBySn(@RequestParam("sn") String sn) {
+    public GeneralResult<SuperCtlDeviceStatusSyncResult> getDeviceStatusBySn(@RequestParam("sn") String sn) {
         SuperCtlDevice device = superCtlDeviceService.findBySn(sn);
         if (device == null) {
             return GeneralResult.notFound("Device Not found:" + sn);
         }
         SuperCtlDeviceStatus status = SuperCtlDeviceStatus.fromString(device.getStatusJson());
-        return GeneralResult.ok(status);
+        SuperCtlDeviceStatusSyncResult result = new SuperCtlDeviceStatusSyncResult();
+        result.setTimestamp(DateTimeUtils.now());
+        result.setStatus(status);
+        return GeneralResult.ok(result);
     }
 }

@@ -40,4 +40,26 @@ public interface SuperCtlActionMapper extends AbstractMapper<SuperCtlAction> {
      * @return actions
      */
     List<SuperCtlAction> selectByType(@Param("type") String type);
+
+    /**
+     * 根据设备ID、操作类型、状态码查询操作数量
+     *
+     * @param deviceId  deviceId
+     * @param typeCode  typeCode
+     * @param stateCode stateCode
+     * @return count
+     */
+    int selectCountByTypeAndState(@Param("deviceId") Integer deviceId,
+                                  @Param("typeCode") String typeCode,
+                                  @Param("stateCode") String stateCode);
+
+    /**
+     * Select by type and state
+     *
+     * @param type  type
+     * @param state state
+     * @return actions
+     */
+    List<SuperCtlAction> selectByTypeAndState(@Param("type") String type,
+                                              @Param("state") String state);
 }

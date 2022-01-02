@@ -1,5 +1,6 @@
 package com.levent8421.wechat.tools.model.service.app.sc.vo;
 
+import com.alibaba.fastjson.annotation.JSONField;
 import com.levent8421.wechat.tools.model.service.app.sc.define.SuperCtlDeviceStatus;
 import lombok.Data;
 
@@ -15,6 +16,7 @@ import java.util.Date;
  */
 @Data
 public class SuperCtlTaskCtlParam {
+    @JSONField(format = "YYYY-MM-dd HH:mm:ss")
     private Date orderTime;
     private SuperCtlDeviceStatus status;
 }

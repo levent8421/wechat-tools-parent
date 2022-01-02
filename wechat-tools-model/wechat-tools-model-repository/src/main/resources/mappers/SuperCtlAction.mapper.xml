@@ -52,4 +52,16 @@
         and sc_a.type_code=#{type}
         order by create_time desc
     </select>
+    <select id="selectCountByTypeAndState" resultType="integer">
+        select count(*)
+        from t_super_ctl_action as sc_a
+        where sc_a.device_id = #{deviceId}
+          and sc_a.type_code = #{typeCode}
+          and sc_a.state_code = #{stateCode}
+    </select>
+    <select id="selectByTypeAndState" resultMap="rm_base">
+        <include refid="base_select"/>
+        and sc_a.type_code=#{type} and sc_a.state_code=#{state}
+        order by create_time desc
+    </select>
 </mapper>

@@ -19,6 +19,7 @@ import java.util.List;
  * @data 2019/4/17 0017
  */
 public class DateTimeUtils {
+    public static final String DEFAULT_FORMAT = "YYYY-MM-dd HH:mm:ss.SSS";
     /**
      * 周一到周日
      */

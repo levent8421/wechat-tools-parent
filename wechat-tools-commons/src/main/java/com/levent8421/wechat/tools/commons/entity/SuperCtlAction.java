@@ -20,6 +20,7 @@ import java.util.Date;
 @EqualsAndHashCode(callSuper = true)
 @Data
 public class SuperCtlAction extends AbstractEntity {
+    public static final int MAX_TASK_ACTIONS = 20;
     /**
      * Device ID
      */

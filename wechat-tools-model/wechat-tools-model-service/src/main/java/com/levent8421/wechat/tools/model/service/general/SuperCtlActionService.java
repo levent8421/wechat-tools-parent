@@ -29,6 +29,16 @@ public interface SuperCtlActionService extends AbstractService<SuperCtlAction> {
     SuperCtlAction sendAction(SuperCtlDevice device, SuperCtlDeviceStatus targetStatus, DeviceMessageClient messageClient);
 
     /**
+     * 发送操作指令
+     *
+     * @param device device
+     * @param action action
+     * @param client mqttClient
+     * @return action
+     */
+    SuperCtlAction sendAction(SuperCtlDevice device, SuperCtlAction action, DeviceMessageClient client);
+
+    /**
      * 通知操作超时
      *
      * @param id        id
@@ -68,4 +78,15 @@ public interface SuperCtlActionService extends AbstractService<SuperCtlAction> {
      * @return PageInfo
      */
     PageInfo<SuperCtlAction> findByType(String type, Integer page, Integer rows);
+
+    /**
+     * Find action by type and state with pagination
+     *
+     * @param type  type
+     * @param state state
+     * @param page  page
+     * @param rows  rows
+     * @return PageInfo
+     */
+    PageInfo<SuperCtlAction> findByTypeAndState(String type, String state, Integer page, Integer rows);
 }

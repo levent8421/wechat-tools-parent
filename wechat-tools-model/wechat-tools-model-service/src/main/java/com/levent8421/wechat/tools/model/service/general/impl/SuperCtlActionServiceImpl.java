@@ -5,6 +5,7 @@ import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.levent8421.wechat.tools.commons.entity.SuperCtlAction;
 import com.levent8421.wechat.tools.commons.entity.SuperCtlDevice;
+import com.levent8421.wechat.tools.commons.exception.BadRequestException;
 import com.levent8421.wechat.tools.commons.utils.datetime.DateTimeUtils;
 import com.levent8421.wechat.tools.message.DeviceMessageClient;
 import com.levent8421.wechat.tools.model.repository.mapper.SuperCtlActionMapper;
@@ -23,6 +24,7 @@ import org.springframework.stereotype.Service;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 import java.util.Date;
+import java.util.Objects;
 
 /**
  * Create by Levent8421
@@ -79,6 +81,18 @@ public class SuperCtlActionServiceImpl extends AbstractServiceImpl<SuperCtlActio
     }
 
     @Override
+    public SuperCtlAction sendAction(SuperCtlDevice device, SuperCtlAction action, DeviceMessageClient client) {
+        int tasks = superCtlActionMapper.selectCountByTypeAndState(device.getId(), action.getTypeCode(), SuperCtlActionStatus.STATE_START);
+        if (tasks >= SuperCtlAction.MAX_TASK_ACTIONS) {
+            throw new BadRequestException("Max Tasks=" + SuperCtlAction.MAX_TASK_ACTIONS);
+        }
+        action = save(action);
+        String topic = superCtlConf.getSuperCtlDownstreamTopicPrefix() + device.getSn();
+        actionSender.sendAction(client, topic, action);
+        return action;
+    }
+
+    @Override
     public void notifyActionComplete(SuperCtlAction action) {
         if (actionCompleteListener != null) {
             actionCompleteListener.onComplete(action);
@@ -108,7 +122,7 @@ public class SuperCtlActionServiceImpl extends AbstractServiceImpl<SuperCtlActio
     public void reportActionDone(SuperCtlAction action, String msg, SuperCtlDeviceStatus status) {
         String stateJsonExpect = action.getStateJsonExpect();
         SuperCtlDeviceStatus expect = JSON.parseObject(stateJsonExpect, SuperCtlDeviceStatus.class);
-        if (!expect.equals(status)) {
+        if (!expect.equals(status) && Objects.equals(action.getTypeCode(), SuperCtlActionTypes.STATE_CTL)) {
             log.warn("Conflict state on expect[{}] and DeviceReport[{}]", expect, status);
             action.setStateCode(SuperCtlActionStatus.STATE_CONFLICT);
         } else {
@@ -126,5 +140,11 @@ public class SuperCtlActionServiceImpl extends AbstractServiceImpl<SuperCtlActio
     public PageInfo<SuperCtlAction> findByType(String type, Integer page, Integer rows) {
         return PageHelper.startPage(page, rows)
                 .doSelectPageInfo(() -> superCtlActionMapper.selectByType(type));
+    }
+
+    @Override
+    public PageInfo<SuperCtlAction> findByTypeAndState(String type, String state, Integer page, Integer rows) {
+        return PageHelper.startPage(page, rows)
+                .doSelectPageInfo(() -> superCtlActionMapper.selectByTypeAndState(type, state));
     }
 }
